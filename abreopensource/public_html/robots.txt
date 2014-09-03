@@ -1,0 +1,52 @@
+User-agent: *
+
+Crawl-delay: 30
+
+Disallow: /*.do$
+Disallow: /.jsp$
+Disallow: /sfq
+Disallow: /cache
+Disallow: /christianvolunteering.jsp
+Disallow: /careercollaborative
+Disallow: /grants
+Disallow: /testsession
+Disallow: /listings
+Disallow: /members
+Disallow: /content
+Disallow: /freelinking
+Disallow: /jsprsscron
+Disallow: /jsptest
+Disallow: /mysite
+Disallow: /misc
+Disallow: /modules
+Disallow: /old
+Disallow: /resources
+Disallow: /wiki
+Disallow: /audio
+Disallow: /urbanministry
+Disallow: /voleng2
+Disallow: /volunteer/search/
+Disallow: /oorg
+Disallow: /org/org
+Disallow: /org/opp
+Disallow: /org/search/
+Disallow: /design_elements
+Disallow: /googleresults.jsp
+Disallow: /socialize-login.jsp
+Disallow: /sr/
+Disallow: /register.do?method=showIndEditProfile1.
+Disallow: /oppsrch.do?method=processoppsearchall
+Disallow: /oppsrch.do?method=processOppSearchAll
+Disallow: /oppsrch.do?formname=oppsrchresultssort&method=processoppsearchall
+Disallow: /org.do
+Disallow: /register.do
+Disallow: /heartsbeacon/
+Disallow: /lords-nest-vine-bible-fellowship-church-inc/
+
+Sitemap: http://www.christianvolunteering.org/sitemap.xml
+
+User-agent: discobot
+Disallow: /
+
+User-agent: Spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)
+Disallow: /

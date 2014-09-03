@@ -1,0 +1,441 @@
+/*
+Theme Name: 
+Theme URI: http://www.americanbible.org/
+Description: New site design initiated second quarter 2009.
+Author: Brainstorm, Inc.
+Author URI: http://brainstormrand.com/
+
+*/
+
+html {font-size:100.01%;margin : 0;padding : 0;}
+
+body {
+	margin : 0;
+	padding : 0;
+	font-family: Arial, sans-serif;
+	color: #b1af92;
+	background-color:#eeeac4;
+	text-align: center;
+}
+
+body #ieroot {font-family: Arial, sans-serif;}
+
+/* BASE STYLES */
+img {border: 0;}
+#hide, .hide {display:none;}
+
+a:link,a:visited, td a:link, td a:visited {color:#85b419;; text-decoration:none ;}
+a:focus, a:hover, a:active, td a:focus, td a:hover, td a:active {color: #000;text-decoration:underline;}
+
+hr {margin:20px 0;padding:0;color: #323232; background-color:#fff;clear:both;width:525px;}
+
+form {margin: 0;padding: 0;}
+
+form select, form input {
+		font-family:arial,sans-serif;
+		font-size:11px;
+		color:#323232;
+		border-top:solid 1px #9c9c9c;
+		border-right:solid 1px #cbcbcb;
+		border-bottom:solid 1px #aeaeae;
+		border-left:solid 1px #b9b9ba;
+}	
+
+
+blockquote {clear:both;}
+
+.skipLinks {display: none;}
+
+
+/* LAYOUT STYLES */
+
+/* centers page */
+#float-center {text-align: left; margin-left: auto; margin-right: auto; padding : 0;width: 909px;
+}
+
+#float-center-inner {
+		float:left;
+		width: 909px;
+		margin:0;
+		padding:0;	
+		background:transparent url(../images/bg_ds.png) repeat-y top left;	
+}
+
+#ds-push {
+		float:left;
+		width: 905px;
+		margin:0;
+		padding:0 0 0 4px; /* push for fade */
+		background:transparent url(../images/footer_ds2.gif) no-repeat bottom left;
+}
+
+
+
+
+/* header area */
+#head {
+	float:left;
+	margin:0 0 8px 0;
+	padding:0;
+	width:905px;
+}
+
+#head-top { /* contains utility nav and font-size controls */
+	float:left;
+	margin:0;
+	padding:0;
+	width:901px;
+	min-height:25px;
+	background-color:#413c34;
+}
+	#ieroot #head-top {
+		height:25px;
+	}
+
+#util-nav {
+	float:right;
+	margin:0;
+	padding:5px 0 0 0;
+	width:400px;
+	color:#6c6a52;
+	font-size:10px;
+	text-align:right;
+}
+		ul#top-nav {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			float:right;
+			}
+		ul#top-nav li {
+			margin:0;
+			padding:0 4px;
+			background-color:transparent;
+			list-style: none;
+			float:left;
+	}
+	
+		ul#top-nav li a:link, ul#top-nav li a:visited {
+				color:#afab89;
+				text-decoration:none;
+		}
+		
+		ul#top-nav li a:focus, ul#top-nav li a:hover, ul#top-nav li a:active {color: #6c6a52;text-decoration:underline;}
+
+#font-size-control {
+	float:right;
+	margin:0;
+	padding:0 3px 0 0;
+	width:40px;
+	text-align:right;
+	background:transparent url(../images/bg_font_changer.gif) no-repeat bottom right;
+	height:25px;
+}
+
+#font-size-control a {
+	font-size:13px;
+	color:#fff;
+}
+#font-size-control a.font-sm {
+	font-size:10px;
+	color:#6fbbf5;
+}
+
+#header {/* wraps head-mid and head-bottom */
+		float:left;
+		margin:0;
+		padding:0;
+		width:901px;
+		height:126px;
+		/* background:transparent url(../images/bg_header.png) no-repeat bottom left; *//* background fade effect removed */
+		position:relative;
+        z-index:11;
+		}
+		#ieroot #header {
+		float:none;
+		}
+
+#head-mid {/* contains logo and search box */
+		float:left;
+		margin:0;
+		padding:0;
+		width:901px;
+}
+
+#logo {
+		float:left;
+		margin:19px 0 0 31px;
+		padding:0;
+		width:300px;
+}
+	/* search form styles */
+#search-wrap {
+		float:right;
+		margin:0 49px 0 0;
+		padding:0;
+		background:transparent url(../images/bg_search.gif) no-repeat top left;
+		width:260px;
+		height:67px;
+}
+* html #search-wrap {
+    margin-right : 25px;
+}
+
+#search-wrap form {
+		margin:7px 0 0 24px;
+		padding:0;
+}
+
+#search-wrap form input {
+		border:0;
+}
+
+	#search-wrap input#Search {
+		margin:0;
+		padding:0;
+		height:16px;
+		width:188px;
+		font-family:arial,sans-serif;
+		font-size:12px;
+		color:#737765;
+		border:solid 0px #fff;
+		padding-top:0px;
+		background-color:transparent;
+}	
+
+#search-wrap input#search-go {
+		margin:4px 0 0 0; vertical-align:middle;
+		padding:0 0 0 11px;
+}
+
+#search-options {
+		float:left;
+		margin:7px 0 0 0;
+		padding:0;
+		width:180px;
+		font-size:12px;
+		font-weight:bold;
+		color:#737765;
+		text-transform:uppercase;
+		height:20px;
+}
+
+#search-options span {
+		color:#428baf;
+}
+
+#search-options input {
+		border:0;
+		margin:0 0 0 3px;
+		padding:0;vertical-align:middle;
+}
+
+#search-options img {
+		margin:0;
+		padding:0;vertical-align:middle;
+}
+
+/* Bible Search Window */
+#BibleSearchWindowOuter {
+	width:403px;
+	margin:0;
+	padding:0;
+	clear:both;
+	position:absolute;
+	top:0;
+	left:472px;
+	z-index : 10;
+}
+
+#BibleSearchWindow {
+	width:403px;
+    float : right;
+    display : none;
+}
+
+#bible-search-wrap {
+	margin:0;
+	padding:0;
+	width:403px;
+	/*background:#f2efde url(../images/bg_bible_search_fade.gif) repeat-y top left;*/
+}
+#bible-search-head {
+	margin:0 auto; /* 0; */
+	padding:5px 0 0px 0;/* 11px 0 5px 0;*/
+	width:364px; /*403px;*/
+	/*text-align:right;*/
+	/*background:transparent url(../images/bg_bible_search_top_tan.gif) no-repeat top left;*/
+}
+#bible-search-head img {
+	margin:0;
+	padding:0; /* 0 14px 0 0; */
+}
+
+#bible-search {
+	margin:0 auto 0px auto;
+	padding:0 0 25px 0;
+	width:364px;
+	background-color:#f2efde;
+}
+
+#bible-search #bible-search-form {
+	margin:5px 0 0 0px;
+	padding:0;
+	font-size:12px;
+	color:#656564;
+}
+
+#bible-search #bible-search-form form input {
+	margin:0;
+	padding:0;
+	color:#737765;
+	vertical-align:middle;
+}
+
+
+#bible-search #bible-search-form form input#biblesearchinput {
+	width:207px;
+	padding:7px 0 7px 5px;
+	font-family:arial,sans-serif;
+	font-size:24px;
+	color:#737765;
+}
+
+
+#bible-search #bible-search-form form input#biblesearch-search {/* search button */
+	width:99px;
+	height:41px;
+	
+}
+
+ul.radioList {
+	margin:5px 0 5px 26px;
+	padding:0;
+	font-size: 11px;
+	list-style: none;
+}  
+
+.radioList li {
+    padding: 4px 0 0;
+	list-style: none;
+}
+.radioList li input {
+    vertical-align: text-bottom;
+}
+.radioList ul {
+    margin-left: 0px;
+	padding-left: 25px;
+}
+
+#bible-search-foot {
+	margin:0 auto;
+	padding:0;
+	width:364px;
+	height:25px;
+	background:transparent url(../images/bible-search_foot.gif) no-repeat top left;
+}
+
+	/* end search form styles */	
+	
+	
+	
+	
+
+#head-bot {
+		float:left;
+		width:901px;
+		margin:0;
+		padding:0;
+}
+
+/* Main Navigation - for both core & interior pages */
+#main-nav-wrap {
+		float:left;
+		width:901px;
+		margin:8px 0 0 0;
+		padding:0;
+		}
+
+#main-nav {margin: 0 0 0 31px;padding:0;float:left;width:auto;color:#a4a181;}
+	#ieroot #main-nav {margin: 0 0 0 16px;}
+
+/* END  DHTML menus styles */
+
+
+
+/* ======== FOOTER styles ======== */
+#footer-wrap {
+	float:left;
+	margin:0;
+	padding:0;
+	width:909px;
+	height: 86px;
+	min-height: 86px;
+	font-size:10px;
+	color:#66665b;
+	clear:both;
+	background-color:transparent;
+}
+	#ieroot #footer-wrap {
+		height: 85px;
+	}
+	
+#footer-top {
+		float:left;
+		width:909px;
+		margin:0;
+		padding:0 0 8px 0;
+		background-color:transparent;
+}
+	#ieroot #footer-top {
+		padding:0;
+		}
+
+#footer-left {
+		float:left;
+		width:793px;
+		margin:40px 0 0 31px;
+		padding:0;
+}
+	#ieroot #footer-left {
+		margin:0 0 0 15px;
+		padding:50px 0 0 0;
+		width:762px;
+	}
+	
+#footer-left ul {margin:6px 0 0 0;padding: 0;list-style: none;float:left;}
+#footer-left ul li {
+		float:left;
+		margin:0;
+		padding:0 2px 0 0;
+		font-size: 10px;
+		background-color:transparent;
+		list-style: none;
+		
+}
+#footer-left img {float:left;margin:0 15px 0 0;}
+	
+#footer-right {
+		float:left;
+		width:75px;
+		margin:0;
+		padding:0;
+}
+	#ieroot #footer-right {
+		margin:0;
+}
+#footer-right img {margin:0;padding:0;}
+
+#footer-top a:link, #footer-top a:visited {color:#656564;text-decoration:none;}
+#footer-top a:focus, #footer-top a:hover, #footer-top a:active {text-decoration:underline;color:#656564;}
+
+#footer-bottom {
+		float:left;
+		width:909px;
+		margin:0;
+		padding:0 0 8px 0;
+		background-color:transparent;
+}
+	#ieroot #footer-top {
+		padding:0 0 0px 0;
+		}

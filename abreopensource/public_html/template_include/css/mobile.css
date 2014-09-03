@@ -1,0 +1,77 @@
+#main_view{
+  display:none;
+}
+#image_reel{
+  display:none;
+}
+#navigation{
+  display:none;
+}
+#network_band_wrapper{
+  display:none;
+}
+.image-advertisement{
+ display:none;
+}
+#contentwrapper {
+    width: 475px;
+}
+#maincontent{
+  width: 475px;
+}
+#maincontent.search_results{
+  width: 475px;
+}
+ul.filters, li {
+margin:0;
+padding:0;
+}
+ul.filters a{
+    background-color: #EFEFEF;
+    border: 1px solid #CFCFCF;
+    border-radius: 6px;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 2px;
+    padding: 2px;
+line-height: 1.2;
+    width: 100%;
+}
+ul#filters li.directory {
+    width: 44%;
+}
+
+ul#filters li {
+    margin: 1px 0 1px 16px;
+    overflow: visible;
+    position: inherit;
+}
+#menu_sidebar{
+  display: inline;
+}
+#sidebar{
+  display: none;
+}
+#contentwrapper.home {
+background: #ECF1FC;
+}
+#all_tabs.results-left a#org.active, #all_tabs.results-left a#opps.active, #all_tabs.results-left a#guidestar.active, #all_tabs.results-left a#organization.active, #all_tabs.results-left a#opportunity.active, #all_tabs.results-left a#organizations.active, #all_tabs.results-left a#opportunities.active, #all_tabs.results-left a#local.active, #all_tabs.results-left a#stm.active, #all_tabs.results-left a#virtual.active, #all_tabs.results-left a#job.active, #all_tabs.results-left a#resume.active, #all_tabs.results-left a#fdn.active, #all_tabs.results-left a#Foundation.active, #all_tabs.results-left a#cv.active, #all_tabs.results-left a#CityVision.active, #all_tabs.results-left a#org, #all_tabs.results-left a#opps, #all_tabs.results-left a#guidestar, #all_tabs.results-left a#organization, #all_tabs.results-left a#opportunity, #all_tabs.results-left a#organizations, #all_tabs.results-left a#opportunities, #all_tabs.results-left a#local, #all_tabs.results-left a#stm, #all_tabs.results-left a#virtual, #all_tabs.results-left a#job, #all_tabs.results-left a#resume, #all_tabs.results-left a#fdn, #all_tabs.results-left a#Foundation, #all_tabs.results-left a#cv, #all_tabs.results-left a#CityVision {
+    font-size: 14px;
+    padding: 2px 5px;
+}
+
+#all_tabs.results-left div {
+    float: left;
+    padding-bottom: 3px;
+}
+
+#page_base {
+    width: 340px;
+}
+#oauth_connectors{
+  margin-top: 15px;
+}
+#oauth_connectors a{
+padding: 2px;
+}

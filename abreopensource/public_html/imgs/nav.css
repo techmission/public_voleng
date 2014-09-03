@@ -1,0 +1,208 @@
+/* //// http://users.tpg.com.au/j_birch/plugins/superfish/ \\\\   */
+
+/*** ESSENTIAL STYLES ***/
+.sf-menu {
+	float:			left;
+	font-size: 		12px;
+	font-family: 	Arial, sans-serif;
+	background:		transparent;/* subnav bg in off state */
+	height:			28px;
+	padding-bottom:	28px;
+	position:		relative;
+    z-index :       8;
+}
+
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			10em; /* left offset of submenus need to match (see below) */
+}
+
+.sf-menu ul li {
+	width:			100%;
+}
+
+.sf-menu li {
+	float:			left;
+	background:		transparent;/* nav bg */
+	position:		static;
+}
+
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+
+.sf-menu li:hover, .sf-menu li.sfHover,
+.sf-menu li a:focus, .sf-menu li a:hover, .sf-menu li a:active {
+	outline:		0;
+	color:			#413c34;
+	text-decoration:none;
+}
+.sf-menu li:hover a, .sf-menu li.sfHover a:visited { /* visited pseudo selector so IE6 applies text colour*/
+	color:#413c34;
+}
+
+.sf-menu li:hover li a, .sf-menu li.sfHover li a:visited { /* visited pseudo selector so IE6 applies text colour*/
+	color:#a4a181;
+}
+
+.sf-menu a {
+	display:		block;
+	position:		relative;
+	border:		none;
+}
+.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:#a4a181;
+	border:			none;
+}
+
+.sf-menu li ul {
+	width:			740px; /*IE6 soils itself without this*/
+}
+
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0;
+	top:			28px; /* match top ul list item height */
+	z-index:		9;
+}
+
+.sf-menu li a { /* main nav element control */
+	margin:		0;
+	padding: 		6px 0 4px 0;
+	text-decoration:none;
+}
+
+.sf-menu li.nav-spacer {
+	margin:		0;
+	padding: 	6px 0em 4px 0;
+	width:		25px;
+	background:	transparent url(../images/main-nav_pipe.gif) no-repeat 12px 3px;
+}
+
+
+.sf-menu li.nav-on  {
+	outline:		0;
+	color:			#413c34 !important;
+	border-bottom: solid 3px #da2032 !important;
+	font-size:18px;
+	line-height:7px;
+	margin-top:2px;
+	padding-bottom:6px;
+
+}
+.sf-menu li.nav-on a, .sf-menu li.nav-on  a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:#413c34;
+}
+
+.sf-menu li.nav-on:hover {
+	border-bottom: solid 0px #da2032;
+}
+
+.sf-menu li.nav-on li  {
+	line-height:15px;
+}
+
+.sf-menu li li {
+	font-size: 		12px !important;
+	background:		transparent;/* subnav bg in on state */
+	position:		relative;
+	width:			auto;
+	float:			left;
+}
+
+.sf-menu li li a {/* sub nav element control */
+	padding: 		5px 1em 3px 0;
+	text-decoration:none;
+	color:#a4a181 !important;/* holds the color on mouseout for IE */
+}
+
+.sf-menu li li:hover , .sf-menu li li.sfHover,.sf-menu li li.current,
+.sf-menu li li a:focus, .sf-menu li li a:hover, .sf-menu li li a:active {
+	outline:		0;
+	color:			#004b85 !important; /* sets subnav link rollover color */
+	font-size: 		12px;
+	
+}
+
+.sf-menu li.nav-on li.current a:link, .sf-menu li.nav-on li.current a:visited, .sf-menu li.nav-on li.current a:hover, .sf-menu li.nav-on li.current a:active {
+	outline:		0;
+	color:			#004b85 !important; /* sets subnav link rollover color */
+	font-size: 		12px;
+	
+}
+
+/* push subnavs right */
+.sf-menu li ul#subnav-get {
+	width:720px;
+	margin-left:50px;
+}
+.sf-menu li ul#subnav-give {
+	width:660px;
+	margin-left:160px;
+}
+.sf-menu li ul#subnav-about {
+	width:530px;
+	margin-left:280px;
+}
+
+.sf-menu li:hover,
+.sf-menu li.sfHover,
+.sf-menu li.current, .sf-menu li li.current,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+	background-color: transparent; /*main nav bg color */
+}
+
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+	border-bottom: solid 3px #d5d6cc;
+}
+
+.sf-menu li.nav-spacer:hover, 
+.sf-menu ul li:hover, .sf-menu ul li.sfHover,
+ul.sf-menu ul li:hover li,
+ul.sf-menu ul li.sfHover li,
+.sf-menu ul a:focus, .sf-menu ul a:hover, .sf-menu ul a:active {
+	background-color: transparent;
+	border-bottom: solid 0px #da2032;
+}
+
+ul.sf-menu .current ul,
+ul.sf-menu ul li:hover ul,
+ul.sf-menu ul li.sfHover ul {
+	left:			0;
+	top:			28px; /* match top ul list item height */
+}
+
+
+
+/**
+* Fix Safari alignment issue.
+* The issue was the .nav-on link was too tall, so the red border wasn't aligning with hover red borders.
+* Assigned heights and paddings to elements. Removed padding from li, as it was causing more problems w/ safari
+*   (i suspect because the li wasn't display:block, so padding has quirky effects on other types of display values)
+* 
+* The property changes break IE 6 very badly, so these rules are hidden using the child selectors.
+* Since it's using child selectors, the subnav elements aren't affected.
+*/
+
+.sf-menu>li>a {
+    height : 15px;
+}
+
+.sf-menu>li.nav-on {
+    height : 23px;
+    padding-bottom : 0 !important;
+}
+
+.sf-menu>li.nav-on>a {
+    line-height : 40%;
+    height : 13px;
+    padding-bottom : 6px !important;
+}

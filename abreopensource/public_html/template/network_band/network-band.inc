@@ -1,0 +1,21 @@
+<link href="/themes/universal_assets/network_band/network-band.css" rel="stylesheet" type="text/css" >
+<script type="text/javascript" src="/themes/universal_assets/network_band/network-band.js"></script>
+
+<div id="network_band_wrapper">
+	<ul id="network_band">
+	<li id="nb_urbanministry"><a target="_blank" href="http://www.urbanministry.org/">UrbanMinistry.org</a></li>
+	<li id="nb_chrisvol"><a target="_blank" href="http://www.christianvolunteering.org/">ChristianVolunteering.org</a></li>
+	<li id="nb_cityvision"><a target="_blank" href="http://www.cityvision.edu/">CityVision College</a></li>
+	<li id="nb_techmission"><a target="_blank" href="http://www.techmission.org/">TechMission</a></li>
+	<li id ="nb_chrisgrants"><a target="_blank"href="http://www.christiangrantsdirectory.org/">Christian Grants</a></li>
+	<li id="nb_chrisjobs"><a target="_blank" href="http://www.urbanchristianjobs.org/">Urban Christian Jobs</a></li>
+	<li id="nb_safefamilies"><a target="_blank" href="http://www.safefamilies.org/">SafeFamilies</a></li>
+	<li id="more"><a href="javascript:toggleStickyMenu('more-menu');">More</a>
+		<ul id="more-menu" style="display: none;">
+		<li id="nb_blazinggrace"><a target="_blank" href="http://www.blazinggrace.org/">Blazing Grace</a></li>
+		<li><a target="_blank" href="http://www.christianfreeware.org/">ChristianFreeware</a></li>
+		</ul>
+	
+	</li>
+	</ul>
+</div>

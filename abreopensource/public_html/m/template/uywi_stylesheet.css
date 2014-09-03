@@ -1,0 +1,482 @@
+
+
+body { 
+background: #000 url(http://uywi.org/content/wp-content/themes/UYWI/images/bkg.jpg) no-repeat scroll center top;
+font-family:"Trebuchet MS",Arial,Helvetica,Sans-serif; 
+	font-size: 12px; 
+	color:#000000;
+	font-weight: normal; 
+	text-align:left; 
+	//text-align:center; 
+	margin: 0;
+	padding: 0 
+}
+#contentwrapper.homepage {float:left;}
+
+p, h1, h2, h3, h4, h5, h6 { 
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+	padding: 0;
+}
+
+img {
+	border: none;
+}
+
+a, a:link, a:visited  {
+	color: #B64A26;
+	text-decoration: none;
+	font-weight:bold;
+}
+
+a:hover  {
+	text-decoration: underline;
+}
+
+.clear {
+	clear: both;
+}
+
+.intsplash {
+	padding: 15px; background:#7693DC url(http://www.christianvolunteering.org/imgs/int_splash_patt.gif) repeat-x
+} 
+
+h1 {
+	font-size: 16px;
+	font-weight: bold
+}
+
+p  {
+	font-size: 12px;
+	font-weight: normal;
+	margin: 1em 0
+}
+
+h1 {
+	color: #000000;
+	font-size: 20px;
+}
+
+h2 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+}
+
+h3 {
+	color: #4D4D4D;
+	margin-top: 10px;
+	margin-bottom: -15px;
+	text-transform:none;
+	font-size: 12px;
+}
+
+.criticaltext {
+	color: #F37C16;
+}
+
+
+#wrapper {
+	text-align: center;
+	width: 950px;
+	margin: 0 auto;
+}
+
+#contentwrapper {
+	text-align:left;
+	background-color:#FFFFFF;
+	margin-top:	20px;
+	/* border: solid 10px #878787; */
+}
+
+#contentwrapper.homepage { 
+background:url("http://uywi.org/content/wp-content/themes/uywi/images/page.jpg") no-repeat scroll center top #DBDADA;
+float:left;
+margin:-10px 0 0;
+padding-top:100px;
+width:1000px; 
+}
+
+
+
+#maincontent {
+	float: left;
+	padding-bottom: 30px;
+	clear: both;
+	background:#FFFFFF;
+	font-size: 12px;
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+	width:762px;
+}
+#maincontent.sidebarless {width:950px;}
+
+#maincontent table {
+	font-size: 12px;
+	color: #000000;
+}
+
+#pagebanner {
+	height: 56px;
+	background: url(/imgs/int_page_banner.gif) repeat-x;
+	border-right: solid 1px #FFFFFF;
+}
+
+#pagebanner span {
+	background:url(/imgs/int_page_banner.gif) repeat-x;
+	padding: 5px 0px 0px 23px;
+	font-weight: bold;
+	font-size: 22px;
+	color: #4D4D4D;
+}
+
+#breadcrumbs {
+	text-align: left;
+	clear: both;
+	background-color: #4D4D4D;
+	color: #FFF;
+	padding: 2px 0px 2px 23px;
+	font-size: 11px;
+}
+
+#breadcrumbs a {
+	color: #fff;
+	font-weight: bold;
+	text-decoration:none;
+}
+
+#breadcrumbs a:hover {
+	text-decoration: underline;
+}
+
+#body, #bodysplash {
+	clear: both;
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+}
+
+#body {
+	padding: 0px 26px 0px 26px;
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+}
+
+#bodysplash_tb {
+	border-top: solid 1px #FFFFFF; 
+	/* border-bottom: solid 1px #000000; */
+	color: #FFFFFF;
+	font-size: 14px;
+}
+
+.bodysplash_content {
+	padding: 15px; 
+	background:#999999  url(/imgs/uywi/int_splash_patt.gif)  repeat-x;
+	border-right: solid 1px #FFFFFF;
+}
+
+#bodysplash_tb h1 {
+	color: #000;
+}
+
+#bodysplash_tb p {
+	color: #000;
+	font-size: 14px;
+}
+
+#bodysplash_tb a {
+	color: #FFFFFF;
+}
+
+#bodysplash_tb a:hover {
+	color: #ECF1FC;
+}
+
+#sidebar {
+	float:left;
+	background: #FFF;
+	width: 150px;
+	font-size: 11px;
+
+}
+
+#sidebar_content h5 {
+	color: #4D4D4D;
+	margin: 7px 0px 0px 0px;
+	font-size: 12px;
+}
+
+div#sidebar_content p {
+	padding-bottom:: 10px;
+	margin-top: 5px;
+	}
+	
+div#sidebar_content ul {
+	margin-left: 0px;
+	padding-left: 0px;
+	padding-top: 5px;
+	margin-top: 0px;
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	}
+
+div#sidebar_content li  { 
+	list-style-type: square;
+	list-style-position: outside;
+	margin-left: 16px;
+	padding-left: 0px;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding-left: 0px;
+	line-height: 14px;
+}
+
+/* Sidebar Modifications by anya, june 2009 */
+div#sidebar_content ul.navbullet li { list-style:none; padding-bottom: 3px; margin-left: 0px; }
+#sidebar ul.navbullet a:hover{color:#B64A26;}
+#sidebar_content h5 a{color:#000;}
+#sidebar_content h5 {color:#333; padding-bottom:5px; text-transform:uppercase; font-size:11px;}
+#sidebar_content h5 a:hover {color:#F00;}
+hr.sidebar_hr {}
+
+.cleardiv {
+	clear: both;
+}
+
+.error {
+	color:#FF0000;
+}
+
+
+
+#creed {
+	display: none;
+}
+
+input.textinputwhite {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	border: 1px solid #838383;
+	background-color: #FFFFFF;
+	text-align: left;
+}
+
+/* 2006-07-14 div to use around displaying text area input */
+#textareaformat {
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+	font-size: 12px;
+}
+
+/* new 2006-07-17 (same font for textarea input) */
+input, textarea, button
+{
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+	font-size: 12px;
+
+}
+input.volunteer {
+background-color:#B64A26;
+color:#FFFFFF;
+font-weight:bold;
+font-size:13px;
+}
+
+/* ===========================STYLES FOR /login.jsp page and sidebar ================================================================*/
+.volbox_wrapper{ background-color:#FBC76E; padding:5px; margin-right:15px; margin-top: 20px; float:left;}
+.volbox{ 
+font-size:14px; 
+color:#000; 
+background-color:#FFEEB6; 
+padding: 10px; 
+border: solid 2px #FFF; 
+height: 200px;
+width:250px;
+}
+.volbox h2 a{ 
+color: #DF9C29; 
+font-size:15px; 
+text-transform:uppercase; 
+text-decoration:none;
+}
+.volbox h2 a:hover, .npbox h2 a:hover{ text-decoration:underline;}
+
+.npbox_wrapper{ background-color:#C3C87A; padding:5px; margin-top: 20px; float:right;}
+.npbox{
+font-size:14px; 
+color: #000; 
+background-color:#D9DF7C;
+padding: 10px;
+border: solid 2px #FFF;
+height: 200px;
+width:250px;
+ }
+.volbox a, .npbox a { color:#666633; text-decoration: none;}
+.volbox a:hover, .npbox a:hover { color:#35568F; text-decoration:underline;}
+.volbox li, .npbox li { line-height: 1.5em;}
+.npbox h2 a{ 
+color:#8C8F59;
+ font-size:15px; 
+ text-transform:uppercase; 
+ text-decoration:none;
+ }
+#page_base{
+border: 2px solid #CCC;
+padding: 10px; 
+background-color:#FFF; 
+float:left; 
+text-align:left; 
+width:620px; 
+margin-left: 50px;
+}
+
+<!-- =================================END of STYLES FOR /login.jsp page and sidebar===========================================-->
+
+#logo {
+padding:20px 10px 10px;
+float:left;
+margin-right:15px;
+}
+
+#header #utilities {
+float:right;
+padding: 10px;
+text-align:right;
+font-size:12px;
+}
+#utilities a{ color:#FFFFFF; font-weight:normal;}
+#header ul li {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+}
+
+#header {
+font-size:11px;
+height:100px;
+margin:0;
+//margin-top: 10px;
+padding:0;
+text-align:left;
+}
+
+#simplemenu {
+background-color:#272727;
+float:left;
+padding:10px 0px 10px;
+width:100%;
+z-index:5;
+text-align:left;
+}
+ul#simplemenu, ul#utilities{margin:0;}
+#simplemenu li a:hover {
+text-decoration:underline;
+}
+#simplemenu li a {}
+#simplemenu > li > a {
+color:#3098BF;
+font-size:16px;
+font-weight:normal;
+padding:10px 9px;
+text-decoration:none;
+}
+#footer{ background-color:#FFF; padding:10px; text-align:center; color:#4D4D4D;}
+#footer a{ font-weight:normal; color:#4D4D4D;}
+#uywi_footer {
+width: 100%;
+background-color:#FFF;
+color:#4D4D4D;
+float:left;
+font-size:12px;
+text-align:left;
+margin:0;
+padding:0;
+//padding-top: 5px;
+}
+#uywi_footer .copy{color:#999999;}
+#uywi_footer .copy a{color:#999999; text-decoration:underline;}
+ul#uywi li {
+float:right;
+width:290px;
+}
+ul#uywi * {
+border-width:0;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0px;
+padding:0;
+}
+ul#uywi h4, ul#uywi legend {
+color:#FFFFFF;
+font-size:14pt;
+font-weight:normal;
+}
+ul#uywi #quicklinks_ul li {
+float:left;
+padding:0;
+width:50%;
+}
+#uywi_footer a {
+font-weight:normal;
+text-decoration:none;
+}
+form {margin:0;}
+/* -------------------- ORANGE OVERWRITES FOR INTERNAL PAGES -----------------------*/
+#uywi .manageorg_container.wide {width:620px; border:3px solid #B64926; }
+
+
+#uywi  .add-new-buttn {
+background-color:#B64926;
+border:1px solid #5F2612;
+}
+#uywi a.add-new-buttn {
+color:#FFF;
+}
+#uywi a.add-new-buttn:hover {
+background-color:#5F2612;
+color:#FFFFFF;
+}
+#uywi .profile_box, #uywi .org_box, #uywi .find_box, #uywi .fb_box {border: 3px solid #B64A26;}
+#uywi .profile_box a, #uywi.org_box a, #uywi ul.columns li a { color:#333333;}
+#uywi #vol_stories_box, #uywi #partner_box {border:1px solid #B64A26; }
+#uywi #vol_stories_header, #uywi #partner_header {background-color:#B64A26;}
+#uywi #vol_stories_header li {background-color:#5F2612;}
+#uywi #vol_stories_header .active_tab { background-color:#FFFFFF;}
+#uywi #account_box{border:1px solid #DFAA1B;}
+#uywi #account_header { background-color:#DFAA1B;}
+#uywi #sidebar_box h4 {color:#000;}
+#oppsearch {
+background-color:#DDDDDD;
+border-bottom:1px solid #003366;
+border-top:1px solid #003366;
+float:left;
+margin:0;
+text-align:left;
+width:950px;
+#line-height:32px;
+}
+
+#oppsearch a {
+font-size:11px;
+font-weight:normal;
+color:#000000;
+}
+#oppsearch #label {
+color:#444444;
+font-weight:bold;
+margin-left:25px;
+margin-right:5px;
+font-size:14px;
+}
+#oppsearch span#title{
+background-color:#FFFFFF;
+border-right:1px solid #003366;
+color:#003366;
+float:left;
+font-size:14px;
+font-weight:bold;
+line-height:30px;
+padding-left:15px;
+padding-right:15px;
+}
+#oppsearch table {height:auto;}
+/*------------------------------------------end of orange overwrites---------------------*/

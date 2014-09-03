@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Server: Apache/2.2.22 (Unix) mod_ssl/2.2.22 OpenSSL/0.9.8e-fips-rhel5 mod_jk/1.2.28 PHP/5.3.10
+X-Powered-By: PHP/5.3.10
+Content-Type: application/json
+Content-Length: 8450
+X-Request-URL: /search/solr.php?q=*:*&rows=5&wt=json&apikey=apikey
+Date: Mon, 02 Apr 2012 16:24:00 GMT
+X-Varnish: 1722949806
+Age: 0
+Via: 1.1 varnish
+Connection: keep-alive
+X-Cache: MISS
+

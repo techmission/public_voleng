@@ -1,0 +1,50 @@
+User-agent: *
+
+Crawl-delay: 30
+
+Disallow: /org/
+Disallow: /org
+Disallow: /volunteer/
+Disallow: /cache
+Disallow: /christianvolunteering.jsp
+Disallow: /testsession
+Disallow: /listings
+Disallow: /members
+Disallow: /content
+Disallow: /freelinking
+Disallow: /jsprsscron
+Disallow: /jsptest
+Disallow: /mysite
+Disallow: /modules
+Disallow: /old
+Disallow: /oppsrch.do
+Disallow: /register.do
+Disallow: /org.do
+Disallow: /resources
+Disallow: /wiki
+Disallow: /audio
+Disallow: /urbanministry
+Disallow: /voleng2
+Disallow: /googleresults.jsp
+Disallow: /&usg=
+Disallow: /advancedsearch.jsp
+Disallow: /individualregistration.jsp
+Disallow: /biblical.jsp
+Disallow: /shorttermmissions.jsp
+Disallow: /contact.jsp
+Disallow: /contactus.jsp
+Disallow: /search.jsp
+Disallow: /virtualvolunteer.jsp
+Disallow: /volunteer/feed/
+Disallow: /volunteer/search/
+Disallow: /org/search/
+Disallow: /register.do?method=showIndEditProfile1.
+Disallow: /*.do$
+Disallow: /s/
+
+User-agent: discobot
+Disallow: / 
+
+User-agent: Spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)
+Disallow: /
+

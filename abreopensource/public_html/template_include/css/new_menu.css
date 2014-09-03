@@ -1,0 +1,392 @@
+/* overall font sizes and styles */	
+body {
+	font-family: Arial,Helvetica,sans-serif;/*Verdana, Arial, sans-serif;*/
+	/* font-size: 0.8em; */
+    }
+
+/* wrapper div (needed to relatively position the navigation) */		
+#primary-nav-wrap {
+		margin: 0;
+		padding: 0;
+		height: 48px; /*68px;*/
+		width: 950px;
+		overflow:hidden;
+	}
+
+/* position and size for navigation menu */
+	#primary-nav {
+		position: relative;
+		margin:0;
+		height:48px; /*68px;*/
+		width: 950px;
+	}
+
+/* remove padding/margin on the subnav (needed to fix the broken IE box model) */
+#primary-nav li ul, #primary-nav li ul{
+		margin: 0;
+		padding: 0;
+	}
+ul#primary-nav { padding-left: 5px;}
+/* no links are underlined */
+	#primary-nav a {
+		text-decoration: none;
+		font-size:12px;
+	}
+	
+/* float the main list items */
+	#primary-nav li { 
+		margin: -1px 0 0;
+		float: left;
+		display: block;
+		padding-right: 8px;
+	}
+
+/* hide secondary-nav by default */
+	#primary-nav li ul { display:none;}
+
+/*put secondary-nav below*/
+	#primary-nav li.level-1 ul  { 
+		position: absolute;
+		top: 26px;
+		left: 0;
+		background: #83A2F4;
+		height: 20px;
+		width: 950px;
+	}
+
+/* background for active secondary-nav */
+	.nav1-browse-content #primary-nav #item-browse-content ul {
+		background: #83A2F4;
+	}
+
+	.nav1-volunteers #primary-nav #item-volunteers ul {
+		background: #83A2F4;
+	}
+
+	.nav1-jobs #primary-nav #item-volunteers ul {
+		background: #83A2F4;
+	}
+	
+	.nav1-organizations #primary-nav #item-organizations ul {
+		background: #83A2F4;
+	}
+	
+	.nav1-churches #primary-nav #item-churches ul {
+		background: #83A2F4;
+	}
+	
+	.nav1-about #primary-nav #item-about ul {
+		background: #83A2F4;
+	}
+	
+	.nav1-my-account #primary-nav #item-my-account ul {
+		background: #83A2F4; 
+	}
+	/* secondary-nav link formatting */
+	#primary-nav li a {
+		color: #224d6f;
+		font-weight: bold;
+		/* font-size: 0.9em; */
+		display: block;
+		width: 110px; /* was 120 */
+		padding: 0;
+	}
+	#primary-nav li a:hover{ color: #FFF;}
+
+	/* active primary nav link text color */
+	.nav1-browse-content #primary-nav #item-browse-content a span{
+		color: #fff;
+	}
+	
+	.nav1-volunteers #primary-nav #item-volunteers a span{
+		color: #fff;
+	}
+	
+	.nav1-jobs #primary-nav #item-jobs a span{
+		color: #fff;
+	}
+	
+	.nav1-organizations #primary-nav #item-organizations a span {
+		color: #fff;
+	}
+	
+	.nav1-churches #primary-nav #item-churches a span {
+		color: #fff;
+	}
+	
+	.nav1-about #primary-nav #item-about a span {
+		color: #fff;		
+	}
+	
+	.nav1-my-account #primary-nav #item-my-account a span {
+		color: #fff;
+	}
+	
+	ul#secondary-nav-1 li.level-2, ul#secondary-nav-2 li.level-2, ul#secondary-nav-3 li.level-2, ul#secondary-nav-4 li.level-2, ul#secondary-nav-5 li.level-2, ul#secondary-nav-6 li.level-2 {
+		border-right: 1px solid #FFF;
+		padding:3px 18px 2px;
+	}
+ul#secondary-nav-2 li#item-nonprofit-college-courses.level-2
+{border-right: none;}
+		
+	ul#secondary-nav-1 li.level-3, ul#secondary-nav-2 li.level-3, ul#secondary-nav-3 li.level-3, ul#secondary-nav-4 li.level-3, ul#secondary-nav-3 li.level-3, ul#secondary-nav-6 li.level-3 {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 3px;
+	}
+	
+	.nav1-browse-content #primary-nav #item-volunteers li.level-3 a, .nav1-about #primary-nav li.level-3 a { color:#333; }
+	.nav1-browse-content #primary-nav #item-volunteers li.level-3 a:hover, .nav1-about #primary-nav li.level-3 a:hover{ text-decoration:underline; color: #00F;}
+	.nav1-browse-content #primary-nav #item-volunteers li.level-3 a:active, .nav1-about #primary-nav li.level-3 a:active {text-decoration: underline; color: #4D4D4D; font-weight: bold;}
+	
+	.nav1-volunteers #primary-nav #item-volunteers li.level-3 a, .nav1-about #primary-nav li.level-3 a { color:#333; }
+	.nav1-volunteers #primary-nav #item-volunteers li.level-3 a:hover, .nav1-about #primary-nav li.level-3 a:hover{ text-decoration:underline; color: #00F;}
+	.nav1-volunteers #primary-nav #item-volunteers li.level-3 a:active, .nav1-about #primary-nav li.level-3 a:active {text-decoration: underline; color: #4D4D4D; font-weight: bold;}
+	
+	.nav1-jobs #primary-nav #item-jobs li.level-3 a, .nav1-about #primary-nav li.level-3 a { color:#333; }
+	.nav1-jobs #primary-nav #item-jobs li.level-3 a:hover, .nav1-about #primary-nav li.level-3 a:hover{ text-decoration:underline; color: #00F;}
+	.nav1-jobs #primary-nav #item-jobs li.level-3 a:active, .nav1-about #primary-nav li.level-3 a:active {text-decoration: underline; color: #4D4D4D; font-weight: bold;}
+	
+	
+	/* secondary-nav link formatting */
+	#primary-nav li.level-1 ul a {
+		border: 0;
+		float: left; /*ie doesn't inherit the float*/
+		color: #00F;
+		width: auto;
+	}
+
+	/* show active secondary-nav by default */
+	.nav1-browse-content #primary-nav #item-browse-content ul {
+		display: block;
+	}
+	
+	.nav1-volunteers #primary-nav #item-volunteers ul {
+		display: block;
+	}
+	
+	.nav1-jobs #primary-nav #item-jobs ul {
+		display: block;
+	}
+	
+	.nav1-organizations #primary-nav #item-organizations ul {
+		display: block;
+	}
+	
+	.nav1-churches #primary-nav #item-churches ul {
+		display: block;
+	}
+	
+	.nav1-about #primary-nav #item-about ul {
+		display: block;
+	}
+	
+	.nav1-my-account #primary-nav #item-my-account ul {
+		display: block;
+	}
+	
+	/* change primary link color on hover */
+	 #primary-nav li.level-1 a:active { 
+		color: #FFF; 
+	}
+	#primary-nav li.level-2 a:hover {
+		text-decoration:underline;
+	}
+	#primary-nav li.level-2 a:active {
+		text-decoration:underline;
+	}
+	
+	/* text positioning in top tabs */
+	#primary-nav li span {
+		display: block;
+		text-align: center;
+		padding-top: 9px;
+	}
+	/* background and alignment for top tabs */
+	a.level-1 {
+		display: block;
+		position: relative;
+		height: 26px;
+		background: url(/imgs/bk-menu.gif) no-repeat; /*contains all hover states*/
+	}
+
+	
+/* Makes menu shorter when there's no third level. Written for every body id
+.nav1-organizations #primary-nav-wrap,
+.nav1-churches #primary-nav-wrap,
+.nav1-my-account #primary-nav-wrap,
+.nav1-about.nav2-contact-us #primary-nav-wrap
+{ height:48px;} */
+
+.nav1-browse-content #primary-nav-wrap,
+.nav1-volunteers #primary-nav-wrap,
+.nav1-jobs #primary-nav-wrap,
+.nav1-organizations #primary-nav-wrap,
+.nav1-churches #primary-nav-wrap,
+.nav1-my-city #primary-nav-wrap,
+.nav1-about #primary-nav-wrap,
+.nav1-my-account #primary-nav-wrap
+{ 
+background: url(/imgs/navbar_bg.gif) repeat-x;
+height: 48px; /*68px;*/
+}
+ 
+
+li#item-my-calling.level-1 a span {
+background:url(/imgs/fb_tiny_icon.gif) no-repeat scroll left center transparent;
+//background:url(/imgs/fb_tiny_icon.gif) no-repeat scroll left bottom transparent;
+height:25px;
+//height:24px;
+width:125px;
+//width:110px;
+} 
+ 
+/* --- Tab Images --- */
+
+/* first, put the initial states in place*/
+
+li.level-1 a {
+	background-position: 0 0;
+}
+#item-my-account.level-1 a {background-position: 0 -108px;} /*my account shows the bottom part of the sprite- green*/
+
+/*active area - based on a body class */
+ 
+  .nav1-browse-content #item-browse-content a {
+ 	background-position: 0 -37px;
+ }
+
+ .nav1-volunteers #item-volunteers a {
+ 	background-position: 0 -37px;
+ }
+
+ .nav1-jobs #item-jobs a {
+ 	background-position: 0 -37px;
+ }
+
+ .nav1-organizations #item-organizations a {
+ 	background-position: 0 -37px;
+ }
+
+ .nav1-churches #item-churches a {
+ 	background-position: 0 -37px;
+ }
+ 
+  .nav1-about #item-about a {
+ 	background-position: 0 -37px;
+ }
+ 
+  .nav1-my-account #item-my-account a {
+ 	background-position: 0 -37px;
+ }
+
+
+/* hover states (need to be explicit b/c of precedence rules) */
+
+#item-browse-content a:hover, #item-browse-content:hover a, #item-browse-content.over a {
+	background-position: 0 -73px;
+}
+
+#item-volunteers a:hover, #item-volunteers:hover a, #item-volunteers.over a {
+	background-position: 0 -73px;
+}
+
+#item-organizations a:hover, #item-organizations:hover a, #item-organizations.over a {
+	background-position: 0 -73px;
+}
+
+#item-churches a:hover, #item-churches:hover a, #item-churches.over a {
+	background-position: 0 -73px;
+}
+#item-my-calling a:hover, #iitem-my-calling:hover a, #item-my-calling.over a {
+	background-position: 0 -73px;
+}
+#item-my-city a:hover, #iitem-my-city:hover a, #item-my-city.over a {
+	background-position: 0 -73px;
+}
+
+#item-internships a:hover, #item-internships:hover a, #item-internships.over a {
+	background-position: 0 -73px;
+}
+
+#item-about a:hover, #item-about:hover a, #item-about.over a {
+	background-position: 0 -73px;
+}
+
+#item-my-account a:hover, #item-my-account:hover a, #item-my-account.over a {
+	background-position: 0 -73px;
+}
+
+/* secondary nav text formatting (needs to be at bottom b/c of precedence rules) */
+
+#primary-nav li.level-1 ul a {
+	display: block;
+	color: #fff;
+}
+
+/* hide third level navigation - only needed for item-volunteers and item-about*/
+
+#primary-nav #item-browse-content li.level-2 ul {display: none; top: 20px; background-color: #DEE0DD; border-left: none;}
+
+#primary-nav #item-browse-content li.level-3 { background-color: #DEE0DD;} 
+
+#primary-nav #item-volunteers li.level-2 ul {display: none; top: 20px; background-color: #DEE0DD; border-left: none;}
+
+#primary-nav #item-volunteers li.level-3 { background-color: #DEE0DD;} 
+
+#primary-nav #item-about li.level-2 ul {display: none; top: 20px; background-color: #DEE0DD; border-left: none;}
+
+/* border-left: none; --there's a border that is coming from navigation.css, remove later*/
+
+#primary-nav li.level-3  a { font-weight:normal; color:#666;} 
+#primary-nav ul#tertiary-nav-1, #primary-nav ul#tertiary-nav-2, #primary-nav ul#tertiary-nav-3, #primary-nav ul#tertiary-nav-4, #primary-nav ul#tertiary-nav-5{
+padding-left: 20px;} 
+
+/* Highlight on a second level when active - for CV menu*/
+.nav2-find-opportunities #primary-nav #item-find-opportunities,
+.nav2-church-portal #primary-nav #item-church-portal, 
+.nav2-post-volunteer-opportunities #primary-nav #item-post-volunteer-opportunities,
+.nav2-programs #primary-nav #item-programs,
+.nav2-contact-us #primary-nav #item-contact-us,
+.nav2-create-account #primary-nav #item-create-account,
+.nav2-login #primary-nav #item-login,
+.nav2-manage-account #primary-nav #item-manage-account,
+.nav2-recruit-volunteers #primary-nav #item-recruit-volunteers,
+.nav2-manage-personal #primary-nav #item-manage-personal,
+.nav2-manage-organization #primary-nav #item-manage-organization,
+.nav2-manage-contacts #primary-nav #item-manage-contacts,
+.nav2-manage-opportunity #primary-nav #item-manage-opportunity,
+.nav2-share #primary-nav #item-share,
+.nav2-getting-started #primary-nav #item-getting-started
+
+{ background-color: #5580F4; padding-bottom: 3px;} 
+
+/* CV menu - Learn Section - Third Level*/
+.nav2-short-term-missions #primary-nav #tertiary-nav-1 li#item-short-term-missions a,
+.nav2-for-families #primary-nav #tertiary-nav-1 li#item-for-families a,
+.nav2-search-all #primary-nav #tertiary-nav-1 li#item-search-all a,
+.nav2-browse-opportunities #primary-nav #tertiary-nav-1 li#item-browse-opportunities a,
+.nav2-browse-organizations #primary-nav #tertiary-nav-1 li#item-browse-organizations a,
+.nav2-virtual-volunteering #primary-nav #tertiary-nav-1 li#item-virtual-volunteering a,
+.nav2-christian-volunteering-org #primary-nav #tertiary-nav-5 li#item-christianvolunteering-org a
+{text-decoration: underline; font-weight:bold; padding-left: 10px;
+background: transparent url(/imgs/pointer.png) no-repeat center left;}
+
+
+
+/* show third level navigation based on page */
+.nav2-find-opportunities #primary-nav #item-volunteers #tertiary-nav-1 { display: block; }
+
+.nav2-getting-started #primary-nav #item-volunteers #tertiary-nav-1 { display: block; }
+
+.nav2-learn #primary-nav #item-volunteers #tertiary-nav-2 { display: block;}
+
+.nav2-blog #primary-nav #item-volunteers #tertiary-nav-3 { display: block;}
+
+.nav2-about-techmission #primary-nav #item-about #tertiary-nav-4 { display: block;}
+
+.nav2-programs #primary-nav #item-about #tertiary-nav-5 { display: block;}
+
+/* other styles*/
+
+#navigation { background-color:#FFF;}  

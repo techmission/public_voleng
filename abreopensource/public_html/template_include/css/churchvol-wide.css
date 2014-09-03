@@ -1,0 +1,252 @@
+/* CSS Document */
+
+h1 { font-size: 14px; }
+
+.addsearchform { display: block; margin-top: -14px; text-align: right; }
+
+#midbox1 {
+	margin: 10px 0px 10px 0px;
+	clear: both;
+	background: #FFDB85 url(http://www.christianvolunteering.org/imgs/volunteerbox_borderpatt-wide.gif) 0px 158px;
+	width: 313px;
+	float: left;
+}
+#midbox1_photo{
+background: transparent url(http://www.christianvolunteering.org/imgs/volunteerbox_patt-wide.gif) no-repeat 0px 0px;
+}
+#midbox1_photo img{
+margin-left:10px;
+border-bottom:3px solid #FFF;
+}
+#midbox2_photo img{
+margin-left:13px;
+border-bottom:3px solid #FFF;
+}
+
+#midbox3_photo img{
+margin-left:13px;
+border-bottom:3px solid #FFF;
+}
+
+#midbox1 a { color: #937341; text-decoration: none; }
+#midbox1 a:hover { text-decoration: underline; }
+#midbox1 h1 {
+	margin-top: -10px;
+	margin-left: 20px;
+	font-size: 14px;
+	color: #B28C4F;
+}
+#midbox1 h3 {
+	margin-top: -5px !important;
+	margin-left: 20px;
+	margin-bottom: -10px !important;
+	font-size: 12px; 
+	font-weight: bold;
+	color: #B28C4F;
+}
+#midbox1_content {
+	color: #937341;
+	height: 330px;
+	background:url(http://www.christianvolunteering.org/imgs/volunteerbox_patt-wide.gif) no-repeat 0px 0px;
+}
+/* #midbox1_content li{
+line-height: 1.5em} */
+
+#midbox1_content.higher {
+
+	height: 330px;
+
+}
+
+#midbox2 {
+	margin: 10px 0px 10px 0px;
+	background: #d9df7b url(http://www.christianvolunteering.org/imgs/organizationbox_borderpatt_wide.gif) 0px 158px;
+	width: 315px;
+	float: left;
+}
+
+#midbox2 a { color: #747748; text-decoration: none; }
+#midbox2 a:hover { text-decoration: underline; }
+#midbox2 ol li {line-height: 120%; margin-bottom: 10px; margin-right: 20px;}
+#midbox2 li { color: #747748; /* line-height: 1.5em; */}
+#midbox2 h1 {
+	margin-top: -10px;
+	margin-left: 20px;
+	color: #749948;
+}
+#midbox2 h2 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #749948;
+}
+#midbox2_content {
+color: #747748;
+	height: 330px;
+	background:url(http://www.christianvolunteering.org/imgs/organizationbox_patt_wide.gif) no-repeat 0px 0px;
+
+}
+midbox2_photo{
+background:url(http://www.christianvolunteering.org/imgs/organizationbox_patt_wide.gif) no-repeat 0px 0px;
+}
+#midbox2_content p {color: #747748; }
+
+#midbox2_content.higher {
+
+	height: 330px;
+
+}
+
+
+#midbox3 {
+	margin: 10px 0px 10px 0px;
+	background: #E7E58C url(http://www.christianvolunteering.org/imgs/trainingbox_borderpatt_wide.gif) 1px 158px;
+	width: 309px;
+	float: left;
+}
+#midbox3 a { color: #76773B; text-decoration: none; }
+#midbox3 li { color: #99994C; line-height: 1.5em; }
+#midbox3 a:hover { text-decoration: underline; }
+#midbox3 h1 {
+	margin-top: -10px;
+	margin-left: 20px;
+	color:#99994C;
+}
+#midbox3 h2 {
+
+	margin-top: 10px;
+
+	margin-bottom: 10px;
+	
+	margin-left: 20px;
+	
+	margin-right: 5px;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	color: #99994C;
+
+}
+#midbox3_content {
+	color: #76773B;
+	height: 330px;
+	background: transparent url(http://www.christianvolunteering.org/imgs/trainingbox_patt_wide.gif) no-repeat 0px 0px;
+}
+#midbox3_photo{
+background: transparent url(http://www.christianvolunteering.org/imgs/trainingbox_patt_wide.gif) no-repeat 0px 0px;
+}
+#midbox3_content a{
+	color: #838654; }
+
+
+#midbox3_content.higher {
+
+	height: 330px;
+
+}
+
+
+
+#midbox1 p, #midbox2 p, #midbox3 p, #midbox1 span {
+
+	margin: 0px 20px 10px 20px;
+
+}
+
+
+
+#ivolunteering #endingbox {
+
+	height: 650px;
+
+	//height: 630px;
+
+}
+
+#right_corner_endingbox{
+position:absolute;
+z-index:2;
+background-color: #ECF1FC;
+width: 32px;
+heght: 30px;
+top:-4px;
+right:-4px;
+}
+
+#endingbox {
+position: relative;
+background: #ECF1FC url(../imgs/endingbox_patt.gif) no-repeat bottom right; 
+padding-left: 10px;
+width: 932px;
+height: auto; 
+border-top: solid 4px #728DD4;
+border-right: solid 4px #728DD4;
+float: left;
+}
+#endingbox h1 {color: #728DD4; font-weight: bold;}
+
+#endingbox td {
+/* border: 1px solid #728DD4;
+border-collapse: collapse; */
+padding: 5px; 
+margin: 0px; 
+font-size: 12px;
+}
+
+#endingbox td.head {
+font-size: 14px;
+font-weight: bold;
+}
+
+
+#endingbox a { color: #728DD4; text-decoration: none; }
+
+
+
+#endingbox a:hover { text-decoration: underline; }
+
+
+
+#endingbox li  { 
+
+	list-style-position: outside;
+
+	margin-left: 16px;
+
+	padding-left: 0px;
+
+	margin-top: 0px;
+
+	padding-top: 0px;
+
+	padding-left: 0px;
+
+	line-height: 16px;
+
+}
+
+
+html>body div#endingbox li {  /* min-height for non-IE  */
+
+	list-style-position: outside;
+
+	margin-left: 16px;
+
+	padding-left: 0px;
+
+	margin-top: 0px;
+
+	padding-top: 0px;
+
+	padding-left: 0px;
+
+	/* height: 0px; */
+
+}
+
+
+

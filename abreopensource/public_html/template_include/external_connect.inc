@@ -1,0 +1,2 @@
+<a style="padding:5px;" href="<%=request.getContextPath()%>/register.do?method=authorizeLinkedinConnectClick"><img src="http://www.christianvolunteering.org/imgs/linkedin_login_button.png"/></a>
+<a style="padding:5x;" href="<%=request.getContextPath()%>/register.do?method=authorizeFacebookConnectClick"><img src="http://www.christianvolunteering.org/imgs/facebook_login_button.png"/></a>

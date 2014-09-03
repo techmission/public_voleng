@@ -1,0 +1,32 @@
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+php_value memory_limit 1G
+
+ErrorDocument 401 /401.shtml
+ErrorDocument 403 /403.shtml
+ErrorDocument 404 /404.shtml
+ErrorDocument 500 /500.shtml
+ErrorDocument 503 /503.shtml
+
+deny from 81.192.122.14
+deny from 196.206.129.228
+deny from 81.192.120.100
+deny from 66.196.97.157
+deny from 196.206.8.53
+deny from 81.192.35.156
+
+Redirect permanent /cv/cms/cv/intern-stories http://www.cityvision.edu/cms/cv/intern-stories
+Redirect permanent /cv/cms/cv/corey-hicks-story-better-equipped-serve-inner-city http://www.cityvision.edu/cms/cv/corey-hicks-story-better-equipped-serve-inner-city
+
+# the rewrite rules below have been moved to httpd.conf, so Tomcat
+# will take note of them
+RewriteEngine on
+# Make sure we don't redirect links from mobile to mobile infinitely
+RewriteCond %{HTTP_HOST} !^m\.(.+)$ [NC]
+# Use AMF to detect mobile devices and then redirect to mobile domain
+RewriteCond %{ENV:AMF_DEVICE_IS_MOBILE} ^true
+RewriteCond %{ENV:AMF_FORCE_TO_DESKTOP} !^true
+RewriteRule ^ http://m.christianvolunteering.org%{REQUEST_URI} [L,R=301]

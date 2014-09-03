@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN"
+        "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+<!--
+
+    Configuration file for UrlRewriteFilter
+    http://tuckey.org/urlrewrite/
+    testing****
+
+-->
+<urlrewrite>
+    <rule>
+        <note>
+            The rule means that requests to /test/status/ will be redirected to /rewrite-status
+            the url will be rewritten.
+        </note>
+        <from>/test/status/</from>
+        <to type="redirect">%{context-path}/rewrite-status</to>
+    </rule>
+    <outbound-rule>
+        <note>
+            The outbound-rule specifies that when response.encodeURL is called (if you are using JSTL c:url)
+            the url /rewrite-status will be rewritten to /test/status/.
+
+            The above rule and this outbound-rule means that end users should never see the
+            url /rewrite-status only /test/status/ both in thier location bar and in hyperlinks
+            in your pages.
+        </note>
+        <from>/rewrite-status</from>
+        <to>/test/status/</to>
+    </outbound-rule>
+
+    <!--
+    INSTALLATION
+        in your web.xml add...
+
+        <filter>
+            <filter-name>UrlRewriteFilter</filter-name>
+            <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+            <init-param>
+                <param-name>logLevel</param-name>
+                <param-value>WARN</param-value>
+            </init-param>
+        </filter>
+        <filter-mapping>
+            <filter-name>UrlRewriteFilter</filter-name>
+            <url-pattern>/*</url-pattern>
+        </filter-mapping>
+
+     EXAMPLES
+
+     Redirect one url
+        <rule>
+            <from>/some/old/page.html</from>
+            <to type="redirect">/very/new/page.html</to>
+        </rule>
+
+    Redirect a directory
+        <rule>
+            <from>/some/olddir/(.*)</from>
+            <to type="redirect">/very/newdir/$1</to>
+        </rule>
+
+    Clean a url
+        <rule>
+            <from>/products/([0-9]+)</from>
+            <to>/products/index.jsp?product_id=$1</to>
+        </rule>
+    eg, /products/1234 will be passed on to /products/index.jsp?product_id=1234 without the user noticing.
+
+    Browser detection
+        <rule>
+            <condition name="user-agent">Mozilla/[1-4]</condition>
+            <from>/some/page.html</from>
+            <to>/some/page-for-old-browsers.html</to>
+        </rule>
+    eg, will pass the request for /some/page.html on to /some/page-for-old-browsers.html only for older
+    browsers whose user agent srtings match Mozilla/1, Mozilla/2, Mozilla/3 or Mozilla/4.
+
+    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- churchvolunteering portal page rewriting -->
+<!--
+    <rule>
+        <from>/world/([a-zA-Z0-9-_ ]+)/([a-z]+)/jsp</from>
+        <to>/register.do?method=showFAQs&amp;country=$1&amp;city=$2</to>
+    </rule>
+    <rule>
+        <from>/subdir/([a-zA-Z0-9-_ ]+)/(.*)</from>
+        <to>/$2</to>
+    </rule>
+    <rule>
+        <from>/([a-zA-Z0-9-_ ]+)/FAQs.jsp</from>
+        <to>/register.do?method=showFAQs&amp;portal=$1</to>
+    </rule>
+    
+    <rule>
+        <from>/olddir/(.*)</from>
+        <to>/$1</to>
+    </rule>
+-->
+<!--
+
+*****************
+    <rule>
+        <from>/([a-zA-Z0-9-_ ]+)/(.*)</from>
+        <to>/$2</to>
+    </rule>
+*****************
+
+
+    <rule>
+        <from>^/world/([a-zA-Z0-9-_ ]+)/([a-z]+)$</from>
+        <to>/register.do?method=showFAQs&amp;country=$1&amp;city=$2</to>
+    </rule>
+    <rule>
+        <from>^/world/([a-zA-Z0-9-_ ]+)/([a-z]+)$.jsp</from>
+        <to>/register.do?method=showFAQs&amp;country=$1&amp;city=$2</to>
+    </rule>
+-->
+    <rule>
+      <from>(/[a-zA-Z0-9-_ ]*)?/opportunities/([0-9]+)/application</from>
+      <to>/org.do?method=downloadQuestionnaireFile&amp;oppnid=$2</to>
+    </rule>
+    
+    <rule>
+      <from>(/[a-zA-Z0-9-_ ]*)?/required_documents/([0-9]+)</from>
+      <to>/org.do?method=downloadRequiredDocumentFile&amp;docnid=$2</to>
+    </rule>
+
+ 		<rule>
+            <from>/([a-zA-Z0-9-_ ]*?)/s/results.jsp</from>
+            <to>/register.do?method=showForwardHome</to>
+        </rule>
+
+ 		<rule>
+            <from>/([a-zA-Z0-9-_ ]*?)/s/results.jsp</from>
+            <to>/register.do?method=showForwardHome</to>
+        </rule>
+ 		<rule>
+            <from>/([a-zA-Z0-9-_ ]*?)/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+            <to>/register.do?method=showForwardHome</to>
+        </rule>
+ 		<rule>
+            <from>/([a-zA-Z0-9-_ ]*?)/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+            <to>/register.do?method=showForwardHome</to>
+        </rule>
+<rule>
+ <from>/([a-zA-Z0-9-_ ]*?)/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+            <to>/register.do?method=showForwardHome</to>
+</rule>
+<rule>
+ <from>/([a-zA-Z0-9-_ ]*?)/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+            <to>/register.do?method=showForwardHome</to>
+</rule>
+<rule>
+ <from>/([a-zA-Z0-9-_ ]*?)/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+            <to>/register.do?method=showForwardHome</to>
+</rule>
+<rule>
+ <from>/([a-zA-Z0-9-_ ]*?)/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+            <to>/register.do?method=showForwardHome</to>
+</rule>
+<rule>
+ <from>/([a-zA-Z0-9-_ ]*?)/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+            <to>/register.do?method=showForwardHome</to>
+</rule>
+<rule>
+ <from>/([a-zA-Z0-9-_ ]*?)/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+            <to>/register.do?method=showForwardHome</to>
+</rule>
+<rule>
+ <from>/([a-zA-Z0-9-_ ]*?)/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+            <to>/register.do?method=showForwardHome</to>
+</rule>
+
+
+
+
+
+        
+<!-- 
+            <to>/oppsrch.do?method=processOppSearchAll&amp;requesttype=urlalias&amp;portal=$1&amp;source=feeds</to>
+ -->        
+ 		<rule>
+            <from>/cityvision/volunteerlistings.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;fq=content_type:opportunity&amp;fq=intern_type:%22City%20Vision%20Internship%22&amp;portal=cityvision</to>
+        </rule>
+ 		<rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)volunteerlistings.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;fq=content_type:opportunity&amp;portal=$1</to>
+        </rule>
+ 		<rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)volunteerlistings.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;fq=content_type:resume&amp;portal=$1&amp;fq=screened:[1%20TO%202]&amp;fq=cvintern_placed:0&amp;fq=cvintern_applicant:&quot;City Vision Intern Applicant&quot;</to>
+        </rule>
+        
+ 		<rule>
+            <from>/cityvision/internlistings.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;fq=content_type:resume&amp;portal=cityvision&amp;fq=screened:[1%20TO%202]&amp;fq=cvintern_placed:0&amp;fq=cvintern_applicant:&quot;City Vision Intern Applicant&quot;</to>
+        </rule>
+        
+ 		<rule>
+            <from>/cityvision/internapply.jsp</from>
+            <to>/email.do?method=showCreateApplication&amp;portal=cityvision</to>
+        </rule>
+
+
+<!-- 
+http://chrisvol.org:7001/voleng/search/service_areas/Teaching/results.jsp
+http://chrisvol.org:7001/voleng/search/service_areas/Community%20Development/results.jsp
+-->        
+
+ 		<rule>
+            <from>/s/results.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;formname=cleanurl</to>
+        </rule>
+ 		<rule>
+            <from>/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;formname=cleanurl&amp;fq=$1:&quot;$2&quot;</to>
+        </rule>
+ 		<rule>
+            <from>/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;formname=cleanurl&amp;fq=$1:&quot;$2&quot;&amp;fq=$3:&quot;$4&quot;</to>
+        </rule>
+<rule>
+ <from>/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+ <to>/oppsrch.do?method=processSearch&amp;formname=cleanurl&amp;fq=$1:&quot;$2&quot;&amp;fq=$3:&quot;$4&quot;&amp;fq=$5:&quot;$6&quot;</to>
+</rule>
+<rule>
+ <from>/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+ <to>/oppsrch.do?method=processSearch&amp;formname=cleanurl&amp;fq=$1:&quot;$2&quot;&amp;fq=$3:&quot;$4&quot;&amp;fq=$5:&quot;$6&quot;&amp;fq=$7:&quot;$8&quot;</to>
+</rule>
+<rule>
+ <from>/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+ <to>/oppsrch.do?method=processSearch&amp;formname=cleanurl&amp;fq=$1:&quot;$2&quot;&amp;fq=$3:&quot;$4&quot;&amp;fq=$5:&quot;$6&quot;&amp;fq=$7:&quot;$8&quot;&amp;fq=$9:&quot;$10&quot;</to>
+</rule>
+<rule>
+ <from>/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+ <to>/oppsrch.do?method=processSearch&amp;formname=cleanurl&amp;fq=$1:&quot;$2&quot;&amp;fq=$3:&quot;$4&quot;&amp;fq=$5:&quot;$6&quot;&amp;fq=$7:&quot;$8&quot;&amp;fq=$9:&quot;$10&quot;&amp;fq=$11:&quot;$12&quot;</to>
+</rule>
+<rule>
+ <from>/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+ <to>/oppsrch.do?method=processSearch&amp;formname=cleanurl&amp;fq=$1:&quot;$2&quot;&amp;fq=$3:&quot;$4&quot;&amp;fq=$5:&quot;$6&quot;&amp;fq=$7:&quot;$8&quot;&amp;fq=$9:&quot;$10&quot;&amp;fq=$12:&quot;$12&quot;&amp;fq=$13:&quot;$14&quot;</to>
+</rule>
+<rule>
+ <from>/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+ <to>/oppsrch.do?method=processSearch&amp;formname=cleanurl&amp;fq=$1:&quot;$2&quot;&amp;fq=$3:&quot;$4&quot;&amp;fq=$5:&quot;$6&quot;&amp;fq=$7:&quot;$8&quot;&amp;fq=$9:&quot;$10&quot;&amp;fq=$11:&quot;$12&quot;&amp;fq=$13:&quot;$14&quot;&amp;fq=$15:&quot;$13&quot;</to>
+</rule>
+<rule>
+ <from>/s/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/([a-zA-Z0-9-_ ]*?)/([a-zA-Z0-9-_\(\)\|,~:;' ]*?)/results.jsp</from>
+ <to>/oppsrch.do?method=processSearch&amp;formname=cleanurl&amp;fq=$1:&quot;$2&quot;&amp;fq=$3:&quot;$4&quot;&amp;fq=$5:&quot;$6&quot;&amp;fq=$7:&quot;$8&quot;&amp;fq=$9:&quot;$10&quot;&amp;fq=$11:&quot;$12&quot;&amp;fq=$13:&quot;$14&quot;&amp;fq=$15:&quot;$13&quot;&amp;fq=$17:&quot;$18&quot;</to>
+</rule>
+
+
+
+
+ 
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)node/([0-9]+)</from>
+            <to>/org.do?method=showOpportunity&amp;oppnid=$3&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)volunteers/([a-zA-Z0-9-_ ]+).jsp</from>
+            <to>/org.do?method=showOpport&amp;urlalias=$3&amp;requesttype=volunteers&amp;portal=$1&amp;feed=true</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)volunteer/([a-zA-Z0-9-_ ]+).jsp</from>
+            <to>/org.do?method=showOpport&amp;urlalias=$3&amp;portal=$1&amp;feed=false</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)volunteer/feed/([a-zA-Z0-9-_ ]+).jsp</from>
+            <to>/org.do?method=showOpport&amp;urlalias=$3&amp;portal=$1&amp;feed=true</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)volunteers/([a-zA-Z0-9-_ ]+).jsp</from>
+            <to>/org.do?method=showOpport&amp;urlalias=$3&amp;requesttype=volunteers&amp;portal=$1&amp;feed=true</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)org/org([0-9]+).jsp</from>
+            <to>/org.do?method=shownonpstep1&amp;orgnumber=$3&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)orgs/([a-zA-Z0-9-_ ]+).jsp</from>
+            <to>/org.do?method=showOrganiz&amp;urlalias=$3&amp;requesttype=orgs&amp;portal=$1&amp;feed=true</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)org/([a-zA-Z0-9-_ ]+).jsp</from>
+            <to>/org.do?method=showOrganiz&amp;urlalias=$3&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)jobs/([a-zA-Z0-9-_ ]+).jsp</from>
+            <to>/org.do?method=showOpport&amp;urlalias=$3&amp;requesttype=jobs&amp;portal=$1&amp;feed=true</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)job/([a-zA-Z0-9-_ ]+).jsp</from>
+            <to>/org.do?method=showOpport&amp;urlalias=$3&amp;requesttype=job&amp;portal=$1&amp;feed=false</to>
+        </rule>
+
+       <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)org/opp([0-9]+).jsp</from>
+            <to>/org.do?method=showopp&amp;oppnumber=$3&amp;portal=$1</to>
+        </rule>
+
+
+
+
+        <rule>
+            <from>/logout</from>
+            <to>/register.do?method=logout&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/logout.jsp</from>
+            <to>/register.do?method=logout&amp;portal=$1</to>
+        </rule>
+
+
+
+
+    
+<!-- navigation links -->
+        <rule>
+            <from>/boston/</from>
+            <to>/org.do?method=showPasteForms&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)searchform.jsp</from>
+            <to>/org.do?method=showPasteForms&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)churchvolunteer.jsp</from>
+            <to>/register.do?method=showChurchVolunteer&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)churchvolunteering.jsp</from>
+            <to>/register.do?method=showChurchVolunteer&amp;portal=$1</to>
+        </rule>
+<!--         
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)shorttermmissions.jsp</from>
+            <to>/register.do?method=showShortTermMissions&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)christiangapyear.jsp</from>
+            <to>/register.do?method=showChristianGapYear&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)virtualvolunteer.jsp</from>
+            <to>/oppsrch.do?method=showVirSearch1&amp;portal=$1</to>
+        </rule>
+-->        
+        <!-- landingpages -->
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)shorttermmissions.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=stm&amp;fq=position_type:&quot;Short-term Missions / Volunteer Internship&quot;&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)christiangapyear.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=christiangapyear&amp;fq=position_type:&quot;Short-term Missions / Volunteer Internship&quot;&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)catholicvolunteer.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=catholic&amp;fq=&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)foundationgrants.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=foundationgrants&amp;fq=&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)christianjob.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=christianjobs&amp;fq=&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)christianjobs.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=christianjobs&amp;fq=&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)disasterreliefvolunteer.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=disasterreliefhomepage&amp;fq=&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)disasterrelief.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=disasterrelief&amp;fq=&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)hurricanesandy.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=hurricanesandy&amp;fq=&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)virtualvolunteer.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=virtual&amp;fq=position_type:&quot;Virtual Volunteering (from home)&quot;&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)christianfamilyvolunteering.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=family&amp;fq=great_for:&quot;Great for Families&quot;&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)familyvolunteering.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=family&amp;fq=great_for:&quot;Great for Families&quot;&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)medicalmissions.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=medicalmissionsvolunteering&amp;fq=position_type:&quot;Short-term Missions / Volunteer Internship&quot;&amp;fq=service_areas:&quot;Health and Medicine&quot;&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)christianorphanage.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=volunteerinachristianorphanage&amp;fq=position_type:&quot;Short-term Missions / Volunteer Internship&quot;&amp;fq=service_areas:&quot;Orphanage&quot;&amp;portal=$1</to>
+        </rule>
+<!-- 
+            <to>/register.do?method=showHome&amp;landingpage=volunteerintechnologyinmissions&amp;fq=position_type:&quot;Short-term Missions / Volunteer Internship&quot; AND service_areas:&quot;Computers / Technology&quot; OR &quot;Tech: Graphics/Web/IT Ministry&quot;&amp;portal=$1</to>
+ -->
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)technologymissions.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=volunteerintechnologyinmissions&amp;fq=position_type:&quot;Short-term Missions / Volunteer Internship&quot;&amp;fq=service_areas:(&quot;Computers / Technology&quot; OR &quot;Tech: Graphics/Web/IT Ministry&quot;)&amp;portal=$1</to>
+        </rule>
+        <!-- ivolunteering phrasing of the above -->
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)servicetrip.jsp</from>
+            <to>/register.do?method=showShortTermMissions&amp;portal=$1</to>
+        </rule>
+<!--     
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)city.jsp</from>
+            <to>/register.do?method=showCitySitemap&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)region.jsp</from>
+            <to>/register.do?method=showCitySitemap&amp;portal=$1</to>
+        </rule>
+ -->        
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)regionsitemap.jsp</from>
+            <to>/register.do?method=showCitySitemap&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)citysitemap.jsp</from>
+            <to>/register.do?method=showCitySitemap&amp;portal=$1</to>
+        </rule>
+
+
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)about.jsp</from>
+            <to>/register.do?method=showAboutCV&amp;portal=$1</to>
+        </rule>       
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)FAQs.jsp</from>
+            <to>/register.do?method=showFAQs&amp;portal=$1</to>
+        </rule>       
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)bookrecommendations.jsp</from>
+            <to>/register.do?method=showBookRecommendations&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)contact.jsp</from>
+            <to>/register.do?method=showContact&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)pressrelease.jsp</from>
+            <to>/register.do?method=showPressRelease&amp;portal=$1</to>
+        </rule>
+         <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)recruitvolunteers.jsp</from>
+            <to>/org.do?method=showOrgStart&amp;portal=$1</to>
+        </rule>
+        
+
+
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)searchformadv.jsp</from>
+            <to>/org.do?method=showPasteFormsAdv&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)training.jsp</from>
+            <to>/register.do?method=showTraining&amp;portal=$1</to>
+        </rule>
+<!--
+        <rule>
+            <from>/individualregistration.jsp</from>
+            <to>/register.do?method=showIndReg1</to>
+        </rule>
+
+        <rule>
+            <from>/accountregistration.jsp</from>
+            <to>/register.do?method=showIndReg1</to>
+        </rule>
+        <rule>
+            <from>/registration.jsp</from>
+            <to>/register.do?method=showIndReg1</to>
+        </rule>
+-->
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)individualregistration.jsp</from>
+            <to>/register.do?method=showCreateAccount1&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)accountregistration.jsp</from>
+            <to>/register.do?method=showCreateAccount1&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)registration.jsp</from>
+            <to>/register.do?method=showCreateAccount1&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)volunteerstart.jsp</from>
+            <to>/register.do?method=showVolunteerStart&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)volunteergettingstarted.jsp</from>
+            <to>/register.do?method=showVolunteerStart&amp;portal=$1</to>
+        </rule>
+        <rule>
+			<from>/([a-zA-Z0-9-_ ]*?)([\/]?)orgmanagement.jsp</from>
+			<to>/org.do?method=showOrgManageListings&amp;portal=$1</to>
+        </rule>
+        <rule>
+			<from>/([a-zA-Z0-9-_ ]*?)([\/]?)associationmanagement.jsp</from>
+			<to>/org.do?method=showAssocManagement&amp;portal=$1</to>
+        </rule>
+        <rule>
+			<from>/([a-zA-Z0-9-_ ]*?)([\/]?)assocmanagement.jsp</from>
+			<to>/org.do?method=showAssocManagement&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)volunteerstories.jsp</from>
+            <to>/register.do?method=showVolStories&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)portalsearch.jsp</from>
+            <to>/oppsrch.do?method=showSearchPortal&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)churchsearch.jsp</from>
+            <to>/oppsrch.do?method=showSearchPortal&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)searchchurches.jsp</from>
+            <to>/oppsrch.do?method=showSearchPortal&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)solrsearch.jsp</from>
+            <to>/oppsrch.do?method=showSolrSearch&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)advancedsearch.jsp</from>
+            <to>/oppsrch.do?method=showSolrSearch&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)my_ministry_opportunities.jsp</from>
+            <to>/oppsrch.do?method=showMyMinistryOpps&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)myministryopportunities.jsp</from>
+            <to>/oppsrch.do?method=showMyMinistryOpps&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)ministryopportunities.jsp</from>
+            <to>/oppsrch.do?method=showMyMinistryOpps&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)volunteeropportunities.jsp</from>
+            <to>/oppsrch.do?method=showMyMinistryOpps&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)portalopportunities.jsp</from>
+            <to>/oppsrch.do?method=showPortalOpps&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)churchopportunities.jsp</from>
+            <to>/oppsrch.do?method=showPortalOpps&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)login.jsp</from>
+            <to>/register.do?method=showlogin&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)forgotpassword.jsp</from>
+            <to>/register.do?method=showForgotPassword&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)volunteerstories.jsp</from>
+            <to>/register.do?method=showVolStories&amp;portal=$1</to>
+        </rule>
+        
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)personality-test.jsp</from>
+            <to>/register.do?method=showPersonalityTest&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)personalitytest.jsp</from>
+            <to>/register.do?method=showPersonalityTest&amp;portal=$1</to>
+        </rule>
+        
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)typesummaries.jsp</from>
+            <to>/register.do?method=showPersonalityTypeSummaries&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)effectsministry.jsp</from>
+            <to>/register.do?method=showPersonalityEffectsMinistry&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)fourpreferences.jsp</from>
+            <to>/register.do?method=showPersonalityFourPreferences&amp;portal=$1</to>
+        </rule>
+                
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)managesocialize.jsp</from>
+            <to>/register.do?method=showManageSocializeUser&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)unlinksocialize.jsp</from>
+            <to>/register.do?method=showUnlinkSocialize&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)socializedata.jsp</from>
+            <to>/register.do?method=showSocializeData&amp;portal=$1</to>
+        </rule>
+        
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)virtual.jsp</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;postype=4795&amp;Submit=Submit&amp;portal=$1</to>
+        </rule>
+        
+        
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)organizationsearch.jsp</from>
+            <to>/oppsrch.do?method=showOrgSearch1&amp;portal=$1</to>
+        </rule>
+
+<!-- 
+            <to>/oppsrch.do?method=processOrgSearchAll&amp;portal=$1</to>
+ -->
+ 		<rule>
+            <from>/cityvision/organizationlistings.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;fq=content_type:organization&amp;fq=organization_name:%22City%20Vision%22&amp;portal=cityvision</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)organizationlistings.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;fq=content_type:organization&amp;fq=-org_member_type:Foundation&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)foundationlistings.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;membertype=Foundation&amp;fq=content_type:organization&amp;fq=org_member_type:Foundation&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)portals.jsp</from>
+            <to>/oppsrch.do?method=processOrgSearchAll&amp;portallist=true&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)articles.jsp</from>
+            <to>/register.do?method=showArticle&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)orglistings7407.jsp</from>
+            <to>/oppsrch.do?method=processOppSearchAllPaste&amp;orgnid=41652&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)orglistings8783.jsp</from>
+            <to>/oppsrch.do?method=processOppSearchAllPaste&amp;orgnid=42503&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)orglistings([0-9]+).jsp</from>
+            <to>/oppsrch.do?method=processOppSearchAllPaste&amp;orgnid=$3&amp;portal=$1</to>
+        </rule>
+
+    
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)sitemap.jsp</from>
+            <to>/register.do?method=showSitemap&amp;portal=$1</to>
+        </rule>
+
+<!-- 
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)zipmap.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;format=zip&amp;portal=$1</to>
+        </rule>
+ -->
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)zipmap.jsp</from>
+            <to>/register.do?method=showZipmap&amp;portal=$1</to>
+        </rule>
+         <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)zipsitemap.jsp</from>
+            <to>/register.do?method=showZIPSitemap&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)interndirectory.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;format=interndirectory&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)directory.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;format=directory&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)orgdirectory.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;format=orgdirectory&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)organizationdirectory.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;format=orgdirectory&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)directoryorgs.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;format=orgdirectory&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/sitedirectory.jsp</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;voltype=&amp;partner=Here%27s+Life+Inner+City&amp;Submit=Submit</to>
+        </rule>
+
+		<rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)sources.jsp</from>
+            <to>/register.do?method=showSources&amp;portal=$1</to>
+        </rule>
+
+		<!-- set up for much shorter URL given the country -->
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)country/([a-zA-Z0-9-_ ]+).jsp</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;country=$3&amp;portal=$1</to>
+        </rule>
+		<!-- set up for much shorter URL given the zip code -->
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)zip/([a-zA-Z0-9-_ ]+).jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;zip=$3&amp;postal_code=$3&amp;portal=$1</to>
+        </rule>
+<!--
+            <to>/oppsrch.do?method=processSearch&amp;fq=postal_code:$3&amp;portal=$1</to>
+<to>/oppsrch.do?method=processSolrSearchOpp&amp;postalcode=$3&amp;portal=$1</to>
+-->
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)zip([a-zA-Z0-9-_ ]+).jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)zip.jsp</from>
+            <to>/oppsrch.do?method=processSearch&amp;portal=$1</to>
+        </rule>
+        
+        <!-- get "subdirectories" - esp for churchvol portals - to load a homepage (or eventually may redirect to a different page)-->
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)$</from>
+            <to>/register.do?method=showHome&amp;portal=$1</to>
+        </rule>
+
+		<!-- set up for customized volunteerlistings for affiliates -->
+		<!-- 
+        <rule>
+            <from>/agrm/</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;voltype=&amp;partner=Association+of+Gospel+Rescue+Missions+%28AGRM%29&amp;Submit=Submit</to>
+        </rule>
+        <rule>
+            <from>/agrm_sitedirectory.jsp</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;voltype=&amp;partner=Association+of+Gospel+Rescue+Missions+%28AGRM%29&amp;Submit=Submit</to>
+        </rule>
+        <rule>
+            <from>/ccda/</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;voltype=&amp;partner=Christian+Community+Development+Association+%28CCDA%29&amp;Submit=Submit</to>
+        </rule>
+        <rule>
+            <from>/ccda_sitedirectory.jsp</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;voltype=&amp;partner=Christian+Community+Development+Association+%28CCDA%29&amp;Submit=Submit</to>
+        </rule>
+        <rule>
+            <from>/hlic/</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;voltype=&amp;partner=Here%27s+Life+Inner+City&amp;Submit=Submit</to>
+        </rule>
+        <rule>
+            <from>/hlic_sitedirectory.jsp</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;voltype=&amp;partner=Here%27s+Life+Inner+City&amp;Submit=Submit</to>
+        </rule>
+        <rule>
+            <from>/salvationarmy/</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;voltype=&amp;partner=Salvation+Army&amp;Submit=Submit</to>
+        </rule>
+        <rule>
+            <from>/salvationarmy_sitedirectory.jsp</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;voltype=&amp;partner=Salvation+Army&amp;Submit=Submit</to>
+        </rule>
+        <rule>
+            <from>/uywi/</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;voltype=&amp;partner=Urban+Youth+Workers+Institute+%28UYWI%29&amp;Submit=Submit</to>
+        </rule>
+        <rule>
+            <from>/uywi_sitedirectory.jsp</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;voltype=&amp;partner=Urban+Youth+Workers+Institute+%28UYWI%29&amp;Submit=Submit</to>
+        </rule>
+        <rule>
+            <from>/worldvision/</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;voltype=&amp;partner=World+Vision&amp;Submit=Submit</to>
+        </rule>
+        <rule>
+            <from>/worldvision_sitedirectory.jsp</from>
+            <to>/oppsrch.do?method=processOppSearchAll&amp;voltype=&amp;partner=World+Vision&amp;Submit=Submit</to>
+        </rule>
+         -->
+
+
+
+        <rule>
+            <from>/american-bible-society-bible-outreach.jsp</from>
+            <to>/register.do?method=showABSBibleOutreach</to>
+        </rule>       
+        <rule>
+            <from>/abs-bible-outreach.jsp</from>
+            <to>/register.do?method=showABSBibleOutreach</to>
+        </rule>       
+        <rule>
+            <from>/bible-outreach.jsp</from>
+            <to>/register.do?method=showABSBibleOutreach</to>
+        </rule>       
+        <rule>
+            <from>/absBibleOutreach.jsp</from>
+            <to>/register.do?method=showABSBibleOutreach</to>
+        </rule>       
+        <rule>
+            <from>/absbibleoutreach.jsp</from>
+            <to>/register.do?method=showABSBibleOutreach</to>
+        </rule> 
+              
+        <rule>
+            <from>/american-bible-society-bible-sunday.jsp</from>
+            <to>/register.do?method=showABSBibleSunday</to>
+        </rule>       
+        <rule>
+            <from>/abs-bible-sunday.jsp</from>
+            <to>/register.do?method=showABSBibleSunday</to>
+        </rule>       
+        <rule>
+            <from>/bible-sunday.jsp</from>
+            <to>/register.do?method=showABSBibleSunday</to>
+        </rule>       
+        <rule>
+            <from>/absBibleSunday.jsp</from>
+            <to>/register.do?method=showABSBibleSunday</to>
+        </rule>       
+        <rule>
+            <from>/absbiblesunday.jsp</from>
+            <to>/register.do?method=showABSBibleSunday</to>
+        </rule> 
+              
+        <rule>
+            <from>/american-bible-society-executive-volunteers.jsp</from>
+            <to>/register.do?method=showABSExecVol</to>
+        </rule>       
+        <rule>
+            <from>/abs-executive-volunteers.jsp</from>
+            <to>/register.do?method=showABSExecVol</to>
+        </rule>       
+        <rule>
+            <from>/executive-volunteers.jsp</from>
+            <to>/register.do?method=showABSExecVol</to>
+        </rule>       
+        <rule>
+            <from>/absExecutiveVolunteers.jsp</from>
+            <to>/register.do?method=showABSExecVol</to>
+        </rule>       
+        <rule>
+            <from>/absexecutivevolunteers.jsp</from>
+            <to>/register.do?method=showABSExecVol</to>
+        </rule>       
+
+        <rule>
+            <from>/american-bible-society-traveling-engagement-center.jsp</from>
+            <to>/register.do?method=showABSTrvlEngagementCtr</to>
+        </rule>       
+        <rule>
+            <from>/abs-traveling-engagement-center.jsp</from>
+            <to>/register.do?method=showABSTrvlEngagementCtr</to>
+        </rule>       
+        <rule>
+            <from>/traveling-engagement-center.jsp</from>
+            <to>/register.do?method=showABSTrvlEngagementCtr</to>
+        </rule>       
+        <rule>
+            <from>/absTravelingEngagementCenter.jsp</from>
+            <to>/register.do?method=showABSTrvlEngagementCtr</to>
+        </rule>       
+        <rule>
+            <from>/abstravelingengagementcenter.jsp</from>
+            <to>/register.do?method=showABSTrvlEngagementCtr</to>
+        </rule>       
+
+
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)tmctraining.jsp</from>
+            <to>/register.do?method=showTMCTraining&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)staffrecruitment.jsp</from>
+            <to>/register.do?method=showStaffRecruitment&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)workstudy.jsp</from>
+            <to>/register.do?method=showWorkStudy&amp;portal=$1</to>
+        </rule>
+
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)memberbenefits.jsp</from>
+            <to>/register.do?method=showMemberBenefits&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)paidmembership.jsp</from>
+            <to>/register.do?method=showMappingPage&amp;maptopage=paidmembership&amp;portal=$1</to>
+        </rule>
+
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)stmresources.jsp</from>
+            <to>/register.do?method=showSTMResources&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)virtualresources.jsp</from>
+            <to>/register.do?method=showVirtualResources&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)techlinks.jsp</from>
+            <to>/register.do?method=showTechLinks&amp;portal=$1</to>
+        </rule>
+<!-- Professional Links (instead of using the word Technology Links) -->
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)prolinks.jsp</from>
+            <to>/register.do?method=showTechLinks&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)biblical.jsp</from>
+            <to>/register.do?method=showBiblical&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)devotionals.jsp</from>
+            <to>/register.do?method=showDevotionals&amp;portal=$1</to>
+        </rule>
+         <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)links.jsp</from>
+            <to>/register.do?method=showLinks&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)presentations.jsp</from>
+            <to>/register.do?method=showPresentations&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)organizationstandards.jsp</from>
+            <to>/register.do?method=showStandardsHost&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)leaderstandards.jsp</from>
+            <to>/register.do?method=showStandardsLeaders&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)volunteerstandards.jsp</from>
+            <to>/register.do?method=showStandardsVol&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)calling.jsp</from>
+            <to>/register.do?method=showCalling&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)spiritualgifts.jsp</from>
+            <to>/register.do?method=showSpiritualGifts&amp;portal=$1</to>
+        </rule>
+
+
+
+<!-- cityserve news links -->
+        <rule>
+            <from>/CityServeWinter05.jsp</from>
+            <to>/register.do?method=showCityServeNewsWinter05</to>
+        </rule>
+        <rule>
+            <from>/CityServeJun06.jsp</from>
+            <to>/register.do?method=showCityServeNewsJun06</to>
+        </rule>
+        <rule>
+            <from>/CityServeAug06.jsp</from>
+            <to>/register.do?method=showCityServeNewsAug06</to>
+        </rule>
+        <rule>
+            <from>/CityServeOct06.jsp</from>
+            <to>/register.do?method=showCityServeNewsOct06</to>
+        </rule>
+        <rule>
+            <from>/CityServeDec06.jsp</from>
+            <to>/register.do?method=showCityServeNewsDec06</to>
+        </rule>
+
+
+
+
+        <rule>
+            <from>/trainingwebcast.html</from>
+            <to>/register.do?method=showTrainingWebcast</to>
+        </rule>
+        <rule>
+            <from>/trainingwebcast.ppt</from>
+            <to>/register.do?method=showTrainingWebcastPPT</to>
+        </rule>
+        <rule>
+            <from>/trainingwebcast.jsp</from>
+            <to>/register.do?method=showTrainingWebcastPPT</to>
+        </rule>
+        <rule>
+            <from>/VolunteerManagement.ppt</from>
+            <to>/register.do?method=showVolManagementPPT</to>
+        </rule>
+        <rule>
+            <from>/VolunteerManagement.doc</from>
+            <to>/register.do?method=showVolManagementDoc</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)churchinstructions.jsp</from>
+            <to>/register.do?method=showChurchInstructions&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)christiansintechnologyinstructions.jsp</from>
+            <to>/register.do?method=showChrisTechInstructions&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)christiansintechnology.jsp</from>
+            <to>/register.do?method=showChrisTech&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)technology.jsp</from>
+            <to>/register.do?method=showHome&amp;landingpage=volunteerintechnologyinmissions&amp;portal=$1</to>
+            <!--to>/register.do?method=showTech&amp;portal=$1</to-->
+        </rule>
+
+		<!-- specified URL's for Google Analytics tracking -->
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)create/org2</from>
+            <to>/org.do?method=showCreateOrgStep1&amp;portal=$1</to>
+        </rule>
+
+	    <rule>
+			<from>/([a-zA-Z0-9-_ ]*?)([\/]?)apitos.jsp</from>
+			<to>/org.do?method=showSocialGraphRegistration&amp;portal=$1</to>
+		</rule>
+
+	    <rule>
+			<from>/([a-zA-Z0-9-_ ]*?)([\/]?)apiaccess.jsp</from>
+			<to>/org.do?method=showApiAccess&amp;portal=$1</to>
+		</rule>
+		
+		<rule>
+		    <from>/([a-zA-Z0-9-_ ]*?)([\/]?)api.jsp</from>
+		    <to>/oppsrch.do?method=showSearchURLTranslator&amp;portal=$1</to>
+		</rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)logintest.jsp</from>
+            <to>/register.do?method=showloginTest&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)search.jsp</from>
+            <to>/oppsrch.do?method=showSolrSearch&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)fullsearch.jsp</from>
+            <to>/oppsrch.do?method=showFullSearch&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)groupvolunteering.jsp</from>
+            <to>/register.do?method=showGroupVolunteering&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)businessasmissionvolunteering.jsp</from>
+            <to>/register.do?method=showBusinessVolunteering&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)businessvolunteering.jsp</from>
+            <to>/register.do?method=showBusinessVolunteering&amp;portal=$1</to>
+        </rule>
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)professionalvolunteering.jsp</from>
+            <to>/register.do?method=showBusinessVolunteering&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)internships.jsp</from>
+            <to>/register.do?method=showInternships&amp;portal=$1</to>
+        </rule>
+
+        <rule>
+            <from>/([a-zA-Z0-9-_ ]*?)([\/]?)volunteerdashboard.jsp</from>
+            <to>/register.do?method=showVolunteerDashboard&amp;portal=$1</to>
+        </rule>
+
+<!-- the URL directly itself (like www.domain.org/subdomain) still does not work in tomcat, though it does in resin -->
+<!-- ... the problem is that tomcat is not opening the homepage in this case; apache/lighttpd is.  if :8080 is entered, it's fine -->
+    <rule>
+        <from>^/([a-zA-Z0-9-_ ]+)/$</from>
+        <to>/?portal=$1</to>
+    </rule>
+    <rule>
+        <from>/([a-zA-Z0-9-_ ]+)/(.*)</from>
+        <to>/$2&amp;portal=$1</to>
+    </rule>
+<!--
+    <rule>
+        <from>/([a-zA-Z0-9-_ ]*?)([\/]?)(.*)</from>
+        <to>/$3&amp;portal=$1</to>
+    </rule>
+-->
+
+</urlrewrite>
+

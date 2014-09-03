@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Demo of ChristianVolunteering Org Management Widget</title>
+  <meta name="description" content="">
+  
+  <style type="text/css">
+    html, body {
+	  margin: 0;
+	  padding: 0;
+	  font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+	  
+	/* styles for the widget itself */
+    .org-mgmt-widget {
+	  width: 200px;
+	  height: auto; /* will be total of smaller containers - 302px */
+	}
+	
+	.org-container {
+	  background: url("organizations-bg-v2.png") no-repeat scroll left top transparent;
+      height: 84px;
+	}
+	
+	.opp-container {
+	  background: url("opportunities-bg.png") no-repeat scroll left top transparent;
+	  height: 85px;
+	}
+	
+	.contacts-container {
+	  background: url("contacts-bg.png") no-repeat scroll left top transparent;
+	  height: 68px;
+	}
+	
+	.share-container {
+	  background: url("share-bg.png") no-repeat scroll left top transparent;
+	  height: 64px;
+	}
+	
+	/* styles for the headings inside it */
+	h3.org-mgmt-link {
+	  text-align: center;
+	  font-size: 19px;
+	  font-family: Arial, Helvetica, sans-serif;
+	  font-weight: bold;
+	  margin: 0;
+	  padding-top: 20px;
+	}
+	
+	.org-container h3.org-mgmt-link, .opp-container h3.org-mgmt-link {
+	  text-align: left;
+	  float: left;
+	  margin-left: 10px;
+	  padding-top: 18px;
+	}
+	
+	.org-container h3.org-mgmt-link {
+	  padding-top: 18px;
+	}
+	
+	.opp-container h3.org-mgmt-link {
+	  padding-top: 22px;
+	}
+	
+	.contacts-container h3.org-mgmt-link {
+	  padding-top: 24px;
+	}
+	
+	h3.org-mgmt-link a {
+	  text-decoration: none;
+	  color: #596e9f;
+	}
+	
+	h3.org-mgmt-link a:hover {
+	  text-decoration: underline;
+	  color: #596e9f;
+	}
+	
+	/* styles for the add button */
+	
+	p.add-new-buttn {
+	  float: left;
+	  font-size: 12px;
+	}
+	
+	.org-container p.add-new-buttn {
+	  margin-left: 11px;
+	  margin-top: 22px;
+	}
+	
+	.opp-container p.add-new-buttn {
+      margin-left: 14px;
+	  margin-top: 26px;
+	}
+	
+	p.add-new-buttn a {
+	  background-color: #728dd4;
+      border: 1px solid #4D73CF;
+      color: #FFFFFF;
+      font-weight: bold;
+      padding-left: 5px;
+	  padding-right: 5px;
+	  padding-top: 0px;
+	  padding-bottom: 1px;
+      text-decoration: none;
+      width: 140px;
+	}
+	
+	p.add-new-buttn a:hover {
+	  background-color: #596e9f;
+	}
+	
+	.org-mgmt-widget select {
+	  display: block;
+	  margin-left: 10px;
+	  width: 175px;
+	}
+	
+  </style>
+  
+  <script language="text/javascript">
+    /* dummy version of script to pull up new page */
+    function showorg(inid, newlist) {
+	  alert('goto' + newlist);
+	}
+	
+	function showopp(inid, newlist) {
+	  showorg(inid, newlist);
+	}
+  </script>
+  
+</head>
+<body>
+
+  <div class="org-mgmt-widget">
+    <div class="org-container">
+      <h3 class="org-mgmt-link"><a href="#">Organizations</a></h3>	  
+      <p class="add-new-buttn"><a href="#">Add</a></p>
+	  <div style="clear: both;"></div>
+	  <select id="organizationlist" name="organizationlist" onchange="showorg(this.value, 'opportunities')">
+	    <option value="73734" selected="selected">City Vision</option>
+		<option value="12324">TechMission Corps</option>
+	  </select>
+    </div>
+	
+    <div class="opp-container">
+      <h3 class="org-mgmt-link"><a href="#">Opportunities</a></h3>
+	  <p class="add-new-buttn"><a href="#">Add</a></p>
+	  <div style="clear: both;"></div>
+      <select id="opportunities" name="opportunities" class="smalldropdown" onchange="showopp(this.value, 'opportunity')">
+			<option value="" selected="">-- click to select --</option> 	
+			<option value="448364">City Vision Internship: Administrative Intern</option>
+			<option value="448365">City Vision Internship: Graphic Designer Intern</option>
+		</select>
+    </div>
+  
+    <div class="contacts-container">
+      <h3 class="org-mgmt-link"><a href="#">Contacts</a></h3>
+    </div>
+  
+    <div class="share-container">
+      <h3 class="org-mgmt-link"><a href="#">Share on Website</a></h3>
+    </div>
+  
+  </div>
+  
+</body>
+</html>

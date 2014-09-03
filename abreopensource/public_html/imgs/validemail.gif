@@ -1,0 +1,35 @@
+function validemail(curel, prospectevent)
+{
+/*
+	these are the rules according to RFC 822 @ http://www.w3.org/Protocols/rfc822/
+	local-part + "@" + domain
+	local-part is any atom (defined as any ASCII Char 0-127 EXCEPT Chars 0-32,34,40,41,44,58-60,62,64,91-93,127)
+		or any quoted string (with DBL Quotes char(34)) containing any ASCII char 0-127 EXCEPT chars 13,34,92, this quoted string can also be empty
+		or series of quoted strings and/or non-quoted strings (also called atoms) separated by a period
+		this does not take into consideration any "quoting" of characters allowed or comments
+	"@" is just what it is a single @ sign
+	domain is any atom (defined as any ASCII Char 0-127 EXCEPT Chars 0-32,34,40,41,44,58-60,62,64,91-93,127)
+		or a domain-literal (defined as a string enclosed in brackets [ ] with any ASCII char 0-127 EXCEPT 13 and 91-93, this enclosed string can also be empty)
+		this does not take into consideration any "quoting" of characters allowed or comments
+	We are not strictly adhering to the standard when it comes to domain-literals, we will assume the email either ends in a domain-literal, 2-4 letters, or 1-3 numbers
+*/
+		
+	var emailval = curel.email.value;	
+	//var urlstring = 'http://3nmb7.wvus.org/worldvision/BI_Global/Signup.aspx?prospectevent='+prospectevent+'&email=';
+	var urlstring = 'https://webi1.worldvision.org/worldvision/BI_Global/Signup.aspx?prospectevent='+prospectevent+'&email=';
+	var filter  = /^(([a-zA-Z0-9_\-\!\#\$\%\^\&\*\+\=\'\/\?\`\~\{\}])+|(\"[a-zA-Z0-9_\.\-\!\#\$\%\^\&\*\+\=\'\/\?\`\~\{\}\ \(\)\,\:\;\@\[\]\<\>]*\")){1}(\.([a-zA-Z0-9_\-\!\#\$\%\^\&\*\+\=\'\/\?\`\~\{\}])+|(\.\"[a-zA-Z0-9_\.\-\!\#\$\%\^\&\*\+\=\'\/\?\`\~\{\}\ \(\)\,\:\;\@\[\]\<\>]*\"))*\@(((([a-zA-Z0-9_\-\!\#\$\%\^\&\*\+\=\'\/\?\`\~\{\}]+)\.)+([a-zA-Z]{2,4}|[0-9]{1,3})$)|(\[[a-zA-Z0-9_\.\-\!\#\$\%\^\&\*\+\=\'\/\?\`\~\{\}\ \(\)\,\:\;\@\<\>]*\]$))/;
+	if (!filter.test(emailval))
+	{
+		var msg = 'Please enter a valid email address';
+		alert(msg);
+		curel.email.focus();
+	}
+	else 
+	{
+		//window.close();
+		
+		//location.replace (urlstring + emailval);
+		window.open(urlstring + emailval, "Profile", "width=342,height=385,menubar=no,toolbars=no,status=no, scrollbars=no,resizable=no,left=0,top=0,screenX=0,screenY=0");
+	}
+	return false;
+}// -->

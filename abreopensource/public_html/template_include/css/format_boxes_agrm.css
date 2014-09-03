@@ -1,0 +1,539 @@
+	
+a#opplocal, a#organiz, a#stm, a#intrn, a#trn, a#searchadv, a#pro{
+cursor:pointer; 
+text-decoration:none; 
+color:#000000; 
+font-size:1em;
+//font-size:12px; 
+font-weight: normal;
+background:transparent url(/imgs/tabs-off1.png) no-repeat; 
+border-right: 1px solid #4D4d4d; 
+padding:5px 5px 2px;
+margin-bottom: 0px;
+font-weight: bold;
+color:#4D4D4d;
+}
+a#opplocal.active, a#organiz.active, a#stm.active, a#intrn.active, a#trn.active, a#searchadv.active, a#pro.active {
+background:transparent url(/imgs/tabs-on1.png) no-repeat; 
+border-right: 1px solid #4d4d4D;
+font-weight: bold;
+color:#FFF;
+}
+#all_tabs {width:100%; margin-bottom: 20px;}
+h5.benefits {margin: 0; font-size:12px; color:#000;}
+select#country {width: 150px;}
+
+div#content {
+margin-left: 0px;
+}
+div#content a:link {
+color: #4D4D4D;
+text-decoration: none;
+}
+a#ministry_tab_local_one_time, a#ministry_tab_virtual, a#ministry_tab_grp_family, a#ministry_tab_stm, a#ministry_tab_sum_intrn,
+a#ministry_tab_intrn, a#ministry_tab_work_study, a#ministry_tab_board, a#trn, a#latest_tab, a#ministry_tab_local_orgs{
+cursor:pointer; 
+text-decoration:none; 
+color:#000000; 
+font-size:1em;
+//font-size:12px; 
+font-weight: normal;
+background:transparent url(/imgs/tabs-off1.png) no-repeat; 
+border-right: 1px solid #4D4d4d; 
+padding:5px 5px 2px;
+margin-bottom: 0px;
+font-weight: bold;
+color:#0E3E7C!important;
+text-decoration:none!important;
+}
+a#ministry_tab_local_one_time.active, a#ministry_tab_virtual.active, a#ministry_tab_grp_family.active, a#ministry_tab_stm.active, 
+a#ministry_tab_sum_intrn.active, a#ministry_tab_intrn.active, a#ministry_tab_work_study.active, a#ministry_tab_board.active, 
+a#trn.active, a#latest_tab.active, a#ministry_tab_local_orgs.active{
+background:transparent url(<%=request.getContextPath()%>/imgs/tabs-on1.png) no-repeat; 
+border-right: 1px solid #4d4d4D;
+font-weight: bold;
+color:#FFF!important;
+text-decoration:none!important;
+}
+#all_tabs {width:100%; margin-bottom: 20px;}
+h5.benefits {margin: 0; font-size:12px; color:#000;}
+select#country {width: 150px;}
+.add-new-buttn{ 
+background-color:#83A2F4;
+border:1px solid #4D73CF;
+color:#FFFFFF;
+font-weight:bold;
+padding:3px;
+text-decoration:none;
+white-space:nowrap;
+line-height:3em;
+}
+a.add-new-buttn{ color:#000066;}
+a.add-new-buttn:hover {
+background-color:#4D73CF;
+text-decoration:none;
+color:#FFF;
+}
+body#urbmin a.add-new-buttn { 
+background-color:#E4D8B2;
+border:1px solid #B8966C;
+color:#4D4D4D;
+}
+body#urbmin a.add-new-buttn:hover {
+background-color:#B8966C;
+}
+.label_embeds {display: inline-block; text-align:right; font-weight:bold; width:50px;}
+.manageorg_container {width:500px; background-color:#FFF; border:3px solid #93B6F0; padding:10px; margin: 20px auto;} 
+.manageorg_container.wide {width: 600px;}
+body#urbmin .manageorg_container { 
+border:3px solid #B8966C;
+}
+ul.columns {float:left; width:auto;}
+ul.columns li {padding-left:0px; //list-style: square;}
+ul.columns li a{ color:#003366; text-decoration:none;}
+ul.columns li a:hover, a:hover { text-decoration:underline;}
+.profile_box{width: 200px; text-align:left; background-color:#FFF; border:3px solid #93B6F0; height:300px; padding:10px; float:left; margin: 0 20px 20px 10px;}
+.profile_box a, .org_box a{ color:#003366; text-decoration:none; line-height:2em;}
+.profile_box a:hover, .org_box a:hover {text-decoration:underline;}
+.org_box {width: 200px; text-align:left; background-color:#FFF; border:3px solid #93B6F0; min-height:300px; //height:300px; padding:10px; float:left;}
+.find_box {padding: 10px; border: 3px solid #93B6F0; float:left; text-align:left; width:480px;}
+h3{margin:0px;}
+
+a.add-new-buttn { 
+background-color:#83A2F4;
+border:1px solid #4D73CF;
+color:#FFFFFF;
+font-weight:bold;
+padding:3px;
+width:140px;
+text-decoration:none;
+}
+a.add-new-buttn:hover {
+background-color:#4D73CF;
+text-decoration:none;
+color:#FFF;
+}
+body#urbmin a.add-new-buttn { 
+background-color:#E4D8B2;
+border:1px solid #B8966C;
+color:#4D4D4D;
+}
+body#urbmin a.add-new-buttn:hover {
+background-color:#B8966C;
+}
+body#urbmin .profile_box, body#urbmin .org_box, body#urbmin .find_box { 
+border:3px solid #B8966C;
+}
+.better-select div.form-checkboxes-scroll {
+  border: 1px solid #666;
+  max-height: 95px;
+  max-width: 400px;
+  overflow: auto;
+  word-wrap: break-word;
+}
+.better-select div.form-checkboxes-noscroll {
+  border: 1px solid #666;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+ul.columns {float:left; width:auto;}
+ul.columns li {padding-left:0px; //list-style: square;}
+ul.columns li a{ color:#003366; text-decoration:none;}
+ul.columns li a:hover, a:hover { text-decoration:underline;}
+.profile_box{
+	width: 375px;
+	text-align:left;
+	background-color:#FFF;
+	border:3px solid #93B6F0;
+	padding:5px;
+	float:left;
+        font-family: arial,helvitica,sans-serif;
+	height:370px; 
+}
+.profile_box a, .fb_box a{ color:#003366; text-decoration:none; line-height:2em;}
+.profile_box a:hover, .fb_box a:hover {text-decoration:underline;}
+.fb_box {
+	width: 281px;
+	text-align:left;
+	background-color:#FFF;
+	border:3px solid #93B6F0;
+        font-family: arial,helvitica,sans-serif;
+	height:370px; 
+	padding:5px;
+	margin: 0 10px 10px 10px;
+	align: right;
+	//height:270px; float:left;
+}
+.fb_box h2 {text-align:center;}
+.fb_box ol {width:210px;}
+h3{margin:0px;}
+
+a.add-new-buttn { 
+background-color:#83A2F4;
+border:1px solid #4D73CF;
+color:#FFFFFF;
+font-weight:bold;
+padding:3px;
+width:140px;
+text-decoration:none;
+}
+a.add-new-buttn:hover {
+background-color:#4D73CF;
+text-decoration:none;
+color:#FFF;
+}
+
+body#urbmin .profile_box, body#urbmin .fb_box { 
+border:3px solid #B8966C;
+}
+
+hr.box_line{
+border: 0;
+color:#515C72;
+background-color:#515C72;
+height: 2px;
+width:100%;
+}
+#maincontent.sidebarless{width: 100%; backround-image:none; border:none;}
+#contentwrapper.sidebarless {background-image:none; background-color:#FFF; width:950px;}
+#pagebanner {//width:950px;}
+#vol_stories_box{
+border:1px solid #88AAFE;
+margin-left:18px;
+margin-bottom:10px;
+height:253px;
+width:355px;
+float:left;
+background-color:#FFF;
+}
+#vol_stories_header {
+background-color:#88AAFE;
+height:26px;
+padding-left:10px;
+padding-top:3px;
+}
+#vol_stories_header h3 {
+color:#FFFFFF;
+float:left;
+padding-bottom:0;
+margin:0;
+}
+#vol_stories_header ul {
+margin-left:190px;
+margin-top: 0px;
+}
+#vol_stories_header li {
+background-color:#6B84BF;
+color:#FFFFFF;
+float:left;
+font-weight:bold;
+height:19px;
+margin-right:1px;
+padding:3px;
+text-align:center;
+width:20px;
+list-style:none;
+}
+#vol_stories_header ul#numbers li.tab a{ color:#FFF; text-decoration:none;}
+#vol_stories_header ul#numbers li.active_tab a{ color:#88AAFE; text-decoration:none;}
+.main_text {
+padding:10px 10px 0px 150px;
+font-size:11px;
+}
+h1.signupnow { 
+font-size:18px;
+text-transform: uppercase;
+margin-top:125px;
+margin-bottom:0px;
+}
+.main_text h4 {
+margin:0px;
+}
+.imgleft{float:left; width:140px; height:200px}
+.imgleft2{float:left; width:365px; height:265px}
+#vol_stories_header .active_tab {
+background-color:#FFFFFF;
+color:#003366;
+margin-right:1px;
+padding:3px;
+text-align:center;
+}
+#account_box{
+background:transparent url(http://christianvolunteering.org/imgs/acctbox_hands.gif) no-repeat;
+border:1px solid #5B7F37;
+margin-left:18px;
+margin-bottom:10px;
+height:253px;
+width:258px;
+float:left;
+}
+#account_header {
+background-color:#5B7F37;
+height:26px;
+padding-left:10px;
+padding-top:3px;
+}
+#account_header h3, #partner_header h3 {
+color:#FFFFFF;
+float:left;
+padding-bottom:0;
+margin:0;
+}
+.box_content { padding: 20px 10px 0px; //padding:18px 10px 0px;}
+.subinfo {
+padding:10px 10px 5px 150px;
+}
+a { color:#000000; font-weight:inherit;}
+#volunteerheader ul {
+margin-left:220px;
+}
+#sidebar_box.background{
+background:transparent url(http://christianvolunteering.org/imgs/Where_Volunteer_Bkgr.gif) no-repeat;
+margin-right:13px;
+margin-top:7px;
+margin-bottom:10px;
+width:263px;
+height:375px; 
+float:right;
+}
+#sidebar_box h4{ margin-left: 20px; margin-top:10px; color:#5B7F37; font-size:14px;}
+.main_text2 {
+padding:7px 10px 0px 40px;
+font-size:11px;
+font-weight:bold;
+line-height:1.5em;
+
+}
+.numbers{ font-weight:bold; color:#003366;}
+#partner_box{
+border:1px solid #88AAFE;
+margin-left:18px;
+margin-bottom:10px;
+height:215px;
+width:250px;
+float:left;
+background-color:#FFF;
+}
+#partner_box img{border:none;}
+#partner_header {
+background-color:#88AAFE;
+height:26px;
+padding-left:10px;
+padding-top:3px;
+}
+
+
+
+
+#vol_stories_box{
+border:1px solid #88AAFE;
+margin-left:18px;
+margin-bottom:10px;
+min-height:253px;
+width:355px;
+float:left;
+}
+#vol_stories_header {
+background-color:#88AAFE;
+height:26px;
+padding-left:10px;
+padding-top:3px;
+}
+#vol_stories_header h3 {
+color:#FFFFFF;
+float:left;
+padding-bottom:0;
+margin:0;
+}
+#vol_stories_header ul {
+margin-left:190px;
+margin-top: 0px;
+}
+#vol_stories_header li {
+background-color:#6B84BF;
+color:#FFFFFF;
+float:left;
+font-weight:bold;
+height:19px;
+margin-right:1px;
+padding:3px;
+text-align:center;
+width:20px;
+list-style:none;
+}
+#vol_stories_header ul#numbers li.tab a{ color:#FFF; text-decoration:none;}
+#vol_stories_header ul#numbers li.active_tab a{ color:#88AAFE; text-decoration:none;}
+.main_text {
+padding:10px 10px 0px 150px;
+font-size:11px;
+}
+h1.signupnow { 
+font-size:18px;
+text-transform: uppercase;
+margin-top:125px;
+margin-bottom:0px;
+}
+.main_text h4 {
+margin:0px;
+}
+.imgleft{float:left; width:140px; height:200px}
+.imgleft2{float:left; width:365px; height:265px}
+
+#vol_stories_header .active_tab {
+background-color:#FFFFFF;
+color:#37ABBE;
+margin-right:1px;
+padding:3px;
+text-align:center;
+}
+#account_box{
+background:transparent url(http://christianvolunteering.org/imgs/acctbox_hands.gif) no-repeat;
+border:1px solid #5B7F37;
+margin-left:18px;
+margin-bottom:10px;
+height:253px;
+width:258px;
+float:left;
+}
+#account_header {
+background-color:#5B7F37;
+height:26px;
+padding-left:10px;
+padding-top:3px;
+}
+#account_header h3, #partner_header h3 {
+color:#FFFFFF;
+float:left;
+padding-bottom:0;
+margin:0;
+}
+.box_content { padding: 20px 10px 0px; //padding:5px 10px 0px;}
+.subinfo {
+padding:10px 10px 5px 150px;
+}
+a { color:#000000; font-weight:inherit;}
+#volunteerheader ul {
+margin-left:220px;
+}
+#sidebar_box.white{
+background:transparent url(http://christianvolunteering.org/imgs/Where_Volunteer_white.gif) no-repeat;
+margin-right:13px;
+margin-top:7px;
+margin-bottom:10px;
+width:265px;
+height:200px;
+float:right;
+}
+#sidebar_box h4{ margin-left: 20px; color:#5B7F37; font-size:13px;}
+.main_text2 {
+padding:7px 10px 0px 40px;
+font-size:11px;
+font-weight:bold;
+line-height:1.5em;
+}
+.numbers{ font-weight:bold; color:#003366;}
+#partner_box{
+border:1px solid #88AAFE;
+margin-left:23px;
+margin-bottom:10px;
+height:215px;
+width:250px;
+float:left;
+background-color:#FFF;
+}
+#partner_box img{border:none;}
+#partner_header {
+background-color:#88AAFE;
+height:26px;
+padding-left:10px;
+padding-top:3px;
+}
+/* --------- Scrolling News css -------------*/
+#news{ }
+#news ul{padding:7px 10px 0px 40px; //margin: 0px;}
+#news ul a, #news ul a:hover {color:#000;}
+#news ul a {text-decoration:none;}
+#news ul a:hover {text-decoration:underline;}
+#news li{line-height:2em; font-weight:bold; list-style:none;}
+/* the news box when JavaScript is available */
+#news.hasJS
+{height:150px;overflow:hidden;position:relative;}
+/* The nested UL when JavaScript is available */
+#news.hasJS ul
+{position:absolute;top:120px;left:0;}
+p#DOMnewsstopper{ text-align:right; margin-right:30px;}
+/* --------- end: Scrolling News css -------------*/
+
+
+
+
+
+.volbox_wrapper{ background-color:#FBC76E; padding:5px; margin-right:15px; margin-top: 20px; float:left;}
+.volbox{ 
+font-size:14px; 
+color:#000; 
+background-color:#FFEEB6; 
+padding: 10px; 
+border: solid 2px #FFF; 
+height: 200px;
+width:250px;
+}
+.volbox h2 a{ 
+color: #DF9C29; 
+font-size:15px; 
+text-transform:uppercase; 
+text-decoration:none;
+}
+.volbox h2 a:hover, .npbox h2 a:hover{ text-decoration:underline;}
+
+.npbox_wrapper{ background-color:#C3C87A; padding:5px; margin-top: 20px; float:right;}
+.npbox{
+font-size:14px; 
+color: #000; 
+background-color:#D9DF7C;
+padding: 10px;
+border: solid 2px #FFF;
+height: 200px;
+width:250px;
+ }
+.volbox a, .npbox a { color:#666633; text-decoration: none;}
+.volbox a:hover, .npbox a:hover { color:#35568F; text-decoration:underline;}
+.volbox li, .npbox li { line-height: 1.5em;}
+.npbox h2 a{ 
+color:#8C8F59;
+ font-size:15px; 
+ text-transform:uppercase; 
+ text-decoration:none;
+ }
+#page_base{
+border: 2px solid #CCC;
+padding: 10px; 
+background-color:#FFF; 
+float:left; 
+text-align:left; 
+width:600px; 
+margin-left: 50px;
+}
+a#loggedInBlock {
+text-decoration:none;
+}
+.loggedInBlock a { color:#666633; text-decoration: none; font-size:12px;}
+.loggedInBlock a:hover { color:#35568F; text-decoration:underline; font-size:12px;}
+body#fbbody .account_box { 
+background:#FFF;
+}
+
+table#contact {margin-left:20px;}
+table#contact th.contactName {width:90px; padding:0 10px;}
+table#contact th.contactEmail {padding:0 10px;}
+table#contact th.contactPrimary,
+table#contact th.contactRcvEmail,
+table#contact th.contactCanEdit {width:80px; text-align:center;}
+table#contact tr {border-bottom:solid 1px #ccc;}
+table#contact tr.gray {background-color:#E9E8E8;}
+table#contact {
+border-collapse:collapse;
+padding:0;
+}
+table#contact td {padding:0 10px;}
+

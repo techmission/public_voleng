@@ -1,0 +1,5 @@
+<?php
+
+$userdata = 'username:pwd';
+
+?>

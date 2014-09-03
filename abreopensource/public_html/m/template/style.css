@@ -1,0 +1,751 @@
+* { //margin: 0; //padding: 0 }
+
+body
+{
+background: #000 url(http://uywi.org/content/wp-content/themes/UYWI/images/bkg.jpg) center top no-repeat;
+font-family: arial;
+color: #333;
+}
+a { text-decoration: none; color: #b64926; }
+a:hover { text-decoration: underline;  }
+
+img { border: none; padding: 0px; }
+
+#header
+{
+	margin: 0 auto;
+	width: 1000px;
+	height: 60px;
+	background: none repeat scroll 0 0 #000000;
+	left:0px;
+	top:0px;
+	position:relative;
+	z-index:999;
+}
+
+#logo
+{
+	float:left;
+height:54px;
+margin-left:-10px;
+margin-top:12px;
+width:300px;
+	
+}
+
+/*	NAV SECTION
+-----------------------------------------------------------*/
+#nav {
+	color:#FFFFFF;
+float:right;
+font-size:1.1em;
+font-weight:bold;
+margin:30px 0 0;
+padding:0 5px;
+width:450px;
+}
+}
+
+#nav2 {
+	margin-left: 700px;
+	padding-top: 100px;
+	width: 150px;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: arial;
+}
+
+
+/*	FEATURES SECTION
+-----------------------------------------------------------*/
+
+#features
+{
+		width: 952px;
+		overflow: none;
+		padding: 0 0 15px;
+		margin: 0 0 10px;
+}
+
+#features h2
+{
+		display: block;
+		font: bold 70% arial;
+		text-transform: uppercase;
+		color: #468966;
+		margin:0;
+		padding-top: 10px;
+		line-height: 5px;
+}
+
+#othernews h2, #extras h2, #extras #search label, .video h2
+{
+		display: block;
+		font: bold 16px arial;
+		text-transform: uppercase;
+		color: #468966;
+		margin: 20px 0 5px;
+		padding-left: 10px;
+}
+
+#featured-posts
+{
+		float: left;
+		width: 660px;
+		border:1px solid #999;
+
+}
+
+#featured-posts #recent-links
+{
+		float: right;
+}
+
+#featured-posts #recent-links li
+{
+		float: left;
+		list-style: none;
+		text-align: center;
+		margin-left: 5px;
+		font: bold 10px/1.6em arial;
+		color: #999;
+		text-transform: uppercase;
+}
+
+#featured-posts #recent-links li a
+{
+		color: #fff;
+		display: block;
+		width: 18px;
+		height: 18px;
+		background: #151515;
+}
+
+#featured-posts #recent-links li a.active
+{
+		background-color: #ccc;
+}
+
+#featured-posts #posts
+{
+		width: 660px;
+		height: 350px;
+		overflow: hidden;
+		background: #333;
+		background:#fff;
+		z-index: 200;
+		}
+
+#featured-posts #posts .post
+{
+		width: 660px;
+		height: 95px;
+		padding: 255px 0 0;
+}
+
+#featured-posts #posts .postbg
+{
+		background: url(http://uywi.org/content/wp-content/themes/UYWI/images/feat-bg.png) no-repeat;
+		z-index: 200;
+}
+
+#featured-posts #posts .post .post-intro
+{
+		height: 90px;
+		padding: 10px 10px 5px;
+		background: url(http://uywi.org/content/wp-content/themes/UYWI/images/post-intro-bg.png) repeat-x;
+}
+
+#featured-posts #posts .post .post-intro h2
+{
+		font-family: arial;
+		text-transform: none;
+		font-size: 1.5em;
+		margin: 0 0 1px;
+}
+
+#featured-posts #posts .post .post-intro h2 a
+{
+		color: #fff;
+}
+
+#featured-posts #posts .post .entry
+{
+		color: #fff;
+		line-height: 1.6em;
+		font-size: 90%;
+}
+
+#featured-posts #posts .post .entry a
+{
+	color: #fff;
+}
+
+#featured-sponsor
+{
+		float: right;
+		width: 318px;
+}
+
+#featured-sponsor #sponsor
+{
+		height: 250px;
+		background: #333;
+		border: 1px solid #151515;
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;
+}
+
+#featured-sponsor h2, #search h2, #extras #search label
+{
+		text-align: right;
+}
+
+/*	OTHERNEWS SECTION
+-----------------------------------------------------------*/
+
+
+#othernews
+{
+		width: 330px;
+		height: 230px;
+		float: left;
+		overflow: none;
+		padding-top: 0px;
+		padding-right: 10px;
+		padding-left: 5px;
+		margin: 10px 0px 15px;
+}
+
+#othernews h3 {
+font-family: arial;
+font-size: 13px;
+margin-bottom: -10px;
+}
+
+#othernews p {
+font-size: 12px;
+line-height: 13px;
+}
+
+
+#sidebar6
+{
+		width: 280px;
+		height: 320px;
+		float: left;
+		text-align: left;
+		overflow: none;
+		padding-left: 10px;
+		margin-top: 0px;
+		list-style: none;
+		
+}
+
+.podcast
+{
+		width: 280px;
+		height: 257px;
+		float: left;
+		overflow: auto;
+		padding: 0 0 -5px;
+		margin: 0 0 15px;
+}
+
+
+
+/*	MIDDLE SECTION
+-----------------------------------------------------------*/
+
+#middlewrapper {
+	float: left;
+	width: 565px;
+	margin-top: 10px;
+}
+
+#musicreviews {
+float: left;
+width: 645px;
+height: 200px;
+background: #cccccc;
+margin: 1px;
+margin-top: 8px;
+}
+
+#middlead1 {
+float: left;
+width: 645px;
+height: 150px;
+background: #cccccc;
+margin: 1px;
+margin-top: 8px;
+}
+
+
+
+.videowrap {
+	float: left;
+	width: 365px;
+	height: 240px;
+	padding-top: 40px;
+	margin-right: 5px;
+	margin-left: 5px;
+	padding: 2px;
+	background:url(http://uywi.org/content/wp-content/themes/UYWI/images/video.jpg) no-repeat top center;
+
+
+
+}
+
+
+
+
+
+.social {
+	float: right;
+	width: 165px;
+	height: 270px;
+	margin-left: 15px;
+	margin-right: 5px;
+	
+
+}
+
+#featureBottom {
+	float: left;
+	width: 950px;
+	height: 200px;
+}
+
+#bottomBox1 {
+list-style: none;
+float: left;
+width: 304px;
+height: 160px;
+margin: 5px;
+background: #999;
+}
+
+
+/*	PHOTOS / SEARCH SECTION
+-----------------------------------------------------------*/
+
+#extras
+{
+		width: 950px;
+		overflow: auto;
+		margin: 0 0 10px;
+}
+
+#photos
+{
+		float: left;
+}
+
+#photos ul
+{
+		width: 610px;
+}
+
+#photos li
+{
+		list-style: none;
+		float: left;
+		width: 122px;
+		text-align: center;
+}
+
+#photos li img
+{
+		border: 2px solid #ddd;
+		padding: 3px;		
+}
+
+#extras #search
+{
+		float: right;
+		width: 310px;
+}
+
+#extras #searchform
+{
+		padding: 0 10px 0;
+}
+
+#extras #searchform input
+{
+		display: block;
+		font: normal 1em arial;
+		width: 278px;
+		padding: 4px 5px;
+		border: 1px solid #c5c5c5;
+		border-right-color: #eee;
+		border-bottom-color: #eee;
+		margin: 0 0 0.83em;
+}
+
+#extras #searchform button
+{
+		display: block;
+		float: right;
+		width: 75px;
+		height: 25px;
+		font-size: 1em;
+		border: none;
+		color: #fff;
+		background:#666;
+		text-indent: -9999px;
+		cursor: pointer;
+}
+
+
+#content .more-link
+{
+		display: block;
+		text-align: center;
+		width: 75px;
+
+		color: #000;
+		padding: 5px;
+		height: 15px;
+		font-size: 1em;
+}
+
+#content .more-link:hover
+{
+background: #FF6600;
+text-decoration: none;
+}
+.navigation 
+{
+		margin: 0 0 15px;
+		padding: 15px 0 0;
+		font: bold 1em arial;
+		text-transform: uppercase;
+}
+
+.navigation .alignleft
+{
+		float: left;
+}
+
+.navigation .alignright
+{
+		float: right;
+}
+
+#sidebar
+{		font-family: arial;
+		color: #333;
+		float: right;
+		width: 150px;
+		margin: 1em 1em 0 0;
+		border-left: 1px solid #999;
+		padding-left: 20px;
+}
+
+#sidebar2
+{
+		float: right;
+		width: 280px;
+		margin: 1em 0 0;
+		border-left: 1px solid #999;
+		padding-left: 20px;
+		font-family: arial, serif;
+		
+
+
+}
+
+#sidebar3 {		
+		font-family: arial;
+		color: #333;
+		float: left;
+		width: 290px;
+		height: 170px
+		margin: 10px;
+		list-style: none;}
+
+#sidebar2
+{
+		font-family: arial;
+		color: #333;
+		float: right;
+		width: 280px;
+		margin: 1em 0 0;
+		border-left: 1px solid #999;
+		padding-left: 20px;
+		font-family: arial, serif;
+		font-size: 12px;
+}
+
+#sidebar4 
+{
+		float: left;
+		width: 290px;
+		height: 170px
+		margin: 10px;
+		list-style: none;}
+		
+#sidebar5 
+{
+		font-family: arial;
+		color: #333;
+		float: left;
+		width: 290px;
+		height: 170px
+		margin: 10px;
+		list-style: none;}		
+
+#sidebar h2, 
+{
+	display: block;
+	font: bold 1.4em arial, serif;
+	color: #333;
+	margin: 0 0 5px;
+	padding: 5px;
+}
+
+#sidebar2 h2, 
+{
+	display: block;
+	font: bold 1.4em arial, serif;
+	color: #333;
+	margin: 0 0 5px;
+	padding: 5px;
+}
+
+#sidebar2 label {
+	visibility: none;
+}
+
+#sidebar li, #sidebar2 li
+{
+	list-style: none;
+}
+
+#sidebar li ul
+{
+	margin: 0 0 15px;
+	list-style: none;
+	
+}
+
+#sidebar li ul li
+{
+	padding: 5px;
+	font-size: 12px;
+	border-bottom: 1px solid #eee;
+	list-style: none;
+	
+}
+
+#sidebar table
+{
+	width: 310px;
+	margin: 0 0 15px;
+}
+
+#sidebar #sponsor
+{
+	border: 5px solid #151515;
+	margin: 0 0 15px;
+	height: 250px;
+}
+
+#sidebar #search
+{
+	background: #fff;
+	padding: 0 0 15px;
+}
+
+#sidebar #search input
+{
+		display: block;
+		font: normal 1em arial;
+		width: 298px;
+		padding: 4px 5px;
+		border: 1px solid #c5c5c5;
+		border-right-color: #eee;
+		border-bottom-color: #eee;
+		margin: 0 0 10px;
+}
+
+#sidebar #search button
+{
+		display: block;
+		width: 75px;
+		height: 25px;
+		font-size: 1em;
+		border: none;
+		background: url(http://uywi.org/content/wp-content/themes/UYWI/images/search-button.gif) no-repeat;
+		text-indent: -9999px;
+		cursor: pointer;
+}
+
+#sidebar form
+{
+	display: block;
+	background: #FFF;
+}
+
+#sidebar table
+{
+		width: 310px;
+		font: bold 1em arial;
+		margin: 0 0 15px;
+}
+
+#sidebar td
+{
+		/* text-align: center; */
+		font: bold 1em arial;
+		padding: 4px 20px 4px 4px;
+		background: #f5f5f5;
+}
+
+#sidebar caption
+{
+		font: bold 1em arial;
+		background: #ccc;
+		padding: 0.5em;
+}
+
+#sidebar th
+{
+		background: #e5e5e5;
+		padding: 0.4em;
+}
+
+#sidebar tfoot td
+{
+		background: #e5e5e5;
+}
+h2.widgettitle  {font-size: 1.4em;}
+.widget widget_simple_upcoming_events ul {font: bold 16px arial;}
+#simple_upcoming_events ul{font: bold 14px arial; line-height: 20px; list-style: none; text-align: left; margin-left: -35px; margin-top: 5px;}
+#simple_upcoming_events h2{visibility: hidden; display: none;}
+
+
+/*	VIDEO SECTION
+-----------------------------------------------------------*/
+
+.copy {
+float: left;
+padding-bottom: 10px;
+padding-left: 10px;
+}
+.cite {
+	background:#FFFFFF;
+		
+}
+.bottomnav{ float: right;clear: both;}
+
+/*- SIMPLEMENU UL -*/
+#simplemenu, #simplemenu * {list-style:none;margin:0;padding:0;}
+/*- MENU ITEM -*/
+#simplemenu li {cursor:pointer;float:left;}
+#simplemenu li a {display:block;}
+/*- SUB MENU -*/
+#simplemenu li ul {position:absolute;left:-5000px;z-index:1001;}
+#simplemenu li:hover ul {left:auto;width:140px;}
+/*- SUB MENU POSITION -*/
+#simplemenu li:hover ul ul, #simplemenu li:hover ul ul ul, #simplemenu li:hover ul ul ul ul {left:-5000px;}
+#simplemenu li:hover ul, #simplemenu li li:hover ul, #simplemenu li li li:hover ul, #simplemenu li li li li:hover ul {left:auto;}
+#simplemenu li:hover ul li:hover ul {margin:-30px 0 0 140px;}
+
+
+.twtr-widget{
+position: relative;
+font-size: 12px;
+font-family: arial;
+height: 400px;
+}
+
+.twtr-ft div {
+visibility: hidden;
+}
+
+.twtr-timeline {
+position: relative;
+overflow-x: hidden;
+overflow-y: hidden;
+z-index: 2;
+height: 150px;
+
+}
+
+.twtr-widget h4{
+font-size: 16px;
+color: #468966;
+}
+
+.reload {
+float:right;
+margin-top: 80px;
+margin-right: -10px;
+}
+
+/* ---- Top Nav ---- */
+#suckerfishnav, #suckerfishnav ul {
+background:none repeat scroll 0 0 transparent;
+font-weight:normal;
+line-height:1.5em;
+list-style-position:outside;
+list-style-type:none;
+margin:0;
+padding:0;
+position:relative;
+width:100%;
+z-index:300;
+}
+#suckerfishnav a {
+background:none repeat scroll 0 0 transparent;
+color:#FFFFFF;
+display:block;
+font-weight:500;
+padding:0.25em 0.75em;
+text-decoration:none;
+text-transform:uppercase;
+}
+#suckerfishnav a:hover {
+color:#FF6000;
+}
+#suckerfishnav li {
+float:left;
+position:relative;
+}
+#suckerfishnav ul {
+display:none;
+left:-1px;
+position:absolute;
+top:2em;
+width:12em;
+}
+#suckerfishnav ul a {
+background:url(http://uywi.org/content/wp-content/themes/uywi/images/launch.png) repeat scroll 0 0 transparent;
+}
+#suckerfishnav li ul {
+width:14.1em;
+}
+#suckerfishnav li ul a {
+float:left;
+height:auto;
+width:12em;
+}
+#suckerfishnav ul ul {
+top:auto;
+}
+#suckerfishnav li ul ul {
+left:12em;
+margin:0 0 0 10px;
+}
+#suckerfishnav li:hover ul ul, #suckerfishnav li:hover ul ul ul, #suckerfishnav li:hover ul ul ul ul {
+display:none;
+}
+#suckerfishnav li:hover ul, #suckerfishnav li li:hover ul, #suckerfishnav li li li:hover ul, #suckerfishnav li li li li:hover ul {
+display:block;
+
+/* ---- End Top Nav ---- */

@@ -1,0 +1,239 @@
+
+/**
+* Pulse point
+*/
+
+#pulsepoint-wrap {
+   float:left;
+   width:auto;
+   margin:0px 0 0px 31px;
+}
+	#ieroot #pulsepoint-wrap {
+   		float:none;
+}
+
+#pulsepoint {
+    width : 839px; /* bg image is actually 838, so this is 1 pixel wider than the photoshop file (in order to match our other measurements). */
+    height : 63px;
+    background : transparent url(../images/pulse_point_bg.jpg) top left repeat-x;
+}
+
+#pulsepoint a:link, #pulsepoint a:visited {color:#e1b071; text-decoration:none ;}
+#pulsepoint a:hover {color: #000;text-decoration:none;}
+
+#pulsepoint .open a:link, #pulsepoint .open a:visited {color:#000; text-decoration:none ;}
+
+#pulsepointlogo {
+    width : 203px;
+    float : left;
+    color : #fff;
+}
+
+* html #pulsepointlogo {
+    width : 200px; /* IE6 3px bug */
+}
+
+#pulsepointpanelcontainer {
+    position : relative;
+    width : 630px;
+    height : 63px;
+    overflow : hidden;
+}
+
+#pulsepointpanelone,
+#pulsepointpaneltwo,
+#pulsepointpanelthree,
+#pulsepointpanelfour {
+    position : absolute;
+    left : 0;
+    top : 0;
+    overflow : hidden;
+    height : 63px;
+    background-color : transparent;
+    background-repeat : no-repeat;
+}
+
+#pulsepointpanelone {
+    left : 0px;
+    width : 163px;
+}
+
+#pulsepointpaneltwo {
+    left : 163px;
+    width : 155px;
+}
+
+#pulsepointpanelthree {
+    left : 331px;
+    width : 163px;
+}
+
+#pulsepointpanelfour {
+    left : 494px;
+    width : 136px;
+}
+
+
+/*
+* Buttons
+* Same shape and size as the visible panel (before reveal)
+*/
+
+#pulsepointpanelcontainer .ppopenbutton {
+    display : block;
+    float : left;
+	padding:11px 0 0 18px;
+	font-size:11px;
+	line-height:12px;
+}
+
+/* heading */
+#pulsepointpanelcontainer .ppopenbutton span {
+    display : block;
+    margin : 0 0 4px 0;
+	font-size:16px;
+	line-height:15px;
+    font-weight : normal;
+}
+/* heading color */
+#pulsepointpanelcontainer a.ppopenbutton:link span, #pulsepointpanelcontainer a.ppopenbutton:visited span {
+	color:#fbfbf9;
+}
+
+#pulsepointpanelcontainer a.ppopenbutton:hover span {
+		color: #000;
+}
+/* end heading */
+
+/* left angle quote */
+#pulsepointpanelcontainer a.ppopenbutton:link strong, #pulsepointpanelcontainer a.ppopenbutton:visited strong {
+		color:#fff; 
+}
+
+#pulsepointpanelcontainer .open a.ppopenbutton:link strong, 
+#pulsepointpanelcontainer .open a.ppopenbutton:visited strong,
+#pulsepointpanelcontainer .open a.ppopenbutton:focus strong, 
+#pulsepointpanelcontainer .open a.ppopenbutton:hover strong, 
+#pulsepointpanelcontainer .open a.ppopenbutton:active strong {
+		color:#ed1c24; 
+}
+#pulsepoint a.ppopenbutton:hover strong {color: #ed1c24;text-decoration:none;}
+
+/* end left angle quote */
+
+
+#pulsepointpanelone .ppopenbutton {
+    width : 163px;
+    height : 63px;
+}
+
+#pulsepointpaneltwo .ppopenbutton {
+    width : 155px;
+    height : 63px;
+}
+
+#pulsepointpanelthree .ppopenbutton {
+    width : 163px;
+    height : 63px;
+}
+
+#pulsepointpanelfour .ppopenbutton {
+    width : 136px;
+    height : 63px;
+}
+
+/* Button over states */
+
+/* closed */
+#pulsepointpanelcontainer.notanimating .closed .ppopenbutton:hover {
+    background-image : url(../images/pulse_point_selected_bg.png);
+	
+}
+
+.notanimating #pulsepointpanelone.closed   .ppopenbutton:hover { background-position : top left;}
+.notanimating #pulsepointpaneltwo.closed   .ppopenbutton:hover { background-position : -176px 0; }
+.notanimating #pulsepointpanelthree.closed .ppopenbutton:hover { background-position : -331px 0; }
+.notanimating #pulsepointpanelfour.closed  .ppopenbutton:hover { background-position : -494px 0; }
+
+/* open */
+#pulsepointpanelcontainer .open .ppopenbutton:hover {
+    background-image : none;
+}
+
+/* to keep the selected text black when open */
+
+/* headings */
+#pulsepointpanelcontainer .open a.ppopenbutton:link span, #pulsepointpanelcontainer .open a.ppopenbutton:visited span,#pulsepointpanelcontainer .open a.ppopenbutton:hover span {
+	color:#000;
+}
+
+/* details content when opened */
+#pulsepointpanelcontainer .open .ppopenbutton { color:#000;/* tim, i leave this to you, if there are any styles */ }
+
+/* END to keep the selected text black when open */
+
+
+#pulsepointpanelone.open   .ppopenbutton:hover { /* tim, i leave this to you, if there are any styles */ }
+#pulsepointpaneltwo.open   .ppopenbutton:hover { /* tim, i leave this to you, if there are any styles */ }
+#pulsepointpanelthree.open .ppopenbutton:hover { /* tim, i leave this to you, if there are any styles */ }
+#pulsepointpanelfour.open  .ppopenbutton:hover { /* tim, i leave this to you, if there are any styles */ }
+
+/* houses individual whole panels (after reveal) */
+.wholepanel {
+    width : 630px;
+    height : 63px;
+}
+
+.wholepanel a.ppopenbutton:focus, .wholepanel a.ppopenbutton:hover, .wholepanel a.ppopenbutton:active {
+	text-decoration:none;
+}
+
+/* close '<< back' button */
+.wholepanel a.ppclosebutton {
+    float : right;
+    padding-top:3px;
+	width : 40px;
+	font-size:12px !important;
+}
+
+#pulsepoint .wholepanel a.ppclosebutton:link, #pulsepoint .wholepanel a.ppclosebutton:visited {color:#c83a1f; text-decoration:none ;}
+#pulsepoint .wholepanel a.ppclosebutton:focus, #pulsepoint .wholepanel a.ppclosebutton:hover, #pulsepoint .wholepanel a.ppclosebutton:active {color: #000;text-decoration:none;}
+#pulsepoint .wholepanel a.ppclosebutton:link strong, #pulsepoint .wholepanel a.ppclosebutton:visited strong  {color:#413c34; text-decoration:none ;}
+
+/*
+* for copy/pasting convenience
+*/
+.pulsepointpanelcontent {
+	padding-top:12px;
+}
+
+#pulsepointpanelone, #pulsepointpaneltwo, #pulsepointpanelthree, #pulsepointpanelfour {
+	font-size:11px;
+	color:#7f7a72;
+}
+
+#pulsepointpanelone strong, #pulsepointpaneltwo  strong, #pulsepointpanelthree  strong, #pulsepointpanelfour strong {
+	color:#ed1c24;
+}
+
+
+#pulsepointpaneltwo {
+}
+
+#pulsepointpanelthree {
+}
+
+#pulsepointpanelfour {
+}
+
+.panelcontent-duo {
+	float:left;
+	width:30%;
+	padding:0 5px;
+}
+
+.panelcontent-tri {
+	float:left;
+	width:20%;
+	padding:0 5px;
+}

@@ -1,0 +1,321 @@
+/* overall font sizes and styles */	
+body {
+	font-family: Verdana, Arial, sans-serif;
+	/* font-size: 0.8em; */
+    }
+
+/* wrapper div (needed to relatively position the navigation) */		
+#primary-nav-wrap {
+		margin-top: -15px;
+		margin-bottom: 10px;
+		/* margin: 0;
+		padding: 0;
+		height: 80px;
+		width: 960px; */
+	}
+/* position and size for navigation menu */
+	#primary-nav {
+		position: relative;
+		/* top: 55px; 
+		height: 80px;
+		width: 960px; */
+	}
+
+/* remove padding/margin on the subnav (needed to fix the broken IE box model) */
+#primary-nav li ul, #primary-nav li ul {
+		margin: 0;
+		padding: 0;
+	}
+
+/* no links are underlined */
+	#primary-nav a {
+		text-decoration: none;
+	}
+	
+/* float the main list items */
+	#primary-nav li { 
+		margin: 0;
+		float: left;
+		display: block;
+		padding-right: 10px;
+	}
+
+/* hide secondary-nav by default */
+	#primary-nav li ul {
+		display: none;
+	}
+
+/*put secondary-nav below*/
+	#primary-nav li.level-1 ul  { 
+		position: absolute;
+		/* top: 40px; */
+		left: 0;
+		padding-top: 10px;
+		background: #224d6f;
+		height: 20px;
+		width: 943px;
+		padding-left: 20px;
+	}
+	
+/* positioning for first tab */
+#primary-nav #item-browse-content { margin-left: -20px; }	
+
+/* background for active secondary-nav */
+	.nav1-browse-content #primary-nav #item-browse-content ul {
+		background: #f90;
+	}
+
+	.nav1-volunteers #primary-nav #item-volunteers ul {
+		background: #f90;
+	}
+	
+	.nav1-organizations #primary-nav #item-organizations ul {
+		background: #f90;
+	}
+	
+	.nav1-churches #primary-nav #item-churches ul {
+		background: #f90;
+	}
+	
+	.nav1-about #primary-nav #item-about ul {
+		background: #f90;
+	}
+	
+	.nav1-my-account #primary-nav #item-my-account ul {
+		background: #f90;
+	}
+	/* secondary-nav link formatting */
+	#primary-nav li a {
+		color: #224d6f;
+		font-weight: bold;
+		/* font-size: 0.9em; */
+		display: block;
+		width: 120px;
+		padding: 0;
+	}
+
+	/* active primary nav link text color */
+	.nav1-browse-content #primary-nav #item-browse-content a {
+		color: #fff;
+	}
+	
+	.nav1-volunteers #primary-nav #item-volunteers a {
+		color: #fff;
+	}
+	
+	.nav1-organizations #primary-nav #item-organizations a {
+		color: #fff;
+	}
+	
+	.nav1-churches #primary-nav #item-churches a {
+		color: #fff;
+	}
+	
+	.nav1-about #primary-nav #item-about a {
+		color: #fff;
+	}
+	
+	.nav1-my-account #primary-nav #item-my-account a {
+		color: #fff;
+	}
+	
+	/* change secondary-nav bg color when active primary nav link is hovered (2nd rule is for IE) */
+	.nav1-browse-content #primary-nav #item-browse-content:hover ul, .nav1-churches #primary-nav #item-browse-content.over ul {
+		background: #224d6f;
+	}
+	
+	.nav1-volunteers #primary-nav #item-volunteers:hover ul, .nav1-volunteers #primary-nav #item-volunteers.over ul {
+		background: #224d6f;
+	}
+	
+	.nav1-organizations #primary-nav #item-organizations:hover ul, .nav1-organizations #primary-nav #item-organizations.over ul {
+		background: #224d6f;
+	}
+
+	.nav1-churches #primary-nav #item-churches:hover ul, .nav1-churches #primary-nav #item-churches.over ul {
+		background: #224d6f;
+	}
+	
+	.nav1-about #primary-nav #item-about:hover ul, .nav1-about #primary-nav #item-about.over ul {
+		background: #224d6f;
+	}
+	
+	.nav1-my-account #primary-nav #item-my-account:hover ul, .nav1-my-account #primary-nav #item-my-account.over ul {
+		background: #224d6f;
+	}
+	
+	/* active primary-nav link text color on hover */
+	.nav1-browse-content #primary-nav #item-browse-content a:hover {
+		color: #f90;
+	}
+	
+	.nav1-volunteers #primary-nav #item-volunteers a:hover {
+		color: #f90;
+	}
+	
+	.nav1-organizations #primary-nav #item-organizations a:hover {
+		color: #f90;
+	}
+	
+	.nav1-churches #primary-nav #item-churches a:hover {
+		color: #f90;
+	}
+	
+	.nav1-about #primary-nav #item-about a:hover {
+		color: #f90;
+	}
+	
+	.nav1-my-account #primary-nav #item-my-account a:hover {
+		color: #f90;
+	}
+	
+	/* secondary-nav link formatting */
+	#primary-nav li.level-1 ul a {
+		border: 0;
+		float: left; /*ie doesn't inherit the float*/
+		color: #f90;
+		width: auto;
+		margin-right: 15px;
+	}
+
+	/* show active secondary-nav by default */
+	.nav1-browse-content #primary-nav #item-browse-content ul {
+		display: block;
+	}
+	
+	.nav1-volunteers #primary-nav #item-volunteers ul {
+		display: block;
+	}
+	
+	.nav1-organizations #primary-nav #item-organizations ul {
+		display: block;
+	}
+	
+	.nav1-churches #primary-nav #item-churches ul {
+		display: block;
+	}
+	
+	.nav1-about #primary-nav #item-about ul {
+		display: block;
+	}
+	
+	.nav1-my-account #primary-nav #item-my-account ul {
+		display: block;
+	}
+	
+	/* change primary link color on hover */
+	#primary-nav li.level-1 a:hover { 
+		color: #f90;
+	}
+	
+	/* text positioning in top tabs */
+	#primary-nav li span {
+		display: block;
+		text-align: center;
+		padding-top: 5px;
+	}
+	
+	/* background and alignment for top tabs */
+	a.level-1 {
+		display: block;
+		position: relative;
+		/* height: 26px; */
+		background: url(bk-dropdownMap-um3.gif) no-repeat; /*contains all hover states*/
+	}
+
+/* --- Tab Images --- */
+
+/* first, put the initial states in place*/
+
+li.level-1 a {
+	background-position: 0 0;
+}
+
+/*active area - based on a body class */
+ 
+  .nav1-browse-content #item-browse-content a {
+ 	background-position: 0 -37px;
+ }
+
+  .nav1-volunteers #item-volunteers a {
+ 	background-position: 0 -37px;
+ }
+
+ .nav1-organizations #item-organizations a {
+ 	background-position: 0 -37px;
+ }
+
+ .nav1-churches #item-churches a {
+ 	background-position: 0 -37px;
+ }
+ 
+  .nav1-about #item-about a {
+ 	background-position: 0 -37px;
+ }
+ 
+  .nav1-my-account #item-my-account a {
+ 	background-position: 0 -37px;
+ }
+
+
+/* hover states (need to be explicit b/c of precedence rules) */
+
+#item-browse-content a:hover, #item-browse-content:hover a, #item-browse-content.over a {
+	background-position: 0 -73px;
+}
+
+#item-volunteers a:hover, #item-volunteers:hover a, #item-volunteers.over a {
+	background-position: 0 -73px;
+}
+
+#item-organizations a:hover, #item-organizations:hover a, #item-organizations.over a {
+	background-position: 0 -73px;
+}
+
+#item-churches a:hover, #item-churches:hover a, #item-churches.over a {
+	background-position: 0 -73px;
+}
+
+#item-about a:hover, #item-about:hover a, #item-about.over a {
+	background-position: 0 -73px;
+}
+
+#item-my-account a:hover, #item-my-account:hover a, #item-my-account.over a {
+	background-position: 0 -73px;
+}
+
+/* secondary nav text formatting (needs to be at bottom b/c of precedence rules) */
+
+#primary-nav li.level-1 ul a {
+	display: block;
+	color: #fff;
+}
+
+#main-content {
+position: absolute;
+top: 200px;
+}
+
+/* hide third level navigation - only needed for item-volunteers and item-about*/
+
+#primary-nav #item-volunteers li.level-2 ul {display: none; top: 30px; background-color: #bc8f8f; height: 15px;}
+
+#primary-nav #item-about li.level-2 ul {display: none; top: 30px; background-color: #bc8f8f; height: 15px; }
+
+/* show third level navigation based on page */
+
+.nav2-find-opportunities #primary-nav #item-volunteers #tertiary-nav-1 { display: block; }
+
+.nav2-learn #primary-nav #item-volunteers #tertiary-nav-2 { display: block;}
+
+.nav2-blog #primary-nav #item-volunteers #tertiary-nav-3 { display: block;}
+
+.nav2-about-techmission #primary-nav #item-about #tertiary-nav-4 { display: block;}
+
+.nav2-programs #primary-nav #item-about #tertiary-nav-5 { display: block;}
+
+/* how the naming convention would go for the third level */
+.nav3-search-all #primary-nav #item-volunteers #tertiary-nav-1 li#item-search-all a {text-decoration: underline; }
+
+/* override to get main content to show below the menu */
+#content { position: relative; top: 55px; }

@@ -1,0 +1,244 @@
+/* Layout  ChristionVolunteering Theme on UrbanMinistry.org */
+
+tbody {
+border-top: none !important;
+} /*removes gray line that appears above tables from system.css */
+
+#navigation a{
+text-decoration:none;}
+   
+/*.block-nice_menus is added to keep header and footer to stay together in one line, when they are placed into "secondary menu" The reason why the navigation to the right was falling to the next line was because the nav to the left is a block element (so it takes up 100% of the screen width). By making it float left the div will shrink to fit. */
+
+.block-nice_menus {
+float :left;
+padding: 0px;
+}
+ .block-nice_menus .content {
+float :left;
+padding: 0px;
+}
+
+ .nice_navigation .block .content {
+	padding: 0px;
+}
+
+
+/* Third Level Menus */
+
+#navigation ul li li {
+ position: relative;
+}
+
+#navigation ul li li ul {
+    border-left:4px solid #ccc;
+    border-top-width:0px;
+    left:180px;
+		_left: 148px;
+    position:absolute;
+    top:-1px;
+}
+
+
+#navigation ul li li ul li {
+ margin: 0px;
+}
+ 
+
+/*+---------------------------------------------------------------------------*
+|                        nice_menu Structural Overrides-- for nice menu 3&4 (rolling down)
+*----------------------------------------------------------------------------*/
+
+ ul.nice-menu-down {
+  display: block;
+  position: static;
+  float: left;
+  margin: 0 0 0 0;
+  padding: 0 0 0 10px;
+  z-index: 10;
+  list-style: none;
+  
+  }
+ ul.nice-menu-down li {
+  display: block;
+  position: static;
+  float: left;
+  margin: 0;
+  padding: 0px;
+  z-index: 15;
+  float: left;
+  }
+ ul.nice-menu-down li a {
+  display: block;
+	float: left;
+  white-space: nowrap;
+  padding: 10px 11px 6px 11px;
+  text-transform: lowercase;
+  font-size:15px;
+  height: 19px;
+  }
+ ul.nice-menu-down li ul {
+ 	clear: both;
+ }
+  
+ul.nice-menu-down li a:hover, ul.nice-menu-down li:hover {
+ background: url(/imgs/nav_patt_over.gif);
+ }
+ 
+ul.nice-menu-down li li:hover {
+ background: transparent;
+}
+ 
+ 
+ ul.nice-menu-down li li a {
+ padding: 5px;
+ height: auto;
+ font-weight: normal;
+ float: none;
+ clear: both;
+}
+
+ul.nice-menu-down li li a:hover {
+ background: #AAD696;
+ }
+
+
+ ul.nice-menu-down ul {
+  display: none;
+  position: absolute;
+  margin: 0 0 0 -1px;
+  padding: 0;
+  top: 35px;
+  bottom: auto;
+  left: auto;
+  right: auto; 
+  
+  }
+ ul.nice-menu-down li:hover ul,
+ ul.nice-menu-down li.over ul {
+  display: block;
+  }
+ ul.nice-menu-down ul ul {
+  position: static;
+  margin: 0;
+  }
+ ul.nice-menu-down ul li {
+  position: static;
+  float: left;
+  width: 180px;
+  margin: 0;
+  padding: 0;
+  }
+ ul.nice-menu-down ul li a {
+  white-space: normal;
+  padding: 5px 15px;
+  font-size: 13px;
+  }
+ ul.nice-menu-down ul li li {
+  width: 140px;
+  margin-left: 10px;
+  }
+ ul.nice-menu-down ul li li li {
+  width: 130px;
+  }
+ 
+/*+---------------------------------------------------------------------------*
+|                             nice_menu 3&4 - Styling                              |
+*----------------------------------------------------------------------------*/
+
+#chrisvol ul.nice-menu a:link, #chrisvol ul.nice-menu a:visited {
+	color: #fff;
+}
+
+#chrisvol ul.nice-menu ul li a:link, #chrisvol ul.nice-menu ul li a:visited {
+   color: #666;
+  }
+
+#chrisvol ul.nice-menu ul li a:hover {
+   color: #fff;
+  } 
+
+
+ ul.nice-menu-down {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  //font size: 15px; 
+  font-weight: bold;
+  }
+
+ ul.nice-menu-down li {
+  border: none;
+  background: none;
+  font-size:0.9em;
+  //font-size: 12px;
+  }
+	
+
+ ul.nice-menu-down li a.active {
+background: none;
+}
+
+ ul.nice-menu-down ul li a:hover {
+  background-color:#6CAB50;
+  text-decoration:none; 
+  color: #4D4D4D;
+   }
+
+ 
+ ul.nice-menu-down li.active {
+  background-color: #fff;
+  }
+
+ ul.nice-menu-down ul {
+ /* border: 1px solid #ccc; */
+  border-top: none;
+  background-color: #fff;
+  size: 0.85 em; 
+  }
+ 
+ ul.nice-menu-down ul ul {
+  border-top: 1px solid #ccc;
+  border-left: none;
+  background-color: #fff;
+  }
+ ul.nice-menu-down ul li {
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+   }
+ ul.nice-menu-down ul li li {
+  /* border-top: 1px solid #ccc; */
+  border-left: none;
+  }
+ ul.nice-menu-down li {
+	float: left;
+}
+
+/* For Nice-menu */
+
+/*#block-nice_menus-# h2  is to dissappear for nice-menues mentioned here*/
+#block-nice_menus-8 h3 {
+  display: none; 
+  background-color: none; 
+} 
+/*------------------------------------*/
+
+.custom_theme .activeedit-button {
+
+}
+
+#block-block-16 {
+	font-size: .9em;
+	//font-size: 10px;
+}
+
+#block-block-16 .form-item  {
+	margin-bottom: 0px;
+}
+
+.custom_theme #searchmodule {
+	display: none;
+}
+
+/*the end of nice menu edits--------------------------------------*/

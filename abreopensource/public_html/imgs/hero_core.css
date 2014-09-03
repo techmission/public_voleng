@@ -1,0 +1,334 @@
+
+
+/***********
+** Classes with the "-a" suffix are used for initial positioning in this CSS,
+** and as a flag indicating an animated element.
+**
+** For example, .herocoresidebar-a will have the basic sidebar CSS and all animation applied to it.
+**
+** .herocoreslide-a
+**   .herocoreemotive-a
+**   .herocoretitle-a
+**   .herocoresidebar-a
+**     .herocoresidebarbg-a
+**       .herosidebarcopy-a
+**
+**
+** The auto-running slideshow starts on a random slide. To make it start on a particular slide, make it visible
+** make it visible by adding :
+**   style="visibility:visible"
+**
+** to the markup for the herocoreslide-a div.
+**
+**
+** Breakdown of the elements:
+**
+** #herocore                    Container for all slides. Most likely does not need to be modified
+**  .herocoreslide-a            Container div for a single slide
+**    .herocoreemotive-a        Container for the large image that serves as the background
+**    .herocoretitle-a          Container for the title that appears at the bottom left of the slide
+**    .herocoresidebar-a        Container for the sidebar. Used for positioning and width
+**      .herocoresidebarbg-a    Container for the background image.
+**        .herosidebarcopy-a    Container for copy
+**
+**/
+
+/*
+* Core Hero
+*/
+#ieroothero {
+}
+
+#herocore {
+    width : 839px;
+    height : 271px;
+    position : relative;
+    overflow : hidden;
+	font-size : 10px;
+}
+
+
+
+/*
+* Slide container
+*/
+/** so slides load in the background */
+.herocoreslide-a {
+    visibility : hidden;
+}
+
+/*
+* Emotive
+*/
+.herocoreemotive-a {
+    display : block;
+    position : absolute;
+    top : 0;
+    left : 0;
+}
+
+.herocoretitle-a {
+    position : absolute;
+    top : 0;
+    left : 0;
+    font-family : arial, helvetica;
+}
+
+.herocoretitle-a h2 {
+    margin : 0;
+    color : #fff;
+    font-size : 27px;
+    line-height : 25px;
+    font-weight : normal;
+}
+
+.herocoretitle-a p {
+    margin : 0;
+    color : #fff;
+    font-size : 18px;
+    line-height : 16px;
+}
+
+.blackglow {
+    background : transparent url(../images/semi_trans_black.png) top left no-repeat;
+}
+
+.whiteglow {
+    background : transparent url(../images/semi_trans_white.png) top left no-repeat;
+}
+
+* html .blackglow,
+* html .whiteglow {
+    background-image : none;
+}
+
+/*
+* Sidebar
+*/
+.herocoresidebar-a {
+    position : absolute;
+    top : 0;
+    right : 0;
+    width : 297px;
+    height : 271px;
+    color : #fff;
+    font-size : 13px;
+    line-height : 1.2em;
+}
+
+* html .herocoresidebar-a {
+    right : -1px; /* remove this if the container div's width is even */
+    overflow : hidden;
+}
+
+.herocoresidebarbg-a {
+    width : 297px;
+    height : 271px;
+}
+
+.herosidebarcopy-a {
+    padding : 6px 36px 1px 19px;
+}
+
+.herosidebarcopy-a p {
+    margin : 7px 0;
+}
+
+.herosidebarcopy-a a.more {
+    font-size : 18px;
+    line-height : 16px;
+    color : #fff;
+    font-weight : normal;
+}
+
+.herosidebarcopy-a a.more strong {
+    font-size : 12px;
+    line-height : 10px;
+    color : #fff;
+    font-weight : bold;
+}
+
+.herosidebarcopy-a a.more strong em {
+    font-style : normal;
+    color : #375457;
+}
+
+/*
+* Hero bottom bar
+*/
+#herocorebottombar {
+    position : absolute;
+    bottom : 0;
+    left : 0;
+    height : 30px;
+    width : 839px;
+    background : #000;
+    opacity : 0.44;
+    filter : alpha(opacity=44);
+}
+
+#herocorebottombarright {
+    position : absolute;
+    bottom : 0;
+    right : 0;
+    height : 30px;
+    width : 297px;
+    background : #000;
+    opacity : 0.44;
+    filter : alpha(opacity=44);
+}
+
+#herocorebottombarcontents {
+    position : absolute;
+    bottom : 0;
+    left : 0;
+    height : 30px;
+    width : 839px;
+    color : #fff;
+    font-size : 12px;
+}
+
+* html #herocorebottombar,
+* html #herocorebottombarright,
+* html #herocorebottombarcontents {
+    bottom : -1px; /* make this zero if the container div's width is even */
+}
+
+#herocorecontrols {
+    padding : 9px 21px 0 0;
+}
+
+.herocoreselectorbutton-a {
+    display : block;
+    float : right;
+    margin : 0;
+    padding : 0;
+    width : 18px;
+    height : 18px;
+    background : transparent url(../images/hero_core_selector.png) 3px 2px no-repeat;
+}
+
+.herocoreselectorbutton-a.selected,
+.herocoreselectorbutton-a:hover {
+    background : transparent url(../images/hero_core_selector_over.png) 1px 0px no-repeat;
+}
+
+* html .herocoreselectorbutton-a {
+    background-image : url(../images/hero_core_selector.gif);
+}
+
+* html .herocoreselectorbutton-a.selected,
+* html .herocoreselectorbutton-a:hover {
+    background-image : url(../images/hero_core_selector_over.gif);
+}
+
+* html .herocoreselectorbutton-a:hover {
+}
+
+/*
+* Labels
+*/
+#herocorecontrollabels {
+    float : right;
+    padding : 0 9px 0 0;
+    width : 400px;  /* because of IE 7. make wider if issues occur. */
+}
+
+.herocorecontrollabel-a {
+    float : right;
+    display : none;
+    color : #fff;
+    font-size : 12px;
+}
+
+
+
+/***********
+** Applying colors and styles
+**/
+
+/*
+* Teal Theme
+*/
+.herocorethemeteal .herocoretitle-a p {
+    color : #61ded0;
+}
+
+/** teal sidebar */
+.herocorethemeteal .herocoresidebarbg-a {
+    background : transparent url(../images/hero_core_sidebar_bg_teal.png) top left no-repeat;
+}
+
+/* for all ie's */
+#ieroothero .herocorethemeteal .herocoresidebarbg-a {
+    background-image : url(../images/hero_core_sidebar_bg_teal.gif);
+}
+
+.herocorethemeteal .herocoresidebarbg-a a {
+    color : #375457;
+    text-decoration : none;
+}
+
+.herocorethemeteal .herocoresidebarbg-a a.more {
+    color : #fff;
+}
+
+/*
+* Orange Theme
+*/
+.herocorethemeorange .herocoretitle-a p {
+    color : #f98c2e;
+}
+
+/** orange sidebar */
+.herocorethemeorange .herocoresidebarbg-a {
+    background : transparent url(../images/hero_core_sidebar_bg_orange.png) top left no-repeat;
+}
+
+/* for all ie's */
+#ieroothero .herocorethemeorange .herocoresidebarbg-a {
+    background-image : url(../images/hero_core_sidebar_bg_orange.gif);
+}
+
+#ieroothero .herocorethemeorange .herocoresidebarbg-a a {
+    cursor : pointer;
+}
+
+.herocorethemeorange .herocoresidebarbg-a a {
+    color : #375457;
+    text-decoration : none;
+}
+
+.herocorethemeorange .herocoresidebarbg-a a.more {
+    color : #fff;
+}
+
+/*
+* Orange Alpha Theme
+*/
+.herocorethemeorangealpha .herocoretitle-a p {
+    color : #61ded0;
+}
+
+/** orange alpha sidebar */
+.herocorethemeorangealpha .herocoresidebarbg-a {
+    background : transparent url(../images/hero_core_sidebar_bg_orange.png) top left no-repeat;
+}
+
+/* for all ie's */
+#ieroothero .herocorethemeorangealpha .herocoresidebarbg-a {
+    background-image : url(../images/hero_core_sidebar_bg_orange.gif);
+}
+
+.herocorethemeorangealpha .herocoresidebarbg-a a {
+    color : #375457;
+    text-decoration : none;
+}
+
+.herocorethemeorangealpha .herocoresidebarbg-a a.more {
+    color : #fff;
+}
+
+
+
+

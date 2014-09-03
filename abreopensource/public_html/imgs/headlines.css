@@ -1,0 +1,155 @@
+
+#headlines-wrap img { border : 0 }
+#headlines-wrap h3 { margin : 0}
+
+/**
+* Headlines
+*/
+#headlines-wrap {
+	float:left;
+	width:676px;
+	margin:0;
+	padding:8px 0 0 0;
+}
+
+#headlines {
+	margin:0 20px 0 31px;
+	padding:0;
+}
+
+.headline {
+	margin : 0;
+	padding:12px 0 3px 0;
+	background:transparent url(../images/core_hr_625.gif) no-repeat 0px 65px;
+}
+
+.headlinethumbnailcontainer {
+    float : right;
+    margin : 0px 0 0 0;
+    padding : 14px 10px 0 0; /* just faked the padding-top in till it looked right. if height of images changes, this'll not look correct */
+    width : 300px; /* or whatever */
+    text-align : right;
+}
+
+* html .headlinethumbnailcontainer {
+    margin-top : -5px;
+    padding-top : 19px; /* matches negative margin on a:hover on the next line, so IE6 doesn't clip images */
+}
+
+.headlinethumbnailcontainer a.selected img {
+    width : 75px;
+}
+
+/*
+* Rollover title bar
+*/
+.headlinetitlescontainer {
+    position : relative;
+    margin : 6px 0 0 0;  /* just faked in */
+    /* border-top : 2px dotted #737c5e;  just faked in */
+    height : 26px;   /* to stop the jumping */
+    overflow : hidden;
+}
+
+
+.headlinetitlescontainer h3 {
+    position : absolute;
+    display : none;
+    margin : 0;
+    padding : 5px 12px 0 12px;
+    width : 601px; /* 676 - side padding and #headline.margins */
+    height : 21px;
+    font-size : 14px;
+    font-weight : normal;
+    color : #350e0e;
+    text-align : right;
+}
+
+.headlinetitlescontainer h3 em {
+    font-style : normal;
+    color : #fff;
+    text-transform : uppercase;
+}
+
+
+/*
+* Slide open Stories (Synopses)
+*/
+.headlinesynopsescontainer {
+    position : relative;
+    margin : 0;
+    height : 0; /* static height. it's max height is a transition and is set in JS */
+    background : #efeee3;
+    overflow : hidden;
+}
+
+.headlinesynopsis {
+    position : absolute;
+    padding : 1px 0;
+    background : #efeee3;
+    height : 175px; /* needs to be same as .headlinesynopsescontainer */
+    overflow : hidden;
+    display : none;
+}
+
+#headlines .headlinesynopsis h3 {
+    margin : 10px 20px;
+	color:#503517;
+	font-size:12px;
+}
+
+.headlinesynopsis h3 em {
+    font-style : normal;
+    color : #503517;
+    text-transform : uppercase;
+}
+
+.headlinesynopsis p {
+    margin:10px 20px;
+	color:#66614c;
+	font-size:12px;
+}
+
+.headlinesynopsis p a {
+	color:#c85634 !important;
+}
+
+.headlinesynopsis .headlineclosebuttoncontainer {
+    position : absolute;
+    bottom : 6px;
+    right : 6px;
+    margin : 0;
+    padding : 0;
+    text-align : right;
+}
+
+
+/**
+* Colors specific to the section of headlines
+*/
+
+#headlinestories .headlinetitlescontainer h3 {
+    background : #508597
+}
+
+#headlinestories .headlinetitlescontainer h3 {
+    color : #a3d8eb;
+}
+
+#headlinegiving .headlinetitlescontainer h3 {
+    background : #6e8f21
+}
+
+#headlinelegacy .headlinetitlescontainer h3 {
+    background : #ed850a
+}
+
+#headlinenews .headlinetitlescontainer h3 {
+    background : #8f217e
+}
+
+#headlinenews .headlinetitlescontainer h3 {
+    color : #eabfe3;
+}
+
+

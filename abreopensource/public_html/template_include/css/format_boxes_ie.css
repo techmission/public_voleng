@@ -1,0 +1,17 @@
+span.bullet { top: 10px; }
+
+span.search_label { color: black; }
+
+div#welcomebox #search_checkboxes {
+    padding-left: 130px;
+}
+
+div#result #midbox1_content, div#result #midbox2_content, div#result #midbox3_content{
+	height: 400px;
+}
+#all_tabs.results-left a#organization, a#opportunity, a#organizations, a#opportunities, a#local, a#stm, a#virtual{
+	background:transparent url(/imgs/tabs-off1.png) no-repeat #DAE1EF; 
+}
+#all_tabs.results-left a#organization.active, a#opportunity.active, a#organizations.active, a#opportunities.active, a#local.active, a#stm.active, a#virtual.active{
+	background:transparent url(/imgs/tabs-on1.png) no-repeat #627EBC; 
+}

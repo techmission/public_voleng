@@ -1,0 +1,1106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="image_src" href="/imgs/logo.gif"/>
+<head>
+	
+                <title>
+
+                        ChristianVolunteering.org:
+
+Matching Volunteers with Urban Ministries, Short Term Missions Trips, Church, Community Service & Virtual Online Volunteering Opportunities</title>
+	
+	<meta name="description" content="Christianvolunteering.org matches volunteers with Christian social service organizations, nonprofits and churches to provide opportunities in urban ministry, youth programs, short-term missions and virtual volunteering.">
+	<meta name="keywords" content="volunteer, Christian, church, Christian volunteering, Christian volunteer, church volunteer, nonprofit, community,service, urban ministry, youth, social justice, missions, short term missions, missionary, virtual volunteer, volunteer match, volunteer solutions, online volunteering, volunteer online, activism, youth work, digital divide, TechMission, CCDA, UYWI, Salvation Army, City Union Mission, Gospel Mission, World Vision">
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<meta name="robots" content="index, follow, noarchive">
+<link href="http://www.christianvolunteering.org/template_include/css/new_menu.css" rel="stylesheet" type="text/css" />
+<link href="http://www.christianvolunteering.org/template_include/css/standard-wide.css" rel="stylesheet" type="text/css" />
+<link href="http://www.christianvolunteering.org/template_include/css/navigation.css" rel="stylesheet" type="text/css" />
+<!--[if IE 6]>
+	<link href="http://www.christianvolunteering.org/template_include/css/standard-wide-ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+        <link href="http://www.christianvolunteering.org/template_include/css/standard-wide-ie7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link href="http://www.christianvolunteering.org/template_include/css/format_boxes_chrisvol.css?1" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="http://www.christianvolunteering.org/misc/jquery.js"></script>
+<!--DRUPAL NAVIGATION js (only needed for IE; CSS does it in other browsers)-->
+<!--[if IE]>
+<script type="text/javascript" src="/misc/drupal.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="http://www.urbanministry.org/sites/all/themes/um/js/jquery.hoverIntent.minified.js"></script>
+<script type="text/javascript" src="http://www.urbanministry.org/sites/all/themes/um/includes/hovermenu.js"></script>
+
+<link href="http://www.urbanministry.org/sites/all/themes/um/includes/network_band/network-band.css" rel="stylesheet" type="text/css" />
+
+<!-- method is: showOrganiz -->
+
+<!-- add in IE-specific fixes for facet CSS -->
+<!--[if IE]>
+	<link href="/template_include/css/format_boxes_ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+<script type="text/javascript" src="/template_include/js/ajax-solr/core/Core.js"></script>
+<script type="text/javascript" src="/template_include/js/ajax-solr/core/AbstractManager.js"></script>
+<script type="text/javascript" src="/template_include/js/ajax-solr/managers/Manager.jquery.js"></script>
+<script type="text/javascript" src="/template_include/js/ajax-solr/core/Parameter.js"></script>
+<script type="text/javascript" src="/template_include/js/ajax-solr/core/ParameterStore.js"></script>
+
+<script type="text/javascript" src="/template_include/js/ajax-solr/core/ParameterHashStore.js"></script>
+<script type="text/javascript" src="/template_include/js/ajax-solr/core/AbstractWidget.js"></script>
+<script type="text/javascript" src="/template_include/js/ajax-solr/core/AbstractFacetWidget.js"></script>
+<script type="text/javascript" src="/template_include/js/ajax-solr/helpers/jquery/ajaxsolr.theme.js"></script>
+<script type="text/javascript" src="/template_include/js/ajax-solr/helpers/jquery/jquery.livequery.js"></script>
+<link rel="stylesheet" type="text/css" href="/template_include/js/ajax-solr/helpers/jquery/jquery.autocomplete.css" media="screen" />
+<script type="text/javascript" src="/template_include/js/ajax-solr/helpers/jquery/jquery.autocomplete.js"></script>
+
+
+
+
+<script type="text/javascript" src="/template_include/js/ajax-solr/impl/SimpleSearchSetup.js?1329156200000"></script>
+<script type="text/javascript" src="/template_include/js/ajax-solr/widgets/AutocompleteSearchFormWidget.js?1330627423000"></script>
+<script type="text/javascript" src="/template_include/js/ajax-solr/widgets/DistanceSearchFormWidget.js?1328911649000"></script>
+<script type="text/javascript" src="/template_include/js/ajax-solr/widgets/FacetsSearchFormWidget.js?1330032730000"></script>
+<script type="text/javascript" src="/template_include/js/ajax-solr/impl/searchopps.theme.js?1328902294000"></script>
+
+
+
+</head>
+
+
+
+<body  id="chrisvol" class="nav1-volunteers nav2-find-opportunities nav3-search-all" >
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript" src="https://d31qbv1cthcecs.cloudfront.net/atrk.js"></script><script type="text/javascript">_atrk_opts = { atrk_acct: "vyfkf1asZt00yy", domain:"christianvolunteering.org"}; atrk ();</script><noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=vyfkf1asZt00yy" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+
+
+<!-- api host id is: voleng1 -->
+
+<div id="fb-root"></div>
+
+
+<!-- asyncronous include of  <script src="http://connect.facebook.net/en_US/all.js"></script> -->
+
+<script type="text/javascript">
+window.fbAsyncInit = function() {//onload = function() {//
+  FB.init({appId: '156406434372399', status: false, cookie: true,
+           xfbml: true, oauth  : true});
+  fbApiInitialized = true;
+afterInit();
+
+ 
+    // whenever the user logs in, we tell our login service
+// commented out so that our system does not automatically log them in and redirect the user to a different page. 
+// 			may want to re-enable, and just take the user back to the page he/she came from, rather than the dashboard
+//    FB.Event.subscribe('auth.login', function() {
+//       window.location = "/register.do?method=processFacebookConnectClick";
+//    });
+    
+    FB.getLoginStatus(function(response){
+    	var loginElement = document.getElementById('fb-login-li');
+    	var facebookElement = document.getElementById('facebookConnectLinks');
+    	if(response.status == 'connected'){
+    		//alert('connected');
+    		if(loginElement){
+    		//alert('');
+    			loginElement.innerHTML = 
+    			'<a href="/register.do?method=processFacebookConnectClick"><img src="http://www.christianvolunteering.org/imgs/facebook_connect_button.gif"></a>';
+    		}
+    	} else {
+    		//alert('not connected');
+    		if(loginElement){
+    			loginElement.innerHTML = 
+    			'<fb:login-button scope="email">Login/Register with Facebook</fb:login-button>';
+    		}
+    		
+    		FB.XFBML.parse(document.getElementById('fb-login-li'));
+    		if(facebookElement){
+    			//facebookElement.innerHTML = 
+    			//'<a href="/register.do?method=processFacebookConnectClick">Link to Facebook Account</a>';
+    		}
+    	}
+    });
+	
+	
+	
+};
+  (function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol +
+      '//connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());
+function fbEnsureInit(callback) {
+    if (!window.fbApiInitialized) {
+        setTimeout(function() { fbEnsureInit(callback); }, 50);
+    } else {
+        if (callback) { callback(); }
+    }
+}
+function afterInit(){
+	return;
+}  
+  
+
+
+  
+</script>
+
+
+<div id="network_band_wrapper">
+<div id="networkband" style="display: inline-block; width:880px; //width:1070px;" align="left">
+	<ul id="network_band">
+   <li id="nb_techmission"><a target="_parent" href="http://www.techmission.org/"><img height="14" border="0"  style="float: left;" alt="TechMission" 
+   src="http://www.urbanministry.org/sites/all/themes/universal_assets/network_band/techmission-logo.gif"/>
+
+   </a></li>
+	<li id="nb_chrisvol"><a target="_parent" href="http://www.christianvolunteering.org/"><span>ChristianVolunteering.org</span></a></li>
+	<li id="nb_cvi"><a target="_parent" href="http://www.cityvisioninternships.org/"><span>City Vision Internships</span></a></li>
+        <li id="nb_cityvision"><a target="_parent" href="http://www.cityvision.edu/"><span>City Vision College</span></a></li>
+	
+	</ul>
+
+	 <div id="like" style="display:inline;"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fchristianvolunteering&amp;layout=button_count&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:20px; padding-top:2px; margin:0; width:95px;" allowTransparency="true"></iframe></div>
+	 
+	 <div id="plus" style="display:inline; //float:right; //margin-top:-20px;">	
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="small"></g:plusone>
+</div> 
+
+</div>
+</div>
+
+
+	
+
+
+<div id="wrapper">
+
+<div id="contentwrapper" class="solr">
+
+
+	
+<div id="banner">
+
+
+
+
+
+
+
+
+
+
+
+<div id="logo">
+
+<a href="/" >
+<img src="/imgs/cvlogo.gif" alt="ChristianVolunteering.org" width="360" height="65" border="0"/></a>
+
+</div>
+
+
+
+
+
+<div id="search" class="home">
+
+
+<form name="individualForm" method="post" action="/register.do">
+	<input type="hidden" name="method" value="processLogin">
+	<table border="0" cellpadding="0" cellspacing="0" style="font-size: 11px;">
+
+		<tr>
+		  <td>
+		 <input type="text" style="font-size: 11px; width:93px;" onblur="if(this.value==''){this.value='email';}" onfocus="if(this.value=='email'){this.value='';}" value="email" id="email1addr" name="email1addr"/></td>
+		  <td>&nbsp;&nbsp;<input style="font-size: 11px; width:93px;" type="password" name="password1" maxlength="50" />
+			&nbsp;&nbsp;<input name="submit" type="submit" id="submit" value="Log In"> </td>
+		  </tr>
+		  <tr align="right">
+			<td colspan="2">
+
+				<table border=0>
+					<tr>
+						<td colspan="2">
+<div id="fb-login-li" style="margin-right:6px;"></div>
+						</td>
+						<td><a href="/individualregistration.jsp" style="text-decoration:none; text-align:left; margin-right:12px; //margin-right:7px; font-weight:normal; font-size: 11px;">create<br>account</a></td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+	</table>
+</form>
+
+</div>
+
+
+
+
+<div style="padding-top:5px;" id="ad-20989" class="image-advertisement"><a href="http://www.urbanministry.org/ad/20989/20989?url=front_page-en"><img height="65" width="270" title="Click to view Internship Opportunities" alt="Click to view Internship Opportunities" src="http://www.urbanministry.org/files/tmc_internship_ad-short2.gif"></a></div>
+
+<div class="cleardiv"></div>
+
+</div>
+
+
+
+
+
+
+<!-- END HEADER -->
+
+<!-- end header information -->
+<!--link href="http://www.urbanministry.org/sites/all/modules/betterselect/betterselect.css" rel="stylesheet" type="text/css" /-->
+<!-- start navigation information -->
+<!-- start file navigation.inc -->
+
+	
+	
+		<!-- start file template/main_navigation.inc -->
+
+<!-- Begin Menus (div#navigation) -->
+<div id="navigation">
+<!-- the current page path is: /voleng2/search.jsp -->
+
+
+
+<!-- Include file /jsprsscron/chrisvol_new_menu.htm -->
+<div id="primary-nav-wrap">
+	<ul id="primary-nav">	
+	<li id="item-browse-content" class="level-1"><a href="/advancedsearch.jsp" class="level-1"><span>Search</span></a></li>	
+	<li id="item-volunteers" class="level-1">
+
+	<a href="/volunteergettingstarted.jsp" class="level-1"><span>Volunteers</span></a>
+
+	
+	<ul id="secondary-nav-1">
+	    	<li id="item-getting-started" class="level-2"><a href="/volunteergettingstarted.jsp">Getting Started</a></li>
+		<li id="item-find-opportunities" class="level-2"><a href="/advancedsearch.jsp">Find Opportunities</a>
+		<ul id="tertiary-nav-1">
+			<li id="item-search-all" class="level-3"><a href="/advancedsearch.jsp">Search All</a></li>
+			<li id="item-short-term-missions" class="level-3"><a href="/shorttermmissions.jsp">Short Term Missions</a></li>		
+			<li id="item-virtual-volunteering" class="level-3"><a href="/virtualvolunteer.jsp">Virtual Volunteering</a></li>
+
+			<li id="item-browse-opportunities" class="level-3"><a href="/directory.jsp">Browse Opportunities</a></li>
+			<li id="item-browse-organizations" class="level-3"><a href="/directoryorgs.jsp">Browse Organizations</a></li>
+			<li class="level-3"><a href="http://apps.facebook.com/find-your-calling" class="level-3" target="fb">My Calling</a> 
+</li>	
+	      <li class="level-3"><a href="http://www.urbanministry.org/mycity" class="level-3">My City</a>
+		</ul></li>
+		<li id="item-find-jobs" class="level-2"><a href="http://www.urbanministry.org/jobs">Find Jobs</a></li>
+
+		<!--<li id="item-learn" class="level-2"><a href="http://www.urbanministry.org/allchannels">Learn</a>
+		<ul id="tertiary-nav-2">
+			<li id="item-wiki" class="level-3"><a href="http://www.urbanministry.org/wiki/encyclopedia-urban-ministry">Wiki</a></li>
+			<li id="item-volunteer-training" class="level-3"><a href="http://www.urbanministry.org/wiki/encyclopedia-volunteer-management-volunteering-and-short-term-missions">Volunteer Training</a></li>		
+			<li id="item-social-justice-causes" class="level-3"><a href="http://www.urbanministry.org/allchannels">Social Justice Causes</a></li>
+			<li id="item-courses-in-urban-ministry" class="level-3"><a href="http://www.cityvision.edu">Courses in Urban Ministry</a></li>
+			<li id="item-sermon-downloads" class="level-3"><a href="http://www.urbanministry.org/top2008">Sermon Downloads</a></li>
+		</ul></li>-->
+	</ul></li>	
+	<li id="item-organizations" class="level-1">
+
+	<a href="/recruitvolunteers.jsp" class="level-1"><span>Organizations</span></a>
+
+		
+	<ul id="secondary-nav-2">
+		<li id="item-recruit-volunteers" class="level-2"><a href="/recruitvolunteers.jsp">Recruit Volunteers</a></li>
+		<li id="item-browse-resumes" class="level-2"><a href="http://www.urbanministry.org/volunteer/volunteer-search">Search for Volunteers</a></li>
+
+		<li id="item-recruit-staff" class="level-2"><a href="http://www.urbanministry.org/add-job">Recruit Staff</a></li>
+		<li id="item-get-grants" class="level-2"><a href="http://www.urbanministry.org/grants">Get Grants</a></li>
+		<li id="item-get-nonprofit-discounts" class="level-2"><a href="http://www.urbanministry.org/member-benefits">Get Nonprofit Discounts</a></li>
+		<li id="item-nonprofit-college-courses" class="level-2"><a href="http://www.cityvision.edu">Nonprofit College Courses</a></li>
+	</ul></li>	
+	<li id="item-churches" class="level-1"><a href="http://www.churchvolunteering.org" class="level-1"><span>Churches</span></a>	
+	<ul id="secondary-nav-3">
+
+		<li id="item-church-portal" class="level-2"><a href="http://www.churchvolunteering.org">Church Portal</a></li>
+		<li id="item-post-volunteer-opportunities" class="level-2"><a href="http://www.churchvolunteering.org/churchinstructions.jsp">Post Volunteer Opportunities</a></li>
+		<li id="item-sermon-outlines" class="level-2"><a href="http://www.urbansermons.org/f/content-type/sermon-outline">Sermon Outlines</a></li>
+		<li id="item-bible-studies" class="level-2"><a href="http://www.urbansermons.org/f/content-type/bible-study">Bible Studies</a></li>
+		<li id="item-church-volunteer-toolkit" class="level-2"><a href="http://www.urbanministry.org/wiki/encyclopedia-volunteer-management-volunteering-and-short-term-missions#church">Church Volunteer Toolkit</a></li>
+	</ul></li>
+
+	<li id="item-internships" class="level-1"><a href="http://www.christianvolunteering.org/cms/cv/internships" class="level-1"><span>Internships</span></a>
+	<li id="item-about" class="level-1"><a href="/about.jsp" class="level-1"><span>About</span></a>
+	<ul id="secondary-nav-4">
+		<li id="item-about-techmission" class="level-2"><a href="http://www.techmission.org">About TechMission</a>
+		<ul id="tertiary-nav-4">
+			<li id="item-our-board" class="level-3"><a href="http://www.techmission.org/cms/tm/board">Our Board</a></li>
+			<li id="item-our-staff" class="level-3"><a href="http://www.urbanministry.org/staff">Our Staff</a></li>		
+			<li id="item-our-history" class="level-3"><a href="http://www.techmission.org/cms/tm/history">Our History</a></li>
+
+			<li id="item-our-partners" class="level-3"><a href="http://www.techmission.org/cms/tm/partners">Our Partners</a></li>
+			<li id="item-our-testimony" class="level-3"><a href="http://www.techmission.org/cms/tm/testimony-techmission">Our Testimony</a></li>
+			<li id="item-budget-and-funders" class="level-3"><a href="http://www.techmission.org/cms/tm/budget-funders">Budget and Funders</a></li>
+		</ul></li>
+		<li id="item-programs" class="level-2"><a href="http://www.techmission.org/cms/tm/strategy">Programs</a>
+		<ul id="tertiary-nav-5">
+			<li id="item-christianvolunteering-org" class="level-3"><a href="/about.jsp">ChristianVolunteering.org</a></li>
+
+			<li id="item-urbanministry-org" class="level-3"><a href="http://www.urbanministry.org/about-urbanministry-org">UrbanMinistry.org</a></li>		
+			<li id="item-city-vision-college" class="level-3"><a href="http://www.cityvision.edu/cms/cv/about">City Vision College</a></li>
+			<li id="item-techmission-corps" class="level-3"><a href="http://www.techmissioncorps.org">TechMission Corps</a></li>
+		</ul></li>
+     <li id="item-our-vision" class="level-2"><a href="http://www.techmission.org/cms/tm/opportunity">Our Vision</a>
+       <ul id="tertiary-nav-6">
+       <li id="item-crisis" class="level-3"><a href="http://www.techmission.org/cms/tm/crisis">The Crisis</a></li>
+
+       <li id="item-opportunity" class="level-3"><a href="http://www.techmission.org/cms/tm/opportunity">The Opportunity</a></li>
+       <li id="item-strategy" class="level-3"><a href="http://www.techmission.org/cms/tm/strategy">The Strategy</a></li>
+       <li id="item-results" class="level-3"><a href="http://www.techmission.org/cms/tm/results">The Results</a></li>
+       <li id="item-how-to-help" class="level-3"><a href="http://www.techmission.org/cms/tm/how-to-help">How to Help</a></li>
+        </ul></li>
+		<li id="item-annual-report" class="level-2"><a href="http://www.urbanministry.org/Annual-Report">Annual Report</a></li>
+
+		<li id="item-donate" class="level-2"><a href="https://www.urbanministry.org/civicrm/contribute/transact?reset=1&amp;id=13">Donate</a></li>
+		<li id="item-contact-us" class="level-2"><a href="http://www.christianvolunteering.org/contact.jsp">Contact Us</a></li>
+	</ul></li>
+	<li id="item-my-account" class="level-1"><a href="/register.do?method=showIndAcctSum1" class="level-1"><span>My Account</span></a>	
+	<ul id="secondary-nav-5">
+		<li id="item-create-account" class="level-2"><a href="http://www.christianvolunteering.org/individualregistration.jsp">Create Account</a></li>
+		<li id="item-personality-test" class="level-2"><a href="http://apps.facebook.com/find-your-calling/register.do?method=showPersonalityTest" target="fb">Personality Test</a>
+
+		<li id="item-login" class="level-2"><a href="/login.jsp">Login</a></li>
+    <li id="item-manage-account" class="level-2"><a href="/volunteerdashboard.jsp">Account Home</a></li>
+    <li id="item-manage-personal" class="level-2"><a href="/register.do?method=showIndEditProfile1">Personal Account</a></li>
+		<li id="item-manage-organization" class="level-2"><a href="/orgmanagement.jsp">Manage Organization</a></li>
+    <li id="item-reset-password" class="level-2"><a href="http://www.urbanministry.org/user/password">Reset Password</a></li>
+    <li id="item-help" class="level-2"><a href="http://www.urbanministry.org/help">Help</a></li>
+
+	</ul></li>
+	</ul>
+</div>
+<div class="clearing"></div>
+
+
+</div>
+<!-- End Menus (/div#navigation) -->
+
+<!-- end file template/main_navigation.inc -->
+
+	
+
+
+<!-- end file home_navigation.inc -->
+
+<!-- end navigation information -->
+
+  <div id="oppsearch" class="solr">
+	  <span id="title">500 Error</span>
+	
+  </div>
+
+
+<script language="javascript">
+$(document).ready(function() {
+	$('#fq_search').text(window.location.hash)
+  });
+</script>
+
+<div id="result">
+
+<!-- start sidebar information -->
+<!-- start sidebar.inc -->
+
+<div id="sidebar" class="search_results">
+	<div id="sidebar_content">
+
+	<h3 style="padding-top:5px;">Search By:</h3>
+
+
+	<div class="cleardiv"></div>
+
+<ul class="filters" id="filters">		
+	<li id="facet_dist">
+
+		<div id="label" style="float:left">Distance:</div>
+		<div id="dist" class="tagcloud toggle" style="float:left; display:block;">
+				<SELECT id="d" name="d" class="smalldropdown" > 
+					<option value="1.609344">exact location</option>
+					<option value="8.04672">within 5 miles</option>
+					<option value="16.09344">within 10 miles</option>
+					<option value="24.14016">within 15 miles</option>
+
+					<option value="40.2336" selected="selected">within 25 miles</option>
+					<option value="80.4672">within 50 miles</option>
+					<option value="160.9344">within 100 miles</option>
+					<option value="Virtual">virtual</option>
+				</SELECT>
+		</div><!-- end dist -->
+		<br clear="all"/><br clear="all"/>
+
+	</li>
+		
+	<!--li class="filter handle collapse" id="facet_position_type">
+		<a class="handle" onClick="toggle_display('position_type')"><span class="i bullet">&nbsp;</span> <span class="label">Position Type:</span></a>
+		<div id="position_type" class="tagcloud toggle" style="display:none;"></div>
+	</li-->
+		
+	<li class="filter handle expanded" id="facet_service_areas">
+		<a class="handle" onClick="toggle_display('service_areas')"><span class="i bullet">&nbsp;</span> <span class="label">Service Area:</span></a>
+		<div id="service_areas" class="tagcloud toggle" style="display:block;"></div>
+	</li>
+		
+	<li class="filter handle collapse" id="facet_skills">
+		<a class="handle" onClick="toggle_display('skills')"><span class="i bullet">&nbsp;</span> <span class="label">Skills:</span></a>
+
+		<div id="skills" class="tagcloud toggle" style="display:none;"></div>
+	</li>		
+		
+	<li class="filter handle collapse" id="facet_great_for">
+		<a class="handle" onClick="toggle_display('great_for')"><span class="i bullet">&nbsp;</span> <span class="label">Great for:</span></a>
+		<div id="great_for" class="tagcloud toggle" style="display:none;"></div>
+	</li>		
+		
+	<li class="filter handle collapse" id="facet_frequency">
+		<a class="handle" onClick="toggle_display('frequency')"><span class="i bullet">&nbsp;</span> <span class="label">Frequency:</span></a>
+
+		<div id="frequency" class="tagcloud toggle" style="display:none;"></div>
+	</li>		
+		
+<!-- expand if STM, though -->
+	<li class="filter handle collapse" id="facet_benefits_offered">
+		<a class="handle" onClick="toggle_display('benefits_offered')"><span class="i bullet">&nbsp;</span> <span class="label">Benefits:</span></a>
+		<div id="benefits_offered" class="tagcloud toggle" style="display:none;"></div>
+	</li>
+		
+<!-- expand if STM, though -->
+
+	<li class="filter handle collapse" id="facet_trip_length">
+		<a class="handle" onClick="toggle_display('trip_length')"><span class="i bullet">&nbsp;</span> <span class="label">Length of Trip:</span></a>
+		<div id="trip_length" class="tagcloud toggle" style="display:none;"></div>
+	</li>
+		
+	<li class="filter handle collapse" id="facet_region">
+		<a class="handle" onClick="toggle_display('region')"><span class="i bullet">&nbsp;</span> <span class="label">Region:</span></a>
+		<div id="region" class="tagcloud toggle" style="display:none;"></div>
+
+	</li>		
+		
+			<li class="filter handle collapse" id="facet_country_tax">
+				<a class="handle" onClick="toggle_display('country_tax')"><span class="i bullet">&nbsp;</span> <span class="label">Country:</span></a>
+				<div id="country_tax" class="tagcloud toggle" style="display:none;"></div>
+			</li>		
+		
+<!-- expand if STM, though -->
+	<li class="filter handle collapse" id="facet_adv">
+		<a class="handle" onClick="toggle_display('advanced_facets')"><span class="i bullet">&nbsp;</span> <span class="label">Advanced</span></a>
+
+		<ul id="advanced_facets" class="filters" style="display:none;">
+			<li class="filter"><hr class="sidebar_hr"> </li>
+				
+<!-- expand if org is selected, though -->
+			<li class="filter handle collapse" id="facet_denom_affil">
+				<a class="handle" onClick="toggle_display('denom_affil')"><span class="i bullet">&nbsp;</span> <span class="label">Denomination:</span></a>
+				<div id="denom_affil" class="tagcloud toggle" style="display:none;"></div>
+			</li>
+
+				
+<!-- expand if org is selected, though -->
+			<li class="filter handle collapse" id="facet_org_affil">
+				<a class="handle" onClick="toggle_display('org_affil')"><span class="i bullet">&nbsp;</span> <span class="label">Organizational Affiliation:</span></a>
+				<div id="org_affil" class="tagcloud toggle" style="display:none;"></div>
+			</li> 
+		
+			<li class="filter handle collapse" id="facet_province_tax">
+				<a class="handle" onClick="toggle_display('province_tax')"><span class="i bullet">&nbsp;</span> <span class="label">Province:</span></a>
+
+				<div id="province_tax" class="tagcloud toggle" style="display:none;"></div>
+			</li>		
+<!-- 			
+			<li class="filter handle collapse" id="facet_group_size"><! -- will somehow have to handle range -- >
+				<a class="handle" onClick="toggle_display('group_size')"><span class="i bullet">&nbsp;</span> <span class="label">Group Size:</span></a>
+				<div id="group_size" class="tagcloud toggle" style="display:none;">
+					<a href="/oppsrch.do?method=processSolrSearchOpp#(group_min:[2 TO 5] OR group_max:[2 TO 5])" />2-5
+					<a href="/oppsrch.do?method=processSolrSearchOpp#(group_min:[5 TO 10] OR group_max:[5 TO 10])" />5-10
+					<a href="/oppsrch.do?method=processSolrSearchOpp#(group_min:[10 TO 20] OR group_max:[10 TO 20])" />10-20
+					<a href="/oppsrch.do?method=processSolrSearchOpp#(group_min:[20 TO *] OR group_max:[20 TO *])" />20+
+				</div>
+			</li>		
+-->
+			<li class="filter handle collapse" id="facet_afg">
+				<a class="handle" onClick="toggle_display('source')"><span class="i bullet">&nbsp;</span> <span class="label">Search from Third Party Sites:</span></a>
+				<div id="source" class="tagcloud toggle" style="display:none;"></div>
+			</li>		
+		</ul>
+	</li>
+
+</ul>
+
+
+<!--
+      <h3>By Country</h3>
+      <div id="countries"></div>
+      <div id="preview"></div>
+
+      <h3>By Date</h3>
+      <div id="calendar"></div>
+-->
+      <div class="clear"></div>
+
+	</div>
+</div>
+<!-- end sidebar.inc -->
+
+<script language="javascript">
+function toggle_display(facet_field){
+	var default_class="filter";
+	var handle_class=" handle";
+	var collapse_class=" collapse";
+	var expanded_class=" expanded";
+	var e = document.getElementById(facet_field); 
+	if(e.id=="more_link"){
+		e.style.display="none";
+	}else if(e.style.display=="none"){
+		e.style.display="block";
+		e.parentNode.className=default_class+handle_class+expanded_class;
+	}else{
+		e.style.display="none";
+		e.parentNode.className=default_class+handle_class+collapse_class;
+	}
+/*
+	if(e.className.indexOf(expanded_class)){
+		e.className=default_class+toggle_class+' '+collapsed_class;
+	}else{
+		e.className=default_class+toggle_class+' '+expanded_class;
+	}
+*/
+}
+function toggle_facet(facet_field){
+	var default_class="filter";
+	var handle_class=" handle";
+	var collapsed_class=" collapsed";
+	var expanded_class=" expanded";
+
+	var id = facet_field;
+	var root_facet_element = document.getElementById(id); 
+	var class_name = root_facet_element.className;
+	if(class_name.indexOf(default_class) !== -1){
+		root_facet_element.className=default_class+expanded_class;
+		
+		for(i=0; i<root_facet_element.childNodes.length; i++){
+			var tagcloud_div=root_facet_element.childNodes[i];
+			for(j=0; j<tagcloud_div.childNodes.length; j++){
+				var list_element=tagcloud_div.childNodes[j];
+//console.log('list_element.id is ' + list_element.id);				
+				if(list_element.id=="more_link"){
+					list_element.style.display="none";
+				}else if(list_element.style == undefined){
+				}else{
+					var init_class = list_element.className;
+					if(init_class=='filter collapsed'){
+						list_element.style.display="block";
+						list_element.className = default_class+expanded_class;
+					}
+				}
+			}
+		}
+	}
+	var more_link = 'more_link_'+facet_field;
+	var more_link_element = document.getElementById(more_link); 
+	if(more_link_element===undefined){
+	}else{
+		more_link_element.style.display="none;"
+		more_link_element.className = collapsed_class;
+	}
+}
+</script>
+
+<!-- end sidebar information -->
+
+<!-- BEGIN MAINCONTENT -->
+<div id="maincontent" class="search_results">
+
+<div id="chrisvolTopPartnerMenu">
+<!-- start navigation information -->
+
+
+<!-- end navigation information -->
+</div>
+
+
+
+<div id="body">
+
+<br>
+<CENTER>
+<H3>There is a problem with this page. We really need your help to find what is causing errors in our system, so if you get this message, <u>please</u> send us an E-mail with the following:
+<br>Thanks,  <A class="black7" href="mailto:support@christianvolunteering.org?subject=ChristianVolunteering.org User Support">support@christianvolunteering.org</a>
+</h3>
+</CENTER>
+<h4>
+<ol>
+<li>what page (<i>URL</i> <b>AND</b> <i>TITLE of Page</i>) you were on just before, which took you to this Error Page</li>
+<li>the Web Address (URL) of the page you were trying to go to that gave you the error</li>
+<li>what you were trying to do</li>
+</ol>
+</h4>
+<br />
+
+<div align="left">
+
+<div id="populate" style="display:none;"></div>  
+	
+    <div id="all_tabs">
+
+<hr size="2" color="#4D4D4D" width="100%" style="margin-top: 0px; //margin-top:-7px;" />
+</div> <!-- end: div id all_tabs-->
+<!--br /-->		
+
+<div id="searchpage">
+
+<div id="searchform">
+
+<script language="javascript">
+$('#position_type_virt').click(function(){
+		$('#queryLoc').val('');
+});
+$('#position_type_stm').click(function(){
+		$('#queryLoc').val('');
+});
+
+function clicked_virtual(){
+		$('#queryLoc').val('');
+}
+function clicked_stm(){
+		$('#queryLoc').val('');
+}
+
+function clearLocation(){
+	var v = $('#srchmethod').val();
+	if(
+		v == 'Short-term Missions / Volunteer Internship' || v == 'Short-term Missions / Volunteer Internship AND NOT faith_i:21998' ||
+		v == 'Virtual Volunteering (from home)' || v == 'Virtual Volunteering (from home) AND NOT faith_i:21998'
+	){
+		$('#queryLoc').val('');
+	}
+}
+</script>
+<div id="home_solr_search">
+	<div id="search_input">
+		<div>
+			<div style="float:left"><h2>Find </h2></div>
+
+			<div style="float:left">
+				<select class="dropdown home" name="srchmethod" id="srchmethod" onChange="clearLocation()">
+					 <option value="opportunity" >Volunteer Opportunities</option> 
+					 <option value="organization">Organizations</option> 
+					 <option value="Short-term Missions / Volunteer Internship">Short Term Missions / Internships</option> 
+					 <option value="Virtual Volunteering (from home)">Virtual Volunteering</option>
+				</select>
+			</div>
+
+		</div>
+		<br clear="all"/>
+		<ul id="search_keyword" class="search">
+        	<input type="text" id="query" name="query" value="Keywords (Service Areas, Skills)"  class="fld watermark tags"/><br>
+			<span class="search_label">i.e. children, food ministry, homelessness, accounting, computers, teaching, etc</span>
+		</ul>
+		<ul id="search_location" class="search" style="float:left;">
+        	<input type="text_location" id="queryLoc" name="queryLoc" value=""  class="fld watermark location"/><br>
+
+			<span class="search_label">country, metro area, postal code</span>
+		</ul>
+			
+		
+		<br clear="all"/>
+		<br clear="all"/>
+
+		<div id="submit_solr_search"">
+			<input type="submit" name="Submit" value="Search" id="search_solr">
+		</div>
+		
+
+		<div id="search_checkboxes">
+
+			<a href="/directory.jsp">Browse Volunteer Opportunities</a>
+			<br />
+			<a href="/directoryorgs.jsp">Browse Organizations</a>
+			<br />
+		</div>
+	</div>
+
+	<div id="location_data" style="display:none;">
+
+		<div id="location"></div>
+		<div id="postal"></div>
+		<div id="lat"></div>
+		<div id="long"></div>
+		<div id="d_default">40.2336</div>
+		<div id="geo_lat"></div>
+
+		<div id="geo_long"></div>
+	</div>
+
+</div>
+<div style="clear:both;"></div>
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=geometry"></script>
+<script language="javascript">
+//function callback(){}
+var geocoder;
+var map;
+var marker;
+function initialize(callback){
+
+
+
+
+	var postalcode = $('div#postal').text();
+console.log('div#postal text is: '+ postalcode);
+	//GEOCODER
+	geocoder = new google.maps.Geocoder();
+	geocoder.geocode({address: postalcode},
+	function(results_array, status) {
+		if(results_array!=null){ 
+			// Check status and do whatever you want with what you get back
+			// in the results_array variable if it is OK.
+			var location_object = results_array[0];
+			if(location_object!=null){ 			
+				var lat = location_object.geometry.location.lat();
+				var lng = location_object.geometry.location.lng();
+				$('div#geo_lat').text(lat);
+				$('div#geo_long').text(lng);
+//console.log('div#geo_lat text is: '+$('div#geo_lat').text() +';    '+lat);
+//console.log('div#geo_long text is: '+$('div#geo_long').text() +';    '+lng);
+			}
+		}
+		try{
+			callback();
+		}catch(e){
+			if (typeof callback == "undefined") {
+				this.callback = {func: function() {}};
+			}
+		}
+    });
+}
+</script>
+</div>
+
+</div>
+
+
+<div id="show_results">
+		<div id="sort" class="tagcloud toggle" style="float:right; display:none;">
+		<span class="label">Sort By:</span>
+	<SELECT id="sortkey" name="sortkey" class="smalldropdown" > 
+        <option value="tm_member_i desc, popularity desc"></option>
+        <option value="tm_member_i desc, popularity desc" >Popularity</option>
+
+        <option value="org_name asc, tm_member_i desc, popularity desc" >Organization Name</option>
+        <option value="title asc, tm_member_i desc, popularity desc" >Opportunity Title</option>
+
+        <option value="city_tax asc, tm_member_i desc, popularity desc" >City</option>
+        <option value="province_tax asc, tm_member_i desc, popularity desc" >State (US & Canada)</option>
+        <option value="country_tax asc, tm_member_i desc, popularity desc" >Country</option>
+
+        <option value="denom_affil asc, tm_member_i desc, popularity desc" >Denominational Affiliation</option>
+        <option value="org_affil asc, tm_member_i desc, popularity desc" >Affiliation</option>
+
+        <!--option value="length_of_trip_tid asc, tm_member_i desc, popularity desc" >Duration (Short-term Missions Only)</option-->
+        <!--option value="tm_member_i desc, popularity desc" >Cost (Short-term Missions Only)</option-->
+
+		<option value="lat_updated_dt desc, tm_member_i desc, popularity desc" >Date Last Updated</option>
+        <option value="num_volunteers_org desc, tm_member_i desc, popularity desc" ># Volunteers / Organization</option>
+        <option value="num_volunteers_opp desc, tm_member_i desc, popularity desc" ># Volunteers / Opportunity</option>
+    </SELECT>
+
+<br clear="all"/>
+		</div>
+
+	<div id="nav">
+		<ul id="pager"></ul>  <div id="pager-header"></div>
+	</div>
+	<br>
+	<div id="docs"></div>
+</div>
+</div>
+
+<div class="cleardiv"></div>
+
+</div>
+
+            
+
+            </div>
+
+</div>
+
+
+
+
+
+<div id="footer">
+
+		
+
+
+<!-- start file cv_footer.inc -->
+
+	<!-- BEGIN Footer -->
+
+<div id="footer">
+<!-- begin:  LINKS -->
+<table class="footer_sections" cellspacing="0">
+<tr>
+	<td class="footer_sections_left">Partner Volunteer Sites: </td>
+	<td class="footer_sections_right">
+		<!--a href="http://ccda.christianvolunteering.org">CCDA</a><br/-->
+		<a href="http://uywi.christianvolunteering.org" title="ChristianVolunteering.org: Christian Volunteer and Short Term Missions Opportunities">UYWI</a><br/>
+		<a href="http://hlic.christianvolunteering.org" title="Here's Life Inner City">HLIC</a><br/>
+
+		<a href="http://missionamerica.christianvolunteering.org" title="ChristianVolunteering.org: Christian Volunteer and Short Term Missions Opportunities">Mission America</a>
+	</td>
+	<td class="footer_sections_right">
+		<a href="http://agrm.christianvolunteering.org" title="ChristianVolunteering.org: Christian Volunteer and Short Term Missions Opportunities">AGRM</a><br/>
+		<a href="http://putyourfaithinaction.christianvolunteering.org" title="TechMission Faith In Action Volunteer Engine">FaithInAction</a><br/>
+	</td>
+	<td class="footer_sections_right">
+
+		<!--<a href="http://salvationarmy.christianvolunteering.org">Salvation Army</a><br/> -->
+		<a href="http://gospel.christianvolunteering.org" title="ChristianVolunteering.org: Christian Volunteer and Short Term Missions Opportunities">Gospel.com</a><br/>
+		<a href="http://www.catholicvolunteering.org" title="Search thousands of Catholic short term missions trips an volunteer opportunities: CatholicVolunteering.org">Catholic Volunteer Opportunities</a><br/>
+		<a href="http://www.ivolunteering.org" title="iVolunteering Network: Matching Volunteers with Urban Outreach Opportunities">iVolunteering</a>
+	</td>
+</tr>
+
+  
+<tr>
+	<td class="footer_sections_left"> Regional Volunteer Sites:</td>
+	<td class="footer_sections_right">
+		<a href='http://www.christianvolunteering.org/s/ct/Los_Angeles,_CA/ctp/opp/results.jsp#fq=city_tax:"Los Angeles, CA"&fq=content_type:opportunity' title="Los Angeles, CA: Christian Volunteer and Short Term Missions Opportunities: ChristianVolunteering.org">Los Angeles, CA</a><br/>
+		<a href='http://www.christianvolunteering.org/s/ct/New_York,_NY/ctp/opp/results.jsp#fq=city_tax:"New York, NY"&fq=content_type:opportunity' title="New York, NY: Christian Volunteer and Short Term Missions Opportunities: ChristianVolunteering.org">New York, NY</a><br/>
+		<a href='http://www.christianvolunteering.org/s/ct/Chicago,_IL/ctp/opp/results.jsp#fq=city_tax:"Chicago, IL"&fq=content_type:opportunity' title="Chicago, IL: Christian Volunteer and Short Term Missions Opportunities: ChristianVolunteering.org">Chicago, IL</a><br/>
+		<a href='http://www.christianvolunteering.org/s/ct/Boston,_MA/ctp/opp/results.jsp#fq=city_tax:"Boston, MA"&fq=content_type:opportunity' title="Boston, MA: Christian Volunteer and Short Term Missions Opportunities: ChristianVolunteering.org">Boston, MA</a>
+	</td>
+	<td class="footer_sections_right">
+		<a href='http://www.christianvolunteering.org/s/ct/Atlanta,_GA/ctp/opp/results.jsp#fq=city_tax:"Atlanta, GA"&fq=content_type:opportunity' title="Atlanta, GA: Christian Volunteer and Short Term Missions Opportunities">Atlanta, GA</a><br/>
+		<a href='http://www.christianvolunteering.org/s/ct/Washington,_DC/ctp/opp/results.jsp#fq=city_tax:"Washington, DC"&fq=content_type:opportunity' title="Washington, DC: Christian Volunteer and Short Term Missions Opportunities">Washington, DC</a><br/>
+		<a href='http://www.christianvolunteering.org/s/ct/Philadelphia,_PA/ctp/opp/results.jsp#fq=city_tax:"Philadelphia, PA"&fq=content_type:opportunity' title="Philadelphia, PA: Christian Volunteer and Short Term Missions Opportunities">Philadelphia, PA</a><br/>
+		<a href='http://www.christianvolunteering.org/s/ct/Dallas,_TX/ctp/opp/results.jsp#fq=city_tax:"Dallas, TX"&fq=content_type:opportunity' title="Dallas, TX: Christian Volunteer and Short Term Missions Opportunities">Dallas, TX</a>
+	</td>
+	<td class="footer_sections_right">
+		<a href='http://www.christianvolunteering.org/s/ct/Minneapolis-St;_Paul,_MN/ctp/opp/results.jsp#fq=city_tax:"Minneapolis-St. Paul, MN"&fq=content_type:opportunity' title="Minneapolis-St. Paul: Christian Volunteer and Short Term Missions Opportunities">Minneapolis-St. Paul, MN</a><br/>
+		<a href='http://www.christianvolunteering.org/s/ct/San_Diego,_CA/ctp/opp/results.jsp#fq=city_tax:"San Diego, CA"&fq=content_type:opportunity' title="San Diego, CA: Christian Volunteer and Short Term Missions Opportunities">San Diego, CA</a><br/>
+		<a href="http://www.christianvolunteering.org/zipmap.jsp" title="Christian Volunteer Network Sitemap">Zip Code Sitemap</a><br/>
+		<a href="/virtualvolunteer.jsp" title="Virtual Volunteer and Online Volunteering Opportunities: ChristianVolunteering.org">Virtual Volunteering</a>
+	</td>
+</tr>
+
+
+<tr>
+	<td class="footer_sections_left">Sections:</td>
+	<td class="footer_sections_right">
+		<a href="http://www.christianvolunteering.org/churchvolunteer.jsp" title="Church Volunteers' Resources and Search">Church Volunteer Resources</a><br/> 
+		<a href="http://www.christianvolunteering.org/shorttermmissions.jsp" title="Short Term Missions Trip Search">Short Term Missions</a><br/>
+		<a href="/christianfamilyvolunteering.jsp" title="Christian family volunteer opportunities, family short-term missions trips, service learning">Christian Family Volunteering</a><br/>
+		<a href="/medicalmissions.jsp" title="Medical Missions Volunteering">Medical Missions Volunteering</a>
+
+	</td>
+	<td class="footer_sections_right">
+		<a href="/organizationlistings.jsp" title="Christian Volunteer and Short Term Missions Organizations">Organization Sitemap</a><br/>
+		<a href="/directoryorgs.jsp" title="ChristianVolunteering.org: Christian Volunteer and Short Term Missions Organizations">Organization Directory</a><br/>
+		<a href="http://www.christianvolunteering.org/christiangapyear.jsp" title="Christian gap year volunteer internships and short-term missions">Christian Gap Year</a><br/>
+		<a href="http://www.urbanministry.org/wiki/encyclopedia-volunteer-management-volunteering-and-short-term-missions" title="UrbanMinistry.org | Encyclopedia of Volunteering: Encyclopedia of Urban Ministry">Volunteer Management Wiki</a><br/>
+	</td>
+
+	<td class="footer_sections_right">
+		<a href="/volunteerlistings.jsp" title="Christian volunteer, church volunteer, urban ministry service, and short term missions volunteer listings">Volunteer Listings</a><br/>
+		<a href="/directory.jsp" title="Christian volunteer, church volunteer, urban ministry service, and short term missions volunteer listings">Volunteer Sitemap</a><br/>
+		<a href="/christianorphanage.jsp" title="Volunteer in a Christian Orphanage: Find Missions Trips: ChristianVolunteering.org">Volunteer in a Christian Orphanage </a><br/>
+		<a href="/technologymissions.jsp" title="Volunteer in Technology in Missions">Volunteer in Technology in Missions</a>
+	</td>
+</tr>
+
+<tr>
+	<td class="footer_sections_left">TechMission Sites:</td>
+	<td class="footer_sections_right">
+<a href="http://www.techmission.org" title="Technology and Urban Ministry, Christian Community Computer Centers Addressing the Digital Divide">TechMission.org</a><br/>
+<a href="http://www.urbanministry.org" title="UrbanMinistry.org: Urban ministry MP3s, talks, podcast, workshops, presentations, Webcasts, training, on racism, racial reconciliation, ethnic identity, classism, sexism, grants">UrbanMinistry.org</a><br/>
+<a href="http://www.urbansermons.org" title="Urban Sermons, Audio, Video, Articles, MP3 Podcasts, and Church Resources">UrbanMinistry.org</a>
+	</td>
+	<td class="footer_sections_right">
+
+	<a href="http://www.cityvision.edu" title="Online Urban Ministry Courses in Theology, Missions, Accounting, CFRE Fundraising, Management, Evangelism and Counseling">CityVision.edu</a><br/>
+<a href="http://www.safefamilies.org" title="Free Parental Controls & Internet Filtering Software We-Blocker Download - Online Safety Workshops - Christian Accountability, Pornography and Sex Addiction Recovery">
+SafeFamilies.org</a><br/>
+	</td>
+	<td class="footer_sections_right">
+		<a href="http://www.christianfreeware.org/" title="Free Christian Software CD for download including church management software, worship projection, accountability software, freeware, open source ministry and Bible software"> 
+		ChristianFreeware.org</a><br/>
+		<a href="http://www.christianvolunteering.org" title="Christian Volunteer Directory: Volunteering for Urban Ministries and Short Term Urban Missions Opportunities">Volunteer: ChristianVolunteering.org</a> <br/>
+
+	</td>
+</tr>
+
+</table><!-- end:LINKS -->
+
+<table class="footer_links"><!-- Table that contains share buttn and CV links-->
+<tr>
+ <td style="text-align: left; width:50px; padding-top: 30px;"></td> 
+
+<!-- ADS INSERTED HERE -->
+<td>
+<div class="advertisement" id="group-tids-4496">
+<script type="text/javascript" src="http://www.urbanministry.org/sites/all/modules/ad/serve.php?q=1&amp;k=7a15268e1dcf7769adc47075b2f267d1&amp;t=4496"></script>
+</div>
+</td>
+
+<!--/ADS INSERTED-->
+
+<td class="copyright">
+
+<p>
+<a href="http://www.urbanministry.org/frontpageview/feed"><img src="http://www.urbanministry.org/imgs/Facebook_Buttons_Images/SocialMediaImages4CVFooter.jpg" alt="social media networks" border="0" align="texttop" usemap="#Map"/>
+<map name="Map">
+  <area shape="rect" coords="0,2,22,24" href="http://www.facebook.com/christianvolunteering">
+  <area shape="rect" coords="25,2,47,21" href="http://www.youtube.com/techmissioninc">
+  <area shape="rect" coords="48,2,73,20" href="http://twitter.com/remotefaith">
+</map>
+</a>
+</p>
+
+<p style="font-size: 1.2em;">Get site support in our <a href="http://www.urbanministry.org/help" style="text-decoration: underline;">Help Forums</a>.</p>
+
+<p>
+<!-- main page feed -->
+<a href="http://www.urbanministry.org/frontpageview/feed"><img src="http://www.urbanministry.org/files/images/rss-sm.png" align="texttop" alt="RSS" title="RSS feed" width="16" height="16" /> RSS</a> |
+<!--/ main page feed -->
+<!-- Buttn Facebook -->
+<script>function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
+<a href="http://www.facebook.com/share.php?u=<url>" class="fb_share_button" onclick="return fbs_click()" target="_blank" style="text-decoration:none;">Share</a> |
+
+<!--/ Buttn Facebook -->
+<a href="http://www.urbanministry.org/terms">privacy</a> | 
+<a href="/contact.jsp" title="Contact Christian Volunteering">contact</a> | 
+<a href="mailto:feedback@christianvolunteering.org">feedback</a> | 
+<a href="https://www.urbanministry.org/civicrm/contribute/transact?reset=1&id=13"><img height="16" align="texttop" title="donate to TechMission" alt="donate" src="http://www.urbanministry.org/imgs/donate.gif"/></a> <br/> 
+  
+</p>
+</td>
+
+</tr>
+</table><!-- end: Table that contains UM logo, share buttn and UM links-->
+
+<script type="text/javascript" src="http://www.urbanministry.org/themes/universal_assets/network_band/network-band.js"></script>
+
+
+
+<!-- include quanticast footer -->
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-00AKbhG_JqHRY"
+};
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-00AKbhG_JqHRY.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast tag -->
+
+
+<!-- include footer login -->
+<div id="footertest" style="display:none">
+<!-- alison test -->
+null
+<br>
+/voleng2/search.jsp
+</div>
+<!-- URL domain is: http://www.urbanministry.org-->
+<!--session attribute drupalsession is: -->
+
+<iframe name="footerlogin" id="footerlogin" src="/register.do?method=showDrupalLogin" height="0" width="0" style="display:none"></iframe>
+
+
+
+
+<!-- end file cv_footer.inc -->
+
+
+
+
+
+<!-- back to /template/footer.inc -->
+
+
+
+</div>
+
+<script type="text/javascript" src="http://www.urbanministry.org/themes/universal_assets/network_band/network-band.js"></script>
+
+
+</div>
+<!--(posted from google analytics include) method posting = showOrganiz-->
+
+
+
+
+
+
+
+<!-- start file footer_google_analytics.inc -->
+
+
+<!--script type="text/javascript" src="http://www.christianvolunteering.org/files/ga.js"></script-->
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+  
+_gaq.push(   
+	['_setAccount', 'UA-768097-3'],   
+		['_trackPageview'],   
+	['b._setAccount', 'UA-768097-10'],   
+		['b._trackPageview'] 
+
+);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+</script>
+
+<!-- end file footer_google_analytics.inc -->
+
+
+<!-- include quanticast footer -->
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-00AKbhG_JqHRY"
+};
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-00AKbhG_JqHRY.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast tag -->
+
+
+
+
+
+
+
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://d1ros97qkrwjf5.cloudfront.net/30/eum/rum.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrf2","beacon-1.newrelic.com","c15206f0f7",577586,"ZV1WYUNYWUoHBxdbWlwXfmZhFkFWCgENVQcdS1FUQ1pfFwwXEw==",0,62,new Date().getTime()])</script></body>
+</html>
+
+<!-- end file footer.inc -->
+<!-- end footer information -->
+

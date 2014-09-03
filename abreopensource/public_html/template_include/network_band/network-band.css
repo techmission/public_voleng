@@ -1,0 +1,540 @@
+/* CSS Document */
+
+#network_band_wrapper {
+	background: #EFEFEF;
+	height: 27px;
+	border-bottom:1px solid #2f5583;
+}
+
+#network_band {
+	margin:0px auto;
+	padding: 9px 0px 0px 25px;
+	font-size: 12px!important;
+	font-family: Arial, Helvetica, sans-serif;
+	background:url(network_band_power-symbol2.gif) no-repeat left;
+	text-align: left;
+	width: 950px;
+	line-height:1.2;
+}	
+
+#network_band a {
+	background:#8ea5c1;
+    border-color: #2F5583;
+	border-bottom: none!important;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    padding: 3px 0 4px 7px;
+    text-decoration: none;
+}
+#network_band a span{
+	color: #fff;
+	text-decoration: none;
+	background:#8ea5c1;
+    border-radius: 9px 9px 0 0;
+    padding: 2px 7px 0 0;
+}
+
+#network_band a:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border: 1px solid #2F5583;
+    color: #000000;
+    padding: 3px 0 4px 7px;
+    text-decoration: none;
+}
+#network_band a:hover span{
+background:#fff;
+padding-right:7px;
+color:#000;
+}
+#network_band a:link, #network_band a { /* to overwrite Drupal's */
+font-weight:normal;}
+
+#network_band li {
+	display: inline;
+	position: relative;
+}
+
+#network_band #more a {
+	background: url(network_band_arrow1.gif) no-repeat right;
+	padding-right: 12px;
+}
+
+#network_band #more a:hover {
+	background: url(network_band_arrow_hover1.gif) no-repeat right;
+}
+
+#network_band #more ul {
+	position: absolute;
+	top: 19px;
+	left: 0px;
+	margin: 0px;
+	background: #000;
+	padding: 0px;
+	display:none;
+}
+
+#network_band #more ul a {
+	background: #EFEFEF;
+	padding-right: 0px;
+	display: block;
+	padding: 5px;
+	border-top: solid 1px #AAAAAA;
+}
+
+#network_band #more ul a:hover {
+	background: #AAAAAA;
+}
+
+#network_band #more ul li {
+	display: block;
+	border-right-width: 0px;
+	padding: 0px;
+}
+
+/* positioning the FB like button - not sure why need to do relative? */
+#like {
+  position: relative;
+  left: 400px;
+  top: -20px;
+}
+
+/* --------------------------Site Specific Customizations ---------------------------------------- */
+
+/*For Techmission.org -- internal pages*/
+.techmission #network_band {width: 680px; //width: 900px;}
+
+li#nb_techmission {border-right: none;}
+li#nb_techmission img {margin-right:5px;}
+li#nb_techmission a, li#nb_techmission a:hover {background:none; border:none;}
+.techmission #nb_urbanministry a {font-weight: normal;} /* = UM link is not bold if this page id specified*/	
+
+
+/*For TechmissionCorps.org -- internal pages*/
+.tmc #network_band {width: 680px; //width: 900px;}
+.tmc #nb_tmc a {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000!important;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.tmc #nb_tmc a span{
+	background:#fff;
+	padding:3px 7px 0 0;
+	color:#000000!important;
+	border-radius:9px 9px 0 0;
+}
+.tmc #nb_tmc a:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.tmc #nb_tmc a:hover span{
+	background:#fff;
+	padding-right:7px;
+}
+.tmc li#nb_tmc { padding: 0px; }
+.tmc #nb_urbanministry a{ font-weight: normal;} /* = UM link is not bold if this page id specified*/	
+
+
+/*For Urbanministry.org -- home page*/
+.um-home #network_band {width:680px;}
+#nb_urbanministry a {font-weight: normal;} /* = UM link is always bold if no page id specified*/	
+.um-home #nb_urbanministry a {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000!important;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.um-home #nb_urbanministry a span{
+	background:#fff;
+	padding:3px 7px 0 0;
+	color:#000000!important;
+	border-radius:9px 9px 0 0;
+}
+.um-home #nb_urbanministry a:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.um-home #nb_urbanministry a:hover span{
+	background:#fff;
+	padding-right:7px;
+}
+
+
+/*For Urbanministry.org -- internal pages*/
+.um #network_band {width: 680px;}
+.um #nb_urbanministry a {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000!important;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.um #nb_urbanministry a span{
+	background:#fff;
+	padding:3px 7px 0 0;
+	color:#000000!important;
+	border-radius:9px 9px 0 0;
+}
+.um #nb_urbanministry a:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.um #nb_urbanministry a:hover span{
+	background:#fff;
+	padding-right:7px;
+}
+.um li#nb_urbanministry {padding:0px; }
+
+
+/*For UrbanMinistry.org/Chrisvol Theme -- internal pages*/
+.chrisvol #network_band {width: 680px;}
+.chrisvol #nb_chrisvol a {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000!important;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.chrisvol #nb_chrisvol a span{
+	background:#fff;
+	padding:3px 7px 0 0;
+	color:#000000!important;
+	border-radius:9px 9px 0 0;
+}
+.chrisvol #nb_chrisvol a:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.chrisvol #nb_chrisvol a:hover span{
+	background:#fff;
+	padding-right:7px;
+}
+.chrisvol li#nb_chrisvol { padding: 0; }
+#chrisvol #nb_urbanministry a, .chrisvol #nb_urbanministry a { font-weight: normal;} /* = UM link is not bold if this page id specified*/	
+
+
+/*For Chrisvol.org -- all pages*/
+#chrisvol #network_band {width: 680px;}
+#chrisvol #nb_chrisvol a {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000!important;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+#chrisvol #nb_chrisvol a span{
+	background:#fff;
+	padding:3px 7px 0 0;
+	color:#000000!important;
+	border-radius:9px 9px 0 0;
+}
+#chrisvol #nb_chrisvol a:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+#chrisvol #nb_chrisvol a:hover span{
+	background:#fff;
+	padding-right:7px;
+}
+#chrisvol li#nb_chrisvol { padding: 0; }
+
+
+/*For UrbanMinistry.org/SixSeeds Theme -- internal pages*/
+.sixseeds #network_band {width: 680px;}
+.sixseeds #nb_chrisvol a {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000!important;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.sixseeds #nb_chrisvol a span{
+	background:#fff;
+	padding:3px 7px 0 0;
+	color:#000000!important;
+	border-radius:9px 9px 0 0;
+}
+.sixseeds #nb_chrisvol a:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.sixseeds #nb_chrisvol a:hover span{
+	background:#fff;
+	padding-right:7px;
+}
+.sixseeds li#nb_chrisvol {padding:0;}
+.sixseeds #nb_urbanministry a{ font-weight: normal;} /* = UM link is not bold if this page id specified*/	
+
+
+/*For CityVision.edu -- home page*/
+.cityvision #network_band {width:680px; //width: 900px;}
+.cityvision #nb_cityvision a {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000!important;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.cityvision #nb_cityvision a span{
+	background:#fff;
+	padding:3px 7px 0 0;
+	color:#000000!important;
+	border-radius:9px 9px 0 0;
+}
+.cityvision #nb_cityvision a:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.cityvision #nb_cityvision a:hover span{
+	background:#fff;
+	padding-right:7px;
+}
+.cityvision li#nb_cityvision {padding:0px;}
+.cityvision #nb_urbanministry a{ font-weight: normal;} /* = UM link is not bold if this page id specified*/	
+
+
+/*For Blazing Grace */
+.blazinggrace #network_band {width:680px;}
+.blazinggrace #nb_blazinggrace a {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000!important;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.blazinggrace #nb_blazinggrace a span{
+	background:#fff;
+	padding:3px 7px 0 0;
+	color:#000000!important;
+	border-radius:9px 9px 0 0;
+}
+.blazinggrace #nb_blazinggrace a:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.blazinggrace #nb_blazinggrace a:hover span{
+	background:#fff;
+	padding-right:7px;
+}
+.blazinggrace li#nb_blazinggrace {padding:0;}
+.blazinggrace #nb_urbanministry a{ font-weight: normal;} /* = UM link is not bold if this page id specified*/	
+	
+	
+/*For Safe Families */
+.safefamilies #network_band {width:85%;}
+.safefamilies #nb_safefamilies a {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000!important;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.safefamilies #nb_safefamilies a span{
+	background:#fff;
+	padding:3px 7px 0 0;
+	color:#000000!important;
+	border-radius:9px 9px 0 0;
+}
+.safefamilies #nb_safefamilies a:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.safefamilies #nb_safefamilies a:hover span{
+	background:#fff;
+	padding-right:7px;
+}
+.safefamilies li#nb_safefamilies {padding:0;}
+.safefamilies #nb_urbanministry a{ font-weight: normal;} /* = UM link is not bold if this page id specified*/	
+	
+	
+/*For Safe Families -home */
+#sf_home #network_band {width:680px;}
+#sf_home #nb_safefamilies a {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000!important;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+#sf_home #nb_safefamilies a span{
+	background:#fff;
+	padding:3px 7px 0 0;
+	color:#000000!important;
+	border-radius:9px 9px 0 0;
+}
+#sf_home #nb_safefamilies a:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+#sf_home #nb_safefamilies a:hover span{
+	background:#fff;
+	padding-right:7px;
+}
+#sf_home li#nb_safefamilies {padding:0;}
+#sf_home #nb_urbanministry a{ font-weight: normal;} /* = UM link is not bold if this page id specified*/	
+	
+	
+/*For Christian Grants */
+.chrisgrants #network_band {width:680px;}
+.chrisgrants #nb_chrisgrants a {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000!important;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.chrisgrants #nb_chrisgrants a span{
+	background:#fff;
+	padding:3px 7px 0 0;
+	color:#000000!important;
+	border-radius:9px 9px 0 0;
+}
+.chrisgrants #nb_chrisgrants a:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.chrisgrants #nb_chrisgrants a:hover span{
+	background:#fff;
+	padding-right:7px;
+}
+.chrisgrants li#nb_chrisgrants { padding:0;}
+.chrisgrants #nb_urbanministry a{ font-weight: normal;} /* = UM link is not bold if this page id specified*/	
+	
+	
+/*For Christian Jobs */
+.chrisjobs #network_band {width:680px;}
+.chrisjobs #nb_chrisjobs a {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000!important;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.chrisjobs #nb_chrisjobs a span{
+	background:#fff;
+	padding:3px 7px 0 0;
+	color:#000000!important;
+	border-radius:9px 9px 0 0;
+}
+.chrisjobs #nb_chrisjobs a:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #2F5583 #2F5583 #FFFFFF;
+    border-radius: 9px 9px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    padding: 6px 0 5px 7px;
+    text-decoration: none;
+}
+.chrisjobs #nb_chrisjobs a:hover span{
+	background:#fff;
+	padding-right:7px;
+}
+.chrisjobs li#nb_chrisjobs {padding:0;}
+.chrisjobs #nb_urbanministry a{ font-weight: normal;} /* = UM link is not bold if this page id specified*/	

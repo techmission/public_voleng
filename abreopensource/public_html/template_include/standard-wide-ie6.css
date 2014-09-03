@@ -1,0 +1,12 @@
+#search {
+	margin-right: 9px;
+}
+#navigation ul.nice-menu li {
+	width: 50px;
+}
+
+#navigation ul.nice-menu li ul li {
+	width: 150px;
+}
+
+span.i { top: 10px; }

@@ -1,0 +1,5 @@
+<?
+
+echo session_id();
+
+?>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ANT build script for  ABRE Open Source Web Base package  -->
+
+<project name="abreopenwebbase" default="project.abrewebbase.complete" basedir="">
+
+  <!-- Initialize properties used later in this project -->
+  <target name="project.init.properties">
+
+    <property name="LocalSRC" value="src" />
+    <property name="LocalOUT" value="classes" />
+    <property name="Deploy" value="deploy" />
+
+  </target>
+
+  <!-- Project Wide Classpath -->
+  <path id="project.class.path">
+
+    <!-- servlet -->
+    <pathelement path="..\abreopensource\public_html\WEB-INF\lib\servlet.jar" />
+
+    <!--  ABRE Open Source Base Classes -->
+    <pathelement path="..\abreopenbase\deploy\abreopenbase.jar" />
+
+    <!--  ABRE Open Source Application Base Classes -->
+    <pathelement path="..\abreopenappbase\deploy\abreopenappbase.jar" />
+
+    <!-- apache solr - use solrj -->
+    <pathelement path="..\abreopensource\public_html\WEB-INF\lib\apache-solr-solrj-3.4.0.jar" />
+    
+
+  </path>
+
+  <!-- delete folders generated in this build -->
+  <target name="project.init.cleanup" depends="project.init.properties">
+        <delete dir="${LocalOUT}" quiet="true" />
+        <delete dir="${Deploy}" quiet="true" />
+  </target>
+
+  <!-- Prepare folders  for compilation  -->
+  <target name="project.prepare" depends="project.init.cleanup">
+        <mkdir dir="${LocalOUT}" />
+        <mkdir dir="${Deploy}" />
+  </target>
+
+  <!-- Compile ABRE WebApp project -->
+  <target name="project.abrewebbase.compile" depends="project.prepare">
+  
+    <javac srcdir="${LocalSRC}" destDir="${LocalOUT}" classpathref="project.class.path" />
+    <jar destfile="${Deploy}/abreopenwebbase.jar" basedir="${LocalOUT}" compress="false" />
+
+  </target>
+
+  <target name="project.abrewebbase.complete" depends="project.abrewebbase.compile">
+    <echo message="* ABRE Open Source Web Base Classes Compiled and Jar *" />
+  </target>
+
+</project>

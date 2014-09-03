@@ -1,0 +1,132 @@
+/* CSS Document */
+
+#network_band_wrapper {
+	background: #000 url(network_band_bg.gif) repeat-x;
+	height: 22px;
+}
+
+#network_band {
+	margin:0px auto;
+	padding: 3px 0px 3px 25px;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	background:url(network_band_logo.gif) no-repeat left;
+	text-align: left;
+	width: 810px;
+}
+
+#network_band a {
+	color: #EFEFEF;
+	text-decoration: none;
+}
+
+#network_band a:hover {
+	color: #5D9345;
+	text-decoration:underline;
+}
+#network_band a:visited , #network_band a:link { /* to overwrite Drupal's */
+font-weight:normal;}
+
+#network_band li {
+	display: inline;
+	padding: 0px 5px;
+	border-right: solid 1px #999;
+	position: relative;
+}
+
+#network_band #more a {
+	background: url(network_band_arrow.gif) no-repeat right;
+	padding-right: 12px;
+}
+
+#network_band #more a:hover {
+	background: url(network_band_arrow_hover.gif) no-repeat right;
+}
+
+#network_band #more ul {
+	position: absolute;
+	top: 19px;
+	left: 0px;
+	margin: 0px;
+	background: #000;
+	padding: 0px;
+	display:none;
+}
+
+#network_band #more ul a {
+	background: #000;
+	padding-right: 0px;
+	display: block;
+	padding: 5px;
+	border-top: solid 1px #999;
+}
+
+#network_band #more ul a:hover {
+	background: #000;
+}
+
+#network_band #more ul li {
+	display: block;
+	border-right-width: 0px;
+	padding: 0px;
+}
+
+/* --------------------------Site Specific Customizations ---------------------------------------- */
+
+/*For Techmission.org -- internal pages*/
+#techmission #network_band {
+	width: 810px;}
+#techmission #nb_techmission a {
+	font-weight: bold;}
+	
+/*For Urbanministry.org -- home page*/
+.um-home #network_band {
+	width:970px;}
+.um-home #nb_urbanministry a {
+	font-weight: bold;}
+	
+/*For Urbanministry.org -- internal pages*/
+#urbanministry #network_band {
+	width: 85%;}
+#urbanministry #nb_urbanministry a {
+	font-weight: bold;}
+
+/*For Chrisvol.org */
+#chrisvol #network_band {
+	width: 950px;}
+#chrisvol #nb_chrisvol a {
+	font-weight: bold;}	
+
+/*For CityVision.edu -- home page*/
+#cityvision #network_band {
+	width:810px;}
+#cityvision #nb_cityvision a {
+	font-weight: bold;}
+/*For Blazing Grace */
+#blazinggrace #network_band {
+	width:950px;}
+#blazinggrace #nb_blazinggrace a {
+	font-weight: bold;}
+/*For Safe Families */
+#safefamilies #network_band {
+	width:85%;}
+#safefamilies #nb_safefamilies a {
+	font-weight: bold;}
+	
+/*For Safe Families -home */
+#sf_home #network_band {
+	width:772px;}
+#sf_home #nb_safefamilies a {
+	font-weight: bold;}
+	
+/*For Christian Grants */
+.chrisgrants #network_band {
+	width:950px;}
+.chrisgrants #nb_chrisgrants a {
+	font-weight: bold;}
+	
+/*For Christian Jobs */
+.chrisjobs #network_band {
+	width:950px;}
+.chrisjobs #nb_chrisjobs a {
+	font-weight: bold;}

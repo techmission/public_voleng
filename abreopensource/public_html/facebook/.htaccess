@@ -1,0 +1,4 @@
+RewriteCond %{REQUEST_URI} !^/robots.txt
+# RewriteCond %{REQUEST_URI} !^/google4451192ee250de86.html
+RewriteRule ^(.*)$ http://www.christianvolunteering.org/ [L,R=301]
+

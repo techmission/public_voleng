@@ -1,0 +1,733 @@
+/* CSS Document */
+
+
+
+body {
+
+	margin: 0px;
+
+	padding:0px;
+
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+
+	font-size: 12px;
+
+/*	background:url(/imgs/page_patt.gif);*/
+
+}
+
+
+
+/* new 2006-07-17 (same font for textarea input) */
+
+textarea, button
+
+{
+
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+
+	font-size: 12px;
+
+
+
+}
+
+input
+
+{
+
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+
+	font-size: 12px;
+
+	font-style: normal;
+
+}
+
+iframe
+
+{
+
+	margin: 0px 0px 0px 0px;
+
+	padding: 0px;
+
+
+
+
+}
+
+form {
+
+	margin: 0px;
+
+	padding: 0px;
+
+}
+
+
+
+a {
+
+	font-weight: bold;
+
+	color: #5D9345;
+
+}
+
+
+
+a:hover { color: #728DD4; }
+
+
+
+#footer a:hover, #search a:hover { color: #5D9345; }
+
+
+
+h1 {
+
+	color: #728DD4;
+
+	font-size: 20px;
+
+}
+
+
+
+h2 {
+
+	margin-top: 10px;
+
+	margin-bottom: 10px;
+
+	font-size: 16px;
+
+	font-weight: bold;
+
+	color: #728DD4;
+
+}
+
+
+
+h3 {
+
+	color: #5D9345;
+
+	margin-top: 10px;
+
+	margin-bottom: -15px;
+
+	text-transform:none;
+
+	font-size: 14px;
+
+}
+
+
+
+h4, h5 {
+
+	color: #003366;
+
+	margin-top: 10px;
+
+	margin-bottom: -15px;
+
+	text-transform:none;
+
+	font-size: 14px;
+
+}
+
+
+
+.criticaltext  {
+
+	color: #F37C16;
+
+}
+
+
+
+
+#sidebar {
+/*
+	float:left;
+
+	margin-left: 7px;
+
+*/
+
+	margin-left: 1px;
+
+	background: #AAD696;/* url(/imgs/sidebar_patt.gif) repeat-y;*/
+
+	width: 151px;
+
+	height: 163px;
+
+	font-size: 11px;
+
+}
+
+
+
+#sidebar a {
+
+	color: #3F642F;
+
+	text-decoration:none;
+
+}
+
+
+
+#sidebar a:hover {
+
+	color: #F9FAC9;
+
+	text-decoration:underline;
+
+}
+
+
+
+
+
+#sidebar_content h5 {
+
+	color: #5D9345;
+
+	margin: 7px 0px 0px 0px;
+
+	font-size: 12px;
+
+}
+
+
+
+#sidebar_content {
+
+	padding-left: 10px;
+
+	padding-right: 10px;
+
+}
+
+
+
+div#sidebar_content p {
+
+	padding-bottom:0px; /* 10px;*/
+
+	margin-top: 5px;
+
+	}
+
+	
+
+div#sidebar_content ul {
+
+	margin-left: 0px;
+
+	padding-left: 0px;
+
+	padding-top: 0px; /*5px;*/
+
+	margin-top: 0px;
+
+	padding-bottom: 0px; /*10px;*/
+
+	margin-bottom: 0px;
+
+	margin-left: 0px;
+
+	}
+
+
+
+div#sidebar_content li  { 
+
+	list-style-type: square;
+
+	list-style-position: outside;
+
+	margin-left: 16px;
+
+	padding-left: 0px;
+
+	margin-top: 0px;
+
+	padding-top: 0px;
+
+	padding-left: 0px;
+
+	/*line-height: 14px;*/
+
+}
+
+
+
+.cleardiv {
+
+	clear: both;
+
+}
+
+
+
+.error {
+
+	color:#FF0000;
+
+}
+
+
+
+	/* End Pull Down Menus 	*/
+
+#footer a:hover, #search a:hover { color: #5D9345; }
+
+#footer {
+
+	background: #E9E8E8; /* url(/imgs/footer_patt.gif) repeat-x top;*/
+
+	padding: 15px;
+
+	text-align:center;
+
+	font-size:11px;
+
+	clear:both;
+
+	border-bottom: solid 1px #000000;
+
+}
+
+#footer td{
+
+	font-size:11px;
+
+	clear:both;
+
+}
+#footer table{
+
+	font-size:11px;
+
+	clear:both;
+
+}
+
+
+
+#footer a {
+
+	font-weight: bold;
+
+	color: #666666;
+
+}
+
+	
+
+/* Homepage 	*/
+
+
+
+#welcomebox {
+
+	background: #AAD696 url(../imgs/welcomebox_patt_wide.gif) no-repeat bottom right;
+
+	width: 919px;
+
+	float: left;
+
+}
+
+
+
+#welcomebox.wide {
+
+	background: #AAD696 url(../imgs/welcomebox_patt_full.gif) no-repeat bottom right;
+
+	width: 919px;
+
+	float: left;
+
+}
+
+
+
+#welcomebox h1 {
+
+	color: #5D9345;
+
+	font-size: 20px;
+
+}
+
+
+
+#welcomebox h2 {
+
+	margin-top: 10px;
+
+	margin-bottom: 10px;
+
+	font-size: 16px;
+
+	font-weight: bold;
+
+	color: #5D9345;
+
+}
+
+
+
+#welcomebox a {
+
+	color: #5D9345;
+
+}
+
+
+
+#midbox1 {
+
+	margin: 10px 0px 10px 0px;
+
+	clear: both;
+
+	background: #FFDB85 url(../imgs/volunteerbox_borderpatt-wide.gif) 0px 158px;
+
+	width: 315px;
+
+	float: left;
+
+}
+
+
+
+#midbox1 a { color: #B28C4F; text-decoration: none; }
+
+
+
+#midbox1 a:hover { text-decoration: underline; }
+
+
+
+#midbox1 h1 {
+
+	color: #B28C4F;
+
+	font-size: 20px;
+
+}
+
+
+
+#midbox1 h2 {
+
+	margin-top: 10px;
+
+	margin-bottom: 10px;
+
+	font-size: 16px;
+
+	font-weight: bold;
+
+	color: #B28C4F;
+
+	text-decoration: underline;
+
+}
+
+
+
+#midbox1_content {
+
+	height: 300px;
+
+	background:url(/imgs/volunteerbox_patt-wide.gif) no-repeat 0px 0px;
+
+}
+
+
+
+#midbox2 {
+
+	/*margin: 10px 0px 10px 0px;*/
+
+	background: #d9df7b url(http://www.christianvolunteering.org/imgs/organizationbox_borderpatt_wide.gif) 0px 158px;
+
+	width: 315px;
+
+	/*float: left;*/
+
+}
+
+
+#midbox2 a { color: #8C8F57; text-decoration: none; }
+
+#midbox2 a:hover { text-decoration: underline; }
+
+#midbox2 h2 {
+
+	margin: 0px 20px 10px 20px;
+/*
+	margin-top: 10px;
+
+	margin-bottom: 10px;
+*/
+	font-size: 12px;
+
+	font-weight: bold;
+
+	color: #99994C;
+
+	text-decoration: none;
+
+}
+
+
+
+#midbox2_content {
+
+
+	/*height: 300px;*/
+
+
+/*
+	background:url(http://www.christianvolunteering.org/imgs/organizationbox_patt_wide.gif) no-repeat 0px 0px;	
+*/
+
+}
+
+
+
+#midbox3 {
+
+	margin: 10px 0px 10px 0px;
+
+	background: #E7E58C url(../imgs/trainingbox_borderpatt_wide.gif) 1px 158px;
+
+	width: 309px;
+
+	float: left;
+
+}
+
+
+
+#midbox3 a { color: #99994C; text-decoration: none; }
+
+
+
+#midbox3 a:hover { text-decoration: underline; }
+
+
+
+#midbox3 h2 {
+
+	margin-top: 10px;
+
+	margin-bottom: 10px;
+
+	font-size: 16px;
+
+	font-weight: bold;
+
+	color: #99994C;
+
+	text-decoration: underline;
+
+}
+
+
+
+#midbox3_content {
+
+	height: 300px;
+
+	background:url(/imgs/trainingbox_patt_wide.gif) no-repeat 0px 0px;
+
+}
+
+
+
+#midbox1 p, #midbox2 p, #midbox3 p, #midbox1 span {
+
+	margin: 0px 20px 10px 20px;
+
+}
+
+
+
+#ivolunteering #endingbox {
+
+	height: 650px;
+
+	//height: 630px;
+
+}
+
+
+
+#endingbox {
+
+	background: #ECF1FC url(../imgs/endingbox_patt.gif) no-repeat bottom right;
+
+	width: 919px;
+
+	height: auto; /*1220px; */ /*193px;*/
+
+	border-top: solid 4px #728DD4;
+
+	float: left;
+
+}
+
+
+
+#endingbox a { color: #728DD4; text-decoration: none; }
+
+
+
+#endingbox a:hover { text-decoration: underline; }
+
+
+
+#endingbox li  { 
+
+	list-style-position: outside;
+
+	margin-left: 16px;
+
+	padding-left: 0px;
+
+	margin-top: 0px;
+
+	padding-top: 0px;
+
+	padding-left: 0px;
+
+	line-height: 16px;
+
+}
+
+html>body div#endingbox li {  /* min-height for non-IE  */
+
+	list-style-position: outside;
+
+	margin-left: 16px;
+
+	padding-left: 0px;
+
+	margin-top: 0px;
+
+	padding-top: 0px;
+
+	padding-left: 0px;
+
+	height: 0px;
+
+}
+
+
+
+#endingbox H2 {
+
+	margin: 0px 0px 10px 0px;
+
+}
+
+
+
+.hrule {
+
+	border-top: dashed 1px #728DD4; 
+
+	margin-top: -10px;
+
+}
+
+
+
+.hilitebox {
+
+	border: dashed 1px #728DD4;
+
+	padding: 0px; /*3px;*/
+
+}
+
+
+
+.form div {
+
+	padding-bottom: 0px; /*8px;*/
+
+}
+
+
+
+.form label {
+
+	width: 150px; 
+
+	display: block; 
+
+	float:left;
+
+	clear:both;
+
+}
+
+
+
+/* 2006-07-14 div to use around displaying text area input */
+
+#textareaformat {
+
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+
+	font-size: 12px;
+
+}
+
+
+
+select.smalldropdown {
+
+	FONT-SIZE: 9px;
+
+	FONT-STYLE: normal;
+
+	FONT-WEIGHT: normal;
+
+	TEXT-DECORATION: none;
+
+	BORDER: 1px solid #838383;
+
+}
+
+
+
+input.textinputwhite {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	font-style: normal;
+
+	border: 1px solid #838383;
+
+	background-color: #FFFFFF;
+
+	text-align: left;
+
+}

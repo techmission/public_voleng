@@ -1,0 +1,27 @@
+<!--
+
+function launchpopunder()
+{
+   // set randomSelect(24) to get 1 in 24 chance 
+   // to test set randomSelect(2) to get 1 in 2 chance
+   /*
+   var randomNum = randomSelect(3);
+	//alert (randomNum);  
+	if (randomNum > 1)
+	{ 
+	//alert("random: selected");
+	newwin = window.open('/worldvision/master.nsf/email_signup_popunder_africaboy?OpenPage', 'Popwin', 'screenX=10,screenY=10,top=10,left=10, height=385,width=342,nostatus,resizable=no');
+ 	//newwin = window.open('/worldvision/sample1.nsf/satisfaction_fy05q3?OpenForm', 'Popwin', 'screenX=10,screenY=10,top=10,left=10, height=385,width=342,nostatus,resizable=no');			 
+	}
+	else
+	{ //alert("random: not selected");
+	newwin = window.open('/worldvision/master.nsf/email_signup_popunder_new?OpenPage', 'Popwin', 'screenX=10,screenY=10,top=10,left=10,height=385,width=342,nostatus,resizable=no');
+	}
+
+	*/
+	
+	newwin = window.open('/worldvision/master.nsf/email_signup_popunder_africaboy?OpenPage', 'Popwin', 'screenX=10,screenY=10,top=10,left=10, height=410,width=375,nostatus,resizable=no');
+}
+
+
+// -->

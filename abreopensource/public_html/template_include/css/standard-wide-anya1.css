@@ -1,0 +1,504 @@
+/* CSS Document -- Jazzy Homepage-- created by Anya Gilliam and Amber Brady--*/
+
+*{ font-size:11px; font-family:Arial, Helvetica, sans-serif;}
+h3 { margin-bottom: 0px;}
+
+#container_welcomebox {
+float:left; 
+background-color:#5D9345; 
+margin-bottom: 5px; 
+//margin-bottom: 10px; 
+
+height:230px; 
+margin-left:5px; 
+margin-top:5px; 
+width:611px;
+}
+#welcomebox {background: #AAD696; height:230px; width:611px; overflow:hidden;
+/*url(../imgs/welcomebox_patt_wide.gif) no-repeat bottom right;*/
+/*float: left;*/}
+#welcomebox_photo {
+float: left;
+height: 228px;
+width:200px; 
+}
+#welcomebox_photo img{
+border-right: none;
+}
+
+#welcomebox h2 {
+	font-size: 18px;
+	color: #496F37;
+	text-transform: capitalize;
+	margin-top:0px;
+	margin-bottom: 5px;
+}
+
+.container_endingbox {float:left; background-color:#83A2F4; margin-left:5px;}
+#endingbox {
+position: relative;
+border:none;
+background: #ECF1FC url(../imgs/endingbox_patt.gif) no-repeat bottom right; 
+width: 610px;
+height: 500px; 
+overflow:hidden;
+float: left;
+}
+
+#endingbox h1 {
+ color: #728DD4;
+}
+
+
+
+#endingbox a { color: #728DD4; text-decoration: none; }
+
+
+
+#endingbox a:hover { text-decoration: underline; }
+
+
+
+#endingbox li  { 
+
+	list-style-position: outside;
+
+	margin-left: 16px;
+
+	padding-left: 0px;
+
+	margin-top: 0px;
+
+	padding-top: 0px;
+
+	padding-left: 0px;
+
+	line-height: 16px;
+
+}
+
+
+html>body div#endingbox li {  /* min-height for non-IE  */
+
+	list-style-position: outside;
+
+	margin-left: 16px;
+
+	padding-left: 0px;
+
+	margin-top: 0px;
+
+	padding-top: 0px;
+
+	padding-left: 0px;
+
+	height: 0px;
+
+}
+
+#endingbox H1{
+padding-left: 15px;
+margin-top:0px;
+}
+
+#endingbox H2 {
+
+	margin: 0px;
+
+}
+/* Drupal related styles*/
+
+#endingbox .views-row-odd, #endingbox .views-row-even {
+margin-left: 10px;
+clear: both;
+}
+
+#endingbox .stats, #endingbox .service_links_delicious, #endingbox .service_links_digg, #endingbox .submitted, #endingbox .playstats, #endingbox .playtime, #endingbox .play_counter, #endingbox .node_translation_es {
+display:none;
+}
+#endingbox span {
+	color:inherit!important;
+	font-size:inherit!important;
+}
+ul.links li{
+display:inline;
+padding-right: 10px;}
+
+#endingbox .views-row-odd, #endingbox .views-row-even {
+clear:both;
+margin-left:10px;
+}
+
+#endingbox .node_wrapper, #endingbox .node-inner {
+min-height: 80px;
+//height: 100px;
+padding-left:20px;
+position:relative;
+}
+.node .content a, .node .content a:hover{
+font-weight:normal;}
+
+#endingbox .node_title, #endingbox h2 {
+margin-left:110px;
+}
+#endingbox .node_wrapper .node img, #endingbox .node-inner .content img  {
+position:absolute;
+left:5px;
+width:100px; 
+height: auto;
+top:0px;
+//top: 5px;
+}
+#endingbox .node_wrapper .node, #endingbox .node-inner .content {
+margin-left:110px;
+}
+#endingbox ul.inline.links li.last, #endingbox ul.inline.links li.first {
+display:none;
+}
+#endingbox #newpadding{
+}
+
+#endingbox .content p{
+line-height:1.4em;
+margin:0px;
+padding:0px;}
+#endingbox .content p strong {
+font-weight:normal;}
+#endingbox .content p br {
+display:none;} 
+.views-field-teaser, .views-field-teaser strong, .views-field-teaser p, .views-field-teaser span{ font-weight: normal; margin:0px; font-size:inherit!important; color:inherit!important;} 
+h2.title {
+}
+.more-link {
+float:right;
+padding:0px 250px 10px 0px;
+}
+
+/* Footer */
+#footer {
+	COLOR: #333;
+	font-size:12px;
+	clear:both;
+}
+
+#footer a {
+font-weight: normal;
+}
+
+.footer_sections{
+background-color:#CEDFEA;
+font-size: 12px; 
+}
+
+.footer_sections_right a{ text-decoration:none; font-weight:normal;}
+
+.volbox_wrapper{ background-color:#FBC76E; padding:5px; margin-right:15px; margin-top: 20px; float:left;}
+.volbox{ 
+font-size:14px; 
+color:#000; 
+background-color:#FFEEB6; 
+padding: 10px; 
+border: solid 2px #FFF; 
+height: 200px;
+width:250px;
+}
+.volbox h2 a{ 
+color: #DF9C29; 
+font-size:15px; 
+text-transform:uppercase; 
+text-decoration:none;
+}
+.volbox h2 a:hover, .npbox h2 a:hover{ text-decoration:underline;}
+
+.npbox_wrapper{ background-color:#C3C87A; padding:5px; margin-top: 20px; float:right;}
+.npbox{
+font-size:14px; 
+color: #000; 
+background-color:#D9DF7C;
+padding: 10px;
+border: solid 2px #FFF;
+height: 200px;
+width:250px;
+ }
+.volbox a, .npbox a { color:#666633; text-decoration: none;}
+.volbox a:hover, .npbox a:hover { color:#35568F; text-decoration:underline;}
+.volbox li, .npbox li { line-height: 1.5em;}
+.npbox h2 a{ 
+color:#8C8F59;
+ font-size:15px; 
+ text-transform:uppercase; 
+ text-decoration:none;
+ }
+#page_base{
+border: 2px solid #CCC;
+padding: 10px; 
+background-color:#FFF; 
+float:left; 
+text-align:left; 
+width:600px; 
+margin-left: 50px;
+}
+/* Sidebar Modifications by anya, june 2009 */
+div#sidebar_content ul.navbullet li { list-style:none; padding-bottom: 3px; margin-left: 0px; }
+#sidebar ul.navbullet a:hover{color:#036;}
+#sidebar_content h5 a{color:#036;}
+#sidebar_content h5 {color:#333; padding-bottom:5px; text-transform:uppercase; font-size:11px;}
+#sidebar_content h5 a:hover {color:#F00;}
+hr.sidebar_hr {color:#036;}
+
+div, p {
+	margin:0;
+	padding:0;
+}
+.container {
+}
+.hoverme:hover .hasBackgroundColor {
+	background-color:#333 !important;
+}
+
+.container ul {margin: 10px; padding: 0;}
+
+
+/* Box Modifications by amber, sept 2009 */
+
+h4{margin-bottom:5px;}
+#maincontent.sidebarless{width: 100%; backround-image:none; border:none;}
+#contentwrapper {background-image:none; background-color:#FFF; width:950px;}
+
+#container_about{ background-color:#83A2F4; float:left; width:300px; height:230px; 
+margin:5px 5px 5px;
+//margin-bottom: 10px; }
+#about_us {background-color:#D8D9ED; padding:0px 10px; border:1px solid #FFF; height: 230px; overflow:hidden; margin:0;
+background: #D8D9ED url(http://christianvolunteering.org/imgs/bluebackground2.gif) repeat-x bottom left;
+}
+#about_us ul, #about_us ol{
+	font-weight:bold;
+	color:#036;
+	list-style:none;
+	margin:7px;
+	margin-left:-25px;
+	//margin-left:10px;}
+
+#about_us p{
+line-height:1.4em;
+font-style:italic;
+}
+#about_us a, #about_us h4, #about_us h3{
+color:#83A2F4;
+}
+#about_us h3.title{
+color:#036;
+text-transform:capitalize;
+font-size:18px;
+margin-top:0px;
+}
+#about_us a:hover{
+color:#C00;
+}
+
+.container_stories_box, .container_org_stories_box, .container_church_stories_box {float:left; height:231px; margin-bottom: 5px; margin-left:5px;}
+
+.container_stories_box{background:#CFA45A;}
+.container_org_stories_box {background:#ABAF6D;}
+.container_church_stories_box{background:#AFA641;}
+
+#stories_box, #org_stories_box, #church_stories_box{ height:229px; width:300px; float:left;}
+
+#stories_box{
+background: #FBCE80 url(http://christianvolunteering.org/imgs/orangebackground.gif) repeat-x top left;
+border:1px solid #FBC76E;
+}
+#org_stories_box{
+background: #DDE37A url(http://christianvolunteering.org/imgs/limebackground.gif) repeat-x top left;
+border:1px solid #D9DF6F;
+}
+#church_stories_box{
+background: #E3DD72 url(http://christianvolunteering.org/imgs/yellowbackground.gif) repeat-x top left;
+border:1px solid #DFD353;
+}
+
+#img_opp1, #img_opp2, #img_opp3, #img_opp4,
+#img_org1, #img_org2, #img_org3, #img_org4,
+#img_church1, #img_church2, #img_church3, #img_church4
+{float:left; width:140px; height:200px; padding:0; margin-top:0px;}
+
+#img_opp1 { background-image:url(/imgs/shasta.gif); } /*keep this img, change the rest of them*/
+#img_opp2{ background-image:url(/imgs/stock-img-wenyuan.gif); }
+#img_opp3 { background-image:url(/imgs/pamela_nepal1.gif); }
+#img_opp4 { background-image:url(/imgs/stock-img-mayowa.gif); }
+
+#img_org1{ background-image:url(/imgs/infonepal.gif); }
+#img_org2{ background-image:url(/imgs/regina_org.gif); }
+#img_org3{ background-image:url(/imgs/bma_org.gif); }
+#img_org4{ background-image:url(/imgs/needhim_org.gif); }
+
+#img_church1{ background-image:url(/imgs/Paul---Community-Service1.jpg); }
+#img_church2{ background-image:url(/imgs/needhim_org.gif); }
+#img_church3{ background-image:url(/imgs/church-cross.gif); }
+#img_church4{ background-image:url(/imgs/vineyard.gif); }
+
+
+#stories_header, #org_stories_header, #church_stories_header {height:26px; padding-left:10px; padding-top:3px;}
+
+#stories_header {background-color:#FBC76E;}
+#org_stories_header { background-color:#D9DF6F;}
+#church_stories_header {background-color:#DFD353;}
+
+#stories_header h3 {
+color:#8F713E;
+float:left;
+padding-bottom:0;
+margin:0;
+}
+#org_stories_header h3 {
+color:#7C7F4F;
+float:left;
+padding-bottom:0;
+margin:0;
+}
+#church_stories_header h3 {
+color:#6F6929;
+float:left;
+padding-bottom:0;
+margin:0;
+}
+#stories_header ul, #org_stories_header ul, #church_stories_header ul {
+margin-left:135px; //margin-left:180px;/* was 135*/
+margin-top: 0px;
+}
+#stories_header li, #org_stories_header li, #church_stories_header li {
+color:#FFFFFF;
+float:left;
+font-weight:bold;
+height:19px;
+margin-right:1px;
+padding:3px;
+text-align:center;
+width:20px;
+list-style:none;
+}
+#stories_header li {
+background-color:#CFA45A;
+}
+#org_stories_header li {
+background-color:#ABAF6D;
+}
+#church_stories_header li {
+background-color:#AFA641;
+}
+#stories_header ul#numbers li.tab a { color:#FFF; text-decoration:none;}
+#stories_header ul#numbers li.active_tab a{ color:#FFECB1; text-decoration:none;}
+#org_stories_header ul#numbers li.tab a{ color:#FFF; text-decoration:none;}
+#org_stories_header ul#numbers li.active_tab a{ color:#88AAFE; text-decoration:none;}
+#church_stories_header ul#numbers li.tab a{ color:#FFF; text-decoration:none;}
+#church_stories_header ul#numbers li.active_tab a{ color:#88AAFE; text-decoration:none;}
+
+.main_text {
+padding:10px 10px 0px 10px;
+font-size:11px !important;
+font-family:Arial, Helvetica, sans-serif;
+height:150px;
+overflow:hidden;
+}
+.main_text p{ font-size:11px;}
+.specialmessage {}
+h1.signupnow {
+color: inherit;
+font-size:11px;
+float:right;
+text-align:center;
+text-transform: uppercase;
+white-space:normal;
+width: 150px;
+margin-top: 5px;
+margin-right:10px;
+}
+.main_text h4, .main_text h5{
+margin:0px;
+}
+#stories_header h3.title a, #org_stories_header h3.title a, #church_stories_header h3.title a {
+text-decoration:none;
+font-size:15px;
+}
+#stories_header h3.title a:hover, #org_stories_header h3.title a:hover, #church_stories_header h3.title a:hover {
+text-decoration:underline;
+}
+a h4.title{
+text-decoration:underline;
+}
+.main_text a{
+font-weight:bold;
+text-decoration:none;
+}
+.main_text a:hover{
+text-decoration:underline;
+}
+#stories_box .main_text h4, #stories_box .main_text h5, #stories_box h1.signupnow{
+color:#8F713E;
+}
+#org_stories_box .main_text h4, #org_stories_box .main_text h5, #org_stories_box h1.signupnow{
+color:#7C7F4F;
+}
+#church_stories_box .main_text h4, #church_stories_box .main_text h5, #church_stories_box h1.signupnow{
+color:#6F6929; 
+}
+#stories_box ul, #stories_box ol, #stories_box li, #stories_box a, #stories_box h4{
+color:#8F713E;
+}
+#org_stories_box ul, #org_stories_box ol, #org_stories_box li, #org_stories_box a, #org_stories_box h4{
+color:#7C7F4F;
+}
+#church_stories_box ul, #church_stories_box ol, #church_stories_box li, #church_stories_box a, #church_stories_box h4{
+color:#6F6929;
+}
+#stories_box a:hover, #org_stories_box a:hover, #church_stories_box a:hover{
+color:#C00;
+}
+a.more{
+text-decoration:underline;
+float:right;
+margin-top:5px;
+margin-right:5px;
+}
+.imgleft{float:left; width:140px; height:200px}
+.imgleft2{float:left; width:365px; height:265px}
+#stories_header .active_tab, 
+#org_stories_header .active_tab, 
+#church_stories_header .active_tab {
+background-color:#FFFFFF;
+margin-right:1px;
+padding:3px;
+text-align:center;
+}
+#stories_header .active_tab {
+color:#CFA45A;
+}
+#org_stories_header .active_tab{
+color:#ABAF6D;
+}
+#church_stories_header .active_tab {
+color:#AFA641;
+}
+
+#container_partners{ background-color:#83A2F4; float:left; width:300px; margin:0px 5px 5px; }
+#partners { background-color: #FFF; padding: 0 10px; border:1px solid #FFF; height: 500px; overflow:hidden; margin:0;}
+#partners h3.title {
+font-size:18px;
+color:#036;
+margin-top:0;}
+ /*url(http://christianvolunteering.org/imgs/bluebackground.gif) repeat-x bottom left*/
+#sidebar_box h4 {
+margin-bottom:10px;}
+ .numbers{ font-weight:bold; color:#003366;}
+ /* --------- Scrolling News css -------------*/
+#news{ }
+#news ul{padding:7px 10px 0px 40px; //margin: 0px;}
+#news li{line-height:2em; font-weight:bold; list-style:none;}
+/* the news box when JavaScript is available */
+#news.hasJS
+{height:320px;overflow:hidden;position:relative;}
+/* The nested UL when JavaScript is available */
+#news.hasJS ul
+{position:absolute;top:120px;left:0;}
+p#DOMnewsstopper{ text-align:right; margin-right:30px;}
+/* --------- end: Scrolling News css -------------*/

@@ -1,0 +1,9 @@
+Options -Indexes
+RewriteEngine On
+RewriteCond %{REQUEST_URI} WEB-INF
+RewriteRule ^.*$  /404.shtml [R]
+ErrorDocument 400 /400.shtml
+ErrorDocument 401 /401.shtml
+ErrorDocument 403 /403.shtml
+ErrorDocument 404 /404.shtml
+ErrorDocument 500 /500.shtml

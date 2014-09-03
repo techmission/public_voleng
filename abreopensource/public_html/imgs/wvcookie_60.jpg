@@ -1,0 +1,264 @@
+<!--
+function checkCookieExists (cookieName)
+{
+	var CurCookies = document.cookie;
+	var tmpcookiechk = CurCookies.indexOf(cookieName);
+	if (tmpcookiechk > -1){
+		//alert ("found cookie");
+		return 1;
+	}
+	return -1;
+}
+
+function CookiesStatus()
+{
+	// This sets a cookie on the user's machine
+	document.cookie="cookiechk=cookies_on";
+	// This retrieves the entire cookie from the user's machine
+	var CurCookies = document.cookie;
+	// this parses the entire cookie to check for the single cookie you just set
+	CookieChk = CurCookies.indexOf("cookiechk");
+	if(CookieChk == -1)
+	{ // if it does not find it
+		return false;
+	}
+	// if it does find it
+	return true;
+}
+
+function CookiesEnabled()
+{
+	var popwin = false; // default to false
+	var CurCookies = document.cookie;
+	var CookieVal = -1;
+	var tmpcookiechk = CurCookies.indexOf("dailyWVPopunder");
+	if (tmpcookiechk > -1)
+		{
+		//alert ("found dailyWVPopunder");
+		return -1;
+		}
+	// Check if the popunder cookie exists
+	CookieChk = CurCookies.indexOf("GetWVPopunder=");
+	if(CookieChk == -1)
+	{ // Cookie not found
+		popwin = true;
+		CookieVal = 0;
+	}
+	else
+	{ // We did find our cookie, so now we check for the value
+		CookieVal = CurCookies.substr(CookieChk + 14, 1); // The value we set will be 1 digit
+		//alert(CookieVal);
+		switch (CookieVal)
+		{
+			case '0': // If it is 0 set it to 1 and pop the window
+				popwin = true;
+				CookieVal = 1;
+				break;
+			case '1': // If it is 1 set it to 2 and pop the window
+				popwin = true;
+				CookieVal = 2;
+				break;
+			case '2': // If it is 2 set it to 3 and pop the window for the last time
+				popwin = true;
+				CookieVal = 3;
+				break;
+			case '3': // If it is 3 don't do anything and don't pop the window
+				break;
+			default: // If it is some corrupted value reset it to 0 and pop the window
+				CookieVal = 0;
+				popwin = true;
+		}
+	}
+	
+	if (popwin) 
+	{
+	launchpopunder();
+	}
+	return CookieVal;
+}
+
+function CookiesNotEnabled()
+{
+	alert("In order for us to better accomodate you using our site please enable cookies on your browser");
+	return -1;
+}
+
+function writeWVcookies (setPopunder, campaignid)
+{
+	// This is our cookie writing script
+	// We'll read the campaign from the querystring, and create the cross domain cookie
+	// using a call to an img src.  We will also add an sid variable to the cookie if
+	// keyword exists in the querystring.  Otherwise we will add the search engine campaign
+	// code for those who came from search, and the default campaign code for those who 
+	// are not from search, and are on a page with a default code.
+	// Brian Kang - 02/02/2005
+	
+	// Get certain querystring variables and write them into cookies
+	var keepgoin = true;
+	var qrystr = location.search;
+	var arrNameVal = "";
+	
+	// First of all do we have anything in the querystring
+	if (qrystr.length == 0)
+	{
+		keepgoin = false;
+	}
+	
+	// Now let's find the ones that we are looking for
+	var foundDV = false;		// Boolean to set if a campaign code exists
+	var foundSearch = false;	// Boolean to set if we have come from paid search
+	var writecookie = false;	// Boolean to set if we have something to write
+	var curDVID = ""; 			// Donor Vision ID (Campaign Code)
+	var curNV = ""; 			// Current Name/Value Pair
+	var CookieQS = "";			// Query String to send to asp/jsp pages
+	var curDVIndex = "";		// Current CampaignID Index
+	var curSearchIndex = "";	// Current Search Index
+	var refurl = "";		// Referring URL
+
+	if (keepgoin)
+	{
+		// Let's place the Name Value pairs into an array
+		arrNameVal = qrystr.split("&");		
+		
+		// Loop through the array and extract the pertinent name/value pairs
+		for (var i=0; i<arrNameVal.length; i++)
+		{
+			// The first one (item 0) is always going to have a ? preceeding it
+			curNV = arrNameVal[i];
+			if (i==0)
+			{
+				curNV = curNV.substr(1);
+			}
+			// We are only looking for 1 specific Name/Value pair
+			// when we find it we'll set a flag, and if we don't find it we'll see 
+			// if we had a value in the previous cookie value
+			if (curNV.indexOf("campaign=") == 0)
+			{	// We have found the DV id
+				foundDV = true;
+				curDVIndex = i;
+			}
+			if (curNV.indexOf("keyword=") == 0)
+			{	// This is from paid search
+				foundSearch = true;
+				curSearchIndex = i;
+			}									
+		}
+	}
+	
+	// Set the referring url
+	refurl = document.referrer;
+	CookieQS = "refurl=" + escape(refurl);
+	
+	if (foundDV==true)
+	{
+	CookieQS = CookieQS + "&campaign=" + arrNameVal[curDVIndex].substr(9);
+	}
+	else if (foundDV==false)
+	{ //Setup campaign codes for free search
+
+		var iCheck = checkCookieExists ("campaign");
+		//alert ("iCheck=" + iCheck);
+		if (iCheck < 0)	
+		{
+		var searchString;
+		var codeString;
+		var results;
+		var I = -1;
+		var foundB = false;
+		var searchArray = new Array (["google.com"],
+		["search.yahoo.com"], ["search.msn.com"],
+		["lycos.com"], ["search.aol.com"],
+		["search.earthlink.net"], ["search.netscape.com"],
+		["ask.com"], ["altavista.com"],
+		["dogpile.com"], ["excite.com"]);
+		var codeArray = new Array ([1315040], [1315041], [1315042], [1315043], [1315044], [1315045],
+		[1315046], [1315047], [1315048], [1315049], [13150410]);
+		var maxI = searchArray.length - 1;
+
+			while ((I <= maxI) && (!(foundB)))
+			{
+			I = I + 1;
+			searchString = searchArray[I];
+			codeString = codeArray[I];
+			refurl = refurl.toLowerCase();
+			results = refurl.indexOf(searchArray[I]);
+				if (results > 0)
+				{
+				//alert ("setting Free Search cookie");
+				CookieQS = CookieQS + "&campaign=" + codeString;
+				foundB = true;
+				}
+			}
+
+			if (campaignID!="" && foundB==false)
+			{
+			//alert ("Setting Default Cookie");
+			CookieQS = CookieQS + "&campaign=" + campaignID;
+			}
+		}
+	}
+	
+	if (foundSearch==true)
+	{
+	// Set the sessionID
+	var d=new Date();
+	var day=d.getDate();
+	day=(day < 10) ? '0' + day : day;
+	var m=d.getMonth() + 1;
+	var month=(m < 10) ? '0' + m : m;
+	var yyyy=d.getFullYear();
+	var hours=d.getHours();
+	hours=(hours<10) ? '0' + hours: hours;
+	var minutes=d.getMinutes();
+	minutes=(minutes<10) ? '0' + minutes: minutes;
+	var ms=d.getMilliseconds()+ 1000;
+	var ran_unrounded=Math.random()*100000;
+	var ran_number=Math.round(ran_unrounded) + 100000; 
+	var sid = yyyy + '' + month + '' + day + '' + hours + '' + minutes + '' + ms + '' + ran_number;
+
+	CookieQS = CookieQS + "&sid=" + sid;
+	//alert (sid);
+	}
+	else
+	{
+	sid = -1;
+	}
+
+	if (setPopunder >= 0)
+	{	//We have found a popunder being set
+	CookieQS = CookieQS + "&GetWVPopunder=" + setPopunder;
+	}	
+
+	// Since the campaign code was found, let's setup the image that creates the cookies
+	//PROD
+	var imglink = "<img border=0 src=\"http://donate.wvus.org/OA_HTML/xxwvCrossDomainCookies.jsp?";
+	//TPROD
+	//var imglink = "<img border=0 src=\"http://othniel.wvus.org:8051/OA_HTML/xxwvCrossDomainCookies.jsp?";		
+	//DPROD
+	//var imglink = "<img border=0 src=\"http://ehud.wvus.org:8052/OA_HTML/xxwvCrossDomainCookies.jsp?";		
+	//worldvision.org
+	//var imglink="<img border=0 src=\"http://webi1.worldvision.org/Kana/WVCG_wvorg.asp?";
+	
+	imglink = imglink +  CookieQS;
+	imglink = imglink + "\" height=0>"
+	document.write(imglink);
+	
+	//Write image to create the super cookie
+	//var imglink2="<img border=0 src=\"http://webi1.worldvision.org/Kana/WVCG_wvorg_sid.asp?";
+	//imglink2 = imglink2 +  CookieQS;
+	//imglink2 = imglink2 + "\" height=0>"
+	//alert (imglink2);
+	//document.write(imglink2);
+
+	if (foundSearch==true)
+	{
+	return sid;
+	}
+	else
+	{
+	return -1;
+	}
+
+}
+
+// -->

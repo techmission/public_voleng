@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<!--  
+    This is a test Struts configuration file  
+-->
+
+<struts-config>
+
+  <!-- ==================================== Data Source Configuration -->
+  <data-sources></data-sources>
+ 
+
+  <!-- === START Form Bean Definitions ============ -->
+  <form-beans>
+
+	<!--  
+	    search Form Bean marcillo 4/16/2006   
+	-->
+    <form-bean dynamic="true" name="searchForm" type="org.apache.struts.action.DynaActionForm">
+        <form-property name="url"           type="java.lang.String" />
+        <form-property name="apikey"        type="java.lang.String" />
+        <form-property name="outputFormat"  type="java.lang.String" />
+        <form-property name="method"        type="java.lang.String" initial="processOppSearchAll" />
+	    <form-property name="requesttype"   type="java.lang.String" />
+	    <form-property name="errormsg"      type="java.lang.String" />
+	    <form-property name="portal"   type="java.lang.String" />
+	    <form-property name="cvintern"   type="java.lang.String" />
+        <form-property name="sortorder"     type="java.lang.String" />
+        <form-property name="maxrows"       type="java.lang.String" />
+        <form-property name="source"    type="java.lang.String" />
+        <form-property name="formname"    type="java.lang.String" />
+        <form-property name="searchtype"    type="java.lang.String" />
+        <form-property name="searchkey1"    type="java.lang.String" />
+        <form-property name="searchkey2"    type="java.lang.String" />
+        <form-property name="searchkey3"    type="java.lang.String" />
+        <form-property name="programtype"   type="java.lang.String" />
+        <form-property name="programtypetid"   type="java.lang.String" />
+        <form-property name="membertype"   type="java.lang.String" />
+        <form-property name="membertypetid"   type="java.lang.String" />
+        <form-property name="category1"     type="java.lang.String" />
+        <form-property name="category2"     type="java.lang.String" />
+        <form-property name="category3"     type="java.lang.String" />
+        <form-property name="servicearea1"       type="java.lang.String" />
+        <form-property name="servicearea2"       type="java.lang.String" />
+        <form-property name="servicearea3"       type="java.lang.String" />
+        <form-property name="cursor1"       type="java.lang.String" />
+        <form-property name="postalcode"    type="java.lang.String" />
+        <form-property name="distance"      type="java.lang.String" />
+        <form-property name="zip"    type="java.lang.String" />
+        <form-property name="fq"      type="java.lang.String[]" />
+        <!--form-property name="keyword"       type="java.lang.String" /-->
+
+	    <form-property name="keyword"		type="java.lang.String[]" />
+
+        <form-property name="skills1"       type="java.lang.String" />
+        <form-property name="skills2"       type="java.lang.String" />
+        <form-property name="skills3"       type="java.lang.String" />
+        <form-property name="skills1id"       type="java.lang.String" />
+        <form-property name="skills2id"       type="java.lang.String" />
+        <form-property name="skills3id"       type="java.lang.String" />
+        <form-property name="oppnumvol"     type="java.lang.String" />
+        <form-property name="frequency"     type="java.lang.String" />
+        <form-property name="shortterm"     type="java.lang.String" />
+        <form-property name="city"          type="java.lang.String" />
+        <form-property name="state"         type="java.lang.String" />
+        <form-property name="prov"         type="java.lang.String" />
+        <form-property name="partner"       type="java.lang.String" />
+        <form-property name="partner2"      type="java.lang.String" />
+        <form-property name="partner3"      type="java.lang.String" />
+        <form-property name="partner4"      type="java.lang.String" />
+        <form-property name="partner5"      type="java.lang.String" />
+        <form-property name="orgaffil1tid"       type="java.lang.String" />
+        <form-property name="orgaffil2tid"      type="java.lang.String" />
+        <form-property name="orgaffil3tid"      type="java.lang.String" />
+        <form-property name="orgaffil4tid"      type="java.lang.String" />
+        <form-property name="orgaffil5tid"      type="java.lang.String" />
+        <form-property name="orgname"       type="java.lang.String" />
+        <form-property name="orgnumber"     type="java.lang.String" />
+        <form-property name="orgnid"     type="java.lang.String" />
+        <form-property name="region"        type="java.lang.String" />
+        <form-property name="regiontid"        type="java.lang.String" />
+        <form-property name="country"       type="java.lang.String" />
+        <form-property name="voltype"       type="java.lang.String" initial="" />
+        <form-property name="postype"       type="java.lang.String" />
+        <form-property name="postypesarray"       type="java.lang.String" />
+        <form-property name="focusare1"     type="java.lang.String" />
+        <form-property name="focusare2"     type="java.lang.String" />
+        <form-property name="focusare3"     type="java.lang.String" />
+        <form-property name="focusare4"     type="java.lang.String" />
+        <form-property name="focusare5"     type="java.lang.String" />
+        <form-property name="greatfor1"     type="java.lang.String" />
+        <form-property name="greatfor2"     type="java.lang.String" />
+        <form-property name="greatfor3"     type="java.lang.String" />
+        <form-property name="greatfor4"     type="java.lang.String" />
+        <form-property name="greatfor5"     type="java.lang.String" />
+        <form-property name="greatforkid"     type="java.lang.String" />
+        <form-property name="greatforsenior"     type="java.lang.String" />
+        <form-property name="greatforteen"     type="java.lang.String" />
+        <form-property name="greatforgroup"     type="java.lang.String" />
+        <form-property name="greatforfamily"     type="java.lang.String" />
+        <form-property name="affiliation"   type="java.lang.String" />
+        <form-property name="denomaffiltid"   type="java.lang.String" />
+        <form-property name="requiredcodetype"   type="java.lang.String" />
+        <form-property name="requiredcodedesc"   type="java.lang.String" />
+        <form-property name="orgnumvol"     type="java.lang.String" />
+        <form-property name="orgnumvolintl"     type="java.lang.String" />
+        <form-property name="haslistings"     type="java.lang.String" />
+        <form-property name="listingsurl"     type="java.lang.String" />
+        <form-property name="numopps"     type="java.lang.String" />
+	    <form-property name="positiontypetidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="serviceareatidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="skilltidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="greatfortidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="triplengthtidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="typesofoppstidsarray"		type="java.lang.Integer[]" />
+        <form-property name="numserved"  type="java.lang.String" />
+        <form-property name="formaltrain"     type="java.lang.String" />
+        <form-property name="orgstmtfaith"  type="java.lang.String" />
+        <form-property name="duration"  type="java.lang.String" />
+		<form-property name="localaffil"  type="java.lang.String" />
+		<form-property name="mingroup"  type="java.lang.String" />
+		<form-property name="maxgroup"  type="java.lang.String" />
+        <form-property name="workstudy"       type="java.lang.String" />
+        <form-property name="roomboard"       type="java.lang.String" />
+        <form-property name="triplength"       type="java.lang.String" />
+        <form-property name="stipend"				type="java.lang.String" />
+	    <form-property name="frequencyid"			type="java.lang.String" />
+	    <form-property name="medinsur"				type="java.lang.String" />
+	    <form-property name="transport"		  		type="java.lang.String" />
+	    <form-property name="americorps"		  	type="java.lang.String" />
+	    <form-property name="serviceareas"			type="java.lang.String" />
+		<form-property name="skilltypes"			type="java.lang.String" />
+		<form-property name="causetopics"			type="java.lang.String" />
+	    <form-property name="skilltypesarray"		type="java.lang.String" />
+	    <form-property name="serviceareasarray"		type="java.lang.String" />
+	    <form-property name="lookingforarray"		type="java.lang.String" />
+	    <form-property name="spiritualdevarray"		type="java.lang.String" />
+	    <form-property name="ministryareascausearray"	type="java.lang.String" />
+	    <form-property name="globalissuesarray"		type="java.lang.String" />
+	    <form-property name="organizationaldevarray"	type="java.lang.String" />
+	    <form-property name="reconciliationarray"	type="java.lang.String" />
+		<form-property name="citytid"				type="java.lang.String" />
+		<form-property name="countrytid"			type="java.lang.String" />
+		<form-property name="notus"			type="java.lang.Boolean" />
+	    <form-property name="hqoroffsite"      type="java.lang.String" />
+		<form-property name="faithtid"			type="java.lang.String" />
+	    <form-property name="lookingfor"		type="java.lang.String" />
+	    <form-property name="latitude"		type="java.lang.String" />
+	    <form-property name="longitude"		type="java.lang.String" />
+	    <form-property name="notlocalpostal"		type="java.lang.String" />
+	    <form-property name="notlocalcitytid"		type="java.lang.String" />
+	    <form-property name="notlocalcntrytid"		type="java.lang.String" />
+        <form-property name="notcountry"       type="java.lang.String" />
+	    <form-property name="portallist"		type="java.lang.String" />
+	    
+		<form-property name="assoconly"			type="java.lang.Boolean" />
+
+		<form-property name="skipbanner"			type="java.lang.String" />
+		<form-property name="preview"			type="java.lang.String" />
+	    <form-property name="bckgrnd"		type="java.lang.String" />
+	    <form-property name="brdr"		type="java.lang.String" />
+	    <form-property name="atxt"		type="java.lang.String" />
+	    <form-property name="txt"		type="java.lang.String" />
+	    
+ 	</form-bean>
+
+	<!--  
+	    email Form 
+	-->
+    <form-bean dynamic="true" name="emailForm" type="org.apache.struts.action.DynaActionForm">
+	    <form-property name="errormsg"      	type="java.lang.String" />
+	    <form-property name="portal"   type="java.lang.String" />
+	    <form-property name="orgnid"      		type="java.lang.String" />
+	    <form-property name="oppnid"      		type="java.lang.String" />
+	    <form-property name="lid"      		type="java.lang.String" />
+	    <form-property name="nid"      		type="java.lang.String" />
+	    <form-property name="vid"      		type="java.lang.String" />
+	    <form-property name="voluid"      		type="java.lang.String" />
+	    <form-property name="volnid"      		type="java.lang.String" />
+	    <form-property name="volrailsid"      		type="java.lang.String" />
+        <form-property name="subdom"      type="java.lang.String" />
+	    <form-property name="siteemail"      type="java.lang.String" />
+        <form-property name="emailmsgtype"      type="java.lang.String" />
+	    <form-property name="smtpauthreq"   	type="java.lang.String" />
+        <form-property name="emaildebug"		type="java.lang.String" />
+	    <form-property name="smtpserver"		type="java.lang.String" />
+	    <form-property name="stmpuserpwd"  		type="java.lang.String" />
+	    <form-property name="stmpuser"  		type="java.lang.String" />
+	    <form-property name="emailbodytxtintro"  	type="java.lang.String" />
+	    <form-property name="emailbodytxt"  	type="java.lang.String" />
+	    <form-property name="emailbodytxtclosing"  	type="java.lang.String" />
+	    <form-property name="emailbodytxtres"  	type="java.lang.String" />
+	    <form-property name="emailresfilepath"  	type="java.lang.String" />
+	    <form-property name="volid"      		type="java.lang.String" />
+	    <form-property name="volfn"      		type="java.lang.String" />
+	    <form-property name="volln"      		type="java.lang.String" />
+	    <form-property name="volphone"      	type="java.lang.String" />
+	    <form-property name="volchris"      	type="java.lang.String" />
+	    <form-property name="volskilltypes"      	type="java.lang.String" />
+	    <form-property name="volskills"      	type="java.lang.String" />
+	    <form-property name="volskills2"      	type="java.lang.String" />
+	    <form-property name="volskills3"      	type="java.lang.String" />
+	    <form-property name="volinterestarea1"      	type="java.lang.String" />
+	    <form-property name="volinterestarea2"      	type="java.lang.String" />
+	    <form-property name="volinterestarea3"      	type="java.lang.String" />
+	    <form-property name="emailsubject"      	type="java.lang.String" />
+	    <form-property name="fromuser"      	type="java.lang.String" />
+	    <form-property name="touser"      	type="java.lang.String" />
+	    <form-property name="contactfn"      	type="java.lang.String" />
+	    <form-property name="contactln"      	type="java.lang.String" />
+	    <form-property name="oppname"      	type="java.lang.String" />
+	    <form-property name="oppid"      	type="java.lang.String" />
+	    <form-property name="orgid"      	type="java.lang.String" />
+	    <form-property name="orgname"      	type="java.lang.String" />
+	    <form-property name="orgaddr1"      	type="java.lang.String" />
+	    <form-property name="orgcity"      	type="java.lang.String" />
+	    <form-property name="orgstate"      	type="java.lang.String" />
+	    <form-property name="orgprov"      	type="java.lang.String" />
+	    <form-property name="orgcountry"      	type="java.lang.String" />
+	    <form-property name="orgphone"      	type="java.lang.String" />
+	    <form-property name="orgweb"      		type="java.lang.String" />
+	    <form-property name="orgemail"      		type="java.lang.String" />
+	    <form-property name="oppbkgrnd"      		type="java.lang.String" />
+	    <form-property name="oppreference"      		type="java.lang.String" />
+	    <form-property name="emailattachfile"      	type="java.lang.String" />
+	    <form-property name="stmreferences"      		type="java.lang.String" />
+	    <form-property name="orgurlid"      		type="java.lang.String" />
+	    <form-property name="oppurlid"      		type="java.lang.String" />
+	    <form-property name="listtype"      		type="java.lang.String" />
+	    <form-property name="interntype"       type="java.lang.String" />
+	    <form-property name="referralurl"       type="java.lang.String" />
+	    <form-property name="feed"      type="java.lang.Boolean" initial="false"/>
+      <form-property name="resume_file" type="org.apache.struts.upload.FormFile"  />
+      <form-property name="cover_letter_file" type="org.apache.struts.upload.FormFile" />
+      <form-property name="application_file" type="org.apache.struts.upload.FormFile" />
+      <form-property name="required_document_nid_1" type="java.lang.Integer" />
+      <form-property name="required_document_nid_2" type="java.lang.Integer" />
+      <form-property name="required_document_nid_3" type="java.lang.Integer" />
+      <form-property name="required_document_file_1" type="org.apache.struts.upload.FormFile" />
+      <form-property name="required_document_file_2" type="org.apache.struts.upload.FormFile" />
+      <form-property name="required_document_file_3" type="org.apache.struts.upload.FormFile" />
+      
+
+	    <form-property name="orgnids"		type="java.lang.Integer[]" />
+	    <form-property name="oppnids"		type="java.lang.Integer[]" />
+	          
+	    <form-property name="firstname"      	type="java.lang.String" />
+	    <form-property name="lastname"      	type="java.lang.String" />
+	    <form-property name="email"      	type="java.lang.String" />
+	    <form-property name="phone"      	type="java.lang.String" />
+	    <form-property name="ischris"      	type="java.lang.String" />
+	    <form-property name="agerequirement"      	type="java.lang.String" />
+	    <form-property name="source"      	type="java.lang.String" />
+	    <form-property name="diploma"      	type="java.lang.String" />
+	    <form-property name="timecommitability"      	type="java.lang.String" />
+	    <form-property name="attendingbachelors"      	type="java.lang.String" />
+	    <form-property name="testimony"      	type="java.lang.String" />
+	    <form-property name="geopref"      	type="java.lang.String" />
+	    <form-property name="internreason"      	type="java.lang.String" />
+	    <form-property name="lang"      	type="java.lang.String" />
+	    <form-property name="church"      	type="java.lang.String" />
+	    <form-property name="major"      	type="java.lang.String" />
+	    <form-property name="hasbachelors"      	type="java.lang.String" />
+	    <form-property name="credits"      	type="java.lang.String" />
+	    <form-property name="careergoals"      	type="java.lang.String" />
+	    <form-property name="hrlycommit"      	type="java.lang.String" />
+	    <form-property name="livablestipend"      	type="java.lang.String" />
+	    <form-property name="livablestipendexpl"      	type="java.lang.String" />
+	    <form-property name="crimrecord"      	type="java.lang.String" />
+	    <form-property name="crimdescrip"      	type="java.lang.String" />
+	    <form-property name="housing"      	type="java.lang.String" />
+	    <form-property name="servicesite"      	type="java.lang.String" />
+	    <form-property name="locpref"      	type="java.lang.String" />
+	    <form-property name="starttime"      	type="java.lang.String" />
+	    <form-property name="forwardresume"      	type="java.lang.String" />
+	    <form-property name="webcam"      	type="java.lang.String" />
+	    <form-property name="skype"      	type="java.lang.String" />
+	    <form-property name="internlength"      	type="java.lang.String" />
+	    <form-property name="pastoralref"      	type="java.lang.String" />
+	    <form-property name="pastoralrefchurch"      	type="java.lang.String" />
+	    <form-property name="pastoralrefphone"      	type="java.lang.String" />
+	    <form-property name="pastoralrefemail"      	type="java.lang.String" />
+	    <form-property name="profref"      	type="java.lang.String" />
+	    <form-property name="profreforg"      	type="java.lang.String" />
+	    <form-property name="profrefphone"      	type="java.lang.String" />
+	    <form-property name="profrefemail"      	type="java.lang.String" />
+	    <form-property name="gender"      	type="java.lang.String" />
+	    <form-property name="dob"      	type="java.lang.String" />
+	    <form-property name="src"      	type="java.lang.String" />
+	    <form-property name="addr"      	type="java.lang.String" />
+	    <form-property name="city"      	type="java.lang.String" />
+	    <form-property name="prov"      	type="java.lang.String" />
+	    <form-property name="postal"      	type="java.lang.String" />
+	    <form-property name="country"      	type="java.lang.String" />
+	    <form-property name="citizentid"      	type="java.lang.String" />
+	    <form-property name="degreeprogtid"      	type="java.lang.String" />
+	    <form-property name="internlengthtid"      	type="java.lang.String" />
+	    <form-property name="pospreftid"      	type="java.lang.String" />
+	    <form-property name="skillstid"      	type="java.lang.String" />
+	    <form-property name="sourcetid"      	type="java.lang.String" />
+	    <form-property name="poppreftid"      	type="java.lang.String" />
+	    <form-property name="interntypetid"      	type="java.lang.String" />
+	    <form-property name="interntypetids"      	type="java.lang.Integer[]" />
+	    <form-property name="workenvirontid"      	type="java.lang.String" />
+	    <form-property name="lastyrhighschool"      	type="java.lang.String" />
+	    <form-property name="cvdegree_carreergoals"      	type="java.lang.String" />
+      
+      
+ 	</form-bean>
+
+	<!--  organization Form Bean marcillo 4/1/2006  	-->
+    <form-bean dynamic="true" name="orgForm"  type="org.apache.struts.action.DynaActionForm">    
+        <form-property name="social_graph_I_agree_data_usage" type="java.lang.Integer" />
+        <form-property name="social_graph_I_agree_caching" type="java.lang.Integer" />
+        <form-property name="social_graph_I_agree_logo" type="java.lang.Integer" />
+        <form-property name="social_graph_I_agree_final" type="java.lang.Integer" />
+        <form-property name="social_graph_explanation" type="java.lang.String" />
+        <form-property name="social_graph_signature" type="java.lang.String" />
+       
+    
+    
+        <form-property name="site_interest" type="java.lang.Integer" />
+        <form-property name="ein_1"      type="java.lang.String" />
+        <form-property name="ein_2"      type="java.lang.String" />
+        <form-property name="method"          type="java.lang.String" />
+	    <form-property name="requesttype"     type="java.lang.String" />
+	    <form-property name="errormsg"        type="java.lang.String" />
+	    <form-property name="portal"   type="java.lang.String" />
+	    <form-property name="orgnid"       type="java.lang.String" />
+	    <form-property name="urlalias"       type="java.lang.String" />
+	    <form-property name="referralurl"       type="java.lang.String" />
+	    <form-property name="feed"      type="java.lang.Boolean" initial="false"/>
+	    <form-property name="tid"       type="java.lang.String" />
+	    <form-property name="nid"       type="java.lang.String" />
+
+	    <!--form-property name="uploadBanner"       type="com.abrecorp.opensource.struts.fileform" /-->
+	    <!--form-property name="uploadBanner"       type="org.apache.struts.upload.FormFile" /-->
+
+	    <form-property name="portalbanner"   type="java.lang.String" />
+	    <form-property name="portalheadertags"   type="java.lang.String" />
+	    <form-property name="portalheader"   type="java.lang.String" />
+	    <form-property name="portalcss"   type="java.lang.String" />
+	    <form-property name="portalfooter"   type="java.lang.String" />
+	    <form-property name="portalname"   type="java.lang.String" />
+	    <form-property name="portaltid"   type="java.lang.String" />
+
+	    <form-property name="oppprimarycontactuid"   type="java.lang.String" />
+	    <form-property name="oppcontactuidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="oppcontactuidsrcvemailarray"		type="java.lang.Integer[]" />
+
+	    <form-property name="orgadminuidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="orgcontactuidsarray"		type="java.lang.Integer[]" />
+
+	    <form-property name="positiontypetidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="serviceareatidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="skilltidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="greatfortidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="triplengthtidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="typesofoppstidsarray"		type="java.lang.Integer[]" />
+
+	    <form-property name="email"      type="java.lang.String" /><!-- *********************************************************** -->
+	    <form-property name="siteemail"      type="java.lang.String" />
+	    <form-property name="orgtypetid"         type="java.lang.String" />
+
+	    <form-property name="orgaffiltidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="publicorgaffiltidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="denomtidsarray"		type="java.lang.Integer[]" />
+	    <form-property name="publicdenomtidsarray"		type="java.lang.Integer[]" />
+
+	    <form-property name="orgdenominationtid"         type="java.lang.String" />
+	    <form-property name="orgaffiliation1tid"         type="java.lang.String" />
+	    <form-property name="orgaffiliation2tid"         type="java.lang.String" />
+	    <form-property name="orgaffiliation3tid"         type="java.lang.String" />
+	    <form-property name="orgaffiliation4tid"         type="java.lang.String" />
+	    <form-property name="orgaffiliation5tid"         type="java.lang.String" />
+	    <form-property name="orgprogramtype1tid"         type="java.lang.String" />
+	    <form-property name="orgotheraffiliation"         type="java.lang.String" />
+	    <form-property name="orgtype"         type="java.lang.String" />
+	    <form-property name="orgname"         type="java.lang.String" />
+	    <form-property name="addr1"           type="java.lang.String" />
+	    <form-property name="addr2"           type="java.lang.String" />
+	    <form-property name="city"            type="java.lang.String" />
+	    <form-property name="state"           type="java.lang.String" />
+	    <form-property name="prov"			  type="java.lang.String" /><!-- ***** removed & put back b/c of funky prov & programtypes issues ***** -->
+	    <form-property name="postalcode"      type="java.lang.String" />
+	    <form-property name="country"         type="java.lang.String" />
+	    <form-property name="phone1"          type="java.lang.String" />
+	    <form-property name="fax1"            type="java.lang.String" />
+	    <form-property name="orgwebpage"      type="java.lang.String" />
+	    <form-property name="orgdonateurl"      type="java.lang.String" />
+	    <form-property name="orgfedtaxid"     type="java.lang.String" />
+	    <form-property name="orgotherid"      type="java.lang.String" />
+	    <form-property name="orgmissionstatement"   type="java.lang.String" />
+	    <form-property name="orgdescription"  type="java.lang.String" />
+	    <form-property name="orginternalcomment"   type="java.lang.String" />
+	    <form-property name="orgcomment"      type="java.lang.String" />
+	    <form-property name="orgmemberstatus" type="java.lang.String" />
+	    <form-property name="orgmembertype"   type="java.lang.String" />
+	    <form-property name="orgpartner"      type="java.lang.String" />
+	    <form-property name="orgpartner2"      type="java.lang.String" />
+	    <form-property name="orgpartner3"      type="java.lang.String" />
+	    <form-property name="orgpartner4"      type="java.lang.String" />
+	    <form-property name="orgpartner5"      type="java.lang.String" />
+	    <form-property name="orgaffiliation"  type="java.lang.String" />
+	    <form-property name="localaffil"  type="java.lang.String" />
+	    <form-property name="subdomain" type="java.lang.String" />
+
+	    <form-property name="intlvols" type="java.lang.String" />
+
+	    <form-property name="orgnumvol"       type="java.lang.String" />
+        <form-property name="orgnumvolintl"     type="java.lang.String" />
+        <form-property name="haslistings"     type="java.lang.String" />
+        <form-property name="listingsurl"     type="java.lang.String" />
+        <form-property name="numopps"     type="java.lang.String" />
+        <form-property name="typesofoppsarray"     type="java.lang.String" />
+	    <form-property name="orgnumserved"    type="java.lang.String" />
+	    <form-property name="orgformaltrain"  type="java.lang.String" />
+	    <form-property name="orgstmtfaith"    type="java.lang.String" />
+
+	    <form-property name="orgchrismembertype"    type="java.lang.String" />
+	    <form-property name="onethirdpov"		type="java.lang.String" />
+	    <form-property name="orgemail"			type="java.lang.String" />
+	    <form-property name="hasportal"			type="java.lang.String" />
+
+	    <form-property name="programtypes"		type="java.lang.String" /><!-- ***** removed & put back b/c of funky prov & programtypes issues ***** -->
+
+		<!-- ORG_DETAILS - ali - 2006-10-10 -->
+	    <form-property name="detorgnumber"    type="java.lang.String" /> <!-- ?might not be necessary? -->
+	    <form-property name="detorgcodekey"    type="java.lang.String" /> <!-- ?might not be necessary? -->
+	    <form-property name="detprimaryperson"    type="java.lang.String" />
+	    <form-property name="detupdateid"    type="java.lang.String" />
+	    <form-property name="detfedtaxid"    type="java.lang.String" />
+	    <form-property name="numvolorg"    type="java.lang.String" />
+	    <form-property name="numserved"    type="java.lang.String" />
+	    <form-property name="is501c3"    type="java.lang.String" />
+	    <form-property name="orgbudget"    type="java.lang.String" />
+	    <form-property name="numstafforg"    type="java.lang.String" />
+	    <form-property name="langrabic"    type="java.lang.String" />
+	    <form-property name="langchinese"    type="java.lang.String" />
+	    <form-property name="langenglish"    type="java.lang.String" />
+	    <form-property name="langfrench"    type="java.lang.String" />
+	    <form-property name="langhindi"    type="java.lang.String" />
+	    <form-property name="langportuguese"    type="java.lang.String" />
+	    <form-property name="langspanish"    type="java.lang.String" />
+	    <form-property name="langotheratxt"    type="java.lang.String" />
+	    <form-property name="langothera"    type="java.lang.String" />
+	    <form-property name="langotherbtxt"    type="java.lang.String" />
+	    <form-property name="langotherb"    type="java.lang.String" />
+	    <form-property name="raceasian"    type="java.lang.String" />
+	    <form-property name="raceblack"    type="java.lang.String" />
+	    <form-property name="racecaucasian"    type="java.lang.String" />
+	    <form-property name="racelatino"    type="java.lang.String" />
+	    <form-property name="racepacificislander"    type="java.lang.String" />
+	    <form-property name="racenativeamerican"    type="java.lang.String" />
+	    <form-property name="raceothertext"    type="java.lang.String" />
+	    <form-property name="raceother"    type="java.lang.String" />
+	    <form-property name="demolowincome"    type="java.lang.String" />
+	    <form-property name="demohomeless"    type="java.lang.String" />
+	    <form-property name="demodisability"    type="java.lang.String" />
+	    <form-property name="demourban"    type="java.lang.String" />
+	    <form-property name="demorural"    type="java.lang.String" />
+	    <form-property name="demoyouth"    type="java.lang.String" />
+	    <form-property name="demoadults"    type="java.lang.String" />
+	    <form-property name="demoseniors"    type="java.lang.String" />
+	    <form-property name="orggendermale"    type="java.lang.String" />
+	    <form-property name="orggenderfemale"    type="java.lang.String" />
+
+
+		<!-- Contact person info (drawn from userprofileinfo) -->
+	    <form-property name="orgprimaryperson"    type="java.lang.String" />
+	    <form-property name="contactfirstname"    type="java.lang.String" />
+	    <form-property name="contactlastname"    type="java.lang.String" />
+	    <form-property name="firstname"    type="java.lang.String" />
+	    <form-property name="lastname"    type="java.lang.String" />
+	    <form-property name="contactemail"    type="java.lang.String" />
+        <form-property name="orguid"    type="java.lang.String" />
+        <form-property name="username"    type="java.lang.String" />
+        <form-property name="email1addr"    type="java.lang.String" />
+        <form-property name="siteusetype"    type="java.lang.String" />
+        <form-property name="password1"    type="java.lang.String" />
+        <form-property name="password2"    type="java.lang.String" />
+        <form-property name="namefirst"    type="java.lang.String" />
+        <form-property name="namelast"    type="java.lang.String" />
+        <form-property name="agreeflag1"    type="java.lang.String" />
+        <form-property name="agreeflag2"    type="java.lang.String" />
+        <form-property name="agreeflagworldvision"    type="java.lang.String" />
+	    <form-property name="isemailcontact" type="java.lang.String" />
+
+
+		<!-- orgopportunities_info -->
+        <form-property name="opptitle"        type="java.lang.String" />
+        <form-property name="oppdesc"         type="java.lang.String" />
+	    <form-property name="benefitstidsarray"		type="java.lang.Integer[]" />
+        <form-property name="oppworkstudytid"       type="java.lang.String" />
+        <form-property name="opproomboardtid"       type="java.lang.String" />
+        <form-property name="opptriplengthtid"       type="java.lang.String" />
+        <form-property name="oppstipendtid"       type="java.lang.String" />
+	    <form-property name="roomboardtid"		  type="java.lang.String" />
+	    <form-property name="stipendtid"		  type="java.lang.String" />
+	    <form-property name="medinsurtid"		  type="java.lang.String" />
+	    <form-property name="transporttid"		  type="java.lang.String" />
+	    <form-property name="americorpstid"		  type="java.lang.String" />
+        <form-property name="oppservicearea1tid"       type="java.lang.String" />
+        <form-property name="oppservicearea2tid"       type="java.lang.String" />
+        <form-property name="oppservicearea3tid"       type="java.lang.String" />
+        <form-property name="oppskills1tid"       type="java.lang.String" />
+        <form-property name="oppskills2tid"       type="java.lang.String" />
+        <form-property name="oppskills3tid"       type="java.lang.String" />
+	    <form-property name="opppositiontypetid"      type="java.lang.String" />
+	    <form-property name="opppositiontype2tid"      type="java.lang.String" />
+	    <form-property name="opplanguagetid"      type="java.lang.String" />
+	    <form-property name="oppnumber"       type="java.lang.String" />
+	    <form-property name="oppnid"       type="java.lang.String" />
+	    <form-property name="prognumber"      type="java.lang.String" />
+	    <form-property name="oppcodekey"      type="java.lang.String" />
+	    <form-property name="oppstatus"       type="java.lang.String" />
+	    <form-property name="oppstatus2"       type="java.lang.String" />
+	    <form-property name="backgroundcheck"       type="java.lang.String" />
+	    <form-property name="opptype"         type="java.lang.String" />
+	    
+	    <form-property name="volsneeded"      type="java.lang.String" />
+	    <form-property name="hoursrequired"   type="java.lang.String" />
+	    <form-property name="hourstype"       type="java.lang.String" />
+	    <form-property name="language"        type="java.lang.String" />
+	    <form-property name="datereq"         type="java.lang.String" />
+	    <form-property name="daterequiredtid"         type="java.lang.String" />
+	    <form-property name="startdate"       type="java.lang.String" />
+	    <form-property name="enddate"         type="java.lang.String" />
+	    
+	    <form-property name="startDtMonth"       type="java.lang.String" />
+	    <form-property name="startDtDate"       type="java.lang.String" />
+	    <form-property name="startDtYear"       type="java.lang.String" />
+	    
+	    <form-property name="endDtMonth"       type="java.lang.String" />
+	    <form-property name="endDtDate"       type="java.lang.String" />
+	    <form-property name="endDtYear"       type="java.lang.String" />
+	    
+	    <form-property name="appDeadlineMonth"       type="java.lang.String" />
+	    <form-property name="appDeadlineDate"       type="java.lang.String" />
+	    <form-property name="appDeadlineYear"       type="java.lang.String" />
+	    
+	    <form-property name="contactuid"   type="java.lang.String" />
+	    <form-property name="createdate"      type="java.lang.String" />
+	    <form-property name="createuser"      type="java.lang.String" />
+	    <form-property name="updatedate"      type="java.lang.String" />
+	    <form-property name="updateuser"      type="java.lang.String" />
+	    <form-property name="oppreqcodetype"  type="java.lang.String" />
+	    <form-property name="oppreqcodename"  type="java.lang.String" />
+	    <form-property name="oppmission"      type="java.lang.String" />
+	    <form-property name="opprequirements" type="java.lang.String" />
+	    <form-property name="oppnumvol"		  type="java.lang.String" />
+	    <form-property name="oppfrequency"		  type="java.lang.String" />
+	    <form-property name="oppfreq"		  type="java.lang.String" />
+	    <form-property name="oppfrequencytid"		  type="java.lang.String" />
+	    <form-property name="oppshortterm"		  type="java.lang.String" />
+	    <form-property name="region"			  type="java.lang.String" />
+	    <form-property name="groupmin"			  type="java.lang.String" />
+	    <form-property name="groupmax"			  type="java.lang.String" />
+	    <form-property name="oppcostold"			  type="java.lang.String" />
+	    <form-property name="compensation"		  type="java.lang.String" />
+	    <form-property name="stipend"		  type="java.lang.String" />
+	    <form-property name="amntpd"			  type="java.lang.String" />
+	    <form-property name="costinclude"		  type="java.lang.String" />
+	    <form-property name="stmreferences"		  type="java.lang.String" />
+	    <form-property name="additionaldetail"	  type="java.lang.String" />
+	    <form-property name="appdeadlineold"		  type="java.lang.String" />
+	    <form-property name="duration"			  type="java.lang.String" />
+	    <form-property name="triplength"			  type="java.lang.String" />
+	    <form-property name="referencereq"		  type="java.lang.String" />
+	    <form-property name="oppcost"			  type="java.lang.String" />
+	    <form-property name="oppcostterm"			  type="java.lang.String" />
+	    <form-property name="appdeadline"		  type="java.lang.String" />
+	    <form-property name="oppexpiredrenew" type="java.lang.String" />
+	    <form-property name="redirected" type="java.lang.String" />
+        <form-property name="role"          type="java.lang.String" />
+
+ 	    <form-property name="greatfor1tid"      type="java.lang.String" />
+	    <form-property name="greatfor2tid"      type="java.lang.String" />
+	    <form-property name="greatfor3tid"      type="java.lang.String" />
+	    <form-property name="greatfor4tid"      type="java.lang.String" />
+	    <form-property name="greatfor5tid"      type="java.lang.String" />
+	    
+	    <form-property name="hqoroffsite"      type="java.lang.String" />
+	    <form-property name="privateopp"      type="java.lang.String" />
+
+ 	    <form-property name="favoritedorgnids"      		type="java.lang.Integer[]"/>
+ 	    <form-property name="favoritedoppnids"      		type="java.lang.Integer[]" />
+ 	    <form-property name="orgnids"      		type="java.lang.Integer[]"/>
+ 	    <form-property name="oppnids"      		type="java.lang.Integer[]" />
+
+ 	    <form-property name="favoritedoppnidsfromfeed"      		type="java.lang.Integer[]" />
+ 	    <form-property name="oppnidsfromfeed"      		type="java.lang.Integer[]" />
+	    
+	    <form-property name="favoritechildopps"      type="java.lang.Boolean" initial="false"/>
+	    
+		<form-property name="skipbanner"		type="java.lang.String" />
+		<form-property name="preview"			type="java.lang.String" />
+	    <form-property name="bckgrnd"			type="java.lang.String" />
+	    <form-property name="brdr"				type="java.lang.String" />
+	    <form-property name="atxt"				type="java.lang.String" />
+	    <form-property name="txt"				type="java.lang.String" />
+
+        <form-property name="shortform"         type="java.lang.Boolean" />
+
+	    <form-property name="interntype"       type="java.lang.String" />
+        
+        <form-property name="questionnaire_file" type="org.apache.struts.upload.FormFile" />
+        <form-property name="questionnaire_required" type="java.lang.Integer" />
+        <form-property name="questionnaire_type" type="java.lang.String" />
+        <form-property name="questionnaire_id" type="java.lang.Integer" />
+        <form-property name="resume_required" type="java.lang.Integer" />
+        <form-property name="cover_letter_required" type="java.lang.Integer" />
+        <form-property name="other_documents_required" type="java.lang.Integer" />
+        
+        <form-property name="required_document_to_remove_nids" type="java.lang.Integer[]" />
+        
+        <form-property name="required_document_to_add_file_1" type="org.apache.struts.upload.FormFile" />
+        <form-property name="required_document_to_add_name_1" type="java.lang.String" />
+        <form-property name="required_document_to_add_file_2" type="org.apache.struts.upload.FormFile" />
+        <form-property name="required_document_to_add_name_2" type="java.lang.String" />
+        <form-property name="required_document_to_add_file_3" type="org.apache.struts.upload.FormFile" />
+        <form-property name="required_document_to_add_name_3" type="java.lang.String" /> 
+	</form-bean>
+
+
+	<!--  individual Form Bean marcillo 3/14/2006  -->
+    <form-bean dynamic="true" name="individualForm" type="org.apache.struts.action.DynaActionForm">
+        <form-property name="method" type="java.lang.String" />
+	    <form-property name="requesttype" type="java.lang.String" />
+	    <form-property name="portal"   type="java.lang.String" />
+	    <form-property name="username" type="java.lang.String" />
+	    <form-property name="password1" type="java.lang.String" />
+	    <form-property name="password2" type="java.lang.String" />
+	    <form-property name="internalusertypecomment" type="java.lang.String" />
+	    <form-property name="internaltaclitecomment" type="java.lang.String" />
+	    <form-property name="errormsg" type="java.lang.String" />
+
+        <form-property name="import_external_profile" type="java.lang.Integer" />
+
+	    <form-property name="newsletter" type="java.lang.String" />
+
+        <form-property name="fq"      type="java.lang.String[]" />
+
+	    <form-property name="createdby" type="java.lang.String" />
+	    <form-property name="createdate" type="java.lang.String" />
+	    <form-property name="updateby" type="java.lang.String" />
+	    <form-property name="updatedate" type="java.lang.String" />
+
+	    <form-property name="personid" type="java.lang.String" />
+	    <form-property name="upnid" type="java.lang.String" />
+	    <form-property name="upvid" type="java.lang.String" />
+	    <form-property name="uplid" type="java.lang.String" />
+	    <form-property name="uid" type="java.lang.String" />
+	    <form-property name="personcodekey" type="java.lang.String" />
+	    <form-property name="lastlogindate" type="java.lang.String" />
+	    <form-property name="passphraseone" type="java.lang.String" />
+	    <form-property name="passphrasetwo" type="java.lang.String" />
+	    <form-property name="agreeflag1" type="java.lang.String" />
+	    <form-property name="agreeflag2" type="java.lang.String" />
+        <form-property name="agreeflagworldvision"    type="java.lang.String" />
+
+	    <form-property name="maptopage" type="java.lang.String" />
+	    <form-property name="mappingtopage" type="java.lang.String" />
+
+	    <form-property name="namefirst" type="java.lang.String" />
+	    <form-property name="namelast" type="java.lang.String" />
+	    <form-property name="othernumber" type="java.lang.String" />
+	    <form-property name="email1addr" type="java.lang.String" />
+	    <form-property name="email1verifydate" type="java.lang.String" />
+	    <form-property name="email1verifyflag" type="java.lang.String" />
+	    <form-property name="email2addr" type="java.lang.String" />
+	    <form-property name="phone1" type="java.lang.String" />
+	    <form-property name="phone2" type="java.lang.String" />
+	    <form-property name="fax1" type="java.lang.String" />
+	    <form-property name="addrline1" type="java.lang.String" />
+	    <form-property name="addrline2" type="java.lang.String" />
+	    <form-property name="addrline3" type="java.lang.String" />
+	    <form-property name="addrcity" type="java.lang.String" />
+	    <form-property name="addrstateprov" type="java.lang.String" />
+	    <form-property name="addrprov" type="java.lang.String" />
+	    <form-property name="addrpostalcode" type="java.lang.String" />
+	    <form-property name="addrcountryname" type="java.lang.String" />
+	    <form-property name="birthyear" type="java.lang.String" />
+	    <form-property name="personwebpage" type="java.lang.String" />
+	    <form-property name="primarylanguage" type="java.lang.String" />
+	    <form-property name="ethnicity" type="java.lang.String" />
+	    <form-property name="authtokens" type="java.lang.String" />
+	    <form-property name="configtokens" type="java.lang.String" />
+	    <form-property name="personcomment" type="java.lang.String" />
+	    <form-property name="personinternalcomment" type="java.lang.String" />
+	    <form-property name="volresume" type="java.lang.String" />
+	    <form-property name="indivtitle" type="java.lang.String" />
+	    <form-property name="volskills" type="java.lang.String" />
+	    <form-property name="volskills2" type="java.lang.String" />
+	    <form-property name="volskills3" type="java.lang.String" />
+	    <form-property name="volskills1tid" type="java.lang.String" />
+	    <form-property name="volskills2tid" type="java.lang.String" />
+	    <form-property name="volskills3tid" type="java.lang.String" />
+	    <form-property name="volinterestarea1" type="java.lang.String" />
+	    <form-property name="volinterestarea2" type="java.lang.String" />
+	    <form-property name="volinterestarea3" type="java.lang.String" />
+	    <form-property name="volinterestarea1tid" type="java.lang.String" />
+	    <form-property name="volinterestarea2tid" type="java.lang.String" />
+	    <form-property name="volinterestarea3tid" type="java.lang.String" />
+	    <form-property name="vollang1" type="java.lang.String" />
+	    <form-property name="vollang2" type="java.lang.String" />
+	    <form-property name="vollang3" type="java.lang.String" />
+	    <form-property name="vollang1tid" type="java.lang.String" />
+	    <form-property name="vollang2tid" type="java.lang.String" />
+	    <form-property name="vollang3tid" type="java.lang.String" />
+	    <form-property name="indivdenomaffil" type="java.lang.String" />
+	    <form-property name="indivdenomaffiltid" type="java.lang.String" />
+	    <form-property name="indivotheraffil" type="java.lang.String" />
+	    <form-property name="indivotheraffil1tid" type="java.lang.String" />
+	    <form-property name="indivotheraffil2" type="java.lang.String" />
+	    <form-property name="indivotheraffil2tid" type="java.lang.String" />
+	    <form-property name="indivotheraffil3" type="java.lang.String" />
+	    <form-property name="indivotheraffil3tid" type="java.lang.String" />
+	    <form-property name="volavail" type="java.lang.String" />
+	    <form-property name="volavailtid" type="java.lang.String" />
+	    <form-property name="volboard" type="java.lang.String" />
+	    <form-property name="volboardtid" type="java.lang.String" />
+	    <form-property name="volvirt" type="java.lang.String" />
+	    <form-property name="volvirttid" type="java.lang.String" />
+	    <form-property name="localvoltid" type="java.lang.String" />
+	    <form-property name="groupfamilytid" type="java.lang.String" />
+	    <form-property name="intrntid" type="java.lang.String" />
+	    <form-property name="sumintrntid" type="java.lang.String" />
+	    <form-property name="workstudytid" type="java.lang.String" />
+	    <form-property name="jobstid" type="java.lang.String" />
+	    <form-property name="conferencetid" type="java.lang.String" />
+	    <form-property name="consultingtid" type="java.lang.String" />
+	    <form-property name="socjustgrpstid" type="java.lang.String" />
+	    <form-property name="localorgstid" type="java.lang.String" />
+	    <form-property name="indivrace" type="java.lang.String" />
+	    <form-property name="indivagerange" type="java.lang.String" />
+	    <form-property name="indivchristian" type="java.lang.String" />
+	    <form-property name="attendchurch" type="java.lang.String" />
+	    <form-property name="siteusetype" type="java.lang.String" />
+	    <form-property name="orgcreation" type="java.lang.String" />
+	    <form-property name="volunteer" type="java.lang.String" />
+	    <form-property name="volunteertid" type="java.lang.String" />
+	    <form-property name="internshipinterest" type="java.lang.Integer" />
+	    <form-property name="subdomain" type="java.lang.String" />
+	    <form-property name="timezone" type="java.lang.String" />
+
+	    <form-property name="provider" type="java.lang.String" />
+	    <form-property name="timestamp" type="java.lang.String" />
+	    <form-property name="signature" type="java.lang.String" />
+	    <form-property name="facebookuid" type="java.lang.String" />
+	    
+	    <!-- form elements for personality tests iesnftjp -->
+	    <form-property name="personalitypageno" type="java.lang.String" />
+	    <form-property name="personalitytypei" type="java.lang.String" />
+	    <form-property name="personalitytypee" type="java.lang.String" />
+	    <form-property name="personalitytypes" type="java.lang.String" />
+	    <form-property name="personalitytypen" type="java.lang.String" />
+		<form-property name="personalitytypef" type="java.lang.String" />
+		<form-property name="personalitytypet" type="java.lang.String" />
+		<form-property name="personalitytypej" type="java.lang.String" />
+		<form-property name="personalitytypep" type="java.lang.String" />
+		<form-property name="personalityei" type="java.lang.String" />
+		<form-property name="personalitysn" type="java.lang.String" />
+		<form-property name="personalityft" type="java.lang.String" />
+		<form-property name="personalityjp" type="java.lang.String" />
+		<form-property name="personalitytype" type="java.lang.String" />
+		<form-property name="personalitytypetid" type="java.lang.String" />
+		<form-property name="serviceareas" type="java.lang.String" />
+		<form-property name="skilltypes" type="java.lang.String" />
+		<form-property name="lookingfor" type="java.lang.String" />
+		<form-property name="spiritualdev" type="java.lang.String" />
+		<form-property name="ministryareascause" type="java.lang.String" />
+		<form-property name="globalissues" type="java.lang.String" />
+		<form-property name="organizationaldev" type="java.lang.String" />
+		<form-property name="reconciliation" type="java.lang.String" />
+		<form-property name="otherlearninginterests" type="java.lang.String" />
+		<form-property name="otherpassions" type="java.lang.String" />
+		<form-property name="otherskills" type="java.lang.String" />
+		<form-property name="causetopics" type="java.lang.String" />
+	    <form-property name="skilltypesarray"		type="java.lang.Integer[]" />
+	    <form-property name="serviceareasarray"		type="java.lang.Integer[]" />
+	    <form-property name="lookingforarray"		type="java.lang.Integer[]" />
+	    <form-property name="spiritualdevarray"		type="java.lang.Integer[]" />
+	    <form-property name="ministryareascausearray"	type="java.lang.Integer[]" />
+	    <form-property name="globalissuesarray"		type="java.lang.Integer[]" />
+	    <form-property name="organizationaldevarray"	type="java.lang.Integer[]" />
+	    <form-property name="reconciliationarray"	type="java.lang.Integer[]" />
+	    <form-property name="languagesarray"		type="java.lang.Integer[]" />
+		<form-property name="subscribe" type="java.lang.String" />
+		<form-property name="retaketest" type="java.lang.String" />
+		<form-property name="showhome" type="java.lang.String" />
+		<form-property name="page" type="java.lang.String" />
+		<form-property name="personalitypage" type="java.lang.String" />
+		
+	    <form-property name="isemailcontact" type="java.lang.String" />
+	    
+		<form-property name="skipbanner"			type="java.lang.String" />
+		<form-property name="preview"			type="java.lang.String" />
+	    <form-property name="bckgrnd"		type="java.lang.String" />
+	    <form-property name="brdr"		type="java.lang.String" />
+	    <form-property name="atxt"		type="java.lang.String" />
+	    <form-property name="txt"		type="java.lang.String" />
+	    
+	    <form-property name="addr1"           type="java.lang.String" />
+	    <form-property name="addr2"           type="java.lang.String" />
+	    <form-property name="city"            type="java.lang.String" />
+	    <form-property name="state"           type="java.lang.String" />
+	    <form-property name="prov"			  type="java.lang.String" /><!-- ***** removed & put back b/c of funky prov & programtypes issues ***** -->
+	    <form-property name="postalcode"      type="java.lang.String" />
+	    <form-property name="country"         type="java.lang.String" />
+	</form-bean>
+
+	<!--  dbutils Form Bean marcillo 7/29/2006  -->
+    <form-bean dynamic="true" name="dbutilsForm" type="org.apache.struts.action.DynaActionForm">
+        <form-property name="method" type="java.lang.String" />
+	    <form-property name="errormsg" type="java.lang.String" />
+	    <form-property name="sqlstatement" type="java.lang.String" />
+	    <form-property name="exectype" type="java.lang.String" />
+	    <form-property name="maxrows" type="java.lang.String" />
+
+	    <form-property name="tablename" type="java.lang.String" />
+	    <form-property name="dtoclassname" type="java.lang.String" />
+	    <form-property name="methodprefix" type="java.lang.String" />
+	    <form-property name="databaseclassname" type="java.lang.String" />
+	    <form-property name="PROCESSTYPE" type="java.lang.String" />
+	    <form-property name="codegentype" type="java.lang.String" />
+	</form-bean>
+
+<form-bean name="fileUploadAndSave" type="com.abrecorp.opensource.struts.StrutsUploadAndSaveForm"/>
+
+<form-bean name="uploadFile" type="org.apache.struts.validator.DynaValidatorActionForm">
+  <form-property name="title" type="java.lang.String"/>
+  <form-property name="revdate" type="java.lang.String"/>
+  <form-property name="revinfo" type="java.lang.String"/>
+  <form-property name="documentfile" type="org.apache.struts.upload.FormFile"/>
+</form-bean>
+
+  </form-beans>
+  <!-- === END Form Bean Definitions ============ -->
+
+  <!-- === START Global Forward Definitions ============ -->
+  <global-forwards>
+	<forward   name="homepage"       path="/voleng2/homepage.jsp" />
+	<forward   name="showlogin"      path="/voleng2/login1.jsp" />
+    <forward   name="logon"          path="/logon.jsp"/>
+    <forward   name="failure"        path="/.do"/>
+	<forward   name="home"       path="/index.jsp" />
+	<forward   name="home1"       path="/index.jsp" />
+  </global-forwards>
+  <!-- === END Global Forward Definitions ============ -->
+
+  <!-- === START Action Mappings ============ -->
+  <action-mappings>
+
+<action path="/fileUploadAndSave"   type="com.abrecorp.opensource.struts.StrutsUploadAndSaveAction"
+				name="fileUploadAndSave"  input="/voleng2/fileUploadAndSave.jsp"><!--   parameter="method" -->
+	<!--forward name="success" path="/downloaduploadedfile.jsp"/-->
+        <forward name="filesuccess" 		path="/voleng2/file_upload_file_success.jsp"/>
+        <forward name="imagesuccess" 		path="/voleng2/file_upload_image_success.jsp"/>
+        <forward name="filefailure" 		path="/voleng2/file_upload_file_failed.jsp"/>
+		<forward name="failure" 		path="/voleng2/file_upload_failure.jsp"/>
+	    <forward name="loginstatus"          		path="/voleng2/loginstatus.jsp" />
+	    <forward name="404"          				path="/404.jsp" />
+	    <forward name="showlogin"          			path="/voleng2/login1.jsp" />
+	    <forward name="mappingpage"   				path="/voleng2/mapping_page.jsp" />
+	    <forward name="applicsent"          		path="/voleng2/application_sent.jsp" />
+</action>
+
+<action path="/fileDownload" type="com.abrecorp.opensource.struts.StrutsDownloadFileAction" >
+		<forward name="failure" 		path="/voleng2/file_upload_failure.jsp"/>
+	    <forward name="showlogin"          			path="/voleng2/login1.jsp" />
+	    <forward name="loginstatus"          		path="/voleng2/loginstatus.jsp" />
+	    <forward name="mappingpage"   				path="/voleng2/mapping_page.jsp" />
+	    
+	    <forward name="noaccess"		        		path="/voleng2/no_access.jsp" />
+</action>
+
+
+
+	<!--  database utilities actions  -->
+	<action path="/dbutils"   type="com.abrecorp.opensource.struts.DBUtilActions"
+				name="dbutilsForm"    parameter="method" scope="request">
+	    <forward name="showgentable"       path="/admin/dbutilgentable.jsp" />
+	    <forward name="showrunsql"         path="/admin/dbutilsqlexec.jsp" />
+	    <forward name="showsqlresult"      path="/admin/dbutilsqlresult.jsp" />
+	    <forward name="404"          				path="/404.jsp" />
+
+	</action>
+
+    <action   path="/showpage"   type="com.abrecorp.opensource.struts.ShowPageActions" scope="request">
+	    <forward name="home1"          path="/404.shtml" />
+    </action>
+<!--
+<action name="fileform" path="/org" scope="request" type="com.abrecorp.opensource.struts.OrganizationActions" validate="false">
+        <forward name="success" path="/voleng2/uploadsuccess.jsp"/>
+		<forward name="failure" path="/voleng2/file.jsp"/>
+</action>
+-->
+
+<!-- in php,  $email=trim($_REQUEST['email']); works, but can't find solution for jsp/struts to log in from post -->
+	<!--  individual actions  -->
+	<action path="/register"   type="com.abrecorp.opensource.struts.RegisterActions"
+				name="individualForm"    parameter="method" scope="request">
+	    <forward   name="home"       path="/index.jsp" />
+	    <forward   name="home1"       path="/index.jsp" />
+
+	    <forward name="404"          				path="/404.jsp" />
+
+	    <forward name="forwardhome"          				path="/voleng2/forward_home.jsp" />
+
+        <forward name="syndication_partners" path="/voleng2/syndication_partners.jsp" />
+
+	    <forward name="anon"          				path="/voleng2/anonymous.jsp" />
+	    <forward name="auth"          				path="/voleng2/authenticated.jsp" />
+	    <forward name="loginstatus"          		path="/voleng2/loginstatus.jsp" />
+	    <forward name="showdrupalsession"          	path="/voleng2/drupal_logged_in_session.jsp" />
+	    <forward name="showlogintest"          		path="/voleng2/logintest.jsp" />
+	    <forward name="drupallogin"          		path="/voleng2/drupal_login.jsp" />
+	    <forward name="showgroupvolunteering"   	path="/voleng2/groupvolunteering.jsp" />
+	    <forward name="showbusinessvolunteering"   	path="/voleng2/businessasmissionvolunteering.jsp" />
+	    <forward name="showdisastervolunteering"   	path="/voleng2/disasterreliefvolunteering.jsp" />
+	    <forward name="showinternships"   			path="/voleng2/internships.jsp" />
+	    
+	    <forward name="showlogin"          			path="/voleng2/login1.jsp" />
+	    <forward name="volstart"   					path="/voleng2/volunteergettingstarted.jsp" />
+<!--forward name="showregistration"   			path="/voleng2/volcreateacct1.jsp" /-->
+	    <forward name="showstmissions"   			path="/voleng2/short_term_missions.jsp" />
+	    <forward name="showchristiangapyear"   		path="/voleng2/christian_gap_year.jsp" />
+	    <forward name="showchurchvol"   			path="/voleng2/church_volunteer.jsp" />
+	    <forward name="showchurchinstructions"   	path="/voleng2/church_instructions.jsp" />
+	    <forward name="showchristechinstructions"   path="/voleng2/christians_in_technology_instructions.jsp" />
+	    <forward name="showchristech"  				path="/voleng2/christians_in_technology.jsp" />
+	    <forward name="showtech"  					path="/voleng2/technology.jsp" />
+
+	    <forward name="cvinterncreateaccount"   	path="/voleng2/applic_create_account.jsp" />
+	    
+	    <forward name="createaccount1"   			path="/voleng2/create_account1.jsp" />
+	    <forward name="createaccount2"   			path="/voleng2/create_account2.jsp" />
+	    <forward name="createaccount3"   			path="/voleng2/create_account3.jsp" />
+	    <forward name="managesubscription" 			path="/voleng2/manage_subscription.jsp" />
+	    <forward name="facebooksplash"   			path="/voleng2/facebook_splash_page.jsp" />
+	    <forward name="memberbenefits"				path="/voleng2/member_benefits.jsp" />
+	    <forward name="mappingpage"   				path="/voleng2/mapping_page.jsp" />
+
+	    <forward name="hurrsandycontactadd"   		path="/voleng2/hurr_sandy_create_account.jsp" />
+
+	    <forward name="nonpaddlisting"     			path="/voleng2/nonp-addlisting.jsp" />
+        <forward name="nonpaddlistingshort"         path="/voleng2/nonp-addlisting-short.jsp" />
+        <forward name="nonpaddlistingcvintern"         path="/voleng2/nonp-addlisting-cvintern.jsp" />
+        
+
+	    <forward name="volunteerdashboard"        	path="/voleng2/volunteerdashboard.jsp" />
+	    <forward name="assocmanagement"        		path="/voleng2/association_management.jsp" />
+	    <forward name="orgmanagement"        		path="/voleng2/orgmanagement.jsp" />
+	    <forward name="orgmanagelistings"        	path="/voleng2/orgmanage_listings.jsp" />
+	    <forward name="switchorgaccnt"        		path="/voleng2/myaccnt_switch_org.jsp" />
+	    <forward name="createnonpstep1"    			path="/voleng2/nonp-start33.jsp" />
+	    <forward name="opppubliclisting"     		path="/voleng2/opp_public_listing.jsp" />
+		<forward name="oppsearchnoresult"  			path="/voleng2/volnoresults.jsp" />
+
+	    <forward name="socializedashboard"        	path="/voleng2/socializedashboard.jsp" />
+	    <forward name="createaccountsocialize"      path="/voleng2/socialize_createaccount.jsp" />
+	    <forward name="socializecreateaccount2"   	path="/voleng2/socialize_create_account2.jsp" />
+	    <forward name="unlinksocialize"        		path="/voleng2/socialize_unlinkaccount.jsp" />
+	    <forward name="socializemanage"        		path="/voleng2/socialize_manage.jsp" />
+	    <forward name="socializedata"        		path="/voleng2/socialize_data.jsp" />
+
+	    <forward name="facebookconnectcreateaccount" path="/voleng2/external_connect_createaccount.jsp" />
+	    <forward name="facebookconnectcreateaccount2" path="/voleng2/facebook_connect_createaccount2.jsp" />
+	    
+	    <forward name="linkedinconnectcreateaccount" path="/voleng2/external_connect_createaccount.jsp" />
+
+	    <forward name="facebooklogin"        		path="/voleng2/facebook_login.jsp" />
+	    <forward name="placeholder"        			path="/voleng2/placeholder.jsp" />
+
+	    <forward name="myacctsumm1"        			path="/voleng2/volunteerdashboard.jsp" />
+
+	    <forward name="facebookauthredirect" 		path="/voleng2/facebook_auth_redirect.jsp" />
+        <forward name="personalitytest"       		path="/voleng2/personality_test.jsp" />
+	    <forward name="personalitytest2"       		path="/voleng2/personality_test2.jsp" />
+	    <forward name="personalitytest3"       		path="/voleng2/personality_test3.jsp" />
+	    <forward name="personalitytest4"       		path="/voleng2/personality_test4.jsp" />
+		<forward name="personalitytest5"       		path="/voleng2/personality_test5.jsp" />
+		<forward name="personalitytest6"       		path="/voleng2/personality_test6.jsp" />
+		<forward name="personalityresults"       	path="/voleng2/personality_my_results.jsp" />
+		<forward name="personalityministryarea"     path="/voleng2/personality_ministry_areas.jsp" />
+		<forward name="personalityministryarea2" 	path="/voleng2/personality_ministry_areas2.jsp" />
+		<forward name="personalitytypesummaries" 	path="/voleng2/personality_typesummaries.jsp" />
+		<forward name="personalityeffectsministry" 	path="/voleng2/personality_effectsministry.jsp" />
+		<forward name="personalityfourpreferences" 	path="/voleng2/personality_fourpreferences.jsp" />
+		<forward name="personalityministryopps"		path="/voleng2/my_ministry_opportunities.jsp" />
+		<forward name="personalityredirect"			path="/voleng2/personality_test_redirect.jsp" />
+		<forward name="personalityoppredirect"		path="/voleng2/personality_opp_redirect.jsp" />
+		<forward name="sources" 					path="/voleng2/sources.jsp" />
+		<forward name="facebookfriendstab"			path="/voleng2/facebook_friends_tab.jsp" />
+		<forward name="facebooktrainingcontent"		path="/voleng2/facebook_training_content.jsp" />
+		<forward name="facebookfriendscontainer"	path="/voleng2/facebook_friends_container.jsp" />
+		<forward name="facebooktypeinfocontainer"	path="/voleng2/facebook_typeinfo_container.jsp" />
+		<forward name="facebookauthredirect"		path="/voleng2/facebook_auth_redirect.jsp" />
+		
+	    <forward name="volacctedit1"       			path="/voleng2/volacctedit1.jsp" />
+	    <forward name="drupalaccount"       		path="/voleng2/drupal_setup.jsp" />
+	    <forward name="logout"             			path="/index.jsp" />
+
+	    <forward name="volstories"           		path="/voleng2/vol-stories.jsp" />
+	    <forward name="aboutcv"           			path="/voleng2/About-CV.jsp" />
+	    <forward name="faqs"           				path="/voleng2/FAQs.jsp" />
+
+	    <forward name="sitemap"           			path="/voleng2/sitemap1.jsp" />
+	    <forward name="zipmap"                      path="/voleng2/zipmap.jsp" />
+	    <forward name="zipsitemap"                  path="/voleng2/zipsitemap.jsp" />
+	    <forward name="citysitemap"           		path="/voleng2/citysitemap.jsp" />
+	    <forward name="help"              			path="/voleng2/help.jsp" />
+	    <forward name="termsandconditions"   		path="/voleng2/termsandconditions.jsp" />
+	    <forward name="bookrecommendations"  		path="/voleng2/book_recommendations.jsp" />
+
+	    <forward name="contact"    					path="/voleng2/contactus.jsp" />
+	    <forward name="pressrelease"    			path="/voleng2/press_release.jsp" />
+	    <forward name="article"    					path="/voleng2/articles.jsp" />
+	    <forward name="training"    				path="/voleng2/trainingpage.jsp" />
+	    <forward name="links"    					path="/voleng2/links.jsp" />
+	    <forward name="presentations"    			path="/voleng2/presentations.jsp" />
+	    <forward name="calling"    					path="/voleng2/calling.jsp" />
+	    <forward name="tmctraining"    				path="/voleng2/tmc_training.jsp" />
+	    <forward name="staffrecruitment"    		path="/voleng2/staff_recruitment.jsp" />
+	    <forward name="workstudy"    				path="/voleng2/work_study.jsp" />
+	    
+	    <!-- linking to the /files/ through mapping (for subdomains) -->
+	    <forward name="trainingwebcast"    			path="/files/Volunteer_Orientation/Presentation_Files/index.html" />
+	    <forward name="trainingwebcastppt"    		path="/files/vol_orientation_CCDA.ppt" />
+	    
+	    <forward name="volmgmtppt"    				path="/files/Volunteer_Management_online_version.ppt" />
+	    <forward name="chrisvolmgmtmanual"    		path="/files/Templates_Manual.doc" />
+	    
+	    <forward name="testanon"   					path="/voleng2/test-anon.jsp" />
+	    <forward name="testauth"   					path="/voleng2/test-auth.jsp" />
+	    
+	    <forward name="maxemails"       			path="/voleng2/iwanttohelp_max_emails.jsp" />
+	    <forward name="oppemailsent"       			path="/voleng2/iwanttohelp.jsp" />
+	    <forward name="emailconfirm"		       path="/voleng2/iwanttohelp_confirm.jsp" />
+	    <forward name="emailcontactconfirm"		       path="/voleng2/contact_email_confirm.jsp" />
+	    <!--forward name="emailconfirm"       			path="/voleng2/emailconfirmation.jsp" /-->
+
+	    <forward name="forgotpassword"     			path="/voleng2/forgot_password.jsp" />
+	    <forward name="passwordconfirm"    			path="/voleng2/passwordconfirmation.jsp" />
+	    <forward name="nopwdconfirm"       			path="/voleng2/no_pwd_confirm.jsp" />
+
+	    <forward name="biblical"     				path="/voleng2/biblical.jsp" />
+	    <forward name="devotionals"     			path="/voleng2/devotionals.jsp" />
+	    <forward name="techlinks"    				path="/voleng2/technology_links.jsp" />
+	    <forward name="stmresources"       			path="/voleng2/stm_resources.jsp" />
+	    <forward name="virtualresources"       		path="/voleng2/virtual_resources.jsp" />
+
+	    <forward name="nonpviewlisting1"   			path="/voleng2/nonp-viewlisting1.jsp" />
+	    <forward name="fileuploadpage"          		path="/voleng2/file_upload_resume.jsp" />
+	    <forward name="filedownloadpage"          		path="/voleng2/fileDownload.jsp" />
+		
+
+	    <forward name="myministryopps"    			path="/voleng2/my_ministry_opportunities.jsp" />
+	    <forward name="portalopps"    				path="/voleng2/portal_opportunities.jsp" />
+		
+		<!-- American Bible Society (ABS) pages -->
+	    <forward name="absbibleoutreach"       		path="/voleng2/american-bible-society-bible-outreach.jsp" />
+	    <forward name="absbiblesunday"       		path="/voleng2/american-bible-society-bible-sunday.jsp" />
+	    <forward name="absexecvol"       			path="/voleng2/american-bible-society-executive-volunteers.jsp" />
+	    <forward name="abstrvlengagementctr"       	path="/voleng2/american-bible-society-traveling-engagement-center.jsp" />
+		
+		<!-- cityserve links -->
+	    <forward name="cityservenewswinter05"       path="/voleng2/cityserve_news_2005_winter.jsp" />
+	    <forward name="cityservenewsjun06"       	path="/voleng2/cityserve_news_2006_Jun.jsp" />
+	    <forward name="cityservenewsaug06"       	path="/voleng2/cityserve_news_2006_Aug.jsp" />
+	    <forward name="cityservenewsoct06"       	path="/voleng2/cityserve_news_2006_Oct.jsp" />
+	    <forward name="cityservenewsdec06"       	path="/voleng2/cityserve_news_2006_Dec.jsp" />
+	    <forward name="cityservetrain1"       		path="/voleng2/training1_cityserve.jsp" />
+	    <forward name="cityservetrain2"       		path="/voleng2/training2_cityserve.jsp" />
+	    <forward name="cityservetrain3"       		path="/voleng2/training3_cityserve.jsp" />
+	    <forward name="standardshost"    			path="/voleng2/standards_of_excellence_host.jsp" />
+	    <forward name="standardsleaders"    		path="/voleng2/standards_of_excellence_leaders.jsp" />
+	    <forward name="standardsvol"    			path="/voleng2/standards_of_excellence_volunteer.jsp" />
+	    <forward name="spiritualgifts"    			path="/voleng2/spiritual_gifts.jsp" />
+
+		<!-- urban ministry create account -->
+	    <forward name="urbmincreateaccnt"     		path="/urbanministry/create_account.jsp" />
+	    <forward name="urbminnewaccnt"     			path="/urbanministry/confirm_account.jsp" />
+
+	    	    <forward name="applicationform1"          	path="/voleng2/application_form1.jsp" />
+	    <forward name="applicationform2"          	path="/voleng2/application_form2.jsp" />
+	    <forward name="applicationform3"          	path="/voleng2/application_form3.jsp" />
+	    <forward name="applicsent"          		path="/voleng2/application_sent.jsp" />
+	    <forward name="application"          		path="/voleng2/application_show.jsp" />
+	    <forward name="applications"          		path="/voleng2/application_list.jsp" />
+
+		<!-- administrative pages -->
+	    <forward name="showsysadmin1"      			path="/admin/sysadmin1.jsp" />
+	    <forward name="showrunsql"         			path="/admin/dbutilsqlexec.jsp" />
+	    <forward name="emailtestentry"     			path="/admin/testsendemail1.jsp" />
+
+	    <forward name="noaccess"		        		path="/voleng2/no_access_reg.jsp" />
+	    <forward name="adminorgmanagement"        		path="/admin/orgmanagement.jsp" />
+	    <forward name="admincreatenonpstep3"    			path="/admin/nonp-start55.jsp" />
+	    <forward name="admineditnonpstep1"      			path="/admin/nonp-edit55.jsp" />
+	    <forward name="admineditnonpstep2"      			path="/admin/nonp-edit66.jsp" />
+	    <forward name="adminorgcontacts"    				path="/admin/org_contacts.jsp" />
+	    <forward name="adminaddorgcontact"    			path="/admin/add_org_contact.jsp" />
+	    <forward name="adminremoveorgcontact"    		path="/admin/remove_org_contact.jsp" />
+	    <forward name="adminnonpeditlisting"    			path="/admin/nonp-editlisting.jsp" />
+		<!-- full text build pages -->
+	    <forward name="fulltextbuild1"     			path="/admin/fulltextbuild1.jsp" />
+			    
+	</action>
+
+	<!--  organization actions  -->
+	<action path="/org"   type="com.abrecorp.opensource.struts.OrganizationActions"
+				name="orgForm"    parameter="method" scope="request">
+		
+	    <forward name="404"          				path="/404.jsp" />
+	    <forward name="home"						path="/index.jsp" />
+	    <forward name="search"          		path="/voleng2/search.jsp" />
+
+	    <forward name="applicationsearch"          		path="/voleng2/application_search.jsp" />
+	    <forward name="applicationlist"          		path="/voleng2/application_list.jsp" />
+	    <forward name="cvinternmanage"          		path="/voleng2/applic_cvintern_manager_page.jsp" />
+
+		<forward name="socialGraphRegistration" path="/voleng2/socialGraphRegistration.jsp"/>
+	    <forward name="apiaccess"     		path="/voleng2/api_access.jsp" />
+
+	    <forward name="loginstatus"          		path="/voleng2/loginstatus.jsp" />
+	    <forward name="showlogin"          			path="/voleng2/login1.jsp" />
+	    <forward name="myacctsumm1"        			path="/voleng2/myaccountsum1.jsp" />
+	    <forward name="nonpstart22"        			path="/voleng2/nonp-start22.jsp" />
+	    <forward name="createnonpstep1"    			path="/voleng2/nonp-start33.jsp" />
+	    <forward name="createnonpstep2"    			path="/voleng2/nonp-start44.jsp" />
+	    <forward name="createnonpstep3"    			path="/voleng2/nonp-start55.jsp" />
+	    <forward name="portalmanage"      			path="/voleng2/portal_manage.jsp" />
+	    <forward name="editnonpstep1"      			path="/voleng2/nonp-edit55.jsp" />
+	    <forward name="editnonpstep2"      			path="/voleng2/nonp-edit66.jsp" />
+	    <forward name="viewnonpstep11"      		path="/voleng2/nonp-view11.jsp" />
+	    <forward name="viewnonpstep21"     			path="/voleng2/nonp-view21.jsp" />
+	    <forward name="orgpubliclisting"     		path="/voleng2/org_public_listing.jsp" />
+	    <forward name="assocmanagement"        		path="/voleng2/association_management.jsp" />
+	    <forward name="orgmanagement"        		path="/voleng2/orgmanagement.jsp" />
+	    <forward name="orgmanagelistings"        	path="/voleng2/orgmanage_listings.jsp" />
+	    
+	    <forward name="orgcontacts"    				path="/voleng2/org_contacts_manage.jsp" />
+	    <forward name="addorgcontact"    			path="/voleng2/add_org_contact.jsp" />
+	    <forward name="removeorgcontact"    		path="/voleng2/remove_org_contact.jsp" />
+
+	    <forward name="oppcontactadd"  				path="/voleng2/opp_contact_add.jsp" />
+	    <forward name="oppcontactmanage"   			path="/voleng2/opp_contact_manage.jsp" />
+	    <forward name="oppcontactremove"    		path="/voleng2/opp_contact_remove.jsp" />
+
+	    <forward name="opporgcontactmanage"   		path="/voleng2/opp-org_contact_manage.jsp" />
+	    
+	    <forward name="orgcontactadd"   			path="/voleng2/org_contact_add.jsp" />
+	    <forward name="orgcontactmanage"   			path="/voleng2/org_contact_manage.jsp" />
+	    <forward name="orgcontactremove"    		path="/voleng2/org_contact_remove.jsp" />
+
+	    <forward name="orgadmincontactmanage" 		path="/voleng2/org_admin-contact_manage.jsp" />
+	    <forward name="orgadminmanage" 		path="/voleng2/org_admin-contact_manage.jsp" />
+
+	    <forward name="orgadminadd"    				path="/voleng2/org_admin_add.jsp" />
+<!--forward name="orgadminmanage"    			path="/voleng2/org_admin_manage.jsp" /-->
+	    <forward name="orgadminremove"	    		path="/voleng2/org_admin_remove.jsp" />
+
+	    <forward name="nonpaddlisting"     			path="/voleng2/nonp-addlisting.jsp" />
+        <forward name="nonpaddlistingshort"         path="/voleng2/nonp-addlisting-short.jsp" />
+        <forward name="nonpaddlistingcvintern"         path="/voleng2/nonp-addlisting-cvintern.jsp" />
+        
+	    <forward name="nonpeditlisting"    			path="/voleng2/nonp-editlisting.jsp" />
+        <forward name="nonpeditlistingcvintern"         path="/voleng2/nonp-editlisting-cvintern.jsp" />
+	    <forward name="nonpdupliclisting"    		path="/voleng2/nonp-dupliclisting.jsp" />
+	    <forward name="nonpviewlisting"    			path="/voleng2/nonp-viewlisting.jsp" />
+	    <forward name="nonpviewlisting1"   			path="/voleng2/nonp-viewlisting1.jsp" />
+	    <forward name="opppubliclisting"     		path="/voleng2/opp_public_listing.jsp" />
+		<forward name="oppsearchnoresult"  			path="/voleng2/volnoresults.jsp" />
+		<forward name="orgnoresults"  				path="/voleng2/orgnoresults.jsp" />
+	    <forward name="myacctsumm2"        			path="/voleng2/myaccountsum1.jsp" />
+	    <forward name="shareonwebsite"   				path="/voleng2/org_share_on_website.jsp" />
+
+	    <forward name="portalopps"    				path="/voleng2/portal_opportunities.jsp" />
+	    <forward name="portalbannerpost"    		path="/voleng2/portal_banner_post.jsp" />
+
+	    <forward name="fileuploadpage"          		path="/voleng2/fileUploadAndSave.jsp" />
+        <forward name="filesuccess" 		path="/voleng2/file_upload_image_success.jsp"/>
+        <forward name="imagesuccess" 		path="/voleng2/file_upload_file_success.jsp"/>
+		<forward name="failure" 		path="/voleng2/file_upload_failure.jsp"/>
+	    <forward name="filedownloadpage"          		path="/voleng2/fileDownload.jsp" />
+
+	    <forward name="createaccount2"   			path="/voleng2/create_account2.jsp" />
+	    <forward name="facebooksplash"   			path="/voleng2/facebook_splash_page.jsp" />
+
+	    <forward name="mappingpage"   				path="/voleng2/mapping_page.jsp" />
+
+	    <forward name="pasteforms"        			path="/voleng2/pasteforms.jsp" />
+	    <forward name="pasteformsadv"        		path="/voleng2/pasteforms_advanced.jsp" />
+
+	    <forward name="maxemails"       			path="/voleng2/iwanttohelp_max_emails.jsp" />
+	    <forward name="oppemailsent"       			path="/voleng2/iwanttohelp.jsp" />
+
+		<!-- administrative pages -->
+	    <forward name="showsysadmin1"      			path="/admin/sysadmin1.jsp" />
+	    <forward name="showrunsql"         			path="/admin/dbutilsqlexec.jsp" />
+	    <forward name="emailtestentry"     			path="/admin/testsendemail1.jsp" />
+
+	    <forward name="noaccess"		        		path="/voleng2/no_access.jsp" />
+	    <forward name="adminorgmanagement"        		path="/admin/orgmanagement.jsp" />
+	    <forward name="admincreatenonpstep3"    			path="/admin/nonp-start55.jsp" />
+	    <forward name="admineditnonpstep1"      			path="/admin/nonp-edit55.jsp" />
+	    <forward name="admineditnonpstep2"      			path="/admin/nonp-edit66.jsp" />
+	    <forward name="adminorgcontacts"    				path="/admin/org_contacts.jsp" />
+	    <forward name="adminaddorgcontact"    			path="/admin/add_org_contact.jsp" />
+	    <forward name="adminremoveorgcontact"    		path="/admin/remove_org_contact.jsp" />
+	    <forward name="adminnonpeditlisting"    			path="/admin/nonp-editlisting.jsp" />
+		<!-- full text build pages -->
+	    <forward name="fulltextbuild1"     			path="/admin/fulltextbuild1.jsp" />
+
+	</action>
+
+	<!--  opportunity search actions  -->
+	<action path="/oppsrch"   type="com.abrecorp.opensource.struts.searchOpportunitiesAction"
+				name="searchForm"    parameter="method" scope="request">
+		<forward name="searchurltranslator"        path="/voleng2/search_url_translator.jsp" />
+		<forward   name="home"       path="/index.jsp" />
+		
+
+	    <forward name="applicationsearch"          		path="/voleng2/application_search.jsp" />
+	    <forward name="applicationlist"          		path="/voleng2/application_list.jsp" />
+	    <forward name="404"          				path="/404.jsp" />
+
+	    <forward name="showsearch"          		path="/voleng2/vol-start11.jsp" />
+	    <forward name="showsearchportal"       		path="/voleng2/portal_search.jsp" />
+	    <forward name="showincludesearch"      		path="/voleng2/include_searchform.jsp" />
+	    <forward name="search"          		path="/voleng2/search.jsp" />
+	    <forward name="searchresult"    		path="/voleng2/search_results.jsp" />
+	    <forward name="searchresultembed"    		path="/voleng2/search_results_embed.jsp" />
+	    <forward name="noresultembed"    		path="/voleng2/search_results_none_embed.jsp" />
+	    <forward name="directory" 			   		path="/voleng2/solr_directory.jsp" />
+	    <forward name="orgdirectory" 			   	path="/voleng2/solr_org_directory.jsp" />
+	    <forward name="zipdirectory"                  path="/voleng2/solr_zip_directory.jsp" />
+	    <forward name="showfullsearch"          	path="/voleng2/fullsearch.jsp" />
+	    <forward name="showoppsearch"      			path="/voleng2/volunteer2.jsp" />
+	    <forward name="showoppsearchall"      		path="/voleng2/volunteer2all.jsp" />
+	    <forward name="oppsearchresult"    			path="/voleng2/volunteer2r.jsp" />
+		<forward name="oppsearchnoresult"  			path="/voleng2/volnoresults.jsp" />
+	    <forward name="portalopps"    				path="/voleng2/portal_opportunities.jsp" />
+	    <forward name="portalresultstab"    		path="/voleng2/portal_results_tab.jsp" />
+	    <forward name="portalresultstaborg"    		path="/voleng2/portal_results_orgs_tab.jsp" />
+	    <forward name="myministryopps"    			path="/voleng2/my_ministry_opportunities.jsp" />
+	    <forward name="myresultstab"    			path="/voleng2/my_ministry_results_tab.jsp" />
+	    <forward name="myresultslatesttab"    		path="/voleng2/my_ministry_results_latest_tab.jsp" />
+	    <forward name="myresultstabnone"    		path="/voleng2/my_ministry_results_tab_none.jsp" />
+	    <forward name="myresultstaborg"    			path="/voleng2/my_ministry_results_orgs_tab.jsp" />
+	    <forward name="myresultstaborgnone"    		path="/voleng2/my_ministry_results_orgs_tab_none.jsp" />
+	    <forward name="showvirtsearch"     			path="/voleng2/virtual_vol.jsp" />
+	    <forward name="bostonsearch"              	path="/voleng2/bostonpage.jsp" />
+	    <!--forward name="showorgsearch"      		path="/voleng2/org_search1.jsp" /-->
+	    <forward name="showorgsearch"      			path="/voleng2/volunteer3.jsp" />
+	    <forward name="orgsearchresult"    			path="/voleng2/volunteer3r.jsp" />
+		<forward name="orgnoresults"  				path="/voleng2/orgnoresults.jsp" />
+	    <forward name="oppsearchnoresultpaste"    	path="/voleng2/volnoresults_paste.jsp" />
+	    <forward name="oppsearchresultpaste"    	path="/voleng2/volunteer2r_paste.jsp" />
+		
+	    <forward name="externallistings"   				path="/voleng2/external_listings.jsp" />
+
+		<forward name="personalityoppredirect"		path="/voleng2/personality_opp_redirect.jsp" />
+		
+	    <forward name="createaccount2"   			path="/voleng2/create_account2.jsp" />
+	    <forward name="mappingpage"   				path="/voleng2/mapping_page.jsp" />
+
+	    <forward name="showlogin"    	path="/voleng2/login1.jsp" />
+	    <forward name="loginstatus"    	path="/voleng2/loginstatus.jsp" />
+	    
+	    <forward name="noaccess"		        		path="/voleng2/no_access_oppsrch.jsp" />
+	    <forward name="ajaxsolrsearchresult"    		path="/voleng2/search_results_ajax-solr.jsp" />
+	</action>
+
+
+	<!--  opportunity search actions  -->
+	<action path="/email"   type="com.abrecorp.opensource.struts.EmailActions"
+				name="emailForm"    parameter="method" scope="request">
+	    <forward name="404"          				path="/404.jsp" />
+
+	    <forward name="createaccount2"   			path="/voleng2/create_account2.jsp" />
+	    <forward name="facebooksplash"   			path="/voleng2/facebook_splash_page.jsp" />
+	    <forward name="maxemails"       			path="/voleng2/iwanttohelp_max_emails.jsp" />
+	    <forward name="oppemailsent"       			path="/voleng2/iwanttohelp.jsp" />
+	    <forward name="emailconfirm"		        path="/voleng2/iwanttohelp_confirm.jsp" />
+	    <forward name="emailcontactconfirm"		    path="/voleng2/contact_email_confirm.jsp" />
+	    <!--forward name="emailconfirm"       		path="/voleng2/emailconfirmation.jsp" /-->
+	    <forward name="loginstatus"          		path="/voleng2/loginstatus.jsp" />
+	    <forward name="showlogin"	          		path="/voleng2/login1.jsp" />
+	    <forward name="emailhistory"          		path="/voleng2/email_history.jsp" />
+	    <forward name="emailattachments"          		path="/voleng2/email_attachments.jsp" />
+	    <forward name="volunteerreferrals"          path="/voleng2/volunteer_referrals.jsp" />
+
+	    <forward name="cvinterncreateaccount"   	path="/voleng2/applic_create_account.jsp" />
+	    	    
+	    <forward name="applicationform1"          	path="/voleng2/application_form1.jsp" />
+	    <forward name="applicationform2"          	path="/voleng2/application_form2.jsp" />
+	    <forward name="applicationform3"          	path="/voleng2/application_form3.jsp" />
+	    <forward name="applicsent"          		path="/voleng2/application_sent.jsp" />
+	    <forward name="application"          		path="/voleng2/application_show.jsp" />
+	    <forward name="applications"          		path="/voleng2/application_list.jsp" />
+
+	    <forward name="fileuploadpage"          		path="/voleng2/applic_file_upload_resume.jsp" />
+	    <forward name="filedownloadpage"          		path="/voleng2/fileDownload.jsp" />
+	    
+	    <forward name="volunteerdashboard"          path="/voleng2/volunteerdashboard.jsp" />
+	    <forward name="mappingpage"   				path="/voleng2/mapping_page.jsp" />
+		<forward name="oppsearchnoresult"  			path="/voleng2/volnoresults.jsp" />
+		<forward name="orgnoresults"  				path="/voleng2/orgnoresults.jsp" />
+
+		<!-- administrative pages -->
+	    <forward name="showsysadmin1"      			path="/admin/sysadmin1.jsp" />
+	    <forward name="showrunsql"         			path="/admin/dbutilsqlexec.jsp" />
+	    <forward name="emailtestentry"     			path="/admin/testsendemail1.jsp" />
+
+	    <forward name="noaccess"		        		path="/voleng2/no_access.jsp" />
+	    <forward name="adminorgmanagement"        		path="/admin/orgmanagement.jsp" />
+	    <forward name="admincreatenonpstep3"    			path="/admin/nonp-start55.jsp" />
+	    <forward name="admineditnonpstep1"      			path="/admin/nonp-edit55.jsp" />
+	    <forward name="admineditnonpstep2"      			path="/admin/nonp-edit66.jsp" />
+	    <forward name="adminorgcontacts"    				path="/admin/org_contacts.jsp" />
+	    <forward name="adminaddorgcontact"    			path="/admin/add_org_contact.jsp" />
+	    <forward name="adminremoveorgcontact"    		path="/admin/remove_org_contact.jsp" />
+	    <forward name="adminnonpeditlisting"    			path="/admin/nonp-editlisting.jsp" />
+		<!-- full text build pages -->
+	    <forward name="fulltextbuild1"     			path="/admin/fulltextbuild1.jsp" />
+
+	</action>
+
+
+	</action-mappings>
+  <!-- === END Action Mappings ============ -->
+
+
+
+</struts-config>

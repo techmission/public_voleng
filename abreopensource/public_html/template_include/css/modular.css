@@ -1,0 +1,1288 @@
+/* CSS Document */
+
+
+
+form {
+
+	margin: 0px;
+
+	padding: 0px;
+
+}
+
+
+/* added for advancedsearch.jsp - ali - 2007.11.16 */
+
+#servicearea p, #servicearea2 p, #servicearea3 p, #midbox1 span {
+
+	margin: 0px 0px 4px 0px;
+
+}
+
+
+
+#search a:hover { color: #5D9345; }
+
+
+
+		h1, h2, h3, h4, h5, h6 {
+
+			margin: 0;
+
+			padding: 0;
+
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+
+		}
+
+		
+
+h1 {
+
+	font-size: 20px;
+
+}
+
+
+
+h2 {
+
+	margin-top: 10px;
+
+	margin-bottom: 10px;
+
+	font-size: 16px;
+
+	font-weight: bold;
+
+}
+
+
+
+h3 {
+
+	margin-top: 10px;
+
+	margin-bottom: -15px;
+
+	text-transform:none;
+
+	font-size: 14px;
+
+}
+
+
+
+p  {
+
+	font-size: 12px;
+
+	font-weight: normal;
+
+	margin: 1em 0
+
+}
+
+
+
+
+
+.intsplash {
+
+	padding: 15px; background:#7693DC url(http://www.christianvolunteering.org/imgs/int_splash_patt.gif) repeat-x
+
+} 
+
+
+
+
+
+.criticaltext {
+
+	color: #F37C16;
+
+}
+
+
+
+
+
+#wrapper {
+
+	text-align: center;
+
+}
+
+
+
+
+
+#banner {
+
+	padding-top: 10px;
+
+	background-color:#FFFFFF;
+
+}
+
+
+
+#search {
+
+	width: 334px;
+
+	float: left;
+
+}
+
+
+
+#search a {
+
+	color: #000000;	
+
+}
+
+
+
+#searchcontent {
+
+	border-left: solid 4px #C0C0C0;
+
+	border-right: solid 4px #C0C0C0;
+
+	background-color: #F7F7F7;
+
+	padding: 2px 10px 4px 10px;
+
+	font-size: 11px;
+
+}
+
+
+
+form#homesearch {
+
+	margin: 0px;
+
+	padding: 0px;
+
+}
+
+
+
+form#bannersearch {
+
+	margin-top: 10px;
+
+}
+
+
+
+form#bannersearch input, form#bannersearch select {
+
+	font-size: 10px;
+
+	margin-right: 5px;
+
+}
+
+
+
+#navigation {
+
+	/* height: 36px; */
+
+	/* background:url(/imgs/nav_patt.gif) repeat-x; */
+
+	position:relative;
+
+	font-size:0px;
+
+}
+
+
+
+
+
+/*	#pagebanner {
+
+	height: 56px;
+
+	background: url(http://www.christianvolunteering.org/imgs/int_page_banner.gif) repeat-x;
+
+border-right: solid 1px #FFFFFF;
+
+	}
+
+	
+
+	#pagebanner span {
+
+		background:url(http://www.christianvolunteer.org/imgs/int_page_banner.gif) repeat-x;
+
+		padding: 2px 0px 0px 23px;
+
+		font-weight: bold;
+
+		font-size: 22px;
+
+		color: #728DD4;
+
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+
+	}*/
+
+	
+
+
+
+#breadcrumbs {
+
+	clear: both;
+
+	background-color: #4D4D4D;
+
+	color: #FFC138;
+
+	padding: 2px 0px 2px 23px;
+
+	font-size: 11px;
+
+}
+
+
+
+#breadcrumbs a {
+
+	color: #FFC138;
+
+	font-weight: bold;
+
+	text-decoration:none;
+
+}
+
+
+
+#breadcrumbs a:hover {
+
+	text-decoration: underline;
+
+}
+
+
+
+#body, #bodysplash {
+
+	clear: both;
+
+}
+
+
+
+#body {
+
+	padding: 0px 26px 0px 26px;
+
+}
+
+
+
+#bodysplash_tb {
+
+	border-top: solid 1px #FFFFFF; 
+
+	/* border-bottom: solid 1px #000000; */
+
+	color: #FFFFFF;
+
+	font-size: 14px;
+
+}
+
+
+
+.bodysplash_content {
+
+	padding: 15px; 
+
+	background:#999999  url(/imgs/uywi/int_splash_patt.gif)  repeat-x;
+
+	border-right: solid 1px #FFFFFF;
+
+}
+
+
+
+#bodysplash_tb h1 {
+
+	color: #000;
+
+}
+
+
+
+#bodysplash_tb p {
+
+	color: #000;
+
+	font-size: 14px;
+
+}
+
+
+
+#bodysplash_tb a {
+
+	color: #FFFFFF;
+
+}
+
+
+
+#bodysplash_tb a:hover {
+
+	color: #ECF1FC;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+		div#sidebar {
+
+			float: left;
+
+			width: 140px;
+
+			padding: 0;
+
+			display: inline;				/* must incl for IE6 */
+
+			text-align: left;
+
+			background-color: #ebebeb; /* 5D8EE2; */
+
+	BORDER-RIGHT: #5D8EE2 3px solid; 
+
+	BORDER-BOTTOM: #5D8EE2 3px solid; 
+
+		}
+
+
+
+#sidebar a {
+
+	text-decoration:none;
+
+}
+
+
+
+#sidebar a:hover {
+
+	text-decoration:underline;
+
+}
+
+
+
+
+
+#sidebar_content h5 {
+
+	margin: 7px 0px 0px 0px;
+
+	font-size: 12px;
+
+}
+
+
+
+#sidebar_content {
+
+	font-size: 12px;
+
+	padding-left: 10px;
+
+	padding-right: 10px;
+
+}
+
+
+
+div#sidebar_content p {
+
+	padding-bottom:: 10px;
+
+	margin-top: 5px;
+
+	}
+
+	
+
+div#sidebar_content ul {
+
+	margin-left: 0px;
+
+	padding-left: 0px;
+
+	padding-top: 5px;
+
+	margin-top: 0px;
+
+	padding-bottom: 10px;
+
+	margin-bottom: 0px;
+
+	margin-left: 0px;
+
+	}
+
+
+
+div#sidebar_content li  { 
+
+	list-style-type: square;
+
+	list-style-position: outside;
+
+	margin-left: 16px;
+
+	padding-left: 0px;
+
+	margin-top: 0px;
+
+	padding-top: 0px;
+
+	padding-left: 0px;
+
+	line-height: 14px;
+
+}
+
+
+
+
+
+
+
+
+
+.cleardiv {
+
+	clear: both;
+
+}
+
+
+
+.error {
+
+	color:#FF0000;
+
+}
+
+
+
+
+
+	/* End Pull Down Menus 	*/
+
+	
+
+/* Homepage 	*/
+
+
+
+#welcomebox {
+
+	background: #AAD696 url(/imgs/welcomebox_patt.gif) no-repeat bottom right;
+
+	width: 734px;
+
+	float: left;
+
+}
+
+
+
+#welcomebox a { color: #5D9345; font-size: 14px; text-decoration: bold; }
+
+
+
+#welcomebox a:hover { text-decoration: underline; }
+
+
+
+
+
+#midbox1 {
+
+	margin: 10px 0px 10px 0px;
+
+	clear: both;
+
+	background: #FFDB85 url('http://christianvolunteering.org/imgs/uywi/volunteerbox_borderpatt_uywi.gif') 0px 158px;
+
+	width: 250px;
+
+	float: left;
+
+}
+
+
+
+#midbox1 a { color: #83673b; text-decoration: none; }
+
+
+
+#midbox1 a:hover { text-decoration: underline; }
+
+
+
+#midbox1_content {
+
+	height: 300px;
+
+	background:url('http://christianvolunteering.org/imgs/uywi/volunteerbox_patt_uywi.gif') no-repeat 0px 0px;
+
+}
+
+
+
+/* this template has issues with auto-adjust in Mozilla - here is the fix: */
+
+html>body div#midbox1_content {  /* min-height for non-IE  */
+
+	height: auto;
+
+	min-height: 270px;
+
+}
+
+
+
+#midbox2 {
+
+	margin: 10px 0px 10px 0px;
+
+	background: #d9df7b url(http://christianvolunteering.org/imgs/uywi/organizationbox_borderpatt_uywi.gif) 0px 158px;
+
+	width: 253px;
+
+	float: left;
+
+}
+
+
+
+#midbox2 a { color: #939759; text-decoration: none; }
+
+
+
+#midbox2 a:hover { text-decoration: underline; }
+
+
+
+#midbox2_content {
+
+	height: 300px;
+
+	background:url(http://christianvolunteering.org/imgs/uywi/organizationbox_patt_uywi.gif) no-repeat 0px 0px;
+
+}
+
+
+
+/* this template has issues with auto-adjust in Mozilla - here is the fix: */
+
+html>body div#midbox2_content {  /* min-height for non-IE  */
+
+	height: auto;
+
+	min-height: 300px;
+
+}
+
+
+
+#midbox3 {
+
+	margin: 10px 0px 10px 0px;
+
+	background: #E7E58C url(http://christianvolunteering.org/imgs/uywi/trainingbox_borderpatt_uywi.gif) 1px 158px;
+
+	width: 248px;
+
+	float: left;
+
+}
+
+
+
+#midbox3 a { color: #838654; text-decoration: none; }
+
+
+
+#midbox3 a:hover { text-decoration: underline; }
+
+
+
+#midbox3_content {
+
+	height: 20px;
+
+	background:url(http://christianvolunteering.org/imgs/uywi/trainingbox_patt_uywi.gif) no-repeat 0px 0px;
+
+}
+
+
+
+/* this template has issues with auto-adjust in Mozilla - here is the fix: */
+
+html>body div#midbox3_content {  /* min-height for non-IE  */
+
+	height: auto;
+
+	min-height: 270px;
+
+}
+
+
+
+#midbox1 p, #midbox2 p, #midbox3 p, #midbox1 span {
+
+	margin: 0px 20px 10px 20px;
+
+}
+
+
+
+#endingbox {
+
+	background: #ECF1FC url(http://christianvolunteering.org/imgs/endingbox_patt.gif) no-repeat bottom right;
+
+	width: 734px;
+
+	/*height: 193px;*/
+
+	border-top: solid 4px #728DD4;
+
+	float: left;
+
+}
+
+
+
+#endingbox li  { 
+
+	list-style-position: outside;
+
+	margin-left: 16px;
+
+	padding-left: 0px;
+
+	margin-top: 0px;
+
+	padding-top: 0px;
+
+	padding-left: 0px;
+
+	line-height: 16px;
+
+}
+
+html>body div#endingbox li {  /* min-height for non-IE  */
+
+	list-style-position: outside;
+
+	margin-left: 16px;
+
+	padding-left: 0px;
+
+	margin-top: 0px;
+
+	padding-top: 0px;
+
+	padding-left: 0px;
+
+	height: 0px;
+
+}
+
+
+
+.hrule {
+
+	border-top: dashed 1px #728DD4; 
+
+	margin-top: -10px;
+
+}
+
+
+
+.hilitebox {
+
+	border: dashed 1px #728DD4;
+
+	padding: 3px;
+
+}
+
+
+
+.form div {
+
+	padding-bottom: 8px;
+
+}
+
+
+
+.form label {
+
+	width: 150px; 
+
+	display: block; 
+
+	float:left;
+
+	clear:both;
+
+}
+
+
+
+#creed {
+
+	display: none;
+
+}
+
+
+
+/*Imported Styles     */
+
+#progressbar {
+
+	PADDING-TOP: 7px;
+
+	//padding-bottom: 15px;
+
+	font-size: 11px;
+
+}
+
+#progressbar UL {
+
+	MARGIN: 0px; 
+
+	PADDING: 0px; 
+
+	LIST-STYLE-TYPE: none;
+
+}
+
+#progressbar LI {
+
+	PADDING: 0px 10px 0px 0px; 
+
+	FLOAT: left; 
+
+	MARGIN: 0px;
+
+}
+
+
+
+#progressbar DIV {
+
+	font-size: 10px;
+
+	VERTICAL-ALIGN: middle;
+
+	padding: 0px 5px 0px 5px;
+
+	HEIGHT: 1.4em; 
+
+	text-align: center;
+
+	COLOR: #fff;
+
+	float: left;
+
+	margin-right: 6px;
+
+}
+
+
+
+#progressbar DIV.boxon {
+
+	BACKGROUND-COLOR: #f37c16;
+
+}
+
+#progressbar DIV.boxoff {
+
+	BACKGROUND-COLOR: #999;
+
+}
+
+footer.worldv {
+	font-size: 10px;
+}
+
+select.smalldropdown {
+
+	FONT-SIZE: 12px;
+
+	FONT-STYLE: normal;
+
+	FONT-WEIGHT: normal;
+
+	TEXT-DECORATION: none;
+
+	BORDER: 1px solid #838383;
+
+}
+
+
+
+input.textinputwhite {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+	font-style: normal;
+
+	border: 1px solid #838383;
+
+	background-color: #FFFFFF;
+
+	text-align: left;
+
+}
+
+
+
+/* 2006-07-14 div to use around displaying text area input */
+
+#textareaformat {
+
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+
+	font-size: 12px;
+
+}
+
+
+
+/* new 2006-07-17 (same font for textarea input) */
+
+input, textarea, button
+
+{
+
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+
+	font-size: 12px;
+
+
+
+}
+
+
+
+
+
+	/* VolEngine-specific stylesheet info */
+
+	#pagebanner {
+
+	height: 56px;
+
+	background: url(http://www.christianvolunteering.org/imgs/int_page_banner.gif) repeat-x;
+
+	}
+
+	
+
+	#pagebanner span {
+
+		background:url(http://www.christianvolunteer.org/imgs/int_page_banner.gif) repeat-x;
+
+		padding: 5px 0px 0px 23px;
+
+		font-weight: bold;
+
+		font-size: 22px;
+
+		color: #728DD4;
+
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+
+	}
+
+	
+
+	#breadcrumbs {
+
+	text-align:left;
+
+		clear: both;
+
+		background-color: #93B6F0;
+
+		color: #FFFFFF;
+
+		padding: 2px 0px 2px 23px;
+
+		font-size: 11px;
+
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+
+	}
+
+	
+
+	#breadcrumbs a {
+
+		color: #FFFFFF;
+
+		font-weight: bold;
+
+		text-decoration:none;
+
+	}
+
+	
+
+	#breadcrumbs a:hover {
+
+		text-decoration: underline;
+
+	}
+
+
+
+#body, #bodysplash {
+
+	clear: both;
+
+}
+
+
+
+#body {
+
+	padding: 0px 26px 0px 26px;
+
+}
+
+
+
+#bodysplash_tb {
+
+	border-top: solid 1px #FFFFFF; 
+
+	border-bottom: solid 1px #728DD4;
+
+	color: #FFFFFF;
+
+	font-size: 14px;
+
+}
+
+
+
+#bodysplash_tb h1 {
+
+	color: #FFFFFF;
+
+}
+
+
+
+#bodysplash_tb a {
+
+	color: #FFFFFF;
+
+}
+
+
+
+#bodysplash_tb a:hover {
+
+	color: #ECF1FC;
+
+}
+
+
+
+
+
+#footer a {
+
+	color: #FFFFFF; 
+
+}
+
+
+
+#progressbar {
+
+	FONT-SIZE: 11px; PADDING-BOTTOM: 15px; PADDING-TOP: 7px
+
+}
+
+#progressbar UL {
+
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+
+}
+
+#progressbar LI {
+
+	PADDING-RIGHT: 10px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+
+}
+
+#progressbar DIV {
+
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10px; FLOAT: left; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; COLOR: #fff; MARGIN-RIGHT: 6px; PADDING-TOP: 0px; HEIGHT: 1.4em; TEXT-ALIGN: center
+
+}
+
+#progressbar DIV.boxon {
+
+	BACKGROUND-COLOR: #f37c16
+
+}
+
+#progressbar DIV.boxoff {
+
+	BACKGROUND-COLOR: #999
+
+}
+
+
+
+.form div {
+
+	padding-bottom: 8px;
+
+}
+
+.form label {
+
+	width: 150px; 
+
+	display: block; 
+
+	float:left;
+
+	clear:both;
+
+}
+
+
+
+#creed {
+
+	display: none;
+
+}
+
+/* new 2006-07-17 (same font for textarea input) */
+
+input, textarea, button
+
+{
+
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+
+	font-size: 12px;
+
+
+
+}
+
+/* 2006-07-14 div to use around displaying text area input */
+
+#textareaformat {
+
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+
+	font-size: 12px;
+
+}
+
+
+
+
+
+/* Homepage 	*/
+
+
+
+#welcomebox {
+
+	background: #AAD696 url(http://christianvolunteering.org/imgs/welcomebox_patt.gif) no-repeat bottom right;
+
+	width: 733px;
+
+	float: left;
+
+}
+
+
+
+#midbox1 {
+
+	margin: 10px 0px 10px 0px;
+
+	clear: both;
+
+	background: #FFDB85 url(http://christianvolunteering.org/imgs/volunteerbox_borderpatt.gif) 0px 158px;
+
+	width: 250px;
+
+	float: left;
+
+}
+
+
+
+#midbox1 a { color: #B28C4F; text-decoration: none; }
+
+
+
+#midbox1 a:hover { text-decoration: underline; }
+
+
+
+#midbox1_content {
+
+	height: 200px;
+
+	background:url(http://christianvolunteering.org/imgs/volunteerbox_patt.gif) no-repeat 0px 0px;
+
+	text-align:left;
+
+}
+
+
+
+#midbox2 {
+
+	margin: 10px 0px 10px 0px;
+
+	background: #d9df7b url(http://christianvolunteering.org/imgs/organizationbox_borderpatt.gif) 0px 158px;
+
+	width: 252px;
+
+	float: left;
+
+}
+
+
+
+#midbox2 a { color: #8C8F57; text-decoration: none; }
+
+
+
+#midbox2 a:hover { text-decoration: underline; }
+
+
+
+#midbox2_content {
+
+	height: 200px;
+
+	background:url(http://christianvolunteering.org/imgs/organizationbox_patt.gif) no-repeat 0px 0px;
+
+	text-align:left;
+
+}
+
+
+
+#midbox3 {
+
+	margin: 10px 0px 10px 0px;
+
+	/* this line is messed up b/c it needs the float:left so that it goes in line with the other midboxes */	
+
+	background: #E7E58C url(http://christianvolunteering.org/imgs/trainingbox_borderpatt.gif) 1px 158px;
+
+	width: 248px;
+
+		
+
+	float: left;        /* this appears to be the culprit line - non-IE appears to not like this code for some reason */
+
+		
+
+}
+
+
+
+#midbox3 a { color: #99994C; text-decoration: none; }
+
+
+
+#midbox3 a:hover { text-decoration: underline; }
+
+
+
+#midbox3_content {
+
+	height: 200px;
+
+	background:url(http://christianvolunteering.org/imgs/trainingbox_patt.gif) no-repeat 0px 0px;
+
+	text-align:left;
+
+}
+
+
+
+#midbox1 p, #midbox2 p, #midbox3 p, #midbox1 span {
+
+	margin: 0px 20px 10px 20px;
+
+}
+
+
+
+
+
+.hrule {
+
+	border-top: dashed 1px #728DD4; 
+
+	margin-top: -10px;
+
+}
+
+
+
+.hilitebox {
+
+	border: dashed 1px #728DD4;
+
+	padding: 3px;
+
+}

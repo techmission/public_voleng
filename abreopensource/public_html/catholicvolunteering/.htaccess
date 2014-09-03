@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^catholicvolunteering\.org$
+RewriteRule ^(.*)$ http://www.catholicvolunteering.org/$1 [R=301,L]
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 81.192.122.14
+deny from 196.206.129.228
+deny from 81.192.120.100
+deny from 66.196.97.157
+deny from 196.206.8.53
+deny from 81.192.35.156

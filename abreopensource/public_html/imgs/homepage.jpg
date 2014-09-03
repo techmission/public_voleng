@@ -1,0 +1,101 @@
+<!--
+var newwin = null;
+
+currLoc = new String(document.location);
+currProtocol = new String(document.location.protocol);
+if (currProtocol.indexOf("https") >= 0)
+{
+ doubleSlashPos = currLoc.indexOf("//");
+ newLoc = new String(currLoc.substr(doubleSlashPos));
+ newLoc = "http:" + newLoc;
+ document.location = newLoc;
+}
+
+/***********************************************************/
+/* This is now OLD on the homepage. Instead use openPage() */
+function changePage(theform) {
+	var tempPage = theform.selCountry.value;
+	if (tempPage != "Select a Country")
+	{
+	top.location.href = tempPage;
+	}
+}
+/**********************************************************/
+
+// Function used to open new pages on the international gateway select box
+function openPage(theform)
+{
+	// grab the value from the form element
+	var newPage	=	theform.selCountry.value;
+	// if the selected value is NOT "Select a Country" then open the new
+	// page based on the value passed into the function.
+	if(newPage	!=	"Select a Country")
+	{
+		//open a new pop up window.
+		window.open(newPage);
+	}
+}
+
+function LaunchSearch(frm) { 
+        document.Search.action = "/wvusFind.nsf/wvusResults!CreateDocument"; 
+        document.Search.method = "POST"; 
+        document.Search.name = "_wvusQuery"; 
+        document.Search.submit(); 
+        return false; 
+ } 
+
+var isie, isns4, isns6;
+var browser = navigator.appName;
+//alert(browser);
+var browserver = navigator.appVersion.substring(0, 1);// Added support for NS6 (which actually equates to a value of 5)
+//alert(browserver);
+var ie = "Microsoft Internet Explorer";
+var ns = "Netscape";
+// Determine Browser Type/Version Combos
+if (browser==ie && browserver >=4)
+{ // It is IE and it is version 4 or greater
+	isie = true;
+	isns4 = false;
+	isns6 = false;
+	showval = 'display';
+}
+else if (browser==ns && browserver==4)
+{ // It is NS version 4 (or an incremental release still less than 6)
+	isns4 = true;
+	isns6 = false;
+	isie = false;
+	showval = 'show';
+}
+else if (browser==ns && browserver>=5)
+{ // It is NS 6
+	isns6 = true;
+	isns4 = false;
+	isie = false;
+	showval = 'show';
+}
+//alert("Is it IE 4 or greater?\n" + isie);
+//alert("Is it NS 4?\n" + isns4);
+//alert("Is it NS 6 or greater?\n" + isns6);
+
+function CheckRegExp(input, re)
+{
+	if (input.search(re) != -1)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+function randomSelect(iUniverse)
+ // Returns a random value in the range of [0..iUniverse], but Math.floor drops the remainder
+ // for the returned value, thus if the random number result is 2.5 would return a 2.
+ // randomSelect is seeded with a value of 9, in order to select one in 9 [0..8].
+{ var randomNumber = Math.floor(Math.random() * iUniverse);
+//   alert(randomNumber);
+   return(randomNumber);
+}
+
+// -->

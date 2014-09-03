@@ -1,0 +1,1696 @@
+/* $Id: betterselect.css,v 1.2.4.3 2009/02/27 14:22:15 marktheunissen Exp $ */
+
+.better-select div.form-checkboxes {
+  margin: 0;
+}
+
+.better-select div.form-checkboxes-scroll {
+  border: 1px solid #666;
+  max-height: 150px;
+  overflow: auto;
+}
+
+.better-select div.form-checkboxes-noscroll {
+  overflow: hidden;
+}
+
+.better-select div.form-checkboxes .form-item {
+  margin: 0;
+}
+
+.hilight {
+  background-color: #DDD;
+}
+
+.better-select div.form-checkboxes-scroll {
+  border: 1px solid #666;
+  max-height: 95px;
+  width: 400px;
+  overflow: auto;
+  word-wrap: break-word;
+}
+.better-select div.form-checkboxes-noscroll {
+  border: 1px solid #666;
+  max-width: 620px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.better-select div.form-item {
+  max-width: 620px;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+.better-select div.org-page {
+    width: 390px;
+}
+a#opplocal, a#organiz, a#stm2, a#intrn, a#trn, a#searchadv, a#pro{
+cursor:pointer; 
+text-decoration:none; 
+color:#000000; 
+font-size:1em;
+//font-size:12px; 
+font-weight: normal;
+background:transparent url(/imgs/tabs-off1.png) no-repeat; 
+border-right: 1px solid #4D4d4d; 
+padding:5px 5px 2px;
+margin-bottom: 0px;
+font-weight: bold;
+color:#4D4D4d;
+}
+a#opplocal.active, a#organiz.active, a#stm2.active, a#intrn.active, a#trn.active, a#searchadv.active, a#pro.active {
+background:transparent url(/imgs/tabs-on1.png) no-repeat; 
+border-right: 1px solid #4d4d4D;
+font-weight: bold;
+color:#FFF;
+}
+#all_tabs {width:100%; margin-bottom: 20px;}
+#solr_results {width:100%; margin-bottom: 20px;}
+h5.benefits {margin: 0; font-size:12px; color:#000;}
+select#country {width: 150px;}
+
+a#ministry_tab_local_one_time, a#ministry_tab_virtual, a#ministry_tab_grp_family, a#ministry_tab_stm, a#ministry_tab_sum_intrn,
+a#ministry_tab_intrn, a#ministry_tab_work_study, a#ministry_tab_board, a#trn, a#latest_tab, a#ministry_tab_local_orgs, a#ministry_tab_stm_search, a#ministry_tab_advanced_search,a#ministry_tab_all{
+cursor:pointer; 
+text-decoration:none; 
+color:#000000; 
+font-size:1em;
+//font-size:12px;
+font-weight: normal;
+background:transparent url(/imgs/tabs-off1.png) no-repeat; 
+border-right: 1px solid #4D4d4d; 
+padding:5px 5px 2px;
+margin-bottom: 0px;
+font-weight: bold;
+color:#4D4D4D!important;
+text-decoration:none!important;
+//height:8px;
+}
+a#ministry_tab_local_one_time.active, a#ministry_tab_virtual.active, a#ministry_tab_grp_family.active, a#ministry_tab_stm.active, 
+a#ministry_tab_sum_intrn.active, a#ministry_tab_intrn.active, a#ministry_tab_work_study.active, a#ministry_tab_board.active, 
+a#trn.active, a#latest_tab.active, a#ministry_tab_local_orgs.active, a#ministry_tab_stm_search.active, a#ministry_tab_advanced_search.active,a#ministry_tab_all.active{
+background:transparent url(/imgs/tabs-on1.png) no-repeat; 
+border-right: 1px solid #4d4d4D;
+font-weight: bold;
+color:#FFF!important;
+text-decoration:none!important;
+}
+.add-new-buttn{ 
+background-color:#83A2F4;
+border:1px solid #4D73CF;
+color:#FFFFFF;
+font-weight:bold;
+padding:3px;
+text-decoration:none;
+white-space:nowrap;
+line-height:3em;
+//line-height:1.7em;
+}
+.add-new-button-lg{
+font-size: 16px;
+}
+a.add-new-buttn{ color:#000066;}
+a.add-new-buttn:hover {
+background-color:#4D73CF;
+text-decoration:none;
+color:#FFF;
+}
+.label_embeds {display: inline-block; text-align:right; font-weight:bold; width:50px;}
+.manageorg_container {width:500px; background-color:#FFF; border:3px solid #93B6F0; padding:10px; margin: 20px auto;} 
+.manageorg_container.wide {width: 600px;}
+body#urbmin .manageorg_container { 
+border:3px solid #B8966C;
+}
+ul.columns {float:left; width:auto;}
+ul.columns li {padding-left:0px; //list-style: square;}
+ul.columns li a{ color:#003366; text-decoration:none;}
+ul.columns li a:hover, a:hover { text-decoration:underline;}
+.profile_box{
+	width: 200px; 
+	text-align:left; 
+	background-color:#FFF; 
+	border:3px solid #93B6F0; 
+	height:300px; 
+	padding:10px; 
+	float:left; 
+	margin: 0 5px 20px;
+}
+.profile_box{
+	width: 375px;
+	text-align:left;
+	background-color:#FFF;
+	border:3px solid #93B6F0;
+	padding:5px;
+	float:left;
+  font-family: arial,helvitica,sans-serif;
+	height:370px; 
+}
+.fb_box {
+	width: 281px;
+	text-align:left;
+	background-color:#FFF;
+	border:3px solid #93B6F0;
+  font-family: arial,helvitica,sans-serif;
+	height:390px; 
+	padding:5px;
+	margin: 0 10px 10px 10px;
+	align: right;
+	//height:270px; float:left;
+}
+.fb_box h2 {text-align:center;}
+.fb_box ol {width:210px;}
+.profile_box a, .org_box a, .fb_box a{ color:#003366; text-decoration:none; line-height:2em;}
+.profile_box a:hover, .org_box a:hover , .fb_box a:hover {text-decoration:underline;}
+.org_box {
+	width: 200px; 
+	text-align:left; 
+	background-color:#FFF; 
+	border:3px solid #93B6F0; 
+	min-height:300px; 
+	//height:336px; 
+	padding:10px; 
+	float:left;
+}
+.find_box {padding: 10px; border: 3px solid #93B6F0; float:left; text-align:left; width:480px;}
+h3{margin:0px;}
+
+a.add-new-buttn { 
+background-color:#83A2F4;
+border:1px solid #4D73CF;
+color:#FFFFFF;
+font-weight:bold;
+padding:3px;
+width:140px;
+text-decoration:none;
+}
+a.add-new-buttn:hover {
+background-color:#4D73CF;
+text-decoration:none;
+color:#FFF;
+}
+body#urbmin a.add-new-buttn { 
+background-color:#E4D8B2;
+border:1px solid #B8966C;
+color:#4D4D4D;
+}
+body#urbmin a.add-new-buttn:hover {
+background-color:#B8966C;
+}
+body#urbmin .profile_box, body#urbmin .org_box, body#urbmin .find_box { 
+border:3px solid #B8966C;
+}
+.better-select div.form-checkboxes-scroll {
+  border: 1px solid #666;
+  max-height: 95px;
+  max-width: 400px;
+  overflow: auto;
+  word-wrap: break-word;
+}
+.better-select div.form-checkboxes-noscroll {
+  border: 1px solid #666;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+ul.columns {float:left; width:auto;}
+ul.columns li {padding-left:0px; //list-style: square;}
+ul.columns li a{ color:#003366; text-decoration:none;}
+ul.columns li a:hover, a:hover { text-decoration:underline;}
+h3{margin:0px;}
+
+a.add-new-buttn, h1.rtecenter a { 
+background-color:#83A2F4;
+border:1px solid #4D73CF;
+color:#FFFFFF;
+font-weight:bold;
+padding:3px;
+width:140px;
+//width:130px;
+text-decoration:none;
+}
+
+a.highlight-buttn{
+    background-color: #95B986;
+}
+a.add-new-buttn:hover, h1.rtecenter a:hover {
+background-color:#4D73CF;
+text-decoration:none;
+color:#FFF;
+}
+
+body#urbmin .profile_box, body#urbmin .fb_box { 
+border:3px solid #B8966C;
+}
+hr.box_line{
+border: 0;
+color:#83A2F4;
+background-color:#83A2F4;
+height: 2px;
+width:100%;
+}
+#maincontent.sidebarless{width: 100%; backround-image:none; border:none;}
+#contentwrapper.sidebarless {background-image:none; background-color:#FFF; width:950px;}
+#pagebanner {//width:950px;}
+#vol_stories_box{
+border:1px solid #88AAFE;
+margin-left:18px;
+margin-bottom:10px;
+height:253px;
+width:355px;
+float:left;
+background-color:#FFF;
+}
+#vol_stories_header {
+background-color:#88AAFE;
+height:26px;
+padding-left:10px;
+padding-top:3px;
+}
+#vol_stories_header h3 {
+color:#FFFFFF;
+float:left;
+padding-bottom:0;
+margin:0;
+}
+#vol_stories_header ul {
+margin-left:190px;
+margin-top: 0px;
+}
+#vol_stories_header li {
+background-color:#6B84BF;
+color:#FFFFFF;
+float:left;
+font-weight:bold;
+height:19px;
+margin-right:1px;
+padding:3px;
+text-align:center;
+width:20px;
+list-style:none;
+}
+#vol_stories_header ul#numbers li.tab a{ color:#FFF; text-decoration:none;}
+#vol_stories_header ul#numbers li.active_tab a{ color:#88AAFE; text-decoration:none;}
+.main_text {
+padding:10px 10px 0px 150px;
+font-size:11px;
+}
+#contentwrapper.home .main_text{
+/*padding:10px;*/
+}
+.main_text h4 {
+margin:0px;
+}
+.imgleft{float:left; width:140px; height:200px}
+.imgleft2{float:left; width:365px; height:265px}
+#vol_stories_header .active_tab {
+background-color:#FFFFFF;
+color:#003366;
+margin-right:1px;
+padding:3px;
+text-align:center;
+}
+#account_box{
+background:transparent url(http://www.christianvolunteering.org/imgs/acctbox_hands.gif) no-repeat;
+border:1px solid #5B7F37;
+margin-left:18px;
+margin-bottom:10px;
+height:253px;
+width:258px;
+float:left;
+}
+#account_header {
+background-color:#5B7F37;
+height:26px;
+padding-left:10px;
+padding-top:3px;
+}
+#account_header h3, #partner_header h3 {
+color:#FFFFFF;
+float:left;
+padding-bottom:0;
+margin:0;
+}
+.box_content { padding: 20px 10px 0px; //padding:18px 10px 0px;}
+.subinfo {
+padding:10px 10px 5px 150px;
+}
+a { color:#000000; font-weight:inherit;}
+#volunteerheader ul {
+margin-left:220px;
+}
+#sidebar_box.white{
+	background:transparent url(http://www.christianvolunteering.org/imgs/Where_Volunteer_white.gif) no-repeat;
+	margin-right:13px;
+	margin-top:7px;
+	margin-bottom:10px;
+	width:265px;
+	height:200px;
+	float:right;
+}
+#sidebar_box.background{
+	background:transparent url(http://www.christianvolunteering.org/imgs/Where_Volunteer_Bkgr.gif) no-repeat;
+	margin-right:13px;
+	margin-top:7px;
+	margin-bottom:10px;
+	width:263px;
+	height:375px; 
+	float:right;
+}
+#sidebar_box h4{ 
+	margin-left: 20px; 
+	margin-top:10px; 
+	color:#5B7F37; 
+	font-size:13px;
+}
+div#contentwrapper.home #sidebar_box.white{
+	background: none;
+	margin:0;
+	width:auto;
+	height:auto; 
+	float:none;;
+}
+div#contentwrapper.home #sidebar_box h4{ 
+	margin-left: 0px; 
+	margin-top:10px; 
+	color:#003366; 
+	font-size:14px;
+}
+.main_text2 {
+	padding:7px 10px 0px 40px;
+	font-size:11px;
+	font-weight:bold;
+	line-height:1.5em;
+}
+.numbers{ font-weight:bold; color:#003366;}
+#partner_box{
+border:1px solid #88AAFE;
+margin-left:18px;
+margin-bottom:10px;
+height:215px;
+width:250px;
+float:left;
+background-color:#FFF;
+}
+#partner_box img{border:none;}
+#partner_header {
+background-color:#88AAFE;
+height:26px;
+padding-left:10px;
+padding-top:3px;
+}
+
+#vol_stories_box{
+border:1px solid #88AAFE;
+margin-left:18px;
+margin-bottom:10px;
+min-height:253px;
+width:355px;
+float:left;
+}
+#vol_stories_header {
+background-color:#88AAFE;
+height:26px;
+padding-left:10px;
+padding-top:3px;
+}
+#vol_stories_header h3 {
+color:#FFFFFF;
+float:left;
+padding-bottom:0;
+margin:0;
+}
+#vol_stories_header ul {
+margin-left:190px;
+margin-top: 0px;
+}
+#vol_stories_header li {
+background-color:#6B84BF;
+color:#FFFFFF;
+float:left;
+font-weight:bold;
+height:19px;
+margin-right:1px;
+padding:3px;
+text-align:center;
+width:20px;
+list-style:none;
+}
+#vol_stories_header ul#numbers li.tab a{ color:#FFF; text-decoration:none;}
+#vol_stories_header ul#numbers li.active_tab a{ color:#88AAFE; text-decoration:none;}
+.main_text {
+padding:10px 10px 0px 150px;
+font-size:11px;
+}
+body#ivolunteering .main_text {
+padding:0px;
+}
+h1.signupnow { 
+font-size:18px;
+text-transform: uppercase;
+margin-top:117px;
+margin-bottom:0px;
+text-decoration:none;
+}
+.main_text h4 {
+margin:0px;
+}
+.imgleft{float:left; width:140px; height:200px}
+.imgleft2{float:left; width:365px; height:265px}
+
+#vol_stories_header .active_tab {
+background-color:#FFFFFF;
+color:#37ABBE;
+margin-right:1px;
+padding:3px;
+text-align:center;
+}
+#account_box{
+background:transparent url(http://www.christianvolunteering.org/imgs/acctbox_hands.gif) no-repeat;
+border:1px solid #5B7F37;
+margin-left:18px;
+margin-bottom:10px;
+height:253px;
+width:258px;
+float:left;
+}
+#account_header {
+background-color:#5B7F37;
+height:26px;
+padding-left:10px;
+padding-top:3px;
+}
+#account_header h3, #partner_header h3 {
+color:#FFFFFF;
+float:left;
+padding-bottom:0;
+margin:0;
+}
+.box_content { padding: 20px 10px 0px; //padding:5px 10px 0px;}
+.subinfo {
+padding:10px 10px 5px 150px;
+}
+a { color:#000000; font-weight:inherit;}
+#volunteerheader ul {
+margin-left:220px;
+}
+.main_text2 {
+padding:7px 10px 0px 40px;
+font-size:11px;
+font-weight:bold;
+line-height:1.5em;
+}
+.numbers{ font-weight:bold; color:#003366;}
+#partner_box{
+border:1px solid #88AAFE;
+margin-left:23px;
+margin-bottom:10px;
+height:215px;
+width:250px;
+float:left;
+background-color:#FFF;
+}
+#partner_box img{border:none;}
+#partner_header {
+background-color:#88AAFE;
+height:26px;
+padding-left:10px;
+padding-top:3px;
+}
+/* --------- Scrolling News css -------------*/
+#news{ }
+#news ul{padding:7px 10px 0px 40px; //margin: 0px;}
+#news ul a, #news ul a:hover {color:#000;}
+#news ul a {text-decoration:none;}
+#news ul a:hover {text-decoration:underline;}
+#news li{line-height:2em; font-weight:bold; list-style:none;}
+/* the news box when JavaScript is available */
+#news.hasJS
+{height:150px;overflow:hidden;position:relative;}
+/* The nested UL when JavaScript is available */
+#news.hasJS ul
+{position:absolute;top:120px;left:0;}
+p#DOMnewsstopper{ text-align:right; margin-right:30px;}
+/* --------- end: Scrolling News css -------------*/
+
+.volbox_wrapper{ background-color:#FBC76E; padding:5px; margin-right:15px; margin-top: 20px; float:left;}
+.volbox{ 
+font-size:14px; 
+color:#000; 
+background-color:#FFEEB6; 
+padding: 10px; 
+border: solid 2px #FFF; 
+height: 200px;
+width:250px;
+}
+.volbox h2 a{ 
+color: #DF9C29; 
+font-size:15px; 
+text-transform:uppercase; 
+text-decoration:none;
+}
+.volbox h2 a:hover, .npbox h2 a:hover{ text-decoration:underline;}
+
+.npbox_wrapper{ background-color:#C3C87A; padding:5px; margin-top: 20px; float:right;}
+.npbox{
+font-size:14px; 
+color: #000; 
+background-color:#D9DF7C;
+padding: 10px;
+border: solid 2px #FFF;
+height: 200px;
+width:250px;
+ }
+.volbox a, .npbox a { color:#666633; text-decoration: none;}
+.volbox a:hover, .npbox a:hover { color:#35568F; text-decoration:underline;}
+.volbox li, .npbox li { line-height: 1.5em;}
+.npbox h2 a{ 
+color:#8C8F59;
+ font-size:15px; 
+ text-transform:uppercase; 
+ text-decoration:none;
+ }
+#page_base{
+border: 2px solid #CCC;
+padding: 10px; 
+background-color:#FFF; 
+float:left; 
+text-align:left; 
+width:600px; 
+margin-left: 50px;
+}
+a#loggedInBlock {
+text-decoration:none;
+}
+.loggedInBlock a { color:#003366; text-decoration: none; font-size:12px;}
+.loggedInBlock a:hover { color:#35568F; text-decoration:underline; font-size:12px;}
+body#fbbody .account_box { 
+background:#FFF;
+}
+/* styles for new search results */
+#search-results a {color:#003366; font-weight:normal;}
+#search-results a.opp_link {font-size:16px; font-weight:bold;}
+#search-results a.opp_link:hover {text-decoration:underline;}
+#search-results .teaser {margin:5px 0px;}
+#search-results .opp-info {color:#777;}
+#search-results .opp-info b {color:#555;}
+#search-results a.more_link {font-weight:bold;}
+
+
+table#contact {margin-left:20px;}
+table#contact th.contactName {width:90px; padding:0 10px;}
+table#contact th.contactEmail {padding:0 10px;}
+table#contact th.contactPrimary,
+table#contact th.contactRcvEmail,
+table#contact th.contactCanEdit {width:80px; text-align:center;}
+table#contact tr {border-bottom:solid 1px #ccc;}
+table#contact tr.gray {background-color:#E9E8E8;}
+table#contact {
+border-collapse:collapse;
+padding:0;
+}
+table#contact td {padding:0 10px;}
+
+/* styles for portal manager */
+#all_tabs.tabs1 {
+    height: 31px;
+    margin: 0 10px 0 0;
+    position: relative;
+    width: 700px;
+}
+#all_tabs #portalheadertagslink, #all_tabs #portalheadertxtlink, #all_tabs #portalcsslink, #all_tabs #portalfooterlink{
+    display: block;
+    float: left;
+    margin: -1px 0 0;
+    padding-right: 5px;
+}
+a.tab-1 {
+    background: url("/template_include/fb_menu.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 25px;
+		//height:auto;
+    position: relative;
+}
+#all_tabs.tabs1 a {
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    padding: 0 5px;
+		text-decoration:none;
+}
+#all_tabs.tabs1 span {
+    display: block;
+    padding-top: 9px;
+    text-align: center;
+}
+#portalheadertagslink.active a, #portalheadertagslink a:hover, 
+#portalheadertxtlink.active a, #portalheadertxtlink a:hover, 
+#portalcsslink.active a, #portalcsslink a:hover, 
+#portalfooterlink.active a, #portalfooterlink a:hover {
+    background-position: 0 -35px;
+}
+#portal_info textarea {margin-top:5px;}
+
+
+/* styles for search tabs * /
+.portal #all_tabs {
+    height: auto;
+    margin: 0;
+    padding: 0 0 5px 35px;
+    width: auto;
+}*/
+.portal #all_tabs {
+    padding: 0 0 5px 35px;
+
+    height: 85px;
+    margin: 0 10px 0 0;
+    position: relative;
+    width: 700px;
+}
+#all_tabs.portallist{
+	height: auto;
+}
+.portal a#opplocal, .portal a#intrn, .portal a#stm2, .portal a#pro, .portal a#organiz, .portal a#trn, .portal a#searchadv, .portal a#ministry_tab_local_one_time, .portal a#ministry_tab_local_orgs, .portal a#ministry_tab_stm, .portal a#ministry_tab_all, .portal a#ministry_tab_stm_search, .portal a#ministry_tab_advanced_search {
+    background: url("/template_include/fb_menu.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 13px;
+		//height:auto;
+    position: relative;
+		border-right:none;
+}
+.portal a#opplocal.active, .portal #vol-opp a:hover, 
+.portal a#intrn.active, .portal #internship a:hover, 
+.portal a#stm2.active, .portal #short-term a:hover, 
+.portal a#pro.active, .portal #vol-pro a:hover,
+.portal a#organiz.active, .portal #organizations a:hover,
+.portal a#trn.active, .portal #content a:hover,
+.portal a#searchadv.active, .portal #searchlong a:hover,
+.portal a#ministry_tab_local_one_time.active, .portal a#ministrySectionLocal a:hover,
+.portal a#ministry_tab_local_orgs.active, .portal #ministrySectionLocalOrgs a:hover,
+.portal a#ministry_tab_stm.active, .portal #ministrySectionSTM a:hover,
+.portal a#ministry_tab_all.active, .portal #ministrySectionAll a:hover,
+.portal a#ministry_tab_stm_search.active, .portal #ministrySectionSTMSearch a:hover,
+.portal a#ministry_tab_advanced_search.active, .portal #ministrySectionAdvancedSearch a:hover
+ {
+    background-position: 0 -35px;
+}
+.portal #all_tabs #vol-opp, 
+.portal #all_tabs #internship, 
+.portal #all_tabs #short-term, 
+.portal #all_tabs #vol-pro, 
+.portal #all_tabs #organizations, 
+.portal #all_tabs #content, 
+.portal #all_tabs #searchlong, 
+.portal #all_tabs #ministrySectionLocal, 
+.portal #all_tabs #ministrySectionLocalOrgs, 
+.portal #all_tabs #ministrySectionSTM, 
+.portal #all_tabs #ministrySectionAll, 
+.portal #all_tabs #ministrySectionSTMSearch, 
+.portal #all_tabs #ministrySectionAdvancedSearch 
+{
+    display: block;
+    float: left;
+    margin: -1px 0 0;
+    padding-right: 5px;
+}
+.portal #all_tabs a {
+    color: #FFFFFF!important;
+    display: block;
+    font-weight: bold;
+    padding: 7px 5px 5px;
+		text-decoration:none;
+}
+.portal #all_tabs hr {clear:both; //margin-top:-9px!important;} 
+#oppsearch.manage_style{
+	display:inline; 
+	background-color:#83A2F4; 
+	width:772px; 
+	margin-top:10px; 
+	margin-bottom:10px;
+}
+
+#oppsearch.manage_style span#title {
+    background-color: #83A2F4;
+    border-right: 1px solid #003366;
+    color: #fff;
+}
+#oppsearch.manage_style span#page_title {
+    background-color: #83A2F4;
+    border-right: 1px solid #003366;
+    color: #fff;
+}
+#contentwrapper.solr {
+    background: #ECF1FC;
+/*    background: url("http://www.christianvolunteering.org/imgs/bodycontent_patt_wide-950.gif") repeat-y scroll right top #FFFFFF;*/
+}
+#contentwrapper.basic {
+    background: #FFFFFF;
+}
+#maincontent.search_results {
+    float: left;
+	clear: none;
+/*	width: 725px;*/
+	width: 705px;
+}
+#maincontent.directory {
+	margin-left: 0px;
+    float: none;
+	width: 900px;
+}
+#maincontent.directory a {
+	color: #003366;
+}
+#maincontent.directory a:hover{
+    color: #000000;
+    text-decoration: none;
+}
+#sidebar.search_results {
+    float: left;
+	clear: both;
+	margin-left: 0px;
+	background: #FFFFFF;
+	width: 225px;
+}
+#sidebar.search_results a {
+	color: #003366;
+}
+#sidebar.search_results a:hover{
+    color: #000000;
+    text-decoration: none;
+}
+#pager li, #links li {
+list-style-type: none;
+display: inline;
+}
+#pager, #pager-header {
+display: inline;
+    float: left;
+}
+.pager li, .links li {
+list-style-type: none;
+display: inline;
+}
+.pager, .pager-header {
+display: inline;
+    float: left;
+}
+#map_link {
+	border: 2px outset;
+	padding: 3px;
+    cursor: pointer;
+    float: right;
+}
+#docs a {
+    color: #003366;
+    font-weight: normal;
+}
+#docs a.opp_link {
+    font-size: 16px;
+    font-weight: bold;
+}
+/* styles for new search results */
+#docs a {color:#003366; font-weight:normal;}
+#docs a.opp_link {font-size:16px; font-weight:bold;}
+#docs a.opp_link:hover {text-decoration:underline;}
+#docs .teaser {margin:5px 0px;}
+#docs .opp-info {color:#777;}
+#docs .opp-info b {color:#555;}
+#docs a.more_link {font-weight:bold;}
+#calendar {
+  width: 160px;
+}
+#search_help {
+  font-size: 80%;
+}
+#search_solr{
+    float: left;
+	font-size: 14px;
+}
+#submit_solr_search {
+	float: left;
+}
+#welcomebox.wide {
+	height:auto;
+}
+div#searchpage .search {
+    float: left;
+}
+div#searchpage #submit_solr_search{
+	margin-top: 10px;
+}
+div#welcomebox #search_solr {
+    font-weight: bold;
+    height: 2.5em;
+}
+div#welcomebox a{
+	font-weight:bold;
+	font-size: 12px;
+}
+div#welcomebox .search_label{
+font-weight:normal;
+    color: #496F37;
+font-size: 11px;
+}
+div#welcomebox input.watermark{
+	width:	200px;
+	height: 30px;
+	font-size: 16px;
+}
+div#welcomebox input.active_watermark{
+    color: black;
+    font-style: bold;
+    font-seze: 18px;
+    padding-left: 3px 6px;
+}
+div#welcomebox input.location{
+	width:	220px;
+}
+div#welcomebox input.tags{
+	width:	400px;
+}
+div#welcomebox .search {
+    float: none;
+}
+div#welcomebox #label {
+    color: #003366;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+div#welcomebox #search_input {
+	float: left;
+	padding-left: 18px;
+}
+div#welcomebox #submit_solr_search {
+    padding-right: 5px;
+	float: left;
+}
+#search_checkboxes {
+    display: none;
+}
+div#welcomebox #search_checkboxes {
+    display: block;
+    padding-left: 135px;
+	float: left;
+}
+div#welcomebox #search_checkboxes.higher {
+    display: block;
+    padding-left: 135px;
+	float: left;
+}
+div#searchpage #search_checkboxes {
+    float: left;
+    padding-left: 135px;
+}
+#search_heading {
+    display: none;
+}
+div#welcomebox #search_heading {
+    display: inline;
+}
+div#searchform input.watermark{
+	width:	200px;
+	height: 30px;
+	font-size: 16px;
+}
+div#searchform input.active_watermark{
+    color: black;
+    font-style: bold;
+    font-seze: 18px;
+    padding-left: 3px 6px;
+}
+div#searchform input.location{
+	width:	220px;
+}
+div#searchform input.tags{
+	width:	400px;
+}
+/* aligning taken from http://stackoverflow.com/questions/306252/how-to-align-checkboxes-and-their-labels-consistently-cross-browsers */
+div#welcomebox .label {
+    font-size: 12px;
+	display: block;
+	padding-left: 10px;
+	text-indent: -16px;
+}
+div#welcomebox input.inline_checkbox {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+ul.search input.watermark{
+	width:	200px;
+	height: 26px;
+	font-size: 14px;
+}
+ul.search input.active_watermark{
+    color: black;
+    font-style: normal;
+    padding-left: 3px;
+}
+ul.search input.location{
+	width:	140px;
+}
+ul.search input.tags{
+	width:	210px;
+}
+ul.search{
+	margin:	0 3px 0 0;
+	padding: 0px;
+}
+#distance{
+	float:right;
+}
+.notice{
+	float:left;
+	color:#003366;
+    font-size: 14px;
+    padding: 5px 10px 5px 0px;
+}
+#filters #label{
+	float:left;
+	color:#003366;
+    font-size: 16px; /* 1.2em; */
+    font-weight: bold;
+    padding: 5px 10px 5px 0px;
+}
+#filters #sortby{
+	color:#003366;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 0px 5px 0px;
+}
+.tagcloud {
+  padding: 2px 2px 0;
+}
+.tagcloud_item {
+  float: left;
+  display: block;
+  margin-right: 4px;
+  color: #6998f0;
+}
+.tagcloud_item:hover {
+  color: #f00;
+}
+.left{
+float:left;
+}
+div#result ul#selection{
+	clear:both;
+}
+div#result #midbox1_content, div#result #midbox2_content, div#result #midbox3_content{
+	height: auto;
+	min-height: 320px; /* 400px;*/
+	padding-left: 10px;
+}
+.nav3-short-term-missions div#result #midbox1_content, 
+.nav3-short-term-missions div#result #midbox2_content,
+.nav3-short-term-missions div#result #midbox3_content {
+  min-height: 200px;
+}
+#midbox1.landingpage h1.head, #midbox2.landingpage h1.head, #midbox3.landingpage h1.head {
+    margin-top: -10px;
+}
+div#result.midbox_section #midbox1_content, div#result #midbox2_content, div#result #midbox3_content{
+	padding-right: 20px;
+}
+div#result.midbox_section{
+	height:auto;
+}
+#endingbox.landingpage {
+    background: url("/imgs/endingbox_patt.gif") no-repeat scroll right bottom #ECF1FC;
+    border-right: 4px solid #728DD4;
+    border-top: 4px solid #728DD4;
+    float: left;
+    height: auto;
+    position: relative;
+    width: 932px;
+    overflow: inherit;
+}
+#container_welcomebox.landingpage{
+	width: 660px;
+}
+#container_about.landingpage{
+	width: 250px;
+}
+#container_welcomebox.landingpage #welcomebox{
+	width: 660px;
+}
+ul#removeall li{
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+ul#removeall .remove{
+    list-style-type: none;
+	padding-top: 2px;
+}
+ul#filters li{
+    font-size: 1em;
+    line-height: 1.3em;
+    list-style: none outside none;
+    margin: 1px 0;
+    overflow: hidden;
+    position: relative;
+/*    white-space: nowrap; */
+    white-space:normal;
+	font-weight: normal;
+}
+ul#filters li.indent{
+    margin-left: 30px;
+    text-indent: -10px;
+}
+ul#filters li.directory{
+    float:left;
+    width:30%;
+}
+ul#filters li.advanced{
+    float:left;
+    width:20%;
+}
+ul#filters.filter_heading li{
+    margin: 5px 5px;
+}
+.collapsed{
+	visibility:hidden;
+}
+.expanded{
+	visibility:visible;
+}
+
+.filter li {
+    font-size: 1em;
+    line-height: 1.3em;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+.handle{
+	padding:10px;
+    font-size: 1.2em;
+	font-weight: bold;
+}
+li.handle a{
+	font-weight: normal;
+}
+li.landingpage a.handle{
+	padding: 20px 20px 20px 0px;
+}
+a.handle {
+    cursor: pointer;
+	font-weight: bold;
+}
+li.landingpage{
+	padding: 0px 0px 0px 10px;
+    list-style: none outside none;
+	margin-left:0px;
+}
+li.landingpage li{
+	padding:0px;
+	margin-left:20px;
+}
+span.label {
+	margin-left: 5px;
+	font-weight: bold;
+}
+li.landingpage span.label {
+	text-decoration: underline;
+    font-size: 16px; 
+	margin-left: 0px;
+}
+#midbox1.landingpage p, #midbox2.landingpage p, #midbox3.landingpage p {
+    margin: 0 10px 10px;
+}
+ul.comma{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0;
+}
+ul.comma li{
+	list-style: none; 
+	margin: 0; 
+	padding: 0;
+	display: inline-block;
+	margin-left: 5px;
+}
+ul.comma a{
+	font-size: 12px;
+}
+ul.comma li:after{
+	content: ", ";
+}
+ul.comma li:last-child:after { 
+	content: "";
+}
+span.i {
+    background: url("/imgs/collapse_icons.gif") no-repeat scroll 0 0 transparent;
+    left: 0;
+    top: 0;
+    width: 0;
+	position: absolute;
+    background-position: 0 center; 
+}
+.expanded span.i {
+    background-position: -12px center;
+    width: 12px;
+}
+.collapse span.i {
+    background-position: 0 center; 
+    width: 12px;
+}
+#home_solr_search{
+	float:left; 
+	margin: 20px 0px 5px 5px; 
+	width: 440px;
+}
+#welcomebox.landingpage #home_solr_search{
+	width: auto;
+}
+#results .filter .handle span.i {
+    background-position: -12px center;
+    min-height: 12px;
+    width: 12px;
+}
+div#maincontent.directory li{
+    margin-left: 16px;
+    margin-top: 0;
+    padding-left: 0;
+    padding-top: 0;
+}
+ul#search_keyword{
+	margin-right: 3px;
+}
+#oppsearch.solr {
+    height: 36px;
+}
+#oppsearch.solr span#title {
+	line-height: 36px;
+}
+#oppsearch.solr span#page_title {
+	line-height: 36px;
+}
+#oppsearch.solr #label {
+    color: #003366;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+select.dropdown {
+    border: 1px solid #838383;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    margin-right: 5px;
+}
+select.home {
+    border: 1px solid #838383;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+#body.wide{
+	padding:0px 5px;
+}
+#body.wide .fb_box{
+	width: 254px;
+}
+
+#all_tabs.results-left div{
+	float:left;
+}
+#all_tabs.results-left a#org,                #all_tabs.results-left a#opps, #all_tabs.results-left a#guidestar,  #all_tabs.results-left a#organization,  #all_tabs.results-left a#opportunity,  #all_tabs.results-left a#organizations,  #all_tabs.results-left a#opportunities,  #all_tabs.results-left a#local,  #all_tabs.results-left a#stm,  #all_tabs.results-left a#virtual,  #all_tabs.results-left a#job,  #all_tabs.results-left a#resume,  #all_tabs.results-left a#fdn,  #all_tabs.results-left a#Foundation,  #all_tabs.results-left a#cv,  #all_tabs.results-left a#CityVision {
+	cursor:pointer; 
+	text-decoration:none; 
+	color:#000000; 
+	font-size:1em;
+	//font-size:12px; 
+	font-weight: normal;
+	background:transparent url(/imgs/tabs-off1.png) no-repeat; 
+	border-right: 1px solid #4D4d4d; 
+	padding:5px 5px 2px;
+	margin-bottom: 0px;
+	font-weight: bold;
+	color:#4D4D4d;
+	margin-right: 2px;
+	height:20px;
+}
+#all_tabs.results-left a#org.active,          #all_tabs.results-left a#opps.active,  #all_tabs.results-left a#guidestar.active,  #all_tabs.results-left a#organization.active,  #all_tabs.results-left a#opportunity.active,  #all_tabs.results-left a#organizations.active,  #all_tabs.results-left a#opportunities.active,  #all_tabs.results-left a#local.active,  #all_tabs.results-left a#stm.active,  #all_tabs.results-left a#virtual.active,  #all_tabs.results-left a#job.active,  #all_tabs.results-left a#resume.active,  #all_tabs.results-left a#fdn.active,  #all_tabs.results-left a#Foundation.active,  #all_tabs.results-left a#cv.active,  #all_tabs.results-left a#CityVision.active{
+	background:transparent url(/imgs/tabs-on1.png) no-repeat; 
+	border-right: 1px solid #4d4d4D;
+	font-weight: bold;
+	color:#FFF;
+	height:20px;
+}
+.portal #all_tabs.results-left a#org,         .portal #all_tabs.results-left a#opps,  .portal #all_tabs.results-left a#guidestar,  .portal #all_tabs.results-left a#organization,  .portal #all_tabs.results-left a#opportunity,  .portal #all_tabs.results-left a#organizations,  .portal #all_tabs.results-left a#opportunities,  .portal #all_tabs.results-left a#local,  .portal #all_tabs.results-left a#stm,  .portal #all_tabs.results-left a#virtual,  .portal #all_tabs.results-left a#job,  .portal #all_tabs.results-left a#resume,  .portal #all_tabs.results-left a#fdn,  .portal #all_tabs.results-left a#Foundation,  .portal #all_tabs.results-left a#cv,  .portal #all_tabs.results-left a#CityVision
+{
+
+    background: url("/template_include/fb_menu.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+	height: 18px;
+    margin: 1px 0;	
+	padding: 7px 5px 0;
+		//height:auto;
+    position: relative;
+		border-right:none;
+}
+.portal #all_tabs.results-left a#org.active,  .portal #all_tabs.results-left a#opps.active,  .portal #all_tabs.results-left a#guidestar.active,  .portal #all_tabs.results-left a#organization.active,  .portal #all_tabs.results-left a#opportunity.active,  .portal #all_tabs.results-left a#organizations.active,  .portal #all_tabs.results-left a#opportunities.active,  .portal #all_tabs.results-left a#local.active,  .portal #all_tabs.results-left a#stm.active,  .portal #all_tabs.results-left a#virtual.active,  .portal #all_tabs.results-left a#job.active,  .portal #all_tabs.results-left a#resume.active,  .portal #all_tabs.results-left a#fdn.active,  .portal #all_tabs.results-left a#Foundation.active,  .portal #all_tabs.results-left a#cv.active,  .portal #all_tabs.results-left a#CityVision.active {
+    background-position: 0 -35px;
+}
+.portal #all_tabs.results-left #org,           .portal #all_tabs.results-left #opps,  .portal #all_tabs.results-left #guidestar,  .portal #all_tabs.results-left #organization,  .portal #all_tabs.results-left #opportunity,  .portal #all_tabs.results-left #organizations,  .portal #all_tabs.results-left #opportunities,  .portal #all_tabs.results-left #local,  .portal #all_tabs.results-left #stm,  .portal #all_tabs.results-left #virtual,  .portal #all_tabs.results-left #job,  .portal #all_tabs.results-left #resume,  .portal #all_tabs.results-left #fdn,  .portal #all_tabs.results-left #Foundation,  .portal #all_tabs.results-left #cv,  .portal #all_tabs.results-left #CityVision {
+    display: block;
+    float: left;
+    margin: -1px 0 0;
+/*	padding: 0px; */
+/*	padding-right: 5px; */
+}
+.portal #all_tabs.results-left  a {
+    color: #FFFFFF!important;
+    display: block;
+    font-weight: bold;
+/*	padding: 0px; */
+/*    padding: 7px 5px 5px; */
+    padding: 7px 5px 5px; 
+	text-decoration:none;
+}
+.portal #all_tabs.results-left  hr {clear:both; //margin-top:-9px!important;} 
+
+.portal #map_link {
+    background-color: #475A82;
+}
+
+
+h2.shorter{
+	margin-bottom:2px;
+}
+.left-column{
+	float: left;
+	padding: 3px;
+	width: 265px;
+	text-align:right;
+}
+.left-column-wide{
+	float: left;
+	padding: 3px;
+	width: 265px;
+	text-align:right;
+	line-height:1.5em;
+}
+#form .left-column-small {
+    float: left;
+    padding: 3px;
+    text-align: left;
+    width: auto;
+}
+.right-column{
+	float: left;
+	padding: 3px;
+}
+.auto-width {
+    width: auto;
+}
+a.volunteer, a.volunteer:link, a.volunteer:hover {
+    background-color: #5D9345;
+    border: 2px outset;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 12px;
+    padding: 2px;
+    text-decoration: none;
+}
+ol.no-indent {
+	margin: 0;
+	padding: 0 2px 0 20px;
+}
+ol.no-indent li{
+	margin: 0;
+	padding: 1px 0;
+}
+ul.no-indent {
+	margin: 0;
+	padding: 0 2px 0 18px;
+}
+ul.no-indent li{
+	margin: 0;
+	padding: 1px 0;
+}
+ul.sub-list-no-indent {
+	margin: 0;
+	padding: 0 2px 0 25px;
+}
+ul.no-indent li{
+	margin: 0;
+	padding: 1px 0;
+}
+h1.blue{
+	color: #728DD4;
+}
+div.outer{
+	float:left; 
+	padding: 4px; 
+	margin: 0px 0px 10px 0px; 
+	width:445px; 
+	height: 430px; 
+	background-color: #83A2F4;
+}
+div.inner{
+	float:left; 
+	padding: 10px; 
+	width:425px; 
+	height: 410px; 
+	background-color: #FFFFFF;
+}
+#welcomebox.short{
+	height: 230px;
+    width: 565px;
+}
+#container_welcomebox.short {
+    height: 230px;
+    width: 565px;
+    border: medium none;
+    padding: 4px;
+    position: relative;
+}
+#main_view .short {
+    height: 230px;
+    width: 345px;
+}
+#window .short {
+    height: 230px;
+    width: 345px;
+}
+#welcomebox h1.image_text {
+    font-family: Gill Sans, Arial Narrow,Arial,Helvetica,sans-serif;
+    font-size: 26px;
+    margin-bottom: 10px;
+    text-align: right;
+    color: #FFFFFF;
+}
+.content-menu-outer {
+    float: left;
+}
+#post-content-menu {
+    display: none;
+    position: absolute;
+    z-index: 2000;
+}
+ul.login_menu {
+	margin: 20px 0 0 0;
+    z-index: 2000;
+    padding: 0 5px 5px 5px;
+    background: none repeat scroll 0 0 #DEE0DD;
+    border: 1px solid #7F623F;
+    list-style: none outside none;
+}
+
+ul.login_menu li {
+	list-type: none;
+	margin: 0;
+	padding: 5px 0 0 0;
+}
+	/* styles for the widget itself */
+    .org-mgmt-widget {
+	  width: 200px;
+	  height: auto; /* will be total of smaller containers - 302px */
+	}
+	
+	.arrow_container {
+	  width: 12px;
+	  height: inherit;
+	  margin-left: 200px;
+	}
+	body.association #assoc_arrow.arrow_container {
+	  background: url("http://www.christianvolunteering.org/imgs/arrow-image.png") no-repeat scroll left top transparent;
+	}
+	body.organization #org_arrow.arrow_container {
+	  background: url("http://www.christianvolunteering.org/imgs/arrow-image.png") no-repeat scroll left top transparent;
+	}
+	body.opportunity #opp_arrow.arrow_container {
+	  background: url("http://www.christianvolunteering.org/imgs/arrow-image.png") no-repeat scroll left top transparent;
+	}
+	body.contacts #contacts_arrow.arrow_container {
+	  background: url("http://www.christianvolunteering.org/imgs/arrow-image.png") no-repeat scroll left top transparent;
+	  height: 84px;
+	  margin-top: -8px;
+	}
+	body.share #share_arrow.arrow_container {
+	  background: url("http://www.christianvolunteering.org/imgs/arrow-image.png") no-repeat scroll left top transparent;
+	  height: 84px;
+	  margin-top: -1px;	  
+	}
+	
+	.org-container {
+	  background: url("http://www.christianvolunteering.org/imgs/organizations-bg-v2.png") no-repeat scroll left top transparent;
+      height: 84px;
+	}
+	
+	.opp-container {
+	  background: url("http://www.christianvolunteering.org/imgs/opportunities-bg.png") no-repeat scroll left top transparent;
+	  height: 85px;
+	}
+	
+	.contacts-container {
+	  background: url("http://www.christianvolunteering.org/imgs/contacts-bg.png") no-repeat scroll left top transparent;
+	  height: 68px;
+	}
+	
+	.share-container {
+	  background: url("http://www.christianvolunteering.org/imgs/share-bg.png") no-repeat scroll left top transparent;
+	  height: 86px;
+	}
+	div#share_container .padded{
+		margin-bottom: 10px;
+	}
+	
+div.left-sidebar-org-widget .left {
+    float: left;
+    width: 200px;
+}	
+	/* styles for the headings inside it */
+	h3.org-mgmt-link {
+	  text-align: center;
+	  font-size: 19px;
+	  font-family: Arial, Helvetica, sans-serif;
+	  font-weight: bold;
+	  margin: 0;
+	  padding-top: 20px;
+	}
+	
+	.org-container h3.org-mgmt-link, .opp-container h3.org-mgmt-link {
+	  text-align: left;
+	  float: left;
+	  margin-left: 10px;
+	  padding-top: 18px;
+	}
+	
+	.org-container h3.org-mgmt-link {
+	  padding-top: 18px;
+	}
+	
+	.opp-container h3.org-mgmt-link {
+	  padding-top: 22px;
+	}
+	
+	.contacts-container h3.org-mgmt-link {
+	  padding-top: 24px;
+	}
+	
+	h3.org-mgmt-link a {
+	  text-decoration: none;
+	  color: #596e9f;
+	}
+	
+	h3.org-mgmt-link a:hover {
+	  text-decoration: underline;
+	  color: #596e9f;
+	}
+	
+	/* styles for the add button */
+	
+	p.add-buttn {
+	  float: left;
+	  font-size: 12px;
+	}
+	
+	.org-container p.add-buttn {
+	  margin-left: 11px;
+	/*  margin-top: 22px;*/
+	}
+	.org-container p.sub {
+		margin: 3px 3px 3px 10px;
+	}
+	.opp-container p.add-buttn {
+      margin-left: 14px;
+	  margin-top: 26px;
+	}
+	.opp-container div.multiple {
+	  padding-top: 8px;
+	}
+	.opp-container p.sub {
+	  margin: 3px;
+	}
+	.opp-container p.add {
+		margin-left: 14px;
+	}
+.opp-container h3.opp-mgmt-link {
+    padding-top: 18px;
+}	
+.opp-container div.opp-mgmt-link {
+    padding-top: 5px;
+}	
+#org_container div.multiple {
+    padding-top: 8px;
+}	p.add-buttn a {
+	  background-color: #728dd4;
+      border: 1px solid #4D73CF;
+      color: #FFFFFF;
+      font-weight: bold;
+      padding-left: 5px;
+	  padding-right: 5px;
+	  padding-top: 0px;
+	  padding-bottom: 1px;
+      text-decoration: none;
+      width: 140px;
+	}
+	
+	p.add-buttn a:hover {
+	  background-color: #596e9f;
+	}
+	
+	.org-mgmt-widget select {
+	  display: block;
+	  margin-left: 10px;
+	  width: 175px;
+	}
+.left-sidebar-org-widget{
+	background: none repeat scroll 0 0;
+	clear: both;
+	overflow: hidden;
+	float: left;
+	width: 205px;
+	display: block;
+	margin: 10px 0 0 0;
+}
+#org-mgmt-widget{
+	width: 212px;
+}
+#maincontent.left-sidebar-org{
+	width: 950px;
+	float:left;
+}
+#maincontent.left-sidebar-org #body{
+	width: 730px;
+    float: left;
+	clear: none;
+	display: block;
+	padding: 0px 3px 10px 5px;
+}
+#maincontent.left-sidebar-org .left-column{
+/*	width: 260px; */
+}
+#maincontent.left-sidebar-org .left-column-wide{
+	width: 265px;
+}
+#maincontent.left-sidebar-org table#contact{
+	margin-left: 0px;
+}
+div#org-mgmt-widget p.add-buttn A{
+	width: 14px; 
+	margin: 0px 0px 2px 0px;
+}
+div#org-mgmt-widget p.sub A{
+        margin: 0px 0px 0px 0px;
+}
+#contentwrapper.nobanner{
+	width: 661px; 
+	margin: auto; /*0px;*/
+}
+#contentwrapper.nobanner #maincontent.search_results {
+    clear: none;
+    float: left;
+    width: 661px;
+}
+
+div#welcomebox input.tags-longer {
+    width: 442px;
+}
+.right-adjust{
+	text-align:right;
+}
+div#welcomebox.tall #search_input{
+    margin: 20px 0 0 10px;
+}
+
+.learn-more-link {
+  font-size: 14px;
+  font-weight: bold; 
+  text-align: center;
+}
+#maincontent.search_results #body {
+    padding: 0 16px;
+}
+#menu_sidebar {
+    display: none;
+}
+div.showApplication{
+	width: 925px;
+}
+div.oneField{
+  margin-top:20px;
+}
+div.inputWrapper{
+  margin-top: -10px;
+  overflow: auto;
+  width: 100%
+}
+span.choices span.oneChoice{
+  float: left;
+}
+span.oneChoice input{
+  float: left;
+}
+span.oneChoice div{
+  float: left;
+}
+span.choices{
+ padding-bottom: 10px;
+}
+div.inputWrapper select{
+  margin-top: 20px;
+}
+div.oneFieldWrapper{
+ overflow: auto;
+ width: 100%;
+}
+fieldset div.inputWrapper{
+  margin-top: 0px;
+}
+fieldset#tfa_NameAddress select{
+  margin-top: 0px;
+}
+.providedResponse{
+  font-weight: normal;
+ /* font-style: italic;*/
+}
+.preField{
+  font-weight: bold;
+}
+div.showApplication .oneField{
+/*  background: #F8F8FF;*/
+/*  width: 450px;*/
+  margin: 2px 0;
+  padding: 10px;
+}
+.reqMark:after {
+content: " *";
+color: #F00;
+font-size: 90%;
+}

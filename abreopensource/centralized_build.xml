@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ANT build script for  ABRE-WebApp Project -->
+
+<project name="abreopensource" default="project.abrevoleng.complete" basedir="">
+
+  <!-- Initialize properties used later in this project -->
+  <target name="project.init.properties">
+
+    <property name="LocalSRC" value="src" />
+    <property name="LocalOUT" value="classes" />
+    <property name="localJSP" value="public_html" />
+    <property name="localWEBINF" value="${localJSP}/WEB-INF" />
+    <property name="localIMG" value="${localJSP}/imgs" />
+    <property name="localStrut2" value="${localJSP}/voleng2" />
+    <property name="localTemplate" value="${localJSP}/template" />
+
+    <property name="Deploy" value="deploy" />
+    <property name="JSPDeploy" value="${Deploy}/public_html" />
+    <property name="WEBINFDeploy" value="${JSPDeploy}/WEB-INF" />
+    <property name="libDeploy" value="${WEBINFDeploy}/lib" />
+    <property name="IMGDeploy" value="${JSPDeploy}/imgs" />
+    <property name="Strut2Deploy" value="${JSPDeploy}/voleng2" />
+    <property name="TemplateDeploy" value="${JSPDeploy}/template" />
+
+  </target>
+
+  <!-- Project Wide Classpath -->
+  <path id="project.class.path">
+
+
+    <!--  JavaMail -->
+    <pathelement path="public_html\WEB-INF\lib\activation.jar" />
+    <pathelement path="public_html\WEB-INF\lib\mail.jar" />
+
+
+    <!-- servlet -->
+    <pathelement path="public_html\WEB-INF\lib\servlet.jar" />
+
+    <!-- struts -->
+    <pathelement path="public_html\WEB-INF\lib\struts.jar" />
+
+    <!-- used for security) -->
+    <pathelement path="public_html\WEB-INF\lib\antisamy-1.4.4.jar" />
+
+    <!-- commons-codec (used for security) -->
+    <pathelement path="public_html\WEB-INF\lib\commons-codec-1.4.jar" />
+
+
+    <!-- commons-lang (used for StringUtils functionality in scanData for tagging) -->
+    <pathelement path="public_html\WEB-INF\lib\commons-lang-2.6.jar" />
+
+    <!-- GeoIP -->
+    <pathelement path="public_html\WEB-INF\lib\GeoIPJava-1.2.5.jar" />
+
+
+    <!-- json -->
+    <pathelement path="public_html\WEB-INF\lib\json-20070829.jar" />
+
+    <!-- json OLD -->
+    <pathelement path="public_html\WEB-INF\lib\json-lib-2.3-jdk15.jar" />
+    
+
+    <!-- apache solr - use solrj -->
+    <pathelement path="public_html\WEB-INF\lib\apache-solr-solrj-3.4.0.jar" />
+
+    <!-- htmlunit-2.9.jar -->
+    <pathelement path="public_html\WEB-INF\lib\htmlunit-2.9.jar" />
+    <pathelement path="public_html\WEB-INF\lib\htmlunit-core-js-2.9.jar" />
+    <pathelement path="public_html\WEB-INF\lib\httpclient-4.1.2.jar" />
+    <pathelement path="public_html\WEB-INF\lib\httpcore-4.1.2.jar" />
+    
+    <pathelement path="public_html\WEB-INF\lib\sac-1.3.jar" />
+    <pathelement path="public_html\WEB-INF\lib\xml-apis-1.3.04.jar" />
+    <pathelement path="public_html\WEB-INF\lib\nekohtml-1.9.15.jar" />
+
+	<!-- quartz - used for scheduled jobs -->
+    <pathelement path="public_html\WEB-INF\lib\c3p0-0.9.1.1.jar" />
+    <pathelement path="public_html\WEB-INF\lib\quartz-2.2.1.jar" />
+    <pathelement path="public_html\WEB-INF\lib\quartz-jobs-2.2.1.jar" />
+	
+	
+    <!-- solrj also uses commons httpdclient -->
+    <pathelement path="public_html\WEB-INF\lib\commons-httpclient-3.1.jar" />
+    
+  	
+    <!-- xml-rpc client -->
+    <pathelement path="public_html\WEB-INF\lib\xmlrpc-client-3.1.2.jar" />
+    
+    <!-- xml-rpc common -->
+    <pathelement path="public_html\WEB-INF\lib\xmlrpc-common-3.1.2.jar" />
+    
+    <!-- xml-rpc server -->
+    <pathelement path="public_html\WEB-INF\lib\xmlrpc-server-3.1.2.jar" />
+  	
+  	<!-- Scribe (for linkedin/facebook connect logic) -->
+  	<pathelement path="public_html\WEB-INF\lib\scribe-1.3.3.jar" />
+
+  </path>
+
+  <!-- delete folders generated in this build -->
+  <target name="project.init.cleanup" depends="project.init.properties">
+        <delete dir="${LocalOUT}" quiet="true" />
+        <delete dir="${Deploy}" quiet="true" />
+  </target>
+
+  <!-- Prepare folders  for compilation  -->
+  <target name="project.prepare" depends="project.init.cleanup">
+        <mkdir dir="${LocalOUT}" />
+        <mkdir dir="${Deploy}" />
+        <mkdir dir="${JSPDeploy}" />
+        <mkdir dir="${WEBINFDeploy}" />
+        <mkdir dir="${libDeploy}" />
+        <mkdir dir="${IMGDeploy}" />
+        <mkdir dir="${Strut2Deploy}" />
+        <mkdir dir="${TemplateDeploy}" />
+  </target>
+
+
+  <!-- Compile ABRE WebApp project -->
+  <target name="project.java.compile" depends="project.prepare">
+
+    <javac srcdir="..\abreopenbase\src" destDir="${LocalOUT}" classpathref="project.class.path" />
+    <jar destfile="${libDeploy}/abreopenbase.jar" basedir="${LocalOUT}" compress="false" />
+
+    <javac srcdir="..\abreopenappbase\src" destDir="${LocalOUT}" classpathref="project.class.path" />
+    <jar destfile="${libDeploy}/abreopenappbase.jar" basedir="${LocalOUT}" compress="false" />
+
+    <javac srcdir="..\abreopenwebbase\src" destDir="${LocalOUT}" classpathref="project.class.path" />
+    <jar destfile="${libDeploy}/abreopenwebbase.jar" basedir="${LocalOUT}" compress="false" />
+
+  
+    <javac srcdir="${LocalSRC}" destDir="${LocalOUT}" classpathref="project.class.path" />
+    <jar destfile="${libDeploy}/abrevoleng.jar" basedir="${LocalOUT}" compress="false" />
+
+  </target>
+
+  <!-- Deploy Compile ABRE WebApp project -->
+  <target name="project.java.deploycompile" depends="project.java.compile">
+    <!-- Copy jar files -->
+    <!--copy file="public_html\WEB-INF\lib\mysql-connector-java-3.0.14-production-bin.jar" todir="${libDeploy}"/-->
+    <copy file="public_html\WEB-INF\lib\mysql-connector-java-5.1.26-bin.jar" todir="${libDeploy}"/>
+    <echo message="copy jar files complete" />
+  </target>
+
+  <!-- Copy jar files To deployment folder -->
+  <target name="project.abrevoleng.copy" depends="project.java.deploycompile">
+    <!-- Copy WEB-INF files -->
+    <copy todir="${WEBINFDeploy}">
+        <fileset dir="${localWEBINF}"/>
+    </copy>
+    <copy todir="${JSPDeploy}">
+        <fileset dir="${localJSP}">
+            <include name="*.css" />
+            <include name="*.jsp" />
+            <include name="*.inc" />
+            <include name="*.js" />
+            <include name="*.html" />
+            <include name="*.shtml" />
+        </fileset>
+    </copy>
+    <copy todir="${IMGDeploy}">
+        <fileset dir="${localIMG}">
+            <include name="*.gif" />
+            <include name="*.jpeg" />
+        </fileset>
+    </copy>
+    <copy todir="${Strut2Deploy}">
+        <fileset dir="${localStrut2}">
+            <include name="*.css" />
+            <include name="*.jsp" />
+            <include name="*.inc" />
+            <include name="*.js" />
+            <include name="*.html" />
+            <include name="*.shtml" />
+        </fileset>
+    </copy>
+    <copy todir="${TemplateDeploy}">
+        <fileset dir="${localTemplate}">
+            <include name="*.css" />
+            <include name="*.jsp" />
+            <include name="*.inc" />
+            <include name="*.js" />
+            <include name="*.html" />
+            <include name="*.shtml" />
+        </fileset>
+    </copy>
+    <echo message="copy jsp and web-inf files complete" />
+  </target>
+
+  <target name="project.abrevoleng.complete" depends="project.abrevoleng.copy">
+    <echo message="* ABRE Application Common Classes Compiled and Jar *" />
+  </target>
+
+</project>

@@ -1,0 +1,180 @@
+#nav {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 7pt; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 1; PADDING-TOP: 0px; FONT-FAMILY: "Trebuchet MS", Arial, Tahoma, Verdana; LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}
+#nav UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 7pt; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 1; PADDING-TOP: 0px; FONT-FAMILY: "Trebuchet MS", Arial, Tahoma, Verdana; LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}
+#nav LI UL UL {
+	MARGIN: -2.5em 0px 0px 11em
+}
+#nav A {
+	DISPLAY: block; FONT-SIZE: 7pt; BACKGROUND: url(/worldvision/master.nsf/v7_topNav_home.gif) no-repeat 0px 0px; WIDTH: 105px; HEIGHT: 16px; TEXT-DECORATION: none
+}
+UNKNOWN {
+	WIDTH: 105px
+}
+#nav A:hover {
+	BACKGROUND-POSITION: -105px 0px
+}
+#nav A.homeActive {
+	BACKGROUND: url(/worldvision/master.nsf/v7_topNav_home_active.gif) no-repeat 0px 0px
+}
+#nav A.homeActive:hover {
+	BACKGROUND-POSITION: 0px 0px
+}
+#nav A.waysToGive {
+	BACKGROUND: url(/worldvision/master.nsf/v7_topNav_waysToGive.gif) no-repeat 0px 0px
+}
+#nav A.waysToGive:hover {
+	BACKGROUND-POSITION: -105px 0px
+}
+#nav A.waysToGiveActive {
+	BACKGROUND: url(/worldvision/master.nsf/v7_topNav_waysToGive_active.gif) no-repeat 0px 0px
+}
+#nav A.waysToGiveActive:hover {
+	BACKGROUND-POSITION: 0px 0px
+}
+#nav A.sponsorship {
+	BACKGROUND: url(/worldvision/master.nsf/v7_topNav_sponsorship.gif) no-repeat 0px 0px
+}
+#nav A.sponsorship:hover {
+	BACKGROUND-POSITION: -105px 0px
+}
+#nav A.sponsorshipActive {
+	BACKGROUND: url(/worldvision/master.nsf/v7_topNav_sponsorship_active.gif) no-repeat 0px 0px
+}
+#nav A.sponsorshipActive:hover {
+	BACKGROUND-POSITION: 0px 0px
+}
+#nav A.getInvolved {
+	BACKGROUND: url(/worldvision/master.nsf/v7_topNav_getInvolved.gif) no-repeat 0px 0px
+}
+#nav A.getInvolved:hover {
+	BACKGROUND-POSITION: -105px 0px
+}
+#nav A.getInvolvedActive {
+	BACKGROUND: url(/worldvision/master.nsf/v7_topNav_getInvolved_active.gif) no-repeat 0px 0px
+}
+#nav A.getInvolvedActive:hover {
+	BACKGROUND-POSITION: 0px 0px
+}
+#nav A.aboutUs {
+	BACKGROUND: url(/worldvision/master.nsf/v7_topNav_aboutUs.gif) no-repeat 0px 0px
+}
+#nav A.aboutUs:hover {
+	BACKGROUND-POSITION: -105px 0px
+}
+#nav A.aboutUsActive {
+	BACKGROUND: url(/worldvision/master.nsf/v7_topNav_aboutUs_active.gif) no-repeat 0px 0px
+}
+#nav A.aboutUsActive:hover {
+	BACKGROUND-POSITION: 0px 0px
+}
+#nav A.learn {
+	BACKGROUND: url(/worldvision/master.nsf/v7_topNav_learn.gif) no-repeat 0px 0px
+}
+#nav A.learn:hover {
+	BACKGROUND-POSITION: -105px 0px
+}
+#nav A.learnActive {
+	BACKGROUND: url(/worldvision/master.nsf/v7_topNav_learn_active.gif) no-repeat 0px 0px
+}
+#nav A.learnActive:hover {
+	BACKGROUND-POSITION: 0px 0px
+}
+#nav LI {
+	FLOAT: left; WIDTH: 105px; POSITION: relative
+}
+#nav IFRAME {
+	FILTER: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=00); LEFT: 0px; POSITION: absolute; TOP: 0px
+}
+#nav LI UL {
+	BORDER-RIGHT: #000 2px solid; BORDER-TOP: #000 2px solid; BACKGROUND: #006699; LEFT: -999em; BORDER-LEFT: #000 2px solid; WIDTH: 105px; BORDER-BOTTOM: #000 2px solid; POSITION: absolute; voice-family: inherit
+}
+#nav LI:hover UL UL {
+	LEFT: -999em
+}
+#nav LI.sfhover UL UL {
+	LEFT: -999em
+}
+#nav LI UL A {
+	PADDING-RIGHT: 5px; BORDER-TOP: #000 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: normal; BACKGROUND-IMAGE: none; PADDING-BOTTOM: 5px; WIDTH: 105px; COLOR: #fff; LINE-HEIGHT: 1.25em; PADDING-TOP: 5px; HEIGHT: 100%; voice-family: inherit
+}
+UNKNOWN {
+	WIDTH: 95px
+}
+#nav #getInvovledWidth {
+	WIDTH: 155px; voice-family: inherit
+}
+#nav #getInvovledWidth A {
+	WIDTH: 145px; voice-family: inherit
+}
+#nav LI UL A:hover {
+	BACKGROUND-COLOR: #ff6600
+}
+#nav LI UL A.first {
+	BORDER-TOP: medium none; FONT-WEIGHT: normal
+}
+#nav LI:hover UL {
+	LEFT: auto
+}
+#nav LI.sfhover UL {
+	LEFT: auto
+}
+#nav LI.doNotTouch {
+	WIDTH: 1px; COLOR: #fff; voice-family: inherit
+}
+#nav LI LI UL#nowASponsor {
+	TOP: 2.45em
+}
+#nav LI:hover UL {
+	LEFT: auto
+}
+#nav LI LI:hover UL {
+	LEFT: auto
+}
+#nav LI.sfhover UL {
+	LEFT: auto
+}
+#nav LI LI.sfhover UL {
+	LEFT: auto
+}
+#nav LI LI:hover UL.aboutUsThirdLevel {
+	LEFT: -22.5em
+}
+#nav LI LI.sfhover UL.aboutUsThirdLevel {
+	LEFT: -22.5em
+}
+#logo {
+	WIDTH: 191px
+}
+#templateLogo {
+	WIDTH: 191px
+}
+#banner {
+	PADDING-LEFT: 80px; BACKGROUND: url(/worldvision/master.nsf/v7_header_banner.jpg) #ff6600 no-repeat right top; WIDTH: 508px
+}
+#templateBanner {
+	PADDING-LEFT: 80px; BACKGROUND: url(/worldvision/master.nsf/v7_header_banner.jpg) no-repeat right top; WIDTH: 508px
+}
+#templateBannerOff {
+	PADDING-LEFT: 80px; WIDTH: 508px
+}
+#channelLinks {
+	MARGIN-LEFT: 248px; WIDTH: 531px; HEIGHT: 30px
+}
+UNKNOWN {
+	MARGIN-LEFT: 249px; WIDTH: 529px
+}
+#templateChannelLinks {
+	MARGIN-LEFT: 58px; WIDTH: 531px; HEIGHT: 30px
+}
+UNKNOWN {
+	MARGIN-LEFT: 59px; WIDTH: 529px
+}
+#aboutusChannelLinks {
+	MARGIN-LEFT: 255px
+}
+UNKNOWN {
+	MARGIN-LEFT: 262px
+}

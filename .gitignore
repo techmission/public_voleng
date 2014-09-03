@@ -1,0 +1,7 @@
+.metadata/
+abreopensource/classes/
+abreopensource/deploy/
+abreopensource/files/
+abreopensource/public_html/WEB-INF/classes/
+abreopensource/public_html/WEB-INF/work/
+abreopensource/centralized_build.log

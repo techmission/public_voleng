@@ -1,0 +1,64 @@
+#topsearch {
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#topsearch input {
+	font-family: Arial, Helvetica, sans-serif;
+	
+}
+#topsearch_nav {
+	margin: 0px;
+	padding: 0px;
+	height: 18px;
+	
+}
+
+
+
+#topsearch form a {
+	text-decoration: underline;
+}
+
+#topsearch_nav li {
+	display: inline;
+	margin-right: 5px;
+	padding: 2px 4px 4px 4px;
+}
+
+#topsearch_nav li.active {
+	background: #CCC;
+}
+
+#topsearch_nav li a {
+	color:#000; 
+	font-weight: normal;
+	text-decoration:underline;
+}
+
+#topsearch_nav li.active a {
+	text-decoration: none;
+	border-bottom-width: 0px;
+	color:#000;
+	font-weight: bold;
+}
+
+#topsearch form {
+	padding: 8px;
+	border:solid 1px #CCC ;
+}
+
+
+#topsearch .textinputwhite, #topsearch .form-text {
+	width: 250px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.topsearch_captions {
+	font-size:10px; 
+	font-weight:normal;
+	margin-top: 3px;
+}
+
+
+

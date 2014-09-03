@@ -1,0 +1,91 @@
+  <% 
+	
+
+		FacebookJsonRestClient facebook;  // the facebook client, talks to REST Server
+		// do authentication  
+		String user =null;
+		String sessionKey = request.getParameter(FacebookParam.SESSION_KEY.toString());  // Session Key passed as request parameter
+		String profileKey = request.getParameter("fb_sig_profile_session_key");  // profile key passed when in tab
+
+//out.println("session key: ");
+out.print(sessionKey);
+
+
+if(session.getAttribute("FB_session_key") == null ){
+	session.setAttribute("FB_session_key",sessionKey);  // clearing Value in session Object
+}
+
+
+//out.println("<br>FB_session_key: <br>");
+//out.print(session.getAttribute("FB_session_key"));
+//out.println("<br>app api key:<br>");
+//out.print(appapikey);
+
+String timestamp="";
+String fbuserid="";
+
+FacebookWebappHelper facebookHelp = FacebookWebappHelper.newInstanceJson(request, response, appapikey, appsecret );
+
+//try{ 
+
+
+//if(facebookHelp.requireLogin("")) return;
+if(facebookHelp.requireFrame("")) return;
+
+out.println(request.getParameter("fb_sig_user"));
+
+if (sessionKey != null){
+	facebook = new FacebookJsonRestClient(appapikey, appsecret,sessionKey);  // create Facebook Json Rest Client
+						
+	if(request.getParameter("fb_sig_user") != null){ 
+		/*user = request.getParameter("fb_sig_user");  // get user as a string.  User info passed as request parameter
+			//out.println(user);
+		Long userLong = new Long(user);
+		if(session.getAttribute("FB_Sess_Key") == null ){
+			session.setAttribute("FB_Sess_Key",sessionKey);  // set the Facebook Session key as a local session var
+		}
+		out.print("user is: "+user+"<br>");
+			if(user.length()>0){
+				fbuserid=user;
+			}
+		if(session.getAttribute("FB_User_ID") == null ){
+			session.setAttribute("FB_User_ID",userLong);  // set the Facebook User ID as a local session var
+		}
+		if(request.getParameter("fb_sig_time") != null){
+			timestamp=request.getParameter("fb_sig_time");
+			//out.print(timestamp);
+			if(session.getAttribute("FB_Timestamp") == null ){
+				session.setAttribute("FB_Timestamp",timestamp);  // set init timestamp as a local session var for auth returning users
+			}
+		}
+		List users = new ArrayList();
+		users.add(userLong);
+		//facebook.users_getInfo(users, ProfileField.NAME);
+
+		//JSONArray friends = (JSONArray) facebook.friends_get();
+		//List friendsList = new ArrayList();
+		//for(int i = 0; i < friends.length(); i++){
+		//	friendsList.add(friends.get(i));
+		//}
+		//out.println(friends);
+		List fields = new ArrayList();
+		fields.add (com.google.code.facebookapi.ProfileField.NAME);
+		fields.add (com.google.code.facebookapi.ProfileField.PIC_SMALL);
+		JSONArray u = (JSONArray) facebook.users_getInfo(users, fields);
+		//out.println(u);
+		out.println();
+		for(int i = 0; i < u.length(); i++){
+			JSONObject obj = u.getJSONObject(i);
+			//out.println(obj.get("name"));
+			//out.println("<img src=" + obj.get("pic_small") + ">");
+		}
+		*/
+	}
+
+		
+}
+//}
+//catch(FacebookException e) {
+	//	if(facebookHelp.requireLogin("")) return;
+//}
+%>

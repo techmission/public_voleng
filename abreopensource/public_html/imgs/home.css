@@ -1,0 +1,244 @@
+
+
+#ds-push {/* overwrite from main style.css file for the homepage */
+		background:transparent url(../images/footer_ds_core.gif) no-repeat bottom left;
+}
+	#ieroot #ds-push {/* overwrite for IE because the ICA logo wasn't matching the ds */
+		background:transparent url(../images/footer_ds_core_ie.gif) no-repeat bottom left;
+}
+
+
+#util-nav {/*adjust for core page expect addition content to right on interior pages */
+	margin:0;
+	padding:5px 55px 0 0;
+}
+
+#hero-wrap {
+		float:left;
+		margin:0px 0 8px 31px;
+		padding:0;
+		width:875px;
+		clear:both;
+}
+	#ieroot #hero-wrap {
+		float:none;
+	}
+
+/* Three column ad row below the hero spot */
+#ad-row-wrap {
+		float:left;
+		margin:0px 0 8px 31px;
+		padding:0;
+		width:875px;
+		clear:both;
+		/*background:transparent url(../images/bg_core_ads_pipe.gif) repeat-y top left;*/
+}
+	#ieroot #ad-row-wrap {
+		float:none;
+	}
+
+#pipe-wrap	{/* to get the dual pipe lines smaller than the containment div ad-row-wrap */
+	float:left;
+	margin:12px 0 0 0;
+	padding:0;
+	background:transparent url(../images/bg_core_ads_pipe.gif) repeat-y top left;
+}
+
+	/* AD #1 */
+#ad-pos-one {
+		float:left;
+		margin:0 0 0  0;
+		padding:0;
+		width:249px;
+		background:transparent url(../images/core_bracket_arrow.png) no-repeat 1px top;
+}
+
+.ad-inner {
+		float:left;
+		margin:0 20px 0 20px;
+		padding:0;
+}
+	#ieroot .ad-inner {
+		float:none;
+		margin:0 20px 0 20px;
+}
+.ad-inner-b {
+		float:left;
+		margin:0 25px 0 20px;
+		padding:0;
+}
+
+	#ieroot .ad-inner-b {
+			float:none;
+	}
+
+	#ad-pos-one h2 {
+		margin:2px 0 10px 0;
+		padding:0;
+		font-size:14px;
+		color:#716b60;
+	}
+	
+	#ad-pos-one h2 a:link, #ad-pos-one h2 a:visited, #ad-pos-one h2 a:focus, #ad-pos-one h2 a:hover, #ad-pos-one h2 a:active  {
+		color:#716b60;
+		text-decoration:none
+	}
+	
+	#ad-pos-one h2 span, #ad-pos-one h2 a span {
+		color:#83a439;
+		text-decoration:none
+	}
+	
+	#ad-pos-one p {
+		margin:0 0 10px 0;
+		padding:0;
+		font-size:12px;
+		color:#66614c;/*#b1af92;*/
+	}
+
+	
+	/* AD #2 */
+#ad-pos-two {
+		float:left;
+		margin:0 0 0  0;
+		padding:0;
+		width:293px;
+		background:transparent url(../images/core_bracket_arrow.png) no-repeat 1px top;
+}
+	
+	#ad-pos-two h2 {
+		margin:3px 0 6px 0;
+		padding:0;
+		font-size:15px;
+		color:#676055;
+		font-weight:normal;
+	}
+	
+	#ad-pos-two h2 a:link, #ad-pos-two h2 a:visited, #ad-pos-two h2 a:focus, #ad-pos-two h2 a:hover, #ad-pos-two h2 a:active  {
+		color:#716b60;
+		text-decoration:none
+	}
+	
+	#ad-pos-two h2 span, #ad-pos-two h2 span a {
+		color:#2f91c3;
+		font-weight:bold;
+		text-decoration:none
+	}
+	
+	#ad-pos-two p {
+		margin:0;
+		padding:0 0 3px 0;
+		font-size:12px;
+		line-height:14px;
+		color:#66614c;/*#b1af92;*/
+	}
+	
+	#ad-pos-two p img {
+		float:left;
+		margin:0;
+		padding:0;
+	}
+	
+	p#join-in {
+		margin:3px 0 0 0;
+		padding:0;
+		color:#676055;
+		font-size:13px;
+	}
+	
+	p#join-in img {
+		float:none;
+		margin:0 4px;
+		padding:0;
+		vertical-align:middle;
+	}
+	
+	
+	/* AD #3 */
+#ad-pos-tre {
+		float:left;
+		margin:0;
+		padding:0;
+		width:298px
+}
+
+.ad-pos-tre-ad {
+    display : none;
+}
+
+#content-wrap {
+	float:left;
+	margin:0;
+	padding:0 0 30px 0;
+	background:transparent url(../images/bg_ds_colfade.png) repeat-y -4px top;	
+}
+
+
+/* Right Column */
+#core-right-col {
+	float:left;
+	margin:37px 0 0 0;
+	padding:0;
+	width:226px;
+	width : 194px;
+}
+
+/* Daily Bible Reading styles */
+#daily-bible-reading {
+	margin:0;
+	padding:0 0 0 16px;
+	clear:both;
+}
+
+#daily-bible-reading h2 {
+	margin:0 0 5px 0;
+	padding:0;
+	font-size: 14px;
+	color:#595a4e;
+	font-weight:normal;
+}
+
+#daily-bible-reading h3 {
+	margin:0;
+	padding:0;
+	font-size: 11px;
+	color:#3facd0;
+	font-weight:normal;
+}
+
+#daily-bible-reading p {
+	margin:0;
+	padding:0;
+	font-size: 19px;
+	color:#b3b18e;
+}
+
+/* Daily Bible Reading styles */
+#daily-prayer {
+	margin:25px 0 0 0;
+	padding:0 32px 0 16px;
+	clear:both;
+}
+
+#daily-prayer h2 {
+	margin:0 0 5px 0;
+	padding:0;
+	font-size: 14px;
+	color:#595a4e;
+	font-weight:normal;
+}
+
+#daily-prayer h3 {
+	margin:0;
+	padding:0;
+	font-size: 11px;
+	color:#3facd0;
+	font-weight:normal;
+}
+
+#daily-prayer p {
+	margin:0;
+	padding:0;
+	font-size: 13px;
+	color:#b3b18e;
+}

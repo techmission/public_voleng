@@ -1,0 +1,15 @@
+<Files ~ "\.inc$">
+Order allow,deny
+Deny from all
+</Files>
+
+<Files ~ "\.orig$">
+Order allow,deny
+Deny from all
+</Files>
+
+<Files ~ "\.DELETE$">
+Order allow,deny
+Deny from all
+</Files>
+
